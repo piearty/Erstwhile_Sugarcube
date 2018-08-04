@@ -22,7 +22,7 @@ A BLT given to you by Annie out of pity at the feast. It was on the detective's 
 
 :: Potion [item]
 <h3>Potion</h3>
-A weird herbal potion Erin forced upon you. Apparently it was supposed to be for (linkreveal: "protection">>, as if that did any good]. It's dark and it looks like there are entire leaves and berries in there, which, considering how hard it was to swallow, doesn't surprise you at all. It was on the detective's mind-desk.\
+A weird herbal potion Erin forced upon you. Apparently it was supposed to be for <<linkappend "protection">>, as if that did any good<</linkappend>>. It's dark and it looks like there are entire leaves and berries in there, which, considering how hard it was to swallow, doesn't surprise you at all. It was on the detective's mind-desk.\
 <<if hasVisited("you drinking Erin's potion", "Erin's night", "Erin and Bram brewing you a potion", "Terry poisoning your salad")>>
 <<set $isItemUsed = true>><</if>>
 
@@ -31,7 +31,7 @@ A weird herbal potion Erin forced upon you. Apparently it was supposed to be for
 <h3>Wolfsbane</h3>
 A purple plant that's apparently used for protection, especially against lycanthropy. Even though it's extremely, extremely poisonous. You don't pretend to understand.
 
-Bram was telling Annie about it while he sold her some (linkreveal: "weed.">> - Oh sorry. "Medicine".] Some of the leaves of the one in the greenhouse have been ripped off.\
+Bram was telling Annie about it while he sold her some <<linkappend "weed.">> - Oh sorry. "Medicine".<</linkappend>> Some of the leaves of the one in the greenhouse have been ripped off.\
 <<if hasVisited("the detective ruminating about the murder weapon", "Bram realizing the wolfsbane was tampered with", "Annie and Erin talking about warding you away", "Terry poisoning your salad")>>
 
 <<set $isItemUsed = true>><</if>>
@@ -208,7 +208,7 @@ A nearly-full-moon charm. It was hanging in the sky in Erin's mind.\
 <h3>Gift Request</h3>
 Found in Bram's mind-greenhouse.
 
-"Thanks ahead of time for the gift I expect you're getting me. Tell you what, when you get the stuff, why don't you share it with me? We'll make a toast to old friends. Make sure it's aged over a decade, don't cheap out on me here. You know the brand I like. - Mort"\
+//"Thanks ahead of time for the gift I expect you're getting me. Tell you what, when you get the stuff, why don't you share it with me? We'll make a toast to old friends. Make sure it's aged over a decade, don't cheap out on me here. You know the brand I like. - Mort"//\
 <<if hasVisited("you and Bram drinking wine")>>
 
 <<set $isItemUsed = true>><</if>>
@@ -337,7 +337,7 @@ Teenaged Terry, probably Erin, and some nobody, sitting in front of a plane tree
 <h3>Burning Letter</h3>
 A letter that is currently and perpetually on fire, in the trash in Erin's mind.
 
-In a looping orange scrawl it says, ""I demand you stop dating my daughter. I know she sneaks over to your and your witch sister's house at night. I won't put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won't have you corrupting Le- " blah blah blah.
+In a looping orange scrawl it says, //"I demand you stop dating my daughter. I know she sneaks over to your and your witch sister's house at night. I won't put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won't have you corrupting Le- "// blah blah blah.
 
 <<set $isItemUsed = true>>
 

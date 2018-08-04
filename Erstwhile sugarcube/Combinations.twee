@@ -1,0 +1,210 @@
+:: Inventory [nosave noinv]
+(unless: $visitedPages contains "Link")[(set: $visitedPages to it + (a: "Link"))]\
+**[[Clues->Clues]] | Link Clues(unless: (datavalues: $thoughts)'s length is 0)[ | [[Thoughts]]] | (link: "Restart")[(savegame: "CurrentState", "RESTART")(goto: "Opening Passage")] | [[Credits]]**
+
+Click on two clues to try to link them.
+
+|selected>[(display: "List Selected")]
+|inventory>[(display: "List Inventory")]
+
+(if: (datavalues: $thoughts)'s length > 0)[
+(unless: $visitedPages contains "Thoughts")[You can [[review->Thoughts]] the things you've figured out, now.]]
+
+(link: "Open your eyes.")[(go-to: $returnTo)]
+
+:: Combine Selected
+{<!--0th level-->
+(if: $selected contains "Potion" and $selected contains "Erin's Testimony")[
+	(set: $combo to "you drinking Erin's potion")
+	(display: "Combovaluation")
+	]
+
+(elseif: $selected contains "Wine" and $selected contains "Gift Request")[
+	(set: $combo to "you and Bram drinking wine")
+	(display: "Combovaluation")
+	]
+	
+(elseif: $selected contains "Salad" and $selected contains "Justin's Testimony")[
+	(set: $combo to "Justin and Terry at the grocery store")
+	(display: "Combovaluation")
+	]
+
+(elseif: $selected contains "Salad" and $selected contains "Terry's Testimony")[
+	(set: $combo to "Justin and Terry at the grocery store")
+	(display: "Combovaluation")
+	]
+	
+(elseif: $selected contains "Sandwich" and $selected contains "Annie's Testimony")[
+	(set: $combo to "your fight with Annie")
+	(display: "Combovaluation")
+	]
+
+(elseif: $selected contains "Old Newspaper" and $selected contains "Petition")[
+	(set: $combo to "Terry's phone conversation")
+	(display: "Combovaluation")
+	]
+	
+(elseif: $selected contains "Crescent Charm" and $selected contains "Gibbous Charm")[
+	(set: $combo to "Justin and Erin being siblings")
+	(display: "Combovaluation")
+	]
+
+(elseif: $selected contains "Sigils" and $selected contains "Potion")[
+	(set: $combo to "Erin's night")
+	(display: "Combovaluation")
+	]
+	
+(elseif: $selected contains "Caf Patch" and $selected contains "Sigils")[
+	(set: $combo to "Justin and Erin setting up for the dinner")
+	(display: "Combovaluation")
+	]
+
+<!--1st level-->
+(elseif: $selected contains "Marijuana" and $selected contains "Medicine Reminder")[
+	(set: $combo to "Bram and Annie's conversation in the garden")
+	(display: "Combovaluation")
+	]
+	
+(elseif: $selected contains "Nut Article" and $selected contains "Annie's Testimony")[
+	(set: $combo to "Terry giving Justin the nut article")
+	(display: "Combovaluation")
+	]
+	
+<!--2nd level-->
+(elseif: $selected contains "Straight Tie" and $selected contains "Bowtie")[
+	(set: $combo to "Terry and Bram's conversation in her shop")
+	(display: "Combovaluation")
+	]
+	
+(elseif: $selected contains "Aconite Poison" and $selected contains "Wolfsbane")[
+	(set: $combo to "the detective ruminating about the murder weapon")
+	(display: "Combovaluation")
+	]
+
+(elseif: $selected contains "Crumpled Paper" and $selected contains "Sharpie")[
+	(set: $combo to "Justin, Annie, and sriracha")
+	(display: "Combovaluation")
+	]
+
+(elseif: $selected contains "Justin's Keys" and $selected contains "Corkscrew")[
+	(set: $combo to "you distracting Justin in front of Bram's house")
+	(display: "Combovaluation")
+	]
+	
+<!--3rd level-->
+(elseif: $selected contains "Petals" and $selected contains "Wolfsbane")[
+	(set: $combo to "Annie and Erin talking about warding you away")
+	(display: "Combovaluation")
+	]
+
+<!--4th level-->
+(elseif: $selected contains "Shifty Person" and $selected contains "Cane")[
+	(set: $combo to "Terry's boyfriend giving her some leaves")
+	(display: "Combovaluation")
+	]
+
+(elseif: $selected contains "Werewolf" and $selected contains "Potion")[
+	(set: $combo to "Erin and Bram brewing you a potion")
+	(display: "Combovaluation")
+	]
+
+<!--7th level-->
+(elseif: $selected contains "Leaves" and $selected contains "Wolfsbane")[
+	(set: $combo to "Bram realizing the wolfsbane was tampered with")
+	(display: "Combovaluation")
+	]
+	
+<!--8th level-->
+(elseif: $selected contains any of $poisons and $selected contains "Salad")[(unless: $thoughts contains "Bram realizing the wolfsbane was tampered with" and $thoughts contains "the detective ruminating about the murder weapon")[This very well may be the combo that killed you, but you don't want to jump to conclusions just yet. You think you should figure some more things out first.(set: $fail to it + 1)]
+(else:)[(set: $combo to "Terry poisoning your salad")
+	(display: "Combovaluation")
+	]]
+	
+<!--Invalid combo flavor text-->
+
+(elseif: $selected contains "Photograph" or $selected contains "Sticky Note" or $selected contains "Rap Sheet" or $selected contains "Consent Form" or $selected contains "Hospital Stickers" or $selected contains "Burning Letter")[You doubt at least one of these items is connected to your death.
+
+(either: ...$lexaItemAnger)(set: $fail to it + 1)]
+
+(elseif: $selected contains "Congratulatory Card" or $selected contains "Money" or $selected contains "Postcard")[You doubt at least one of these items is connected to your death.]
+
+(elseif: $selected contains any of $poisons and $selected contains any of (ds: "Potion", "Sandwich"))[(if: $thoughts contains "Bram realizing the wolfsbane was tampered with" and $thoughts contains "the detective ruminating about the murder weapon")[This very well may be the combo that killed you, but you don't want to jump to conclusions just yet. You think you should figure some more things out first.(set: $fail to it + 1)]
+(else:) [You're pretty sure that this particular combo isn't what killed you, now.(set: $fail to it + 1)]]
+
+<!--Extra flavor text for failures-->
+
+(elseif: $selected contains "Leaves" and $selected contains "Petals")[They're both probably from the same plant, but you can't see any other way they're connected meaningfully.(set: $fail to it + 1)]
+
+(elseif: $selected contains "Cane" and $selected contains "Straight Tie")[Well, you've definitely figured out that these belong to the same guy - Terry's boyfriend. You don't want to think about him further.(set: $fail to it + 1)]
+
+(elseif: $selected contains "Leaves" and $selected contains "Marijuana")[It's a good thought, but these are not marijuana leaves.(set: $fail to it + 1)]
+
+(elseif: $selected contains "Werewolf" and $selected contains "Cane")[You're not //actually// a werewolf, so silver wouldn't really do |much>[much] to you, would it?(click: ?much)[ Unlike the //poison//...](set: $fail to it + 1)]
+
+(elseif: $selected contains "Werewolf" and $selected contains "Wolfsbane")[Well yes, wolfsbane //would// kill a werewolf but...it would kill //anybody//.(set: $fail to it + 1)]
+
+<!--Default failure-->
+
+(else:)[You can't see how those clues are related, at least not right now.(set: $fail to it + 1)]\
+
+(if: $fail > 2)[
+
+Need a |h1>[hint? 
+
+(click: ?h1)[(either:
+"The connections aren't random! Try to find different ways things can be related.",
+"Are there any odd inconsistencies between two clues? Does combining the clues get a contradiction of some sort?",
+"Do any clues have some sort of quality in common?",
+"Maybe someone said something important in their testimony.",
+"You can combine a clue more than once!",
+"You can combine clues found from unlocked memories to unlock even //more// memories!",
+"A certain set of clues can be combined only after you deduce a connection between them by unlocking certain memories. It should be obvious when that happens.",)]]]\
+
+(if: $fail > 9)[
+Need a [[bigger hint?->Hints]]]
+
+:: Select Item
+{
+<!--
+This code block expects the _selectedItem temporary variable to content the ID of the selected item.
+-->
+(if: $selected's length < 2)[
+	<!-- Try to add the item to the unique collection. --> 
+	(set: $selected to it + (dataset: _selectedItem))
+]
+
+<!-- Refresh the page. -->
+(replace: ?selected)[(display: "List Selected")]
+(replace: ?inventory)[(display: "List Inventory")]
+
+:: List Inventory
+<!--Sets the clickedItem variable and opens the check.-->
+(set: _names to (datanames: $inv))\
+(if: _names's length > 0)[\
+	(for: each _item, ...(datanames: $inv))[\
+		(if: (passage:)'s name is "Clues")[\
+			(link-goto: _item + ", ", "_item")\
+		]\
+		(if: (passage:)'s name is "Inventory")[\
+			(print: '(link: _item + ", ")[(set: _selectedItem to "' + _item + '")(display: "Select Item")]')\
+		]\
+	]\
+]
+
+
+:: List Selected
+(if: $selected's length > 0)[\
+	(for: each _item, ...$selected)[\
+		_item selected.
+	]\
+
+(if: $selected's length is 2)[(link: "Combine")[(display: "Combine Selected")(set: $selected to (dataset:))]]\
+
+(link: "
+Reset.")[(set: $selected to (dataset:))(replace: ?selected)[(display: "List Selected")]] (You can also click a 3rd item to reset!)]
+
+:: Combovaluation
+{(set: $fail to 0)
+(unless: $visitedPages contains $combo)[
+		(goto: $combo)]
+	(else:)[You found that memory about $combo already...but maybe you could take a quick peek at it (linkgoto: "again.", $combo)]}
