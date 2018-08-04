@@ -1,12 +1,10 @@
-::PassageFooter
-<<nobr>>
+::PassageFooter [nobr]
 <!--Indicates this item can't be combined-->
     <<if tags().includes("noncombinable")>>
         <br>
-        This probably isn't relevant to the murder
-        <<if !tags().includes "lexa">>
+        This probably isn't relevant to the murder...
+        <<if !tags().includes("lexa")>>
             but you are curious about it...
-            
         <</if>><br>
     <</if>>
 <!--If something is related to Lexa, display a randomly selected angry statement from Mort.-->
@@ -15,6 +13,13 @@
         <<print either($lexaItemAnger)>>
         <br>
     <</if>>
+    
+<!--If item has been used, show this-->
+    <<if $isItemUsed == true>>
+        <br>
+        You think you've gotten all the info out of this clue now.
+    <</if>>
+    
 <!--Unless a passage is an item, a memory, or is not supposed to display an inventory, add the inventory link to every passage-->
     <<if tags().includes("noinv") or tags().includes("item") or tags().includes("memory")>>
 <!--Do nothing-->
@@ -26,9 +31,11 @@
         <</link>>
     <</if>>
 <!--If passage is an item, add a Back button-->    
-    <<if tags().includes("item")>>    
-        <<link "<br>Back to what you were doing.">>
-            <<goto previous()>>
-        <</link>>
+    <<if tags().includes("item")>>
+    <br>
+    <br>
+        <<if $isItemUsed == true>>
+            <<set $isItemUsed = false>>
+        <</if>>
+        <<back "Back to what you were doing.">>
     <</if>>
-<</nobr>>

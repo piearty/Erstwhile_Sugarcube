@@ -246,24 +246,24 @@ You can [[review-&gt;Thoughts]] the things you&#39;ve figured out, now.
 It&#39;s a caesar salad with vinaigrette. Terry and Justin got it for you when you couldn&#39;t eat anything at the party. It was on the detective&#39;s mind-desk.\
 &lt;&lt;if hasVisited(&quot;Justin and Terry at the grocery store&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Aconite Poison" tags="item" position="475,100">&lt;h3&gt;Aconite Poison&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = True&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Aconite Poison" tags="item" position="475,100">&lt;h3&gt;Aconite Poison&lt;/h3&gt;
 This is what you were poisoned with, apparently. It was written on the autopsy report on the detective&#39;s mind-desk.\
 &lt;&lt;if hasVisited(&quot;the detective ruminating about the murder weapon&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Sandwich" tags="item" position="600,100">&lt;h3&gt;Sandwich&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Sandwich" tags="item" position="600,100">&lt;h3&gt;Sandwich&lt;/h3&gt;
 A BLT given to you by Annie out of pity at the feast. It was on the detective&#39;s mind-desk.\
 &lt;&lt;if hasVisited(&quot;your fight with Annie&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Potion" tags="item" position="725,100">&lt;h3&gt;Potion&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Potion" tags="item" position="725,100">&lt;h3&gt;Potion&lt;/h3&gt;
 A weird herbal potion Erin forced upon you. Apparently it was supposed to be for (linkreveal: &quot;protection&quot;&gt;&gt;, as if that did any good]. It&#39;s dark and it looks like there are entire leaves and berries in there, which, considering how hard it was to swallow, doesn&#39;t surprise you at all. It was on the detective&#39;s mind-desk.\
 &lt;&lt;if hasVisited(&quot;you drinking Erin&#39;s potion&quot;, &quot;Erin&#39;s night&quot;, &quot;Erin and Bram brewing you a potion&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Wolfsbane" tags="item" position="850,100">&lt;h3&gt;Wolfsbane&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Wolfsbane" tags="item" position="850,100">&lt;h3&gt;Wolfsbane&lt;/h3&gt;
 A purple plant that&#39;s apparently used for protection, especially against lycanthropy. Even though it&#39;s extremely, extremely poisonous. You don&#39;t pretend to understand.
 
 Bram was telling Annie about it while he sold her some (linkreveal: &quot;weed.&quot;&gt;&gt; - Oh sorry. &quot;Medicine&quot;.] Some of the leaves of the one in the greenhouse have been ripped off.\
 &lt;&lt;if hasVisited(&quot;the detective ruminating about the murder weapon&quot;, &quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;Annie and Erin talking about warding you away&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Justin&#39;s Testimony" tags="item" position="975,100">&lt;h3&gt;Justin&#39;s Testimony&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Justin&#39;s Testimony" tags="item" position="975,100">&lt;h3&gt;Justin&#39;s Testimony&lt;/h3&gt;
 &quot;Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before the day itself. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn&#39;t because I was busy, but...&quot;
 
 &quot;Yeah, `[I was busy with]` patrols, talks with schools, //more// patrols...I mean. You know how it is.&quot;
@@ -293,7 +293,7 @@ Bram was telling Annie about it while he sold her some (linkreveal: &quot;weed.&
 &quot;That girl, I just - she has no idea what she&#39;s doing with her so-called magic, I wouldn&#39;t be surprised if drinking that finally...oh I don&#39;t want to think about it! But she&#39;s done terrible things before...regardless, whoever did it should be ashamed...&quot;\
 &lt;&lt;if hasVisited(&quot;Justin and Terry at the grocery store&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Erin&#39;s Testimony" tags="item" position="1225,100">&lt;h3&gt;Erin&#39;s Testimony&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Erin&#39;s Testimony" tags="item" position="1225,100">&lt;h3&gt;Erin&#39;s Testimony&lt;/h3&gt;
 &quot;I knew this would happen...
 
 &quot;See, the association came up with the idea for the dinner, and everyone was really excited, but there was a negative aura in the air, I could feel it.
@@ -313,7 +313,7 @@ Bram was telling Annie about it while he sold her some (linkreveal: &quot;weed.&
 &quot;I thought the potion would work. It was supposed to protect him, though I guess he never did want my protection.&quot;\
 &lt;&lt;if hasVisited(&quot;you drinking Erin&#39;s potion&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Annie&#39;s Testimony" tags="item" position="100,225">&lt;h3&gt;Annie&#39;s Testimony&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Annie&#39;s Testimony" tags="item" position="100,225">&lt;h3&gt;Annie&#39;s Testimony&lt;/h3&gt;
 &quot;I guess it coulda been `[a good day]`, but there&#39;s a dead man. Did you forget that or somethin&#39;?
 
 &quot;Where are we startin&#39;? We fought this morning...
@@ -329,7 +329,7 @@ Bram was telling Annie about it while he sold her some (linkreveal: &quot;weed.&
 &quot;I gave `[the sandwich]` to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?&quot; She paused. &quot;I wish we&#39;d made up. Feels wrong to have ill thoughts of the dead.&quot;\
 &lt;&lt;if hasVisited(&quot;your fight with Annie&quot;, &quot;Terry giving Justin the nut article&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Bram&#39;s Testimony" tags="item" position="225,225">&lt;h3&gt;Bram&#39;s Testimony&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Bram&#39;s Testimony" tags="item" position="225,225">&lt;h3&gt;Bram&#39;s Testimony&lt;/h3&gt;
 &quot;Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn&#39;t there though, so where should I start, officer? I don&#39;t want to slow you down with irrelevant info, ha.
 
 &quot;O-okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin&#39;s idea apparently- I don&#39;t know if Justin knew about the allergy, of course! Anyway, that&#39;s why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It&#39;s like she doesn&#39;t know what allergies are.
@@ -340,127 +340,127 @@ Bram was telling Annie about it while he sold her some (linkreveal: &quot;weed.&
 
 &quot;W-wait, what are you writing down? I said I wasn&#39;t - &quot;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Petition" tags="item lexa" position="350,225">&lt;h3&gt;Petition&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Petition" tags="item lexa" position="350,225">&lt;h3&gt;Petition&lt;/h3&gt;
 Your petition for the park plaque, ripped into itty bitty pieces in Terry&#39;s mind. You can make out -ETITION, memori-, -xa, and what look like parts of signatures.\
 &lt;&lt;if hasVisited(&quot;Terry&#39;s phone conversation&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Straight Tie" tags="item" position="475,225">&lt;h3&gt;Tie&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Straight Tie" tags="item" position="475,225">&lt;h3&gt;Tie&lt;/h3&gt;
 A navy blue, striped straight tie that Terry was holding for someone she was talking to on the phone. That&#39;s odd.\
 &lt;&lt;if hasVisited(&quot;Terry and Bram&#39;s conversation in her shop&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Old Newspaper" tags="item lexa" position="600,225">&lt;h3&gt;Old Newspaper&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Old Newspaper" tags="item lexa" position="600,225">&lt;h3&gt;Old Newspaper&lt;/h3&gt;
 A yellowing newspaper on Justin&#39;s mind-coffee-table. Terry and another girl are on the front page, chained to a plane tree. The headline says, &quot;**Local Activists Protest Paving Over Park**&quot;.\
 &lt;&lt;if hasVisited(&quot;Terry&#39;s phone conversation&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Shifty Person" tags="item" position="725,225">&lt;h3&gt;Shifty Person&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Shifty Person" tags="item" position="725,225">&lt;h3&gt;Shifty Person&lt;/h3&gt;
 A person Erin saw sneaking about at a godforsaken time in the night. They had a noticeable limp and were carrying something long that glinted silver.\
 &lt;&lt;if hasVisited(&quot;Terry&#39;s boyfriend giving her some leaves&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Cane" tags="item" position="850,225">&lt;h3&gt;Cane&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Cane" tags="item" position="850,225">&lt;h3&gt;Cane&lt;/h3&gt;
 A long, silver tipped cane that Terry&#39;s paramour uses. You saw him with it when he left Terry&#39;s wine store.\
 &lt;&lt;if hasVisited(&quot;Terry&#39;s boyfriend giving her some leaves&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Bowtie" tags="item" position="975,225">&lt;h3&gt;Bowtie&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Bowtie" tags="item" position="975,225">&lt;h3&gt;Bowtie&lt;/h3&gt;
 A gift from Erin to Justin, to go with his many, //many// other bowties. You noticed it in a memory between the two.\
 &lt;&lt;if hasVisited(&quot;Terry and Bram&#39;s conversation in her shop&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Medicine Reminder" tags="item" position="1100,225">&lt;h3&gt;Medicine Reminder&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Medicine Reminder" tags="item" position="1100,225">&lt;h3&gt;Medicine Reminder&lt;/h3&gt;
 &quot;Pay Bram for medicine&quot; - a self-reminder on Annie&#39;s mind-fridge.\
 &lt;&lt;if hasVisited(&quot;Bram and Annie&#39;s conversation in the garden&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Sigils" tags="item" position="1225,225">&lt;h3&gt;Sigils&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Sigils" tags="item" position="1225,225">&lt;h3&gt;Sigils&lt;/h3&gt;
 Lots and lots of sigils, most all of them labeled for &#39;protection&#39;. There&#39;s also a sigil to &#39;renew energy and de-stress&#39; marked for Justin. Found in Erin&#39;s mind, of //course//.\
 &lt;&lt;if hasVisited(&quot;Erin&#39;s night&quot;, &quot;Justin and Erin setting up for the dinner&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Nut Article" tags="item" position="100,350">&lt;h3&gt;Nut Article&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Nut Article" tags="item" position="100,350">&lt;h3&gt;Nut Article&lt;/h3&gt;
 It&#39;s an article about the health benefits of nuts, with a sticky note from Terry on it, given to Justin.\
 &lt;&lt;if hasVisited(&quot;Terry giving Justin the nut article&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Gibbous Charm" tags="item" position="225,350">&lt;h3&gt;Gibbous Charm&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Gibbous Charm" tags="item" position="225,350">&lt;h3&gt;Gibbous Charm&lt;/h3&gt;
 A nearly-full-moon charm. It was hanging in the sky in Erin&#39;s mind.\
 &lt;&lt;if hasVisited(&quot;Justin and Erin being siblings&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Gift Request" tags="item" position="350,350">&lt;h3&gt;Gift Request&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Gift Request" tags="item" position="350,350">&lt;h3&gt;Gift Request&lt;/h3&gt;
 Found in Bram&#39;s mind-greenhouse.
 
 &quot;Thanks ahead of time for the gift I expect you&#39;re getting me. Tell you what, when you get the stuff, why don&#39;t you share it with me? We&#39;ll make a toast to old friends. Make sure it&#39;s aged over a decade, don&#39;t cheap out on me here. You know the brand I like. - Mort&quot;\
 &lt;&lt;if hasVisited(&quot;you and Bram drinking wine&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Caf Patch" tags="item" position="475,350">&lt;h3&gt;Caf Patch&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Caf Patch" tags="item" position="475,350">&lt;h3&gt;Caf Patch&lt;/h3&gt;
 One of a boxful of caffeine patches found in Justin&#39;s mind. &quot;8 hours of energy guaranteed!&quot; according to the packaging. They&#39;re probably his.\
 &lt;&lt;if hasVisited(&quot;Justin and Erin setting up for the dinner&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Crescent Charm" tags="item" position="600,350">&lt;h3&gt;Crescent Charm&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Crescent Charm" tags="item" position="600,350">&lt;h3&gt;Crescent Charm&lt;/h3&gt;
 A crescent moon charm found in Justin&#39;s mind.\
 &lt;&lt;if hasVisited(&quot;Justin and Erin being siblings&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Justin&#39;s Keys" tags="item" position="725,350">&lt;h3&gt;Justin&#39;s Keys&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Justin&#39;s Keys" tags="item" position="725,350">&lt;h3&gt;Justin&#39;s Keys&lt;/h3&gt;
 There&#39;s something not-there that was there before. A tacky tool or charm of some sort...? You noticed it in a memory between Justin and Erin.\
 &lt;&lt;if hasVisited(&quot;you distracting Justin in front of Bram&#39;s house&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Marijuana" tags="item" position="850,350">&lt;h3&gt;Marijuana&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Marijuana" tags="item" position="850,350">&lt;h3&gt;Marijuana&lt;/h3&gt;
 Oh, yeah, Bram&#39;s been growing marijuana for ages. He says it&#39;s for medicinal purposes or something. Sure buddy. Whatever you say.\
 &lt;&lt;if hasVisited(&quot;Bram and Annie&#39;s conversation in the garden&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Crumpled Paper" tags="item" position="975,350">&lt;h3&gt;Crumpled Paper&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Crumpled Paper" tags="item" position="975,350">&lt;h3&gt;Crumpled Paper&lt;/h3&gt;
 A balled up note that Justin had in his pocket before the dinner. There&#39;s orange writing on it but that&#39;s all you can discern.\
 &lt;&lt;if hasVisited(&quot;Justin, Annie, and sriracha&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Petals" tags="item" position="1100,350">&lt;h3&gt;Petals&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Petals" tags="item" position="1100,350">&lt;h3&gt;Petals&lt;/h3&gt;
 Purple. Erin was scattering them around the entrance to the graveyard for some cockamamie reason.\
 &lt;&lt;if hasVisited(&quot;Annie and Erin talking about warding you away&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Sharpie" tags="item" position="1225,350">&lt;h3&gt;Sharpie&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Sharpie" tags="item" position="1225,350">&lt;h3&gt;Sharpie&lt;/h3&gt;
 It&#39;s Annie&#39;s and it&#39;s orange. She was using it to write something down after your and her...disagreement.\
 &lt;&lt;if hasVisited(&quot;Justin, Annie, and sriracha&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Wine" tags="item" position="100,475">&lt;h3&gt;Wine&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Wine" tags="item" position="100,475">&lt;h3&gt;Wine&lt;/h3&gt;
 A dusty bottle of Loup-Rouge wine, bought by Bram a couple days ago, floating in a honeycomb in Terry&#39;s mind.\
 &lt;&lt;if hasVisited(&quot;you and Bram drinking wine&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Corkscrew" tags="item" position="225,475">&lt;h3&gt;Corkscrew&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Corkscrew" tags="item" position="225,475">&lt;h3&gt;Corkscrew&lt;/h3&gt;
 A //really// tacky shark-shaped keychain corkscrew that Bram used to open your bottle of Loup-Rouge.\
 &lt;&lt;if $visitedPages contains &quot;you distracting Justin in front of Bram&#39;s house&quot;&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Werewolf" tags="item" position="350,475">&lt;h3&gt;Werewolf&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Werewolf" tags="item" position="350,475">&lt;h3&gt;Werewolf&lt;/h3&gt;
 You, apparently? According to Erin? That&#39;s what she was telling Annie anyway.\
 &lt;&lt;if hasVisited(&quot;Erin and Bram brewing you a potion&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Leaves" tags="item" position="475,475">&lt;h3&gt;Leaves&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Leaves" tags="item" position="475,475">&lt;h3&gt;Leaves&lt;/h3&gt;
 Some leaves in a bag that Terry got from her boyfriend.\
 &lt;&lt;if hasVisited(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Postcard" tags="item noncombinable" position="600,475">&lt;h3&gt;Postcard&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Postcard" tags="item noncombinable" position="600,475">&lt;h3&gt;Postcard&lt;/h3&gt;
 A postcard from a pride parade from who knows how many years ago, with Justin and Annie in the crowd. It was on Annie&#39;s mind-fridge.
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Congratulatory Card" tags="item noncombinable" position="725,475">&lt;h3&gt;Congratulatory Card&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Congratulatory Card" tags="item noncombinable" position="725,475">&lt;h3&gt;Congratulatory Card&lt;/h3&gt;
 Found stuffed in Justin&#39;s weird mind-walls.
 
 &quot;Congratulations! (textstyle: &quot;strike&quot;&gt;&gt;It&#39;s] You&#39;re a boy!
 
 ~Erin xoxo&quot;
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Sticky Note" tags="noncombinable item lexa" position="850,475">&lt;h3&gt;Sticky Note&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Sticky Note" tags="noncombinable item lexa" position="850,475">&lt;h3&gt;Sticky Note&lt;/h3&gt;
 &quot;There&#39;s $24 missing from my purse. You&#39;d better explain when you get home, missy. 11/14&quot; A passive-aggressive sticky note from ages ago stuck to Annie&#39;s mind-fridge.
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Consent Form" tags="item noncombinable lexa" position="975,475">&lt;h3&gt;Consent Form&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Consent Form" tags="item noncombinable lexa" position="975,475">&lt;h3&gt;Consent Form&lt;/h3&gt;
 Dated a few days ago, it&#39;s for non-voluntary...well...you know. Found half-buried in the sands of Annie&#39;s mind.
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Photograph" tags="item noncombinable lexa" position="1100,475">&lt;h3&gt;Photograph&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Photograph" tags="item noncombinable lexa" position="1100,475">&lt;h3&gt;Photograph&lt;/h3&gt;
 Teenaged Terry, probably Erin, and some nobody, sitting in front of a plane tree. That&#39;s all. Found in Erin&#39;s mind.
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Burning Letter" tags="item noncombinable lexa" position="1225,475">&lt;h3&gt;Burning Letter&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Burning Letter" tags="item noncombinable lexa" position="1225,475">&lt;h3&gt;Burning Letter&lt;/h3&gt;
 A letter that is currently and perpetually on fire, in the trash in Erin&#39;s mind.
 
 In a looping orange scrawl it says, &quot;&quot;I demand you stop dating my daughter. I know she sneaks over to your and your witch sister&#39;s house at night. I won&#39;t put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won&#39;t have you corrupting Le- &quot; blah blah blah.
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Money" tags="item noncombinable" position="100,600">&lt;h3&gt;Money&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Money" tags="item noncombinable" position="100,600">&lt;h3&gt;Money&lt;/h3&gt;
 $24 to be exact, found in the vines of Bram&#39;s mind-greenhouse.
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Hospital Stickers" tags="item noncombinable lexa" position="225,600">&lt;h3&gt;Hospital Stickers&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Hospital Stickers" tags="item noncombinable lexa" position="225,600">&lt;h3&gt;Hospital Stickers&lt;/h3&gt;
 Hospital stickers, dozens of them, found in Terry&#39;s mind. The earliest is dated 11/14 and is over a decade old. The latest is dated a couple days ago.
 
-&lt;&lt;include &quot;Used Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Used Item" tags="noinv nosave" position="350,600">You think you&#39;ve gotten all the info out of this clue now.</tw-passagedata><tw-passagedata pid="44" name="List Inventory" tags="" position="475,600">&lt;&lt;for _i, _name range $inv&gt;&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Used Item" tags="noinv nosave" position="350,600">You think you&#39;ve gotten all the info out of this clue now.</tw-passagedata><tw-passagedata pid="44" name="List Inventory" tags="" position="475,600">&lt;&lt;for _i, _name range $inv&gt;&gt;
     &lt;&lt;link _name&gt;&gt;
         &lt;&lt;set $clickedItem to _name&gt;&gt;
         &lt;&lt;if passage() is &quot;Clues&quot;&gt;&gt;
@@ -469,14 +469,12 @@ Hospital stickers, dozens of them, found in Terry&#39;s mind. The earliest is da
             &lt;&lt;include &quot;item selector&quot;&gt;&gt;
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/link&gt;&gt;
-&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="PassageFooter" tags="" position="600,600">&lt;&lt;nobr&gt;&gt;
-&lt;!--Indicates this item can&#39;t be combined--&gt;
+&lt;&lt;/for&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="PassageFooter" tags="nobr" position="600,600">&lt;!--Indicates this item can&#39;t be combined--&gt;
     &lt;&lt;if tags().includes(&quot;noncombinable&quot;)&gt;&gt;
         &lt;br&gt;
-        This probably isn&#39;t relevant to the murder
-        &lt;&lt;if !tags().includes &quot;lexa&quot;&gt;&gt;
+        This probably isn&#39;t relevant to the murder...
+        &lt;&lt;if !tags().includes(&quot;lexa&quot;)&gt;&gt;
             but you are curious about it...
-            
         &lt;&lt;/if&gt;&gt;&lt;br&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;!--If something is related to Lexa, display a randomly selected angry statement from Mort.--&gt;
@@ -485,6 +483,13 @@ Hospital stickers, dozens of them, found in Terry&#39;s mind. The earliest is da
         &lt;&lt;print either($lexaItemAnger)&gt;&gt;
         &lt;br&gt;
     &lt;&lt;/if&gt;&gt;
+    
+&lt;!--If item has been used, show this--&gt;
+    &lt;&lt;if $isItemUsed == true&gt;&gt;
+        &lt;br&gt;
+        You think you&#39;ve gotten all the info out of this clue now.
+    &lt;&lt;/if&gt;&gt;
+    
 &lt;!--Unless a passage is an item, a memory, or is not supposed to display an inventory, add the inventory link to every passage--&gt;
     &lt;&lt;if tags().includes(&quot;noinv&quot;) or tags().includes(&quot;item&quot;) or tags().includes(&quot;memory&quot;)&gt;&gt;
 &lt;!--Do nothing--&gt;
@@ -496,12 +501,14 @@ Hospital stickers, dozens of them, found in Terry&#39;s mind. The earliest is da
         &lt;&lt;/link&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;!--If passage is an item, add a Back button--&gt;    
-    &lt;&lt;if tags().includes(&quot;item&quot;)&gt;&gt;    
-        &lt;&lt;link &quot;&lt;br&gt;Back to what you were doing.&quot;&gt;&gt;
-            &lt;&lt;goto previous()&gt;&gt;
-        &lt;&lt;/link&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Start2" tags="noinv" position="725,600">It was a pretty good Thanksgiving until you keeled over and died.
+    &lt;&lt;if tags().includes(&quot;item&quot;)&gt;&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+        &lt;&lt;if $isItemUsed == true&gt;&gt;
+            &lt;&lt;set $isItemUsed = false&gt;&gt;
+        &lt;&lt;/if&gt;&gt;
+        &lt;&lt;back &quot;Back to what you were doing.&quot;&gt;&gt;
+    &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Start2" tags="noinv" position="725,600">It was a pretty good Thanksgiving until you keeled over and died.
 
 The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less &lt;&lt;linkappend &quot;//eavesdropping//&quot;&gt;&gt;, regardless of what Bram said,&lt;&lt;/linkappend&gt;&gt; and more //surveying//, - it was having the bonding effect you wanted all along.
 
@@ -531,27 +538,30 @@ In other words, you&#39;re a ghost now.
 
 &lt;!--Mort&#39;s ranting when you come across an item related to Lexa.--&gt;
 &lt;&lt;set $lexaItemAnger to [
-    &quot;But who cares, right?&quot;,
-    &quot;You don&#39;t know why //anyone// would be interested in this stuff.&quot;, 
-    &quot;Dammit, you put this crap in the past for a reason.&quot;, 
-    &quot;You think //maybe// you should stop looking at this stuff before you get too irritated. That&#39;d be bad, wouldn&#39;t it?&quot;, 
-    &quot;You&#39;re getting sick of looking at this. You don&#39;t want to bother with it any further.&quot;, 
-    &quot;You&#39;d better focus on the actual problem, you know, your //murder//.&quot;, 
-    &quot;You feel nauseous just looking at it. You&#39;d better not investigate this anymore.&quot;, 
-    &quot;Pursuing a dead end...Why can&#39;t people just learn to move on?&quot;, 
+    &quot;Anyway, who cares, right?&quot;,
+    &quot;Plus, you don&#39;t know why //anyone// would be interested in this stuff.&quot;, 
+    &quot;And dammit, you put this crap in the past for a reason.&quot;, 
+    &quot;So //maybe// you should stop looking at this stuff before you get too irritated. That&#39;d be bad, wouldn&#39;t it?&quot;, 
+    &quot;Besides, you&#39;re getting sick of looking at this. You don&#39;t want to bother with it any further.&quot;, 
+    &quot;You&#39;d be better off focusing on the actual problem, you know, your //murder//.&quot;, 
+    &quot;Besides, you feel nauseous just looking at it. You&#39;d better not investigate this anymore.&quot;, 
+    &quot;See, this is just pursuing a dead end...Why can&#39;t people just learn to move on?&quot;, 
     &quot;Ugh.&quot;]&gt;&gt;
 
 &lt;!--Have you visited a testimony yet?--&gt;
 &lt;&lt;set $testimonyVisited to false&gt;&gt;
 
 &lt;!--Have you visited a mind yet?--&gt;
-&lt;&lt;set $mindVisited to false&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Start" tags="justin" position="975,600">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
+&lt;&lt;set $mindVisited to false&gt;&gt;
+
+&lt;!--Checks if item been used up or not (resets upon leaving item passage)--&gt;
+&lt;&lt;set $isItemUsed = false&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Start" tags="justin" position="975,600">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
 
 [[Testing]]
     &lt;&lt;set $thoughts[&quot;Overwork&quot;] = &quot;- blop&quot;&gt;&gt;
     &lt;&lt;set $thoughts[&quot;Blackmail&quot;] = &quot;- blarp&quot;&gt;&gt;
-    &lt;&lt;set $clickedItem to &quot;Aconite&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
-    &lt;&lt;set $clickedItem to &quot;Reminder&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
+    &lt;&lt;set $clickedItem to &quot;Aconite Poison&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
+    &lt;&lt;set $clickedItem to &quot;Medicine Reminder&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Sigils&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Potion&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Straight Tie&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
@@ -562,7 +572,9 @@ In other words, you&#39;re a ghost now.
     &lt;&lt;set $clickedItem to &quot;Salad&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Marijuana&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Wolfsbane&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
-    &lt;&lt;set $clickedItem to &quot;Werewolf&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Testing" tags="lexa" position="1100,600">&lt;&lt;print $inv.length&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Thoughts" tags="noinv save" position="1225,600">&lt;&lt;nobr&gt;&gt;
+    &lt;&lt;set $clickedItem to &quot;Werewolf&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
+    &lt;&lt;set $clickedItem to &quot;Money&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
+    &lt;&lt;set $clickedItem to &quot;Hospital Stickers&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Testing" tags="lexa" position="1100,600">&lt;&lt;print $inv.length&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Thoughts" tags="noinv save" position="1225,600">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]] | [[Link Clues-&gt;Inventory]] | Thoughts
      |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
             &lt;&lt;script&gt;&gt;

@@ -3,28 +3,28 @@
 It's a caesar salad with vinaigrette. Terry and Justin got it for you when you couldn't eat anything at the party. It was on the detective's mind-desk.\
 <<if hasVisited("Justin and Terry at the grocery store", "Terry poisoning your salad")>>
 
-<<include "Used Item>><</if>>
+<<set $isItemUsed = True>><</if>>
 
 :: Aconite Poison [item]
 <h3>Aconite Poison</h3>
 This is what you were poisoned with, apparently. It was written on the autopsy report on the detective's mind-desk.\
 <<if hasVisited("the detective ruminating about the murder weapon", "Terry poisoning your salad")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Sandwich [item]
 <h3>Sandwich</h3>
 A BLT given to you by Annie out of pity at the feast. It was on the detective's mind-desk.\
 <<if hasVisited("your fight with Annie", "Terry poisoning your salad")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Potion [item]
 <h3>Potion</h3>
 A weird herbal potion Erin forced upon you. Apparently it was supposed to be for (linkreveal: "protection">>, as if that did any good]. It's dark and it looks like there are entire leaves and berries in there, which, considering how hard it was to swallow, doesn't surprise you at all. It was on the detective's mind-desk.\
 <<if hasVisited("you drinking Erin's potion", "Erin's night", "Erin and Bram brewing you a potion", "Terry poisoning your salad")>>
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Wolfsbane [item]
@@ -34,7 +34,7 @@ A purple plant that's apparently used for protection, especially against lycanth
 Bram was telling Annie about it while he sold her some (linkreveal: "weed.">> - Oh sorry. "Medicine".] Some of the leaves of the one in the greenhouse have been ripped off.\
 <<if hasVisited("the detective ruminating about the murder weapon", "Bram realizing the wolfsbane was tampered with", "Annie and Erin talking about warding you away", "Terry poisoning your salad")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Justin's Testimony [item]
 <h3>Justin's Testimony</h3>
@@ -70,7 +70,7 @@ Bram was telling Annie about it while he sold her some (linkreveal: "weed.">> - 
 "That girl, I just - she has no idea what she's doing with her so-called magic, I wouldn't be surprised if drinking that finally...oh I don't want to think about it! But she's done terrible things before...regardless, whoever did it should be ashamed..."\
 <<if hasVisited("Justin and Terry at the grocery store")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Erin's Testimony [item]
 <h3>Erin's Testimony</h3>
@@ -93,7 +93,7 @@ Bram was telling Annie about it while he sold her some (linkreveal: "weed.">> - 
 "I thought the potion would work. It was supposed to protect him, though I guess he never did want my protection."\
 <<if hasVisited("you drinking Erin's potion")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Annie's Testimony [item]
 <h3>Annie's Testimony</h3>
@@ -112,7 +112,7 @@ Bram was telling Annie about it while he sold her some (linkreveal: "weed.">> - 
 "I gave `[the sandwich]` to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?" She paused. "I wish we'd made up. Feels wrong to have ill thoughts of the dead."\
 <<if hasVisited("your fight with Annie", "Terry giving Justin the nut article")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Bram's Testimony [item]
 <h3>Bram's Testimony</h3>
@@ -126,14 +126,14 @@ Bram was telling Annie about it while he sold her some (linkreveal: "weed.">> - 
 
 "W-wait, what are you writing down? I said I wasn't - "
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Petition [item lexa]
 <h3>Petition</h3>
 Your petition for the park plaque, ripped into itty bitty pieces in Terry's mind. You can make out -ETITION, memori-, -xa, and what look like parts of signatures.\
 <<if hasVisited("Terry's phone conversation")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Straight Tie [item]
@@ -141,7 +141,7 @@ Your petition for the park plaque, ripped into itty bitty pieces in Terry's mind
 A navy blue, striped straight tie that Terry was holding for someone she was talking to on the phone. That's odd.\
 <<if hasVisited("Terry and Bram's conversation in her shop")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Old Newspaper [item lexa]
@@ -149,14 +149,14 @@ A navy blue, striped straight tie that Terry was holding for someone she was tal
 A yellowing newspaper on Justin's mind-coffee-table. Terry and another girl are on the front page, chained to a plane tree. The headline says, "**Local Activists Protest Paving Over Park**".\
 <<if hasVisited("Terry's phone conversation")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Shifty Person [item]
 <h3>Shifty Person</h3>
 A person Erin saw sneaking about at a godforsaken time in the night. They had a noticeable limp and were carrying something long that glinted silver.\
 <<if hasVisited("Terry's boyfriend giving her some leaves")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Cane [item]
@@ -164,21 +164,21 @@ A person Erin saw sneaking about at a godforsaken time in the night. They had a 
 A long, silver tipped cane that Terry's paramour uses. You saw him with it when he left Terry's wine store.\
 <<if hasVisited("Terry's boyfriend giving her some leaves")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Bowtie [item]
 <h3>Bowtie</h3>
 A gift from Erin to Justin, to go with his many, //many// other bowties. You noticed it in a memory between the two.\
 <<if hasVisited("Terry and Bram's conversation in her shop")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Medicine Reminder [item]
 <h3>Medicine Reminder</h3>
 "Pay Bram for medicine" - a self-reminder on Annie's mind-fridge.\
 <<if hasVisited("Bram and Annie's conversation in the garden")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Sigils [item]
@@ -186,7 +186,7 @@ A gift from Erin to Justin, to go with his many, //many// other bowties. You not
 Lots and lots of sigils, most all of them labeled for 'protection'. There's also a sigil to 'renew energy and de-stress' marked for Justin. Found in Erin's mind, of //course//.\
 <<if hasVisited("Erin's night", "Justin and Erin setting up for the dinner")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Nut Article [item]
@@ -194,14 +194,14 @@ Lots and lots of sigils, most all of them labeled for 'protection'. There's also
 It's an article about the health benefits of nuts, with a sticky note from Terry on it, given to Justin.\
 <<if hasVisited("Terry giving Justin the nut article")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Gibbous Charm [item]
 <h3>Gibbous Charm</h3>
 A nearly-full-moon charm. It was hanging in the sky in Erin's mind.\
 <<if hasVisited("Justin and Erin being siblings")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Gift Request [item]
@@ -211,7 +211,7 @@ Found in Bram's mind-greenhouse.
 "Thanks ahead of time for the gift I expect you're getting me. Tell you what, when you get the stuff, why don't you share it with me? We'll make a toast to old friends. Make sure it's aged over a decade, don't cheap out on me here. You know the brand I like. - Mort"\
 <<if hasVisited("you and Bram drinking wine")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Caf Patch [item]
@@ -219,7 +219,7 @@ Found in Bram's mind-greenhouse.
 One of a boxful of caffeine patches found in Justin's mind. "8 hours of energy guaranteed!" according to the packaging. They're probably his.\
 <<if hasVisited("Justin and Erin setting up for the dinner")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Crescent Charm [item]
@@ -227,14 +227,14 @@ One of a boxful of caffeine patches found in Justin's mind. "8 hours of energy g
 A crescent moon charm found in Justin's mind.\
 <<if hasVisited("Justin and Erin being siblings")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Justin's Keys [item]
 <h3>Justin's Keys</h3>
 There's something not-there that was there before. A tacky tool or charm of some sort...? You noticed it in a memory between Justin and Erin.\
 <<if hasVisited("you distracting Justin in front of Bram's house")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Marijuana [item]
@@ -242,7 +242,7 @@ There's something not-there that was there before. A tacky tool or charm of some
 Oh, yeah, Bram's been growing marijuana for ages. He says it's for medicinal purposes or something. Sure buddy. Whatever you say.\
 <<if hasVisited("Bram and Annie's conversation in the garden")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Crumpled Paper [item]
@@ -250,7 +250,7 @@ Oh, yeah, Bram's been growing marijuana for ages. He says it's for medicinal pur
 A balled up note that Justin had in his pocket before the dinner. There's orange writing on it but that's all you can discern.\
 <<if hasVisited("Justin, Annie, and sriracha")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Petals [item]
@@ -258,7 +258,7 @@ A balled up note that Justin had in his pocket before the dinner. There's orange
 Purple. Erin was scattering them around the entrance to the graveyard for some cockamamie reason.\
 <<if hasVisited("Annie and Erin talking about warding you away")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Sharpie [item]
@@ -266,7 +266,7 @@ Purple. Erin was scattering them around the entrance to the graveyard for some c
 It's Annie's and it's orange. She was using it to write something down after your and her...disagreement.\
 <<if hasVisited("Justin, Annie, and sriracha")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Wine [item]
@@ -274,7 +274,7 @@ It's Annie's and it's orange. She was using it to write something down after you
 A dusty bottle of Loup-Rouge wine, bought by Bram a couple days ago, floating in a honeycomb in Terry's mind.\
 <<if hasVisited("you and Bram drinking wine")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Corkscrew [item]
@@ -282,7 +282,7 @@ A dusty bottle of Loup-Rouge wine, bought by Bram a couple days ago, floating in
 A //really// tacky shark-shaped keychain corkscrew that Bram used to open your bottle of Loup-Rouge.\
 <<if $visitedPages contains "you distracting Justin in front of Bram's house">>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 
 :: Werewolf [item]
@@ -290,20 +290,20 @@ A //really// tacky shark-shaped keychain corkscrew that Bram used to open your b
 You, apparently? According to Erin? That's what she was telling Annie anyway.\
 <<if hasVisited("Erin and Bram brewing you a potion")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Leaves [item]
 <h3>Leaves</h3>
 Some leaves in a bag that Terry got from her boyfriend.\
 <<if hasVisited("Bram realizing the wolfsbane was tampered with", "Terry poisoning your salad")>>
 
-<<include "Used Item">><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Postcard [item noncombinable]
 <h3>Postcard</h3>
 A postcard from a pride parade from who knows how many years ago, with Justin and Annie in the crowd. It was on Annie's mind-fridge.
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Congratulatory Card [item noncombinable]
 <h3>Congratulatory Card</h3>
@@ -313,25 +313,25 @@ Found stuffed in Justin's weird mind-walls.
 
 ~Erin xoxo"
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Sticky Note [noncombinable item lexa]
 <h3>Sticky Note</h3>
 "There's $24 missing from my purse. You'd better explain when you get home, missy. 11/14" A passive-aggressive sticky note from ages ago stuck to Annie's mind-fridge.
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Consent Form [item noncombinable lexa]
 <h3>Consent Form</h3>
 Dated a few days ago, it's for non-voluntary...well...you know. Found half-buried in the sands of Annie's mind.
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Photograph [item noncombinable lexa]
 <h3>Photograph</h3>
 Teenaged Terry, probably Erin, and some nobody, sitting in front of a plane tree. That's all. Found in Erin's mind.
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Burning Letter [item noncombinable lexa]
 <h3>Burning Letter</h3>
@@ -339,19 +339,19 @@ A letter that is currently and perpetually on fire, in the trash in Erin's mind.
 
 In a looping orange scrawl it says, ""I demand you stop dating my daughter. I know she sneaks over to your and your witch sister's house at night. I won't put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won't have you corrupting Le- " blah blah blah.
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Money [item noncombinable]
 <h3>Money</h3>
 $24 to be exact, found in the vines of Bram's mind-greenhouse.
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Hospital Stickers [item noncombinable lexa]
 <h3>Hospital Stickers</h3>
 Hospital stickers, dozens of them, found in Terry's mind. The earliest is dated 11/14 and is over a decade old. The latest is dated a couple days ago.
 
-<<include "Used Item">>
+<<set $isItemUsed = true>>
 
 :: Used Item [noinv nosave]
 You think you've gotten all the info out of this clue now.

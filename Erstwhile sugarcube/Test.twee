@@ -4,8 +4,8 @@ aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's tes
 [[Testing]]
     <<set $thoughts["Overwork"] = "- blop">>
     <<set $thoughts["Blackmail"] = "- blarp">>
-    <<set $clickedItem to "Aconite">><<include "Add Item">>
-    <<set $clickedItem to "Reminder">><<include "Add Item">>
+    <<set $clickedItem to "Aconite Poison">><<include "Add Item">>
+    <<set $clickedItem to "Medicine Reminder">><<include "Add Item">>
     <<set $clickedItem to "Sigils">><<include "Add Item">>
     <<set $clickedItem to "Potion">><<include "Add Item">>
     <<set $clickedItem to "Straight Tie">><<include "Add Item">>
@@ -17,5 +17,7 @@ aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's tes
     <<set $clickedItem to "Marijuana">><<include "Add Item">>
     <<set $clickedItem to "Wolfsbane">><<include "Add Item">>
     <<set $clickedItem to "Werewolf">><<include "Add Item">>
+    <<set $clickedItem to "Money">><<include "Add Item">>
+    <<set $clickedItem to "Hospital Stickers">><<include "Add Item">>
 :: Testing [lexa]
 <<print $inv.length>>
