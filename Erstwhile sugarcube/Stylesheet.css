@@ -1,41 +1,36 @@
-html .passage{
-    background: white;
-    color: black;
-	font-size: 20px;
-}
-
 body {
     background: white;
     color: black;
+    font-size: 20px;
 }
 
-html[data-tag~="detective"] {
+body[data-tags~="detective"] {
 	background: #d8d8d8;
     color: #545454;
 }
 
 
-html[data-tag~="justin"] {
+body[data-tags~="justin"] {
 	background-color: LightBlue;
 	color: #1c3654;
 }
 
-html[data-tag~="terry"] {
+body[data-tag~="terry"] {
 	background-color: LightYellow;
 	color: #726918;
 }
 
-html[data-tag~="erin"]{
+body[data-tag~="erin"]{
 	background-color: #f0d2f9;
 	color: purple
 }
 
-html[data-tag~="annie"] {
+body[data-tag~="annie"] {
 	background-color: #f9deac;
 	color: #90671a
 }
 
-html[data-tag~="bram"] {
+body[data-tag~="bram"] {
 	background-color: #b3dda6;
 	color: forestgreen;
 }
