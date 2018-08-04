@@ -1,0 +1,21 @@
+:: Start [detective]
+aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's testimony, sandwich, potion, salad added
+
+[[Testing]]
+    <<set $thoughts["Overwork"] = "- blop">>
+    <<set $thoughts["Blackmail"] = "- blarp">>
+    <<set $clickedItem to "Aconite">><<include "Add Item">>
+    <<set $clickedItem to "Reminder">><<include "Add Item">>
+    <<set $clickedItem to "Sigils">><<include "Add Item">>
+    <<set $clickedItem to "Potion">><<include "Add Item">>
+    <<set $clickedItem to "Straight Tie">><<include "Add Item">>
+    <<set $clickedItem to "Bowtie">><<include "Add Item">>
+    <<set $clickedItem to "Article">><<include "Add Item">>
+    <<set $clickedItem to "Erin's Testimony">><<include "Add Item">>
+    <<set $clickedItem to "Sandwich">><<include "Add Item">>
+    <<set $clickedItem to "Salad">><<include "Add Item">>
+    <<set $clickedItem to "Marijuana">><<include "Add Item">>
+    <<set $clickedItem to "Wolfsbane">><<include "Add Item">>
+    <<set $clickedItem to "Werewolf">><<include "Add Item">>
+:: Testing [lexa]
+<<print $inv.length>>

@@ -1,0 +1,40 @@
+::Thoughts [noinv save]
+<<nobr>>
+    <strong>[[Clues]] | [[Link Clues->Inventory]] | Thoughts
+     |  <<linkreplace "Save">>
+            <<script>>
+                if (Save.ok()) { 
+                    Save.slots.save(0);
+                }
+            <</script>>
+            Game saved.
+        <</linkreplace>>
+        <<if $slotA is true>>
+     |      <<linkreplace "Restart">>
+                <span id="restart">This will erase your progress and saves. Are you sure?
+                <<linkreplace "Yes">>
+                    <<script>>
+                        if (Save.slots.has(0)) {
+                            Save.slots.delete(0);
+                            Engine.restart();  
+                        }
+                        if (Save.autosave.has()) {
+                            Save.autosave.delete();
+                            Engine.restart();                            
+                        }
+                    <</script>></span>
+                <</linkreplace>>
+                <<link "No">>
+                    <<replace "#restart">>Restart<</replace>>
+                <</link>>
+            <</linkreplace>>
+        <</if>>
+     | [[Credits]]</strong>
+<</nobr>>
+On this wacky journey of trying to figure out your own murderer, you've discovered a bunch of other things too.
+
+<<print Object.values($thoughts).join("<br>")>>
+
+<<link "Open your eyes.">>
+    <<goto $returnTo>>
+<</link>>

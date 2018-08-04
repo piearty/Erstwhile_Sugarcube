@@ -1,0 +1,23 @@
+::Start2 [noinv]
+It was a pretty good Thanksgiving until you keeled over and died.
+
+The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less <<linkappend "//eavesdropping//">>, regardless of what Bram said,<</linkappend>> and more //surveying//, - it was having the bonding effect you wanted all along.
+
+Yes, everything was going perfectly - that is, until you started feeling, quoth yourself as beads of sweat dripped down your chin, "a bit crappy". "Crappy" turned out to be a terribly understated description of your heart attack, especially with the <<linkappend "vomiting and suffocation">> - which you personally found excessive -<</linkappend>> piled on top of it. Though 911 was called as soon as you started convulsing, and the EMTs tried their damndest to save you, things ended in a non-miraculous way.
+
+In other words, you're a ghost now.
+
+[[Welp.|Title]]
+
+[[Skip Intro and start at the police station.|Police Station]]
+<<nobr>>
+    <<if Save.slots.has(0)>>
+        <<link "Go back to where you were.">>
+            <<script>>
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            <</script>>
+        <</link>>
+    <</if>>
+<</nobr>>

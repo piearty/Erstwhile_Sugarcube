@@ -1,0 +1,12 @@
+::Add Item
+<!--If you haven't picked up an item before-->
+<<nobr>>
+    <<if $inv.length is 0>>
+        <br>
+        <br>
+        You make a note to remember this, because it might be important. As you do, you almost feel it added to your mind, as if that's an actual space you can visit.
+    <</if>>
+<!--Links to item's page and adds it to the inventory-->
+    <br>
+    //(The clue, "[[$clickedItem]]", has been added to your memories.)//<<set $inv.push($clickedItem)>>
+<</nobr>>

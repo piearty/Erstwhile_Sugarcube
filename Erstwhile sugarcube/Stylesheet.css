@@ -1,0 +1,54 @@
+html .passage{
+    
+    color: white;
+	font-size: 20px;
+}
+
+html[data-tag~="detective"] {
+	background-color: #d8d8d8;
+    color: #545454;
+}
+
+
+html[data-tag~="justin"] {
+	background-color: LightBlue;
+	color: #1c3654;
+}
+
+html[data-tag~="terry"] {
+	background-color: LightYellow;
+	color: #726918;
+}
+
+html[data-tag~="erin"]{
+	background-color: #f0d2f9;
+	color: purple
+}
+
+html[data-tag~="annie"] {
+	background-color: #f9deac;
+	color: #90671a
+}
+
+html[data-tag~="bram"] {
+	background-color: #b3dda6;
+	color: forestgreen;
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    color: darkred;
+}
+
+a:active {
+    color: darkred;
+}
+
+.threecolumn {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}

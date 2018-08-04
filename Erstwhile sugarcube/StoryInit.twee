@@ -1,0 +1,25 @@
+:: StoryInit [nobr]
+<!--Inventory-->
+<<set $inv to []>>
+<<set $thoughts to {}>>
+
+<!--Crafting-->
+<<set $poisons to ["Wolfsbane", "Leaves", "Aconite Poison"]>>
+
+<!--Mort's ranting when you come across an item related to Lexa.-->
+<<set $lexaItemAnger to [
+    "But who cares, right?",
+    "You don't know why //anyone// would be interested in this stuff.", 
+    "Dammit, you put this crap in the past for a reason.", 
+    "You think //maybe// you should stop looking at this stuff before you get too irritated. That'd be bad, wouldn't it?", 
+    "You're getting sick of looking at this. You don't want to bother with it any further.", 
+    "You'd better focus on the actual problem, you know, your //murder//.", 
+    "You feel nauseous just looking at it. You'd better not investigate this anymore.", 
+    "Pursuing a dead end...Why can't people just learn to move on?", 
+    "Ugh."]>>
+
+<!--Have you visited a testimony yet?-->
+<<set $testimonyVisited to false>>
+
+<!--Have you visited a mind yet?-->
+<<set $mindVisited to false>>

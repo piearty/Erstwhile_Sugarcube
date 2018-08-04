@@ -1,0 +1,34 @@
+::PassageFooter
+<<nobr>>
+<!--Indicates this item can't be combined-->
+    <<if tags().includes("noncombinable")>>
+        <br>
+        This probably isn't relevant to the murder
+        <<if !tags().includes "lexa">>
+            but you are curious about it...
+            
+        <</if>><br>
+    <</if>>
+<!--If something is related to Lexa, display a randomly selected angry statement from Mort.-->
+    <<if tags().includes("lexa")>>
+        <br>
+        <<print either($lexaItemAnger)>>
+        <br>
+    <</if>>
+<!--Unless a passage is an item, a memory, or is not supposed to display an inventory, add the inventory link to every passage-->
+    <<if tags().includes("noinv") or tags().includes("item") or tags().includes("memory")>>
+<!--Do nothing-->
+    <<else>>
+<!--Saves where you were and sends you to the inventory page if clicked-->
+        <<link "<br>Remember.">>
+            <<set $returnTo to passage()>>
+            <<goto "Clues">>
+        <</link>>
+    <</if>>
+<!--If passage is an item, add a Back button-->    
+    <<if tags().includes("item")>>    
+        <<link "<br>Back to what you were doing.">>
+            <<goto previous()>>
+        <</link>>
+    <</if>>
+<</nobr>>

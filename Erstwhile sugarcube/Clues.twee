@@ -1,0 +1,68 @@
+::Clues [noinv save]
+<<nobr>>
+    <strong>Clues
+    <<if $inv.length > 1>>
+        | [[Link Clues->Inventory]]
+    <</if>>
+    <<if $thoughts.length is not 0>>
+        | [[Thoughts]]
+    <</if>>
+     |  <<linkreplace "Save">>
+            <<script>>
+                if (Save.ok()) { 
+                    Save.slots.save(0);
+                }
+            <</script>>
+            Game saved.
+        <</linkreplace>>
+        <<if $slotA is true>>
+     |      <<linkreplace "Restart">>
+                <span id="restart">This will erase your progress and saves. Are you sure?
+                <<linkreplace "Yes">>
+                    <<script>>
+                        if (Save.slots.has(0)) {
+                            Save.slots.delete(0);
+                            Engine.restart();  
+                        }
+                        if (Save.autosave.has()) {
+                            Save.autosave.delete();
+                            Engine.restart();                            
+                        }
+                    <</script>></span>
+                <</linkreplace>>
+                <<link "No">>
+                    <<replace "#restart">>Restart<</replace>>
+                <</link>>
+            <</linkreplace>>
+        <</if>>
+     | [[Credits]]</strong>
+<</nobr>>
+<<if $inv.length > 0 and not hasVisited("Clues")>>
+You close your (technically nonexistent) eyes.
+
+As you do, you feel yourself pulled into a space with all the clues you've taken, so to speak, sitting there like actual objects.
+
+Oh. You guess your mind //is// a place you can actually visit. Is this some ghostly power thingamajig? Weird.\
+<</if>>\
+<<if $inv.length > 0>>
+You have these clues:
+
+<<include "List Inventory">>
+
+<<else>>
+You remember a lot of things, but nothing that seems important right now.
+
+<</if>>\
+<<if $inv.length > 1>>
+There are still gaps in the story. You can try [[linking|Inventory]] two clues if you want, see if there's a connection.
+
+<</if>>\
+<<if $thoughts.length > 0>>
+You can [[review->Thoughts]] the things you've figured out, now.
+
+<</if>>\
+<<nobr>>
+    <<link "Open your eyes.">>
+        <<goto $returnTo>>
+    <</link>>
+<</nobr>>
