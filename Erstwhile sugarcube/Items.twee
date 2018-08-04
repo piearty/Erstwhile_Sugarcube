@@ -1,0 +1,357 @@
+:: Salad [item]
+<h3>Salad</h3>
+It's a caesar salad with vinaigrette. Terry and Justin got it for you when you couldn't eat anything at the party. It was on the detective's mind-desk.\
+<<if hasVisited("Justin and Terry at the grocery store", "Terry poisoning your salad")>>
+
+<<include "Used Item>><</if>>
+
+:: Aconite Poison [item]
+<h3>Aconite Poison</h3>
+This is what you were poisoned with, apparently. It was written on the autopsy report on the detective's mind-desk.\
+<<if hasVisited("the detective ruminating about the murder weapon", "Terry poisoning your salad")>>
+
+<<include "Used Item">><</if>>
+
+:: Sandwich [item]
+<h3>Sandwich</h3>
+A BLT given to you by Annie out of pity at the feast. It was on the detective's mind-desk.\
+<<if hasVisited("your fight with Annie", "Terry poisoning your salad")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Potion [item]
+<h3>Potion</h3>
+A weird herbal potion Erin forced upon you. Apparently it was supposed to be for (linkreveal: "protection">>, as if that did any good]. It's dark and it looks like there are entire leaves and berries in there, which, considering how hard it was to swallow, doesn't surprise you at all. It was on the detective's mind-desk.\
+<<if hasVisited("you drinking Erin's potion", "Erin's night", "Erin and Bram brewing you a potion", "Terry poisoning your salad")>>
+<<include "Used Item">><</if>>
+
+
+:: Wolfsbane [item]
+<h3>Wolfsbane</h3>
+A purple plant that's apparently used for protection, especially against lycanthropy. Even though it's extremely, extremely poisonous. You don't pretend to understand.
+
+Bram was telling Annie about it while he sold her some (linkreveal: "weed.">> - Oh sorry. "Medicine".] Some of the leaves of the one in the greenhouse have been ripped off.\
+<<if hasVisited("the detective ruminating about the murder weapon", "Bram realizing the wolfsbane was tampered with", "Annie and Erin talking about warding you away", "Terry poisoning your salad")>>
+
+<<include "Used Item">><</if>>
+
+:: Justin's Testimony [item]
+<h3>Justin's Testimony</h3>
+"Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before the day itself. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn't because I was busy, but..."
+
+"Yeah, `[I was busy with]` patrols, talks with schools, //more// patrols...I mean. You know how it is."
+
+"Mort wasn't helping out because he was also busy with RNA matters. Apparently." He mutters the last word.
+
+"So when we met on Thanksgiving day at Annie's place to touch base, he got all angry that there were nuts in every dish that'd been cooked. Some nut allergy. I - I had no idea.
+
+"Annie and he had some sort of fight, since she had created the menu...That happened before the dinner. Kinda turned everything sour from the start. Thinking about Mort sitting and eating nothing, well, even I felt sorry for him. So the wife suggested we get him a salad. Sure. We forgot dressing though, so she had me go back to get it.
+
+"Then we prepared for the dinner for a couple hours, it started, and...well.
+
+"I hope you all find the killer soon and bring them to justice. I didn't exactly call Mort a friend - I - to be completely honest I didn't like him very much, but I-" He clears his throat. "I never wished him dead."\
+<<if hasVisited("Justin and Terry at the grocery store")>>
+
+<<include "Used Item>><</if>>
+
+:: Terry's Testimony [item]
+<h3>Terry's Testimony</h3>
+"I-I just can't believe - I'm - oh my word I can't do this. Sorry, I need a minute..." She takes a shaky breath and fans herself. "It's just, I never, I never thought that - Mort of all people!
+
+"Sorry yes, what happened...t-the dinner. W-well, the RNA thought up the idea a while ago. A big feast. E-everyone was so excited! Mort, Justin, and I didn't cook but we were all pitching in in some way. B-but then - we found out M-Mort couldn't eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he's been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I'd do if he wasn't there for me -
+
+"Sorry, right...
+
+"Yes, we drove to the grocery to get a small salad for Mort. It was the least we could do so the poor man could have something to eat...poor Mort, oh!
+
+"We headed to the park after that... to help set up, you know? When the dinner started, before the poor man could die of hunger, we gave Mort our salad - oh, and Annie, she gave him a sandwich. Then Erin...Erin gave him a silly little potion, going on and on about protection or something. He drank it, though I can't imagine why, and well...! Next thing you know he's d-dead on the floor!
+
+"That girl, I just - she has no idea what she's doing with her so-called magic, I wouldn't be surprised if drinking that finally...oh I don't want to think about it! But she's done terrible things before...regardless, whoever did it should be ashamed..."\
+<<if hasVisited("Justin and Terry at the grocery store")>>
+
+<<include "Used Item">><</if>>
+
+:: Erin's Testimony [item]
+<h3>Erin's Testimony</h3>
+"I knew this would happen...
+
+"See, the association came up with the idea for the dinner, and everyone was really excited, but there was a negative aura in the air, I could feel it.
+
+"`[Why?]` Well I think that's obvious.
+
+"Well, earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We'd baked everything the day before- Annie, Bram, and I, and for some reason Mort didn't like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie's aura flared up, and of course everyone loves Annie so everyone else got frustrated-
+
+"Well, Mort didn't want to eat any of the dishes- couldn't? He said something like that.  I kept trying to give him the potion, but he ignored me! Everyone ignores me. He left all angrily, and then Justin and Terry went off to get Mort something, salad maybe? I didn't pay too much attention. Well, I did, but not because I was stalking them or anything. I was just concerned about Justin. He hasn't been talking to me at all. I tried to tell him about the bad energies and signs I've felt lately, but he wouldn't listen, and then this had to go and happen!
+
+"Anyway, we all set up the dinner for a couple hours. Then I gave Mort the potion at the party. I watched him drink it and then went back to the party, feeling better, until...
+
+"I had prepared the potion for Mort because I thought he was in danger, and I was right.
+                      
+"Ingredients that protect `[were in the potion]`, of course.
+
+"I thought the potion would work. It was supposed to protect him, though I guess he never did want my protection."\
+<<if hasVisited("you drinking Erin's potion")>>
+
+<<include "Used Item">><</if>>
+
+:: Annie's Testimony [item]
+<h3>Annie's Testimony</h3>
+"I guess it coulda been `[a good day]`, but there's a dead man. Did you forget that or somethin'?
+
+"Where are we startin'? We fought this morning...
+
+"Well, all of yesterday Erin, Bram, and I were baking. Justin couldn't make it, busy as always, and Terry is a terrible cook. Mort was no help. If he'd been there we wouldn't have had -
+
+"I was getting `[to the fight]`, officer. If he'd been there we wouldn't have had the fight. He was sayin' he wouldn't eat the food, and naturally I took offense to that, I mean, spendin' hours in the kitchen cookin' just to have your friend refuse because he don't like nuts!
+
+"Now, if only he'd helped he coulda said that while we were baking. //Before// I put the nuts in everything. And after Justin said it'd be fine, encouraged me even...hmph.
+
+"I couldn't just let the man starve. After we exchanged some fighting words, I made him a sandwich. Everyone else went off to the party- except Justin and Terry. They went to the store.
+
+"I gave `[the sandwich]` to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?" She paused. "I wish we'd made up. Feels wrong to have ill thoughts of the dead."\
+<<if hasVisited("your fight with Annie", "Terry giving Justin the nut article")>>
+
+<<include "Used Item">><</if>>
+
+:: Bram's Testimony [item]
+<h3>Bram's Testimony</h3>
+"Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn't there though, so where should I start, officer? I don't want to slow you down with irrelevant info, ha.
+
+"O-okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin's idea apparently- I don't know if Justin knew about the allergy, of course! Anyway, that's why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It's like she doesn't know what allergies are.
+
+"Mort left, which was really uncomfortable, but we tried to finish the meeting anyway. Then we all went to the party. Or the store. Or the kitchen. I went to the party to set up.
+
+"B-before you start asking about the wolfsbane in the greenhouse, Erin asked me to plant it. She uses it for spells. But I wasn't growing it to poison Mort!
+
+"W-wait, what are you writing down? I said I wasn't - "
+
+<<include "Used Item">>
+
+:: Petition [item lexa]
+<h3>Petition</h3>
+Your petition for the park plaque, ripped into itty bitty pieces in Terry's mind. You can make out -ETITION, memori-, -xa, and what look like parts of signatures.\
+<<if hasVisited("Terry's phone conversation")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Straight Tie [item]
+<h3>Tie</h3>
+A navy blue, striped straight tie that Terry was holding for someone she was talking to on the phone. That's odd.\
+<<if hasVisited("Terry and Bram's conversation in her shop")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Old Newspaper [item lexa]
+<h3>Old Newspaper</h3>
+A yellowing newspaper on Justin's mind-coffee-table. Terry and another girl are on the front page, chained to a plane tree. The headline says, "**Local Activists Protest Paving Over Park**".\
+<<if hasVisited("Terry's phone conversation")>>
+
+<<include "Used Item">><</if>>
+
+:: Shifty Person [item]
+<h3>Shifty Person</h3>
+A person Erin saw sneaking about at a godforsaken time in the night. They had a noticeable limp and were carrying something long that glinted silver.\
+<<if hasVisited("Terry's boyfriend giving her some leaves")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Cane [item]
+<h3>Cane</h3>
+A long, silver tipped cane that Terry's paramour uses. You saw him with it when he left Terry's wine store.\
+<<if hasVisited("Terry's boyfriend giving her some leaves")>>
+
+<<include "Used Item">><</if>>
+
+:: Bowtie [item]
+<h3>Bowtie</h3>
+A gift from Erin to Justin, to go with his many, //many// other bowties. You noticed it in a memory between the two.\
+<<if hasVisited("Terry and Bram's conversation in her shop")>>
+
+<<include "Used Item">><</if>>
+
+:: Medicine Reminder [item]
+<h3>Medicine Reminder</h3>
+"Pay Bram for medicine" - a self-reminder on Annie's mind-fridge.\
+<<if hasVisited("Bram and Annie's conversation in the garden")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Sigils [item]
+<h3>Sigils</h3>
+Lots and lots of sigils, most all of them labeled for 'protection'. There's also a sigil to 'renew energy and de-stress' marked for Justin. Found in Erin's mind, of //course//.\
+<<if hasVisited("Erin's night", "Justin and Erin setting up for the dinner")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Nut Article [item]
+<h3>Nut Article</h3>
+It's an article about the health benefits of nuts, with a sticky note from Terry on it, given to Justin.\
+<<if hasVisited("Terry giving Justin the nut article")>>
+
+<<include "Used Item">><</if>>
+
+:: Gibbous Charm [item]
+<h3>Gibbous Charm</h3>
+A nearly-full-moon charm. It was hanging in the sky in Erin's mind.\
+<<if hasVisited("Justin and Erin being siblings")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Gift Request [item]
+<h3>Gift Request</h3>
+Found in Bram's mind-greenhouse.
+
+"Thanks ahead of time for the gift I expect you're getting me. Tell you what, when you get the stuff, why don't you share it with me? We'll make a toast to old friends. Make sure it's aged over a decade, don't cheap out on me here. You know the brand I like. - Mort"\
+<<if hasVisited("you and Bram drinking wine")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Caf Patch [item]
+<h3>Caf Patch</h3>
+One of a boxful of caffeine patches found in Justin's mind. "8 hours of energy guaranteed!" according to the packaging. They're probably his.\
+<<if hasVisited("Justin and Erin setting up for the dinner")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Crescent Charm [item]
+<h3>Crescent Charm</h3>
+A crescent moon charm found in Justin's mind.\
+<<if hasVisited("Justin and Erin being siblings")>>
+
+<<include "Used Item">><</if>>
+
+:: Justin's Keys [item]
+<h3>Justin's Keys</h3>
+There's something not-there that was there before. A tacky tool or charm of some sort...? You noticed it in a memory between Justin and Erin.\
+<<if hasVisited("you distracting Justin in front of Bram's house")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Marijuana [item]
+<h3>Marijuana</h3>
+Oh, yeah, Bram's been growing marijuana for ages. He says it's for medicinal purposes or something. Sure buddy. Whatever you say.\
+<<if hasVisited("Bram and Annie's conversation in the garden")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Crumpled Paper [item]
+<h3>Crumpled Paper</h3>
+A balled up note that Justin had in his pocket before the dinner. There's orange writing on it but that's all you can discern.\
+<<if hasVisited("Justin, Annie, and sriracha")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Petals [item]
+<h3>Petals</h3>
+Purple. Erin was scattering them around the entrance to the graveyard for some cockamamie reason.\
+<<if hasVisited("Annie and Erin talking about warding you away")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Sharpie [item]
+<h3>Sharpie</h3>
+It's Annie's and it's orange. She was using it to write something down after your and her...disagreement.\
+<<if hasVisited("Justin, Annie, and sriracha")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Wine [item]
+<h3>Wine</h3>
+A dusty bottle of Loup-Rouge wine, bought by Bram a couple days ago, floating in a honeycomb in Terry's mind.\
+<<if hasVisited("you and Bram drinking wine")>>
+
+<<include "Used Item">><</if>>
+
+
+:: Corkscrew [item]
+<h3>Corkscrew</h3>
+A //really// tacky shark-shaped keychain corkscrew that Bram used to open your bottle of Loup-Rouge.\
+<<if $visitedPages contains "you distracting Justin in front of Bram's house">>
+
+<<include "Used Item">><</if>>
+
+
+:: Werewolf [item]
+<h3>Werewolf</h3>
+You, apparently? According to Erin? That's what she was telling Annie anyway.\
+<<if hasVisited("Erin and Bram brewing you a potion")>>
+
+<<include "Used Item">><</if>>
+
+:: Leaves [item]
+<h3>Leaves</h3>
+Some leaves in a bag that Terry got from her boyfriend.\
+<<if hasVisited("Bram realizing the wolfsbane was tampered with", "Terry poisoning your salad")>>
+
+<<include "Used Item">><</if>>
+
+:: Postcard [item noncombinable]
+<h3>Postcard</h3>
+A postcard from a pride parade from who knows how many years ago, with Justin and Annie in the crowd. It was on Annie's mind-fridge.
+
+<<include "Used Item">>
+
+:: Congratulatory Card [item noncombinable]
+<h3>Congratulatory Card</h3>
+Found stuffed in Justin's weird mind-walls.
+
+"Congratulations! (textstyle: "strike">>It's] You're a boy!
+
+~Erin xoxo"
+
+<<include "Used Item">>
+
+:: Sticky Note [noncombinable item lexa]
+<h3>Sticky Note</h3>
+"There's $24 missing from my purse. You'd better explain when you get home, missy. 11/14" A passive-aggressive sticky note from ages ago stuck to Annie's mind-fridge.
+
+<<include "Used Item">>
+
+:: Consent Form [item noncombinable lexa]
+<h3>Consent Form</h3>
+Dated a few days ago, it's for non-voluntary...well...you know. Found half-buried in the sands of Annie's mind.
+
+<<include "Used Item">>
+
+:: Photograph [item noncombinable lexa]
+<h3>Photograph</h3>
+Teenaged Terry, probably Erin, and some nobody, sitting in front of a plane tree. That's all. Found in Erin's mind.
+
+<<include "Used Item">>
+
+:: Burning Letter [item noncombinable lexa]
+<h3>Burning Letter</h3>
+A letter that is currently and perpetually on fire, in the trash in Erin's mind.
+
+In a looping orange scrawl it says, ""I demand you stop dating my daughter. I know she sneaks over to your and your witch sister's house at night. I won't put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won't have you corrupting Le- " blah blah blah.
+
+<<include "Used Item">>
+
+:: Money [item noncombinable]
+<h3>Money</h3>
+$24 to be exact, found in the vines of Bram's mind-greenhouse.
+
+<<include "Used Item">>
+
+:: Hospital Stickers [item noncombinable lexa]
+<h3>Hospital Stickers</h3>
+Hospital stickers, dozens of them, found in Terry's mind. The earliest is dated 11/14 and is over a decade old. The latest is dated a couple days ago.
+
+<<include "Used Item">>
+
+:: Used Item [noinv nosave]
+You think you've gotten all the info out of this clue now.
