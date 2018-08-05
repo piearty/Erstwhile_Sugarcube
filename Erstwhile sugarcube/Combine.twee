@@ -1,13 +1,50 @@
 :: Combine [widget nobr]
 <<widget "combine">>
-    <<if $selected.includesAll($args[0], $args[1])>>
+    <<elseif $selected.includesAll($args[0], $args[1])>>
         <<set $combo = $args[2]>>
         <<set $selected = []>>
         <<goto $combo>>
-    <</if>>
 <</widget>>
 
-::Inventory
+::Inventory [noinv save]
+<<nobr>>
+    <strong>[[Clues]]
+    <<if $inv.length > 1>>
+        | Inventory
+    <</if>>
+    <<if $thoughts.length is not 0>>
+        | [[Thoughts]]
+    <</if>>
+     |  <<linkreplace "Save">>
+            <<script>>
+                if (Save.ok()) { 
+                    Save.slots.save(0);
+                }
+            <</script>>
+            Game saved.
+        <</linkreplace>>
+        <<if $slotA is true>>
+     |      <<linkreplace "Restart">>
+                <span id="restart">This will erase your progress and saves. Are you sure?
+                <<linkreplace "Yes">>
+                    <<script>>
+                        if (Save.slots.has(0)) {
+                            Save.slots.delete(0);
+                            Engine.restart();  
+                        }
+                        if (Save.autosave.has()) {
+                            Save.autosave.delete();
+                            Engine.restart();                            
+                        }
+                    <</script>></span>
+                <</linkreplace>>
+                <<link "No">>
+                    <<replace "#restart">>Restart<</replace>>
+                <</link>>
+            <</linkreplace>>
+        <</if>>
+     | [[Credits]]</strong>
+<</nobr>>
 <<set $selected = []>>
 Click on two clues to try to link them.
  
@@ -21,7 +58,13 @@ Click on two clues to try to link them.
     <</for>>
 <</if>>
  
-<<if $selected.length == 2>><br>[[Combine|Combine Selected]]<br><</if>>
+<<if $selected.length == 2>>
+    <br>
+    <<linkreplace "Combine">>
+        <<include "Combine Selected">>
+    <</linkreplace>>
+    <br>
+<</if>>
  
 <<if $selected.length > 0>>
     <<link "Reset selected">>
@@ -29,10 +72,10 @@ Click on two clues to try to link them.
         <<replace "#Selected">>
             <<include "List Selected">>
         <</replace>>
-    <</link>> (You can also click a 3rd item to reset!)<br>
+    <</link>> (You can also click a 3rd item to switch to it!)<br>
 <</if>>
 
-<<if $selected.length > 2>>
+<<if $selected.length > 1>>
     <<set $selected = []>>
         <<replace "#Selected">>
             <<include "List Selected">>
@@ -44,7 +87,7 @@ Click on two clues to try to link them.
 <<if $inv.length > 0>>
     <<for _n, _item range $inv>>
         <<if passage() == "Clues">>
-            [[_item]]
+            [[_item]],
         <<elseif passage() == "Inventory">>
             <<capture _item>>
                 <<link _item>>
@@ -60,7 +103,10 @@ Click on two clues to try to link them.
  
 :: Combine Selected
 /* 0th level */
-<<combine "Potion" "Erin's Testimony" "you drinking Erin's potion">>
+<<if $selected.includesAll("Potion", "Erin's Testimony")>>
+        <<set $combo = "you drinking Erin's potion">>
+        <<set $selected = []>>
+        <<goto $combo>>
 
 <<combine "Wine" "Gift Request" "you and Bram drinking wine">>
 
@@ -104,16 +150,19 @@ Click on two clues to try to link them.
 <<combine "Leaves" "Wolfsbane" "Bram realizing the wolfsbane was tampered with">>
 	
 <!--8th level-->
-(elseif: $selected contains any of $poisons and $selected contains "Salad")[(unless: $thoughts contains "Bram realizing the wolfsbane was tampered with" and $thoughts contains "the detective ruminating about the murder weapon")[This very well may be the combo that killed you, but you don't want to jump to conclusions just yet. You think you should figure some more things out first.(set: $fail to it + 1)]
-(else:)[(set: $combo to "Terry poisoning your salad")
-	(display: "Combovaluation")
-	]]
+<<if $selected.includesAny("Wolfsbane", "Leaves", "Aconite Poison") and $selected.includes("Erin's Testimony") and !$thoughts.includesAll("Bram realizing the wolfsbane was tampered with", "the detective ruminating about the murder weapon")>>
+    This very well may be the combo that killed you, but you don't want to jump to conclusions just yet. You think you should figure some more things out first./*<<set $fail += 1>>*/
+<<else>>
+    <<set $combo = "Terry poisoning your salad">>
+    <<set $selected = []>>
+    <<goto $combo>>
+<</if>>
 	
 <!--Invalid combo flavor text-->
 
-(elseif: $selected contains "Photograph" or $selected contains "Sticky Note" or $selected contains "Rap Sheet" or $selected contains "Consent Form" or $selected contains "Hospital Stickers" or $selected contains "Burning Letter")[You doubt at least one of these items is connected to your death.
+<<elseif $selected.includesAny("Photograph", "Sticky Note", "Rap Sheet", "Consent Form", "Hospital Stickers", "Burning Letter")>>You doubt at least one of these items is connected to your death.
 
-(either: ...$lexaItemAnger)(set: $fail to it + 1)]
+either($lexaItemAnger)/*(set: $fail to it + 1)*/
 
 (elseif: $selected contains "Congratulatory Card" or $selected contains "Money" or $selected contains "Postcard")[You doubt at least one of these items is connected to your death.]
 
@@ -133,10 +182,9 @@ Click on two clues to try to link them.
 (elseif: $selected contains "Werewolf" and $selected contains "Wolfsbane")[Well yes, wolfsbane //would// kill a werewolf but...it would kill //anybody//.(set: $fail to it + 1)]
 
 <!--Default failure-->
+<<else>>You can't see how those clues are related, at least not right now./*<<set $fail += 1>>*/<</if>>\
 
-(else:)[You can't see how those clues are related, at least not right now.(set: $fail to it + 1)]\
-
-(if: $fail > 2)[
+<!--(if: $fail > 2)[
 
 Need a |h1>[hint? 
 
@@ -149,7 +197,7 @@ Need a |h1>[hint?
 "You can combine clues found from unlocked memories to unlock even //more// memories!",
 "A certain set of clues can be combined only after you deduce a connection between them by unlocking certain memories. It should be obvious when that happens.",)]]]\
 
-<!--(if: $fail > 9)[
+(if: $fail > 9)[
 Need a [[bigger hint?->Hints]]]-->
  
 :: Select Item
@@ -162,10 +210,3 @@ Need a [[bigger hint?->Hints]]]-->
 /* Refresh the page. */
 <<replace "#Selected">><<include "List Selected">><</replace>>
 <<replace "#Inventory">><<include "List Inventory">><</replace>>
- 
-:: cheesecake
-Cheesecake:
- 
-Delicious!
-<<set $inv.push("cheesecake")>>
-[[Inventory]]
