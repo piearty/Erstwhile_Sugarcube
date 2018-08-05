@@ -4,3 +4,5 @@ if (Save.slots.has(0)) {
 } else {
     State.variables.slotA = false;
 }
+
+::PassageHeader

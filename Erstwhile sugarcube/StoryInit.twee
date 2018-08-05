@@ -3,9 +3,6 @@
 <<set $inv to []>>
 <<set $thoughts to {}>>
 
-<!--Crafting-->
-<<set $poisons to ["Wolfsbane", "Leaves", "Aconite Poison"]>>
-
 <!--Mort's ranting when you come across an item related to Lexa.-->
 <<set $lexaItemAnger to [
     "Anyway, who cares, right?",
