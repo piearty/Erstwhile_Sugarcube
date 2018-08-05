@@ -1,0 +1,614 @@
+:: the detective ruminating about the murder weapon [memory detective]
+<<if !$thoughts["the detective ruminating about the murder weapon"]>>\
+    <<set $thoughts["the detective ruminating about the murder weapon"] = "- You were killed by ingesting wolfsbane. Defeated by a plant, and not even the one you're allergic to. Unbelievable. (aconite + wolfsbane)">>\
+<</if>>\
+You're back in that small grey office, though it's distinctly less blurry and dream-like now. The detective is hunched in the chair next to their desk, muttering to themself. You float closer to peer over their shoulder.
+
+In one hand they're holding the autopsy report, your autopsy report; the other hand is running through their hair as they think.
+
+"Maybe it //was// the gardener," they mutter. "I mean, growing wolfsbane in his garden...they found the partially digested leaves in the corpse's stomach. And where else are you going to get aconite? That's gotta be it. Right?"
+
+Seriously? Wolfsbane? You can't believe it. You were offed by a garden flower.
+
+A heavy sigh. "But on the other hand, that's just so neat and easy. I should know better than anyone that these cases are never so simple." They chuckle softly to themself.
+
+As the detective continues to think aloud, the [[memory->Clues]] drips away.
+
+:: Bram and Annie's conversation in the garden [memory annie]
+<<if !$thoughts["Bram and Annie's conversation in the garden"]>>
+    <<set $thoughts["Bram and Annie's conversation in the garden"] = "- Annie uses Bram's marijuana medicinally, though she couldn't pay last time. (marijuana + reminder)">>
+<</if>>\
+A murmuring of voices greets you first, then bright colors. It's daylight streaking across the community garden - the real one - and Bram is there talking to Annie, who is seated on a white stone bench. 
+
+Bram hands a small brown bag over to Annie, and she takes out a small notepad. "I can't pay you right now," she says regretfully, "but-" 
+
+"I know," Bram interrupts. "You can pay me later." 
+
+Annie hums in acknowledgement and makes a note to herself. "Y'know," she says, "it never seemed quite right to me that there're illegal plants."
+
+Bram shrugs. "Well, you know how it is. Not all laws make sense, and some people are just too harsh about what's wrong or right."
+
+"If you're gonna bad mouth Justin, I'm not here for it," Annie says matter-of-factly as she put the bag into her purse.
+
+Bram opens and closes his mouth a couple times. "Of course not." He continues. "It //is// pretty weird that it's illegal, isn't it? I mean, I feel like the law - not all of it," he adds quickly in response to another warning look from Annie, "but a lot of it, associates the stuff with, you know, teenage stoners. Historical precedent, I guess? But there are people who are using it medicinally," he gestures to her and she nods, "and I don't see why that's not alright. At least it's helping people. Unlike some plants out there..."
+
+"What do ya mean by that?" Annie closes her eyes and tilts her head up to bask in the sunlight.
+
+"Um, uh...there's a lot of poisonous plants that probably should be banned but aren't."
+
+"I can't see why them poisonous species would need to be banned unless someone was growin' them on purpose. And I can't think of any good reason for that."
+
+"Well, actually, I am, uh, doing that," Bram says awkwardly, rubbing his neck.
+
+"What?" She frowns disapprovingly.
+
+"I'm growing wolfsbane. Every part of it is poisonous: stem, leaves, petals; it's dangerous just to touch it. It's fascinating really..." he trails off at Annie's hard stare. "Uh, I'm not doing it not to hurt anyone though, I swear...! It's just, Erin uses it for protection. Against lycanthropy, I think, but I'm not sure." Annie raises an eyebrow, and Bram shrugs again. "Witchcraft. That's all I got. I'm growing it over here, I can show y- huh."
+
+"Somethin' wrong?"
+
+Bram has walked over to a bed that's labeled: CAUTION, DO NOT TOUCH. There's a purple flower here, and it looks a bit mishandled. "Some of the leaves are ripped off." He pales. "That's. That's not good."
+<<set $clickedItem to "Wolfsbane">><<include "Add Item">>
+
+As this is said, the scene starts to smear and fade like mixed paint, and you find yourself back in your [[memories->Clues]] again.
+
+:: Erin's night [memory erin]
+<<if !$thoughts["Erin's night"]>>\
+    <<set $thoughts["Erin's night"] = "- Erin didn't take your taking down her sigils well at all and decided to put up more. (potion + sigils)">>\
+<</if>>\
+A memory swirls into view. The scene is dark, but Erin's blonde hair manages to refract the light from the dull streetlamps anyway, making her stand out noticeably as she walks down the boulevard. You almost make a note to check the last time the bulbs were changed, but then you remember you are dead. Bummer. 
+
+She gives each house on the block a hard stare, frowning more and more as she walks along. Pieces of tape and paper cling to the doors she passes, and you recognize them as the remnants of the sigils you took down. Her expression gets darker with every barren door.
+
+Abruptly, she stops in the middle of the sidewalk and makes an annoyed noise, then digs for something in her purse. To your <<linkappend "surprise")[ and dismay], it's another sigil - you didn't realize she made <<linkappend "//more//">>(You can't even take them down now!)<</linkappend>>. She stomps up to a house and angrily fixes it on the door.
+
+"He can't appreciate when someone is just trying to help can he?" she mutters, more bitterly than you knew was possible for her. Adopting a nasally <<linkappend "tone,">>(your voice sounds nothing like that)<</linkappend>> she quotes, "'You can't do this, Erin.' 'Vandalism is a crime, Erin.' 'Stop putting sigils up or I'll kick you off the association and call the police, Erin.'" She gives a sharp little laugh. "As if the police would care. I just want to protect everyone, and you're not stopping me." 
+
+Continuing along the road out of the residential area and into the town proper, Erin puts sigils up on various buildings until she reaches the graveyard. For a moment, you wonder if she's going to go inside, and if you have the nerve to follow her. Instead, she mouths something that looks like "this'll show him" and begins scattering violet petals around the front gate.
+
+After a few moments of scattering petals and chanting... something, she turns back toward the street and her eyes widen, her mouth parting into a little o-shape. You turn to see what she's looking at, and as you do you see someone dressed in dark clothing walking in the distance toward the main part of town, holding something long that glints silver in the moonlight.
+ <<set $clickedItem to "Shifty Person">><<include "Add Item">> <<set $clickedItem to "Petals">><<include "Add Item">>
+
+That's...<<linkappend "suspicious">>
+
+No, that's really, //really// <<linkappend "suspicious">>
+
+Ronton is a quiet neighborhood of like, just shy of a thousand people, and it's not exactly known for its night life. There's never anyone just walking about at who-knows-when in the <<linkappend "morning">>
+
+Well, except for Erin, <<linkappend "apparently">>
+
+And this person<</linkappend>><</linkappend>><</linkappend>><</linkappend>>.
+
+A mix of confusion and concern crosses Erin's face, but she does nothing but watch the man as he limps away. As she turns to head home, the memory [[fades->Clues]].
+
+:: Terry giving Justin the nut article [memory justin]
+<<if !$thoughts["Terry giving Justin the nut article"]>>\
+    <<set $thoughts["Terry giving Justin the nut article"] = "- Terry is why Justin insisted Annie put nuts on the menu. (article + Annie's testimony)">>\
+<</if>>\
+You find yourself in the Whittaker household. The walls are bright and stark with lots of current photos on them. Justin is sitting at a table. Based on the newspaper lying on top of it, it's the day before Thanksgiving. 
+
+Terry walks in. "Justin?"
+
+"Hm?" He looks over. She's holding a few pieces of paper that you recognize as the article.
+
+"You and Annie are in charge of the menu for tomorrow, right?" 
+
+Justin nods. "We are." 
+
+"I've been reading, and," she pauses, but continues with more conviction, "it turns out nuts have a multitude of health benefits. I printed out an article." 
+
+Terry hands Justin the article, and as he's reading, she says, "I just thought that if we're making dinner for the community, it might be good to have the meal be, well, //good// for them."
+
+"That would be nice, yeah." Justin keeps scanning his eyes over the page, though you get the feeling he's processing the conversation rather than actually reading.
+
+"We are a group for the wellbeing of the community. What good would we be if we didn't give them what's best for them?" 
+
+He turns his head to look at her. "I'll ask Annie."
+
+"About adding the nuts to the menu?" She grins widely at him.
+
+Nodding, Justin smiles at his wife. "Yes. What do you think they'd be good in?"
+
+"Oh, I don't know. Everything."
+
+The memory [[fades->Clues]].
+
+:: Bram realizing the wolfsbane was tampered with [bram memory]
+<<if !$thoughts["Bram realizing the wolfsbane was tampered with"]>>\
+    <<set $thoughts["Bram realizing the wolfsbane was tampered with"] = "- Terry's paramour stole the wolfsbane from Bram's garden in the middle of the night. (leaves + wolfsbane)">>\
+<</if>>\
+It's the community garden again. Bram is standing in front of the mishandled wolfsbane plant and Annie seems to have just left. He squats down to get a better look and so do you, as you only got to glance at it before. Wolfsbane is actually a rather pretty plant, you think to yourself, with numerous deep purple petals hanging off a delicate stalk. Its beauty is clear despite this one looking worse for wear, with several petals having fallen to the ground, flowers battered, stem kinked. You examine the remaining leaves on the plant and with a sinking feeling realize they match the leaves that were in the bag Terry's boyfriend gave her.
+
+Oh god. No, maybe there's still a chance -
+
+Bram looks down at the ground next to the plot then presses his finger to something in the dirt. You peer closer; it's some sort of circular indentation. There's another a foot or so away, and another a little further - they must track out of the garden.
+
+"The cane," you hear Bram exhale, and you whirl around to look at him. He has an expression of realization on his face. And then you remember - the boyfriend in question and his damned fancy cane. It must have left imprints in the dirt. That confirms it - he stole the wolfsbane leaves from the garden and gave them to Terry. Which in turn means...
+
+No.
+
+You don't want to consider it. Terry? Kill you? You want to say there's no reason for it, even though a little voice in your mind tells you there are many. Still, how did she? How could she? You decide you'll believe it when you see her in the act. For now, you refuse to think about it.
+
+You [[refuse->Clues]].
+
+:: you drinking Erin's potion [memory erin]
+<<if !$thoughts["you drinking Erin's potion"]>>\
+    <<set $thoughts["you drinking Erin's potion"] = "- You drank Erin's disgusting potion at her insistence. Sigh. (potion + Erin's testimony)">>\
+<</if>>\
+A flash of color, and you find yourself back at the party. You spot yourself sitting at a picnic table. It's- it's weird to see yourself though, you must say. You look pretty good for a man about to die. Your suit is impeccably ironed, and the comb-over is hardly noticeable.
+
+You see Erin approach you- that is, your living counterpart. She's holding out a potion, the same one that she tried to get you to drink all that fateful day. As she corners still living Mort, you think back to how you felt at that moment. You were kind of pissed off because you really did //not// want to drink her concoction - who knows what she put in it? You didn't want to create a fuss though , so you kept either ignoring her or brushing her off instead of telling her to scram like you wanted to.
+
+She'd approached you multiple times before, each time more insistent that you drink the damn thing. As time passed and you kept refusing, she became more agitated. In fact, by the time you agreed to drink whatever it was she made - if only to prevent a scene from happening between RNA members - you were kind of scared of her.
+
+Erin hands the bottle to living Mort, and his face screws into a <<linkappend "sneer">>(apparently you didn't do as good of a job at hiding your frustration as you thought you did)<</linkappend>>. You watch yourself drink the potion, and then the memory [[dissipates->Clues]].
+
+
+:: you and Bram drinking wine [memory bram]
+<<if !$thoughts["you and Bram drinking wine"]>>\
+    <<set $thoughts["you and Bram drinking wine"] = "- You were blackmailing Bram into buying wine for you. What? Does someone have a problem with that? (wine + gift request)">>\
+<</if>>\
+Bram's living room comes into view, and you recognize the scene immediately. This meeting happened a day or so before the party. The living you is sitting on Bram's couch, with Bram in an armchair across from you. Two empty wine glasses stand on the coffee table between the two of you. Bram is trying to open a bottle of Loup-Rouge with a tacky shark-shaped corkscrew, one of those ones that attaches to a keychain. Your living counterpart smirks in amusement.
+
+"I can't get over that silly corkscrew," living Mort says, chuckling.
+<<set $clickedItem to "Corkscrew">><<include "Add Item">>
+
+As Bram finally gets the bottle open, he replies weakly, "Well, I didn't buy it, it was a gift." He sets the bottle down on the coffee table. When he makes no move to pour any wine, Mort reaches over and begins filling up both glasses.
+
+After handing a glass to <<linkappend "Bram">>(who frowns. Hm. You don't remember that)<</linkappend>>, Mort takes a sip from his glass and sighs. You remember what it tasted like, after so long. A buttery, round wine with hints of raspberry and spice. Your favorite. You realize that was the last you'd ever taste of that wine, or any wine. Now you can't taste anything.
+
+Your own voice snaps you back to the scene. "Thanks for getting this. You followed my note to the letter, and this is an especially good year." 
+
+Bram furrows his eyebrows and says, "I'm a little concerned that you're drinking-"
+
+"Oh, it's fine," Mort replies, waving his hand. "Wine doesn't have a high proof, and what's a few glasses with an old friend?" He laughs. "Besides, a little buzz isn't such a bad thing. It helps you forget about the little problems." 
+
+As Bram holds his glass in both hands like a <<linkappend "bowl">>(which is frankly, all wrong. You're surprised you didn't comment on that while you were alive)<</linkappend>>, he stares down into the wine. "Like what," he says dully. 
+
+"Like you growing <<link "marijuana.">><<replace "#m">>
+
+Oh, hold on, was that supposed to be something you were figuring <<linkappend "out?">>
+
+Of course you know about Bram growing marijuana. You've been blackmailing him about it for <<linkappend "ages.">>
+
+You don't have to spell out everything you know all the time, do you? Jeez.<</linkappend>><</linkappend>><</replace>><<link>> for...what was it? "Medicinal purposes"? That's a little problem. Thanks to me, of course."
+<<set $clickedItem to "Marijuana">><<include "Add Item">><span id="m"></span>
+
+Living Mort chuckles again and takes another sip of wine. "Just keep doing this and it won't ever be a big problem. Right?" 
+
+Bram laughs nervously. You didn't realize it while you were living but you're pretty sure he's sweating. "Yep. Right." The memory [[swirls->Clues]] from view.
+
+:: Justin and Terry at the grocery store [justin memory]
+<<if !$thoughts["Justin and Terry at the grocery store"]>>\
+    <<set $thoughts["Justin and Terry at the grocery store"] = "- Terry and Justin got you a salad at the store. (salad + Justin's testimony or Terry's testimony)">>\
+<</if>>\
+The Ronton grocery store forms around you. The Whittakers are here, with their shopping cart containing last minute items for the party - extra paper plates and napkins, sauce, some beer, and the like. 
+
+"Alright? What else do we need?" Terry says peppily.
+
+"Hmm? Oh." Justin blinks slowly and glances at the shopping list. "Looks like all that's left is getting the salad for Mort."
+
+The two roll the cart over to the salad bar and make a garden salad, which is indeed what you remember eating at the party. Or, more accurately, Terry fusses about, picking out vegetables meticulously while Justin mans the cart and tries not to nod off.
+
+"Ok, I think that's good!" she says, tapping the lid on the bowl. You feel like she's forgetting something, though you're not sure what.
+
+Justin jerks awake and looks at her. "Good. Uh. Let's get going then." The two roll their cart toward the checkout.
+
+"Are you alright pookie? You seem even more tired than you usually are." Terry brushes a lock of hair off Justin's forehead.
+
+"Yeah, it's just, I was out so late last night because - "
+
+"Mort?"
+
+"Mort." He sighs, his brow furrowing. "I just wish he could get it through his head that I don't - "
+
+"Now now, this is a time to give thanks for the people around us, not get irrevocably angry at them." She gives Justin a teasing smirk, which he returns. "In fact, I think you should give the salad to him. Say it's from both of us, but hand it to him yourself. Talk to him. It'll be a great way to make amends. Build bridges instead of burning them, you know?"
+
+"Terry, dear, I'm not the one burning th- "
+
+"I know, I know. But please? For me?"
+
+"...Ok," he grunts. "But only for you." 
+
+He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, "Oh sugarbites, we forgot dressing." She looks at Justin meaningfully. It takes a moment for him to respond. "I'll - I'll go get some." He walks off quickly, and the memory [[fades->Clues]].
+
+:: your fight with Annie [memory annie]
+<<if !$thoughts["your fight with Annie"]>>\
+    <<set $thoughts["your fight with Annie"] = "- Man, Annie just does not get the concept of allergies. (sandwich + Annie's testimony)">>\
+<</if>>\
+A memory forms around you, and it's a familiar scene. You're in Annie's kitchen, and everything is calm. This must've been before-
+
+Then you hear Annie shout. "I guess you're just too good for my cooking?"
+
+It's your own voice next. "Are you stupid? I can't eat it. I'd die." You were just being objective.
+
+A spiteful laugh. "That bad, huh? You're not even trying to be kind."
+
+Past Mort tries to justify himself. "You're offended? Annie, I don't need to be kind when //you're// putting //my// life in danger. Who even thought adding nuts to everything was a good idea?" 
+
+"Someone much better than you, for sure." Annie scowls. Current You thinks, belatedly, that she was being a bit stubborn and cruel. It was only natural that you shouted back.
+
+"Annie, if I eat what you made, I will die. I'd say your brains are going with age, but I'm aging pretty well, so I guess It's just you." You were red-faced because you were out of breath, no other reason.
+
+Annie stares at you. "And yet you're surprised I'm offended? You don't think about other people, do you?" You and your prior self both are very aware that Annie is being unreasonable, and past Mort starts making footsteps. 
+
+Through the kitchen window, you see living Mort walk //calmly// out of the house. None of this "storming out" business.
+
+As every else stare in shock at your receding form, Annie lets out a puff of air and whispers, "Mort." She walks into the kitchen, grabs an orange sharpie and a piece of paper, and begins writing.
+<<set $clickedItem to "Sharpie">><<include "Add Item">>
+
+When she's finished, she pulls out bread and other materials.
+
+Slowly, meticulously, she begins making a sandwich.
+
+And the memory [[slips->Clues]] from your sight.
+
+:: Terry's phone conversation [memory terry]
+<<if !$thoughts["Terry's phone conversation"]>>\
+    <<set $thoughts["Terry's phone conversation"] = "- Terry took your idea to put up a memorial as a huge affront and was venting about it to someone over the phone. (newspaper + petition)">>\
+<</if>>\
+You're in the regular, not-metal-walled Whittaker house and Terry is talking to someone on her cell phone, sounding irate. The clock on the wall says it's 8am in the morning and she's got the clothes she wears to the wine store on, so you suppose she's getting ready for work.
+
+Terry adjusts one of the earbuds and continues to talk hotly. "I mean honestly, can you believe him? A plaque in her memory. Huh!"
+
+Oh, here we go. You know what this is about.
+
+"No he can't! I won't stand for it! This is the most horrid, poorly-conceived plan he's had yet. And he gets the unsuspecting town to sign off on it too. They have no idea what they're doing and neither does he."
+
+You're affronted. What in the world was so wrong with your idea that she hated it with such a passion?
+
+"We did! Hell, //Annie// tried to tell him, and he wouldn't even listen to her! Can you imagine? The utter disrespect!"
+
+Now hold on, disrespect? They were the ones being disrespectful! You just wanted to honor her, honor her memory, and they kept saying no. What were you supposed to do? Let her just fade away? Then where would you be? How dare Terry -
+
+"Look, you didn't know her, you can't - She //never// would have wanted this."
+
+Terry said that before too. How would she know?
+
+"Pookie, listen," she says, her expression softening. "We did a tree sit once, for days. It was in the papers, you know? That's how much she loved nature. How much she loved that plane tree. To have some ugly plaque under it, so no one can sit down and have a picnic, or just rest in the shade of the branches? Why would she ever agree to that?"
+
+She...you...if she had just //told// you then maybe -
+
+"He wouldn't ever listen to me, sweetums. He never listens."
+
+You stare at her numbly. You can't believe she thinks of you that way. Terry seems to have calmed down a bit, nodding to whatever the person on the other line is saying. "You know, maybe I will," she says. "Maybe I will."
+
+"Oh!" she says, standing up from the kitchen table. "I almost forgot to say. You left your tie here." She pulls something out of her pocket, a rolled up straight tie - navy blue with stripes. That's...weird. She is talking to Justin, right?
+<<set $clickedItem to "Straight Tie">><<include "Add Item">>
+
+"Yeah," she continues. "Just stop by the shop and I'll give it to you." She hangs up, and the memory [[smears away->Clues]].
+
+
+:: Justin and Erin being siblings [justin memory]
+<<if !$thoughts["Justin and Erin being siblings"]>>\
+    <<set $thoughts["Justin and Erin being siblings"] = "- Erin and Justin are brother and sister. How in the world did you never notice before? (crescent charm + gibbous charm)">>\
+<</if>>\
+You lose sight of what's around you, and then a dark street forms. The moon, nearly full, is high in the sky. Despite the clearly late hour, Justin is walking down the sidewalk, twirling his keys around his finger absentmindedly. Something looks missing from them, though you're not sure what. A charm or tool of some sort? You remember it was kind of tacky, but that's all you recall about it.
+<<set $clickedItem to "Justin's Keys">><<include "Add Item">>
+
+Justin looks annoyed and is grumbling about patrolling.
+
+A figure approaches in the darkness with long blonde locks; when Justin sees her, his eyes widen and he pulls down his cap. He attempts to cross the street - looking both ways, of course, though you don't know why since it's not like any cars are around - but before he can -
+
+"Justin! Is that you? Hi!" The figure waves vigorously and runs up to Justin.
+
+He turns and eyes her. "Erin. It's midnight. Maybe don't go shouting and running down the street?"
+
+"Oh, sorry. How are you?"
+
+"Fine, I guess," he says noncommittally.
+
+"I feel like I haven't talked to you in forever, you keep missing my calls! Or ignoring them." She bites her lip. "I guess that's understandable."
+
+Justin blinks at her. "You know, I've been incredibly busy - "
+
+"No, I don't," she replies sadly, "because you don’t tell me anything anymore. But that's ok. Did you like your birthday presents from me, mom, and dad?"
+
+Wait.
+
+"I, uh. Yes. Thank you. The bowtie was very nice."
+
+""Well, if you insist on wearing those rather than a regular tie, you have to make up for it with fun patterns and cool colors," she sighs.
+<<set $clickedItem to "Bowtie">><<include "Add Item">>
+
+"And what about the charm from our parents?" She holds hers up, the gibbous moon charm, attached to a silvery chain around her neck. "What did you think of that?"
+
+They're //siblings?//
+
+"I...what are you doing out here so late anyway, Erin?"
+
+"You're changing the subject," she pouts.
+
+"And you're avoiding the question." He glances at her bag. "You're not doing what I think you're doing are you?"
+
+Erin nods reluctantly, staring at the pavement. 
+
+In the silence, you examine the two more closely. Now that you think about it, they do look //remarkably// similar. Their noses, their expressions - goddamn, how have you never noticed before? The biggest difference between them is their hair - Erin's is long and blonde, while Justin's is cropped and jet black.
+
+"Look, Justin, please don't tell Mort!" Erin exclaims suddenly. "I - "
+
+"Hey, don't worry about it." He offers her a small half-smile. "I'm not really eager to tell Mort anything, and as long as it's impermanent, who cares?"\
+
+Tell you what? How many secrets were people hiding from you?
+
+She lets out a small squeak of happiness and goes to hug Justin, but he backs away and puts his hand up, looking irritated. Wow. Cold.
+
+Erin's face falls as her arms do, and she starts twirling her hair in her fingers, looking down again. "Well, I answered your question," she says meekly. "So, answer mine? What //did// you think of the crescent charm?"
+
+Justin bites his lip, then clears his throat. "I threw it out," he says gruffly. "I don't need reminders of that anymore. I'd rather just leave it all behind." Then, flatly, "Sorry."
+
+Erin looks like she's about to cry. "It's...I am too." She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears->Clues]].
+
+:: Justin and Erin setting up for the dinner [justin memory]
+<<if !$thoughts["Justin and Erin setting up for the dinner"]>>\
+    <<set $thoughts["Justin and Erin setting up for the dinner"] = "- Justin's been so exhausted he's had to rely on caffeine patches to get through the day. (caf patch + sigils)">>\
+<</if>>\
+The first thing you see as the memory comes into focus is Justin leaning against a plane tree. The rest of the scene fades in - chairs, food, the festive Thanksgiving-themed tablecloths, and the awning draped above them. As you look around you spot other RNA members, including yourself, bustling about and getting the dinner preparations set up.
+
+Justin exhales heavily and sticks his hand in his pocket, rummaging around for something. When he withdraws it, you see he's holding one of those caffeine patches and a crumpled piece of paper. You can't make out what the paper says; all you can tell is that it's written in orange ink.
+<<set $clickedItem to "Crumpled Paper">><<include "Add Item">>
+
+He unceremoniously stuffs the paper back in his pocket, then peels off the backing of the caffeine patch. When he rolls up his sleeve to stick the patch on his wrist, you see that there's a faint lighter patch on his skin, square like the patch is. You realize he must use them a lot. Come to think of it, the bags under his eyes are pretty heavy indeed...
+
+When you look back up, Erin is standing by Justin, and you and he jolt back in surprise. "What is it, Erin?"
+
+"Um, I saw you put that patch on and - " Justin pulls his sleeve down quickly and gives her an irritated look. "-And I thought now would be a good time to give this to you..." Erin pulls a piece of paper out of her bag - the sigil marked for Justin.
+
+"What's this supposed to do?" he says brusquely.
+
+"Well, it's a sigil for renewal of energy and relieving of stress!" Jeez, she's earnest about this stuff. "You should hang it up in your house to charge it with your stress energy and exhaustion, and then you burn it after it's fully charged so it can dispel them. You may not talk to me anymore, but anyone with eyes can see how tired you've been, and I thought it might help."
+
+Justin takes the paper and examines it. "How do you know if it's fully charged?" Erin opens her mouth to speak, but then - "Wait, what am I saying? You know I don't believe in this magic mumbo jumbo," he says, beginning to crumple the paper. At her visible distress, he stops and hands it back to her. "I appreciate the sentiment but I'm fine."
+
+Her brows scrunch together. "But your fatigue! You can't just keep living off of caffeine patches and coffee!"
+
+"Look. Terry gave me this article the other day about the health benefits of nuts; it was almost interesting. Apparently they help with tiredness and all that. And did you notice the dinner?" He gestures to the food being set out. "It's freaking full of nuts. It'll help me more than any magic whatchmacallit. Sorry, but no thanks."
+<<set $clickedItem to "Nut Article">><<include "Add Item">>
+
+Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades->Clues]].
+
+:: Terry and Bram's conversation in her shop [bram memory]
+<<if !$thoughts["Terry and Bram's conversation in her shop"]>>
+    <<set $thoughts["Terry and Bram's conversation in her shop"] = "- Terry is having an affair with a customer at her wine shop, and Bram knows it. (bowtie + straight tie)">>
+<</if>>\
+You find yourself just outside Whittaker Wines. Bram is outside too, staring through the wall-to-floor front windows with a shocked expression on his face, sweat beading on his forehead. You look inside as well, but all you see is some man with a cane talking to Terry. Brown hair, dress shirt; you don't find him terribly relevant at all until Terry pulls on his tie and kisses him on the lean in.
+
+You'd probably pull the same expression Bram is making, were you to still have a face.
+
+Bram goes to the door and makes to open it. Is he going to confront Terry or something? You can't imagine your friend ever doing that. Apparently he's not so sure either, his hand reaching for and pulling back from the bottle-shaped handle in nervosity.
+
+The door opens and Bram starts back, then the man emerges. He leans heavily on the silver-tipped cane he's holding, but otherwise he looks like your average generic 30-something brunette guy. Unremarkable, even. And yet...
+<<set $clickedItem to "Cane">><<include "Add Item">>
+
+He nods to Bram perfunctorily; Bram only eyes him warily in return. As the man walks off, Bram catches the door before it closes and heads hesitantly into the store.
+
+"Hey Bram, how are you?" Terry chirrups. 
+
+"I've, uh, been better," he says haltingly. He glances back at the door and thumbs in that direction. "Hey uh. Who was - who was that? The guy with the cane, I mean."
+
+By gum, he's actually doing it. You never thought he had it in him.
+
+Terry stares blankly at Bram briefly, then blinks and smiles. "He's a customer here." She leans against the counter. "Would you like some help finding a specific brand and year, or are you just browsing?" 
+
+"Just brows- wait, no I'm looking for, uh," Bram pats his pockets for something, presumably a note with what wine he was looking for. After a moment of fruitless searching, he says, "...Are you two friends?"
+
+"What?" 
+
+"You seemed pretty friendly with him." Bram looks away as he speaks, incapable of looking at Terry as he accuses her. 
+
+Standing upright, Terry folds her arms across her chest and replies, "Well, it's not like I can very well run a shop and be rude to my customers." You personally think she's being a little rude right now but you guess you can't blame her, given the situation.
+
+Bram cringes before insisting, "Yeah, but usually store owners don't kiss their customers."
+
+At this, Terry freezes, and Bram just keeps going. "You flirted with him, put a necktie around his neck and, uh, kissed him. Does Justin know that-" 
+
+"No!" Terry shouts. She puts her hands up, almost like a surrender. With an embarrassed blush rapidly blooming on her face, she pleads, "Please don't tell Justin, he'd be heartbroken. He doesn't need to know." 
+
+You just - wow. You're not even sure of what to think at this point.
+
+"Why - nevermind, I don't want to know." Bram stares at Terry, who has slowly drawn her arms back and wrapped them around herself. 
+
+Coldly, she says, "What are you even doing here, Bram? I thought you didn't drink."
+
+"I don- I mean, m-maybe I started?"
+
+You scowl at his slip up as Terry looks at him suspiciously. She opens her mouth to speak but Bram quickly says, "I guess you must've gotten tired of Justin and his bowties, huh? What with that necktie and all."
+
+The tenseness is palpable as the memory [[fades->Clues]].
+
+
+:: Justin, Annie, and sriracha [annie memory]
+<<if !$thoughts["Justin, Annie, and sriracha"]>>\
+    <<set $thoughts["Justin, Annie, and sriracha"] = "- Annie couldn't think to do anything worse to me than put hot sauce in my sandwich and Justin couldn't even bear that. Looks like they're both innocent. (crumpled paper + sharpie)">>\
+<</if>>\
+Lights up on Annie's house. Living-Mort is nowhere to be seen, so this must be after the fight. Justin and Terry are putting on their jackets, probably to head to the store.
+
+"Hold on one moment, you two." You turn to see Annie walk out of the kitchen. "May I speak to Justin alone for a moment, Terry?"
+
+"Oh! Um, sure," says Terry, though Annie is already ushering Justin back into the kitchen. You follow curiously.
+
+Justin looks a bit disconcerted. "What is it, Granny Smith?"
+
+Annie smiles fondly at the nickname, then gestures to the counter. On a plate is a nice, delicious looking sandwich. It's the one that she gave you during the dinner, actually. "I found out a way to get back at Mort."
+
+Oh, crap.
+
+"What for?" Justin says, his eyebrows furrowing.
+
+"Oh don't play coy with me young man, you know what for. The way Mort's been treatin' everyone, he needs a good kick in the pants. Or somethin' else." Her smile turns sly and you start to feel scared. "I made this big, beautiful sandwich for him, y'see. He can't eat nuts right? And it's too late to remake all the food we cooked, so it's only fair he get //somethin'// to eat."
+
+"That's kind of you," Justin says slowly, drumming his fingers on the countertop. "And...?"
+
+"And I thought I might put a little you-know-what in it."
+
+His eyes widen. "Oh god, Annie, you don't mean //that// something, do you?" What something? Nuts? Aconite? Arsenic?! When Annie nods, you feel panic rising in your nonexistent gut. Justin crosses his arms. "No. Don't."
+
+"Come on Justin!" she says indignantly, throwing her arms wide. "Lord knows he deserves it!"
+
+"No. It goes against my principles. As much as I dislike Mort, there's no reason to harm him."
+
+"You always were a goody-two-shoes."
+
+"I'm a cop, ma'am. Don't do it."
+
+They stare at each other in silence. You're freaking out - there's no way Annie would actually have poisoned you right? What have you done wrong? Ok, maybe you did a lot of things wrong, but //still// - Annie speaks. "But what if I just put a little - "
+
+"You're not putting //sriracha sauce in Mort's sandwich//".
+
+Your thoughts screech to a halt. Wait.
+
+What?
+
+"Oh please, it's just a prank, dear, lighten up a bit. Go to the grocery store, get the sauce, and I'll pay you back. Here, I wrote it down so you won't forget. She pulls out a scrap paper with '//sriracha sauce//' written on it in orange sharpie. Before Justin can protest, she shoves it into his hand.
+
+That's it? You want to laugh with how giddy you feel. Sriracha?
+
+"You know I'm definitely not actually buying this, right Granny?" Justin stuffs the note into his pants pocket.
+
+The memory [[fades->Clues]].
+
+:: you distracting Justin in front of Bram's house [bram memory]
+<<if !$thoughts["you distracting Justin in front of Bram's house"]>>\
+    <<set $thoughts["you distracting Justin in front of Bram's house"] = "- Bram was seriously thinking about killing you but realized he needs you to keep Justin off his back. He's innocent. (keys + corkscrew)">>\
+<</if>>\
+The feeling of a memory forming washes over you again, and you find yourself in Bram's house again. You've materialized in the kitchen this time, and Bram is there, the Loup-Rouge resting on the counter. Bram's wearing the same clothing he was when you shared drinks with him - it must be the same day. 
+
+Then you notice that he's muttering to himself and sweating, and he's got something in his hands. You look more closely and-
+
+It's wolfsbane. Bram is holding a pot of wolfsbane. Bram is holding wolfsbane, and he's staring back and forth between the purple leaves and the wine. He's not...moving, just looking between the two of them. What the hell is he - he didn't -
+
+The doorbell rings, and Bram jumps. He quickly hides the wolfsbane, walks over to the front door, and, not bothering to check who is outside, swings it open. Much to Bram's surprise, you - or rather, your past self - is not the one standing there. It's Justin. 
+
+"Hi, Bram," Justin says, giving a single wave. "I'm here because - well, I came to give you this." Justin holds out a corkscrew (a tacky yet adorable shark). Bram takes it with a poorly-masked expression of terror on his face. Luckily Justin doesn't seem to notice. "Terry said you'd been buying wine. And I came because I wanted to talk about something. Do you mind if I come in?" 
+
+Bram wipes the sweat off his forehead with his sleeve. "I don't know if now is the best time, I'm a little busy with, uh, busy - " 
+
+And then, from behind Justin, living Mort appears, smoothly saying, "Bram and I were actually about to catch up for a bit. Hello, Justin." Justin whips around to face you, clearly caught off guard. You know he hates that, but it's not exactly your fault he wasn't paying attention. "Speaking of busy," you continue, "don't you have somewhere to be, Justin?"
+
+Narrowing his eyes at living Mort, Justin asks, "I do?" 
+
+"Don't you have to put flyers for the policeman Q&A session at the middle school?" Mort replies.
+
+"I did that this morning."
+
+"And you met with the teens at the community center?"
+
+"This afternoon." 
+
+"And the patrols in the Wesden Hill and Orup Fells neighborhoods-"
+
+"That's how I spent the rest of the day." Justin crosses his arms. 
+
+"And the park?" 
+
+Justin pauses for a moment. "What about the park?" 
+
+"Did I forget to assign you to check for vandalism in the park?" Mort puts his hand on his chin, thinking. You know that you hadn't forgotten. You just needed Justin gone for Bram's sake. "Someone needs to do that, and I'm afraid reckless teenagers won't listen to anyone but an officer of the law." He looks to Bram and winks. Bram is frozen.
+
+Breathing in slowly, Justin closes his eyes. After he exhales, he opens his eyes and states firmly, "I will get right on that. Good day, Bram. Mort." Justin nods and walks away, and Mort lets himself in.
+
+"Crisis averted," your past self says, patting Bram on the shoulder. "It's a good thing I can get you out of things like this. Imagine if Justin had come in and found the marijuana plots here!" He keeps walking into the living room, sitting down on the couch. 
+
+Bram, who'd been stiff with fear for much of the interaction, melts and walks over to the kitchen. "I'll grab the wine." Opening a cabinet, Bram sighs and puts the wolfsbane away. 
+
+"I guess I do need him," Bram mumbles.
+
+"What was that?"
+
+"Nothing, Mort."
+
+The memory [[fades->Clues]].
+
+:: Annie and Erin talking about warding you away [erin memory]
+<<if !$thoughts["Annie and Erin talking about warding you away"]>>\
+    <<set $thoughts["Annie and Erin talking about warding you away"] = "- Annie and Erin want to ward you off from paying your respects... (petals + wolfsbane)">>\
+<</if>>\
+You appear to be in the local park. This is where the dinner happened, though nothing has been set up yet in the memory. The area is mostly empty, except Erin, Annie, and the plane tree. Annie is sitting on a park bench adjacent to the tree, and Erin is on the ground, her head resting against the trunk. 
+
+You've come in mid-conversation, apparently, because the first thing you hear is Annie say, "I have this feelin' that Mort'll try to come and, I dunno, pay his respects or somethin'. I'm just not ready for that." You had been planning on visiting...
+
+Erin, as she braids a few blades of grass together, replies, "Well, Granny, you don't have to let him."
+
+"I'm not about to go and be rude to the man, even if it's well within my right," Annie scoffs. She watches Erin's hands, squinting a bit as she does so. Without her glasses on, Annie is having a hard time seeing what Erin is doing.
+
+Noticing this, Erin holds the grass up. "I'm just braiding grass. It makes it stronger. My mom taught it to me when I was a kid." She pauses. "I could ward him away."
+
+"What?" Annie cocks her head to the side in confusion.
+
+"I could ward the graveyard against Mort. He's a werewolf -" What!? She thinks you're a werewolf? What kind of ridiculous - "-so I can do it pretty easily with wolfsbane petals. He can't step over a barrier made of those, or he'll die." Erin ties a knot into the grass braid and places it against the tree. "Don't worry, though," she adds. "He'll know it's there, so he won't just be walking and then drop dead. He'll be able to steer clear."
+
+Annie looks Erin up and down, and upon finding her to be completely serious, Annie lets out a sigh. "Well, thanks, I guess. If Mort really is a, uh, werewolf- well, I appreciate it, Erin. Thank you."
+
+You can't believe that Annie is going along with this farce - thinking you're a werewolf, how patently ridiculous! When have you ever acted like a goddamn supernatural creature? ...Present state aside.
+<<set $clickedItem to "Werewolf">><<include "Add Item">>
+
+And warding you away? The more memories you see, the more hurt you feel about your so-called friends. Even though you know that Erin's mumbo jumbo wouldn't actually work, and without a doubt Annie knows too, the fact that she was willing to even //humor// Ms. Wicca just to keep you away...it's unpleasant, to say the least.
+
+"Though," Erin continues, pulling you back to the scene, "he's probably in trouble himself. I can feel the aura and..." Her eyes unfocus as she thinks for a moment. Annie squints a bit but patiently waits for her to continue. "Well, if he's a werewolf I'll need to make something to protect him too. Special though, because he's of unhuman form."
+
+"Protect him? Now what would he need to be protected from, especially if he's...that?" Annie harrumphs.
+
+"Oh, you know." Erin twirls her hand vaguely. "Hunters."
+
+As you stew on this, the memory [[slips away->Clues]].
+
+
+:: Terry's boyfriend giving her some leaves [terry memory]
+<<if !$thoughts["Terry's boyfriend giving her some leaves"]>>\
+    <<set $thoughts["Terry's boyfriend giving her some leaves"] = "- Terry's boyfriend was sneaking around in the garden and stole some leaves. (cane + shifty person)">>\
+<</if>>\
+You're floating on the boulevard in front of the Whittaker house, with Terry standing in the frame of the open door and the light from inside flooding onto the porch. Terry is looking at you and waving. "Thank you again for this!" she says, raising the bag she's holding.
+
+You jerk backward, startled - she's looking at you? But you realize that doesn't make sense since this is a memory and you are a ghost, and besides, her eyes don't quite meet yours anyway. So you turn around to see who she //is// waving at.
+
+Your heart sinks. 
+
+It's the guy - her - her paramour, waving back. He looks slightly disheveled, and given Terry's similar state, it's not hard to put two and two together. As if you didn't feel bad enough for Justin getting cuckolded, it's been happening at his own house, too?
+
+The guy mimes catching something, probably some gross air-kiss from Terry, then turns and walks toward a car that is presumably his, cane clicking on the pavement. You look at Terry again; she is shouldering the door closed and beginning to look in the bag.
+
+Well, obviously you have to know what's in there. You float through the door easily and see Terry peering into the bag at a scattering of small leaves. She smiles. What the hell does she want with a pile of leaves?
+<<set $clickedItem to "Leaves">><<include "Add Item">>
+
+As you wonder this, the memory [[drips away->Clues]].
+
+:: Erin and Bram brewing you a potion [erin memory]
+<<if !$thoughts["Erin and Bram brewing you a potion"]>>\
+    <<set $thoughts["Erin and Bram brewing you a potion"] = "- Erin and Bram created a 'Potion of Continued Life' for you that did not contain wolfsbane. Erin, at the least, is innocent. (potion + werewolf)">>\
+<</if>>\
+The memory starts with a knock, and the sound resonates through your ears as the scene comes into view. Bram is standing in front of a familiar door, a bundle of herbs and other plant substances swaddled in his arms. He's having a difficult time balancing it all, especially since he keeps reaching an arm out to knock.
+
+After a moment, Erin opens the door and stares up at Bram. Her expression is one of concern, and her usual cheery attitude is nowhere to be found. "Bram," she says, "you came." 
+
+"I brought the, uh, ingredients. What are these for, if you don't mind me asking?" Bram looks warily down at Erin. 
+
+"Mort's going to need something to protect him." Erin offers out her arms to help carry the herbs, and, with only slight hesitation, Bram hands her some. Erin continues, "I've been getting bad feelings for some time now, and I think Mort's in danger. Come in?" She elbows the door open a little bit wider and nods inside. 
+
+Bram steps past her, giving a little "thank you" as he does. "So what are you planning?" 
+
+"Oh, a potion." Erin lets out a puff of breath and slams the door shut. "I left the spell book out on the kitchen table. You can set everything down over there." 
+
+As Bram makes his way to the counter and sets down the herbs, he scans the area for the book. The room is lit by candles, which makes it a bit hard to see, but Bram seems to find it quickly because before even you can find the book amongst the mess, Bram is walking over to the stove. 
+
+"Were you baking with this? he calls over to Erin. She doesn't answer, and steps up next to him. 
+
+Pointing to one of the entries, Erin says, "Here. Potion of Continued Life." You rush over to the entry, expecting to see wolfsbane listed but...everything seems innocuous. Huh.
+
+"That's an odd - wait, do you think Mort's going to, uh, you know?" Bram can't quite bring himself to say the word die. Oh, Bram. 
+
+"I think it's possible. You gonna help?" Erin looks over at Bram and smiles, though it's weak and born more of habit that cheer. When Bram nods, she drops it and looks melancholy. "Alright so, first we're going to need..."
+
+She continues on, but the memory [[fades->Clues]]. You're not sure what to think.
+
+:: Terry poisoning your salad [terry memory]
+<<if !$thoughts["Terry poisoning your salad"]>>\
+    <<set $thoughts["Terry poisoning your salad"] = "- Terry poisoned you. Terry poisoned you and you feel like a chump. (aconite, wolfsbane, or leaves + salad)">>\
+<</if>>\
+You're back in the grocery store, moments after the previous memory there left off, it seems. Justin is walking back to the salad bar and Terry is watching him go with a pensive look on her face. She bites her lip. Then, she quickly pulls the lid off the salad and takes something - looks like a box for pushpins or the like - out of her purse. Inside - the leaves, the wolfsbane leaves that she got from her boyfriend. No - //no//. You watch helplessly as she dumps the leaves into the salad, tamps the lid back on, and gives it a good shake. That means - she definitely -
+
+You feel like screaming.
+
+Not a second later - and too late, you think to yourself in dismay - Justin appears from an aisle, holding a small container full of dressing. "Let's go?" he says.
+
+"Let's."
+
+The memory [[dissipates->Clues]].
