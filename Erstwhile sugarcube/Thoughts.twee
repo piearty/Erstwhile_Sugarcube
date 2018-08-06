@@ -1,6 +1,6 @@
 ::Thoughts [noinv save]
 <<nobr>>
-    <strong>[[Clues]] | [[Link Clues->Inventory]] | Thoughts
+    <strong>[[Clues]] | [[Link Clues]] | Thoughts
      |  <<linkreplace "Save">>
             <<script>>
                 if (Save.ok()) { 

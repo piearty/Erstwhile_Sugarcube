@@ -2,7 +2,7 @@
 <<nobr>>
     <strong>Clues
     <<if $inv.length > 1>>
-        | [[Link Clues->Inventory]]
+        | [[Link Clues]]
     <</if>>
     <<if $thoughts.length is not 0>>
         | [[Thoughts]]
@@ -47,14 +47,14 @@ Oh. You guess your mind //is// a place you can actually visit. Is this some ghos
 <<if $inv.length > 0>>
 You have these clues:
 
-<<include "List Inventory">>
+<<include "List Link Clues">>
 
 <<else>>
 You remember a lot of things, but nothing that seems important right now.
 
 <</if>>\
 <<if $inv.length > 1>>
-There are still gaps in the story. You can try [[linking|Inventory]] two clues if you want, see if there's a connection.
+There are still gaps in the story. You can try [[linking|Link Clues]] two clues if you want, see if there's a connection.
 
 <</if>>\
 <<if $thoughts.length > 0>>
