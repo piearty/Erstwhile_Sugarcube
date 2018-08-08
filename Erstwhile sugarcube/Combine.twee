@@ -1,16 +1,8 @@
-:: Combine [widget nobr]
-<<widget "combine">>
-    <<elseif $selected.includesAll($args[0], $args[1])>>
-        <<set $combo = $args[2]>>
-        <<set $selected = []>>
-        <<goto $combo>>
-<</widget>>
-
-::Inventory [noinv save]
+::Link Clues [noinv save]
 <<nobr>>
     <strong>[[Clues]]
     <<if $inv.length > 1>>
-        | Inventory
+        | Link Clues
     <</if>>
     <<if $thoughts.length is not 0>>
         | [[Thoughts]]
@@ -45,11 +37,10 @@
         <</if>>
      | [[Credits]]</strong>
 <</nobr>>
-<<set $selected = []>>
 Click on two clues to try to link them.
  
 <span id="Selected"><<include "List Selected">></span>
-<span id="Inventory"><<include "List Inventory">></span>
+<span id="Link Clues"><<include "List Link Clues">></span>
  
 :: List Selected [nobr]
 <<if $selected.length > 0>>
@@ -60,7 +51,7 @@ Click on two clues to try to link them.
  
 <<if $selected.length == 2>>
     <br>
-    <<linkreplace "Combine">>
+    <<linkreplace "Combine">>\
         <<include "Combine Selected">>
     <</linkreplace>>
     <br>
@@ -82,16 +73,16 @@ Click on two clues to try to link them.
         <</replace>>
 <</if>>
 
-:: List Inventory [nobr]
+:: List Link Clues [nobr]
 /* Sets the clickedItem variable and opens the check. */
 <<if $inv.length > 0>>
     <<for _n, _item range $inv>>
         <<if passage() == "Clues">>
             [[_item]],
-        <<elseif passage() == "Inventory">>
+        <<elseif passage() == "Link Clues">>
             <<capture _item>>
                 <<link _item>>
-                    <<set $selected.push(_item)>>
+                    <<set $selected.pushUnique(_item)>>
                     <<replace "#Selected">>
                         <<include "List Selected">>
                     <</replace>>
@@ -100,13 +91,33 @@ Click on two clues to try to link them.
         <</if>>
     <</for>>
 <</if>>
+
+:: Select Item
+/* This code block expects the _selectedItem temporary variable to content the ID of the selected item. */
+<<if $selected.length <= 2>>\
+    /* Try to add the item to the unique collection. */
+    <<set $selected.pushUnique(_selectedItem)>>\
+<</if>>
  
-:: Combine Selected
+/* Refresh the page. */
+<<replace "#Selected">><<include "List Selected">><</replace>>
+<<replace "#Link Clues">><<include "List Link Clues">><</replace>>
+
+:: Combine [widget nobr]
+<<widget "combine">>
+    <<elseif $selected.includesAll($args[0], $args[1])>>
+        <<set $combo = $args[2]>>
+        <<goto $combo>>
+        <<set $selected = []>>
+<</widget>>
+ 
+:: Combine Selected [nobr]
+test
 /* 0th level */
 <<if $selected.includesAll("Potion", "Erin's Testimony")>>
         <<set $combo = "you drinking Erin's potion">>
-        <<set $selected = []>>
         <<goto $combo>>
+        <<set $selected = []>>
 
 <<combine "Wine" "Gift Request" "you and Bram drinking wine">>
 
@@ -162,9 +173,9 @@ Click on two clues to try to link them.
 
 <<elseif $selected.includesAny("Photograph", "Sticky Note", "Rap Sheet", "Consent Form", "Hospital Stickers", "Burning Letter")>>You doubt at least one of these items is connected to your death.
 
-either($lexaItemAnger)/*(set: $fail to it + 1)*/
+<<print either($lexaItemAnger)>>/*(set: $fail to it + 1)*/
 
-(elseif: $selected contains "Congratulatory Card" or $selected contains "Money" or $selected contains "Postcard")[You doubt at least one of these items is connected to your death.]
+<!--(elseif: $selected contains "Congratulatory Card" or $selected contains "Money" or $selected contains "Postcard")[You doubt at least one of these items is connected to your death.]
 
 (elseif: $selected contains any of $poisons and $selected contains any of (ds: "Potion", "Sandwich"))[(if: $thoughts contains "Bram realizing the wolfsbane was tampered with" and $thoughts contains "the detective ruminating about the murder weapon")[This very well may be the combo that killed you, but you don't want to jump to conclusions just yet. You think you should figure some more things out first.(set: $fail to it + 1)]
 (else:) [You're pretty sure that this particular combo isn't what killed you, now.(set: $fail to it + 1)]]
@@ -179,12 +190,12 @@ either($lexaItemAnger)/*(set: $fail to it + 1)*/
 
 (elseif: $selected contains "Werewolf" and $selected contains "Cane")[You're not //actually// a werewolf, so silver wouldn't really do |much>[much] to you, would it?(click: ?much)[ Unlike the //poison//...](set: $fail to it + 1)]
 
-(elseif: $selected contains "Werewolf" and $selected contains "Wolfsbane")[Well yes, wolfsbane //would// kill a werewolf but...it would kill //anybody//.(set: $fail to it + 1)]
+(elseif: $selected contains "Werewolf" and $selected contains "Wolfsbane")[Well yes, wolfsbane //would// kill a werewolf but...it would kill //anybody//.(set: $fail to it + 1)]-->
 
 <!--Default failure-->
-<<else>>You can't see how those clues are related, at least not right now./*<<set $fail += 1>>*/<</if>>\
+<<else>>You can't see how those clues are related, at least not right now./*<<set $fail += 1>>*/<</if>>
 
-<!--(if: $fail > 2)[
+(if: $fail > 2)[
 
 Need a |h1>[hint? 
 
@@ -199,14 +210,3 @@ Need a |h1>[hint?
 
 (if: $fail > 9)[
 Need a [[bigger hint?->Hints]]]-->
- 
-:: Select Item
-/* This code block expects the _selectedItem temporary variable to content the ID of the selected item. */
-<<if $selected.length < 2>>\
-    /* Try to add the item to the unique collection. */
-    <<set $selected.push(_selectedItem)>>\
-<</if>>
- 
-/* Refresh the page. */
-<<replace "#Selected">><<include "List Selected">><</replace>>
-<<replace "#Inventory">><<include "List Inventory">><</replace>>

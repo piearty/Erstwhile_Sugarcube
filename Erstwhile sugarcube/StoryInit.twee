@@ -2,6 +2,7 @@
 <!--Inventory-->
 <<set $inv to []>>
 <<set $thoughts to {}>>
+<<set $selected to []>>
 
 <!--Mort's ranting when you come across an item related to Lexa.-->
 <<set $lexaItemAnger to [

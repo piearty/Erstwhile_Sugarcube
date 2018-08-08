@@ -102,7 +102,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="73" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
+	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="74" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
 body {
     background: white;
     color: black;
@@ -179,7 +179,7 @@ if (Save.slots.has(0)) {
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Clues" tags="noinv save" position="225,100">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;Clues
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
-        | [[Link Clues-&gt;Inventory]]
+        | [[Link Clues]]
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;if $thoughts.length is not 0&gt;&gt;
         | [[Thoughts]]
@@ -224,14 +224,14 @@ Oh. You guess your mind //is// a place you can actually visit. Is this some ghos
 &lt;&lt;if $inv.length &gt; 0&gt;&gt;
 You have these clues:
 
-&lt;&lt;include &quot;List Inventory&quot;&gt;&gt;
+&lt;&lt;include &quot;List Link Clues&quot;&gt;&gt;
 
 &lt;&lt;else&gt;&gt;
 You remember a lot of things, but nothing that seems important right now.
 
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $inv.length &gt; 1&gt;&gt;
-There are still gaps in the story. You can try [[linking|Inventory]] two clues if you want, see if there&#39;s a connection.
+There are still gaps in the story. You can try [[linking|Link Clues]] two clues if you want, see if there&#39;s a connection.
 
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if $thoughts.length &gt; 0&gt;&gt;
@@ -242,15 +242,10 @@ You can [[review-&gt;Thoughts]] the things you&#39;ve figured out, now.
     &lt;&lt;link &quot;Open your eyes.&quot;&gt;&gt;
         &lt;&lt;goto $returnTo&gt;&gt;
     &lt;&lt;/link&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Combine" tags="widget nobr" position="350,100">&lt;&lt;widget &quot;combine&quot;&gt;&gt;
-    &lt;&lt;elseif $selected.includesAll($args[0], $args[1])&gt;&gt;
-        &lt;&lt;set $combo = $args[2]&gt;&gt;
-        &lt;&lt;set $selected = []&gt;&gt;
-        &lt;&lt;goto $combo&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Inventory" tags="noinv save" position="475,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Link Clues" tags="noinv save" position="350,100">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]]
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
-        | Inventory
+        | Link Clues
     &lt;&lt;/if&gt;&gt;
     &lt;&lt;if $thoughts.length is not 0&gt;&gt;
         | [[Thoughts]]
@@ -285,11 +280,10 @@ You can [[review-&gt;Thoughts]] the things you&#39;ve figured out, now.
         &lt;&lt;/if&gt;&gt;
      | [[Credits]]&lt;/strong&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;&lt;set $selected = []&gt;&gt;
 Click on two clues to try to link them.
  
 &lt;span id=&quot;Selected&quot;&gt;&lt;&lt;include &quot;List Selected&quot;&gt;&gt;&lt;/span&gt;
-&lt;span id=&quot;Inventory&quot;&gt;&lt;&lt;include &quot;List Inventory&quot;&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="5" name="List Selected" tags="nobr" position="600,100">&lt;&lt;if $selected.length &gt; 0&gt;&gt;
+&lt;span id=&quot;Link Clues&quot;&gt;&lt;&lt;include &quot;List Link Clues&quot;&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="4" name="List Selected" tags="nobr" position="475,100">&lt;&lt;if $selected.length &gt; 0&gt;&gt;
     &lt;&lt;for _item range $selected&gt;&gt;
         _item selected.&lt;br&gt;
     &lt;&lt;/for&gt;&gt;
@@ -297,7 +291,7 @@ Click on two clues to try to link them.
  
 &lt;&lt;if $selected.length == 2&gt;&gt;
     &lt;br&gt;
-    &lt;&lt;linkreplace &quot;Combine&quot;&gt;&gt;
+    &lt;&lt;linkreplace &quot;Combine&quot;&gt;&gt;\
         &lt;&lt;include &quot;Combine Selected&quot;&gt;&gt;
     &lt;&lt;/linkreplace&gt;&gt;
     &lt;br&gt;
@@ -317,15 +311,15 @@ Click on two clues to try to link them.
         &lt;&lt;replace &quot;#Selected&quot;&gt;&gt;
             &lt;&lt;include &quot;List Selected&quot;&gt;&gt;
         &lt;&lt;/replace&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="List Inventory" tags="nobr" position="725,100">/* Sets the clickedItem variable and opens the check. */
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="List Link Clues" tags="nobr" position="600,100">/* Sets the clickedItem variable and opens the check. */
 &lt;&lt;if $inv.length &gt; 0&gt;&gt;
     &lt;&lt;for _n, _item range $inv&gt;&gt;
         &lt;&lt;if passage() == &quot;Clues&quot;&gt;&gt;
             [[_item]],
-        &lt;&lt;elseif passage() == &quot;Inventory&quot;&gt;&gt;
+        &lt;&lt;elseif passage() == &quot;Link Clues&quot;&gt;&gt;
             &lt;&lt;capture _item&gt;&gt;
                 &lt;&lt;link _item&gt;&gt;
-                    &lt;&lt;set $selected.push(_item)&gt;&gt;
+                    &lt;&lt;set $selected.pushUnique(_item)&gt;&gt;
                     &lt;&lt;replace &quot;#Selected&quot;&gt;&gt;
                         &lt;&lt;include &quot;List Selected&quot;&gt;&gt;
                     &lt;&lt;/replace&gt;&gt;
@@ -333,11 +327,26 @@ Click on two clues to try to link them.
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/for&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Combine Selected" tags="" position="850,100">/* 0th level */
-&lt;&lt;if $selected.includesAll(&quot;Potion&quot;, &quot;Erin&#39;s Testimony&quot;)&gt;&gt;
-        &lt;&lt;set $combo = &quot;you drinking Erin&#39;s potion&quot;&gt;&gt;
-        &lt;&lt;set $selected = []&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Select Item" tags="" position="725,100">/* This code block expects the _selectedItem temporary variable to content the ID of the selected item. */
+&lt;&lt;if $selected.length &lt;= 2&gt;&gt;\
+    /* Try to add the item to the unique collection. */
+    &lt;&lt;set $selected.pushUnique(_selectedItem)&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+ 
+/* Refresh the page. */
+&lt;&lt;replace &quot;#Selected&quot;&gt;&gt;&lt;&lt;include &quot;List Selected&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
+&lt;&lt;replace &quot;#Link Clues&quot;&gt;&gt;&lt;&lt;include &quot;List Link Clues&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Combine" tags="widget nobr" position="850,100">&lt;&lt;widget &quot;combine&quot;&gt;&gt;
+    &lt;&lt;elseif $selected.includesAll($args[0], $args[1])&gt;&gt;
+        &lt;&lt;set $combo = $args[2]&gt;&gt;
         &lt;&lt;goto $combo&gt;&gt;
+        &lt;&lt;set $selected = []&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Combine Selected" tags="nobr" position="975,100">test
+/* 0th level */
+&lt;!--&lt;&lt;if $selected.includesAll(&quot;Potion&quot;, &quot;Erin&#39;s Testimony&quot;)&gt;&gt;
+        &lt;&lt;set $combo = &quot;you drinking Erin&#39;s potion&quot;&gt;&gt;
+        &lt;&lt;goto $combo&gt;&gt;
+        &lt;&lt;set $selected = []&gt;&gt;
+
 
 &lt;&lt;combine &quot;Wine&quot; &quot;Gift Request&quot; &quot;you and Bram drinking wine&quot;&gt;&gt;
 
@@ -381,18 +390,21 @@ Click on two clues to try to link them.
 &lt;&lt;combine &quot;Leaves&quot; &quot;Wolfsbane&quot; &quot;Bram realizing the wolfsbane was tampered with&quot;&gt;&gt;
 	
 &lt;!--8th level--&gt;
-(elseif: $selected contains any of $poisons and $selected contains &quot;Salad&quot;)[(unless: $thoughts contains &quot;Bram realizing the wolfsbane was tampered with&quot; and $thoughts contains &quot;the detective ruminating about the murder weapon&quot;)[This very well may be the combo that killed you, but you don&#39;t want to jump to conclusions just yet. You think you should figure some more things out first.(set: $fail to it + 1)]
-(else:)[(set: $combo to &quot;Terry poisoning your salad&quot;)
-	(display: &quot;Combovaluation&quot;)
-	]]
+&lt;&lt;if $selected.includesAny(&quot;Wolfsbane&quot;, &quot;Leaves&quot;, &quot;Aconite Poison&quot;) and $selected.includes(&quot;Erin&#39;s Testimony&quot;) and !$thoughts.includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;)&gt;&gt;
+    This very well may be the combo that killed you, but you don&#39;t want to jump to conclusions just yet. You think you should figure some more things out first./*&lt;&lt;set $fail += 1&gt;&gt;*/
+&lt;&lt;else&gt;&gt;
+    &lt;&lt;set $combo = &quot;Terry poisoning your salad&quot;&gt;&gt;
+    &lt;&lt;set $selected = []&gt;&gt;
+    &lt;&lt;goto $combo&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 	
 &lt;!--Invalid combo flavor text--&gt;
 
-(elseif: $selected contains &quot;Photograph&quot; or $selected contains &quot;Sticky Note&quot; or $selected contains &quot;Rap Sheet&quot; or $selected contains &quot;Consent Form&quot; or $selected contains &quot;Hospital Stickers&quot; or $selected contains &quot;Burning Letter&quot;)[You doubt at least one of these items is connected to your death.
+&lt;&lt;elseif $selected.includesAny(&quot;Photograph&quot;, &quot;Sticky Note&quot;, &quot;Rap Sheet&quot;, &quot;Consent Form&quot;, &quot;Hospital Stickers&quot;, &quot;Burning Letter&quot;)&gt;&gt;You doubt at least one of these items is connected to your death.
 
-(either: ...$lexaItemAnger)(set: $fail to it + 1)]
+&lt;&lt;print either($lexaItemAnger)&gt;&gt;/*(set: $fail to it + 1)*/
 
-(elseif: $selected contains &quot;Congratulatory Card&quot; or $selected contains &quot;Money&quot; or $selected contains &quot;Postcard&quot;)[You doubt at least one of these items is connected to your death.]
+&lt;!--(elseif: $selected contains &quot;Congratulatory Card&quot; or $selected contains &quot;Money&quot; or $selected contains &quot;Postcard&quot;)[You doubt at least one of these items is connected to your death.]
 
 (elseif: $selected contains any of $poisons and $selected contains any of (ds: &quot;Potion&quot;, &quot;Sandwich&quot;))[(if: $thoughts contains &quot;Bram realizing the wolfsbane was tampered with&quot; and $thoughts contains &quot;the detective ruminating about the murder weapon&quot;)[This very well may be the combo that killed you, but you don&#39;t want to jump to conclusions just yet. You think you should figure some more things out first.(set: $fail to it + 1)]
 (else:) [You&#39;re pretty sure that this particular combo isn&#39;t what killed you, now.(set: $fail to it + 1)]]
@@ -407,12 +419,12 @@ Click on two clues to try to link them.
 
 (elseif: $selected contains &quot;Werewolf&quot; and $selected contains &quot;Cane&quot;)[You&#39;re not //actually// a werewolf, so silver wouldn&#39;t really do |much&gt;[much] to you, would it?(click: ?much)[ Unlike the //poison//...](set: $fail to it + 1)]
 
-(elseif: $selected contains &quot;Werewolf&quot; and $selected contains &quot;Wolfsbane&quot;)[Well yes, wolfsbane //would// kill a werewolf but...it would kill //anybody//.(set: $fail to it + 1)]
+(elseif: $selected contains &quot;Werewolf&quot; and $selected contains &quot;Wolfsbane&quot;)[Well yes, wolfsbane //would// kill a werewolf but...it would kill //anybody//.(set: $fail to it + 1)]--&gt;
 
 &lt;!--Default failure--&gt;
-&lt;&lt;else&gt;&gt;You can&#39;t see how those clues are related, at least not right now./*&lt;&lt;set $fail += 1&gt;&gt;*/&lt;&lt;/if&gt;&gt;\
+&lt;&lt;else&gt;&gt;You can&#39;t see how those clues are related, at least not right now./*&lt;&lt;set $fail += 1&gt;&gt;*/&lt;&lt;/if&gt;&gt;
 
-&lt;!--(if: $fail &gt; 2)[
+(if: $fail &gt; 2)[
 
 Need a |h1&gt;[hint? 
 
@@ -426,15 +438,7 @@ Need a |h1&gt;[hint?
 &quot;A certain set of clues can be combined only after you deduce a connection between them by unlocking certain memories. It should be obvious when that happens.&quot;,)]]]\
 
 (if: $fail &gt; 9)[
-Need a [[bigger hint?-&gt;Hints]]]--&gt;</tw-passagedata><tw-passagedata pid="8" name="Select Item" tags="" position="975,100">/* This code block expects the _selectedItem temporary variable to content the ID of the selected item. */
-&lt;&lt;if $selected.length &lt; 2&gt;&gt;\
-    /* Try to add the item to the unique collection. */
-    &lt;&lt;set $selected.push(_selectedItem)&gt;&gt;\
-&lt;&lt;/if&gt;&gt;
- 
-/* Refresh the page. */
-&lt;&lt;replace &quot;#Selected&quot;&gt;&gt;&lt;&lt;include &quot;List Selected&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
-&lt;&lt;replace &quot;#Inventory&quot;&gt;&gt;&lt;&lt;include &quot;List Inventory&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Hints" tags="noinv nosave" position="1100,100">**Hints**
+Need a [[bigger hint?-&gt;Hints]]]--&gt;</tw-passagedata><tw-passagedata pid="9" name="Hints" tags="noinv nosave" position="1100,100">**Hints**
 (set: $hints to (ds: &quot;Several of the clues cannot be combined at all.&quot;, &quot;Sure there&#39;s a reason why you don&#39;t want to think about some of the clues. Are you going to say what it is? Hell no.&quot;))\
 {(if: $inv contains &quot;Potion&quot; and $inv contains &quot;Erin&#39;s Testimony&quot;)[(unless: $thoughts contains &quot;you drinking Erin&#39;s potion&quot;)[(set: $hints to it + (ds: &quot;Why is Erin under suspicion?&quot;))]]
  
@@ -1292,7 +1296,7 @@ The memory [[dissipates-&gt;Clues]].</tw-passagedata><tw-passagedata pid="70" na
             &lt;&lt;set $isItemUsed = false&gt;&gt;
         &lt;&lt;/if&gt;&gt;
         &lt;&lt;back &quot;Back to what you were doing.&quot;&gt;&gt;
-    &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Start2" tags="noinv" position="100,975">It was a pretty good Thanksgiving until you keeled over and died.
+    &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="PassageHeader" tags="" position="100,975"></tw-passagedata><tw-passagedata pid="72" name="Start2" tags="noinv" position="225,975">It was a pretty good Thanksgiving until you keeled over and died.
 
 The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less &lt;&lt;linkappend &quot;//eavesdropping//&quot;&gt;&gt;, regardless of what Bram said,&lt;&lt;/linkappend&gt;&gt; and more //surveying//, - it was having the bonding effect you wanted all along.
 
@@ -1313,12 +1317,10 @@ In other words, you&#39;re a ghost now.
             &lt;&lt;/script&gt;&gt;
         &lt;&lt;/link&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="StoryInit" tags="nobr" position="225,975">&lt;!--Inventory--&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="StoryInit" tags="nobr" position="350,975">&lt;!--Inventory--&gt;
 &lt;&lt;set $inv to []&gt;&gt;
 &lt;&lt;set $thoughts to {}&gt;&gt;
-
-&lt;!--Crafting--&gt;
-&lt;&lt;set $poisons to [&quot;Wolfsbane&quot;, &quot;Leaves&quot;, &quot;Aconite Poison&quot;]&gt;&gt;
+&lt;&lt;set $selected to []&gt;&gt;
 
 &lt;!--Mort&#39;s ranting when you come across an item related to Lexa.--&gt;
 &lt;&lt;set $lexaItemAnger to [
@@ -1339,7 +1341,7 @@ In other words, you&#39;re a ghost now.
 &lt;&lt;set $mindVisited to false&gt;&gt;
 
 &lt;!--Checks if item been used up or not (resets upon leaving item passage)--&gt;
-&lt;&lt;set $isItemUsed = false&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Start" tags="justin" position="350,975">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
+&lt;&lt;set $isItemUsed = false&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Start" tags="justin" position="475,975">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
 
 [[Testing]]
     &lt;&lt;set $thoughts[&quot;Overwork&quot;] = &quot;- blop&quot;&gt;&gt;
@@ -1358,8 +1360,8 @@ In other words, you&#39;re a ghost now.
     &lt;&lt;set $clickedItem to &quot;Wolfsbane&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Werewolf&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Money&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
-    &lt;&lt;set $clickedItem to &quot;Hospital Stickers&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Testing" tags="lexa" position="475,975">&lt;&lt;print $inv.length&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Thoughts" tags="noinv save" position="600,975">&lt;&lt;nobr&gt;&gt;
-    &lt;strong&gt;[[Clues]] | [[Link Clues-&gt;Inventory]] | Thoughts
+    &lt;&lt;set $clickedItem to &quot;Hospital Stickers&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Testing" tags="lexa" position="600,975">&lt;&lt;print $inv.length&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Thoughts" tags="noinv save" position="725,975">&lt;&lt;nobr&gt;&gt;
+    &lt;strong&gt;[[Clues]] | [[Link Clues]] | Thoughts
      |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
             &lt;&lt;script&gt;&gt;
                 if (Save.ok()) { 
@@ -1396,7 +1398,7 @@ On this wacky journey of trying to figure out your own murderer, you&#39;ve disc
 
 &lt;&lt;link &quot;Open your eyes.&quot;&gt;&gt;
     &lt;&lt;goto $returnTo&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Title" tags="noinv" position="725,975">&lt;h1&gt;Erstwhile&lt;/h1&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Title" tags="noinv" position="850,975">&lt;h1&gt;Erstwhile&lt;/h1&gt;
 &lt;h4&gt;Maddie Fialla and Marijke Perry&lt;/h4&gt;
 &lt;&lt;link &quot;//One need not be a chamber to be haunted,&lt;br&gt;One need not be a house;&lt;br&gt;The brain has corridors surpassing&lt;br&gt;Material place.&lt;br&gt;&lt;br&gt;-Emily Dickinson//&quot;&gt;&gt;&lt;&lt;goto &quot;Welp&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
