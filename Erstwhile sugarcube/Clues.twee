@@ -15,23 +15,19 @@
             <</script>>
             Game saved.
         <</linkreplace>>
-        <<if $slotA is true>>
+        <<if Save.slots.has(0)>>
      |      <<linkreplace "Restart">>
-                <span id="restart">This will erase your progress and saves. Are you sure?
-                <<linkreplace "Yes">>
+This will erase your progress and saves. Are you sure?
+                <<link "Yes">>
                     <<script>>
                         if (Save.slots.has(0)) {
                             Save.slots.delete(0);
-                            Engine.restart();  
                         }
                         if (Save.autosave.has()) {
-                            Save.autosave.delete();
-                            Engine.restart();                            
+                            Save.autosave.delete();                           
                         }
-                    <</script>></span>
-                <</linkreplace>>
-                <<link "No">>
-                    <<replace "#restart">>Restart<</replace>>
+                        Engine.restart();
+                        <</script>>
                 <</link>>
             <</linkreplace>>
         <</if>>

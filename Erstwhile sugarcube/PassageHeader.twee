@@ -1,8 +1,0 @@
-::PassageReady [script]
-if (Save.slots.has(0)) {
-    State.variables.slotA = true;
-} else {
-    State.variables.slotA = false;
-}
-
-::PassageHeader
