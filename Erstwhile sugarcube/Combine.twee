@@ -85,118 +85,90 @@ Click on two clues to try to link them.
         <</if>>
     <</for>>
 <</if>>
- 
+
+::Combovaluation [widget nobr]
+<<widget "combine">>
+<<set $combo = $args[0]>>
+<<set $selected = []>>
+<<if hasVisited($combo)>>
+    You found that memory about $combo already...but maybe you could take a quick peek at it [[again|$combo]].
+<<else>>
+    <<goto $combo>>
+<</if>>
+<</widget>>
+
 :: Combine Selected [nobr]
 /* 0th level */
 <<if $selected.includesAll("Potion", "Erin's Testimony")>>
-        <<set $combo = "you drinking Erin's potion">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "you drinking Erin's potion">>
         
 <<elseif $selected.includesAll("Wine", "Gift Request")>>
-        <<set $combo = "you and Bram drinking wine">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "you and Bram drinking wine">>
 
 <<elseif $selected.includesAll("Salad", "Justin's Testimony")>>
-        <<set $combo = "Justin and Terry at the grocery store">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Justin and Terry at the grocery store">>
         
 <<elseif $selected.includesAll("Salad", "Terry's Testimony")>>
-        <<set $combo = "Justin and Terry at the grocery store">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Justin and Terry at the grocery store">>
     
 <<elseif $selected.includesAll("Sandwich", "Annie's Testimony")>>
-        <<set $combo = ""your fight with Annie>>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine ""your fight with Annie>>
         
 <<elseif $selected.includesAll("Old Newspaper", "Petition")>>
-        <<set $combo = "Terry's phone conversation">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Terry's phone conversation">>
 
 <<elseif $selected.includesAll("Crescent Charm", "Gibbous Charm")>>
-        <<set $combo = "Justin and Erin being siblings">>
-        <<set $selected = []>>
-        <<goto $combo>>
-	
+        <<combine "Justin and Erin being siblings">>
+
 <<elseif $selected.includesAll("Sigils", "Potion")>>
-        <<set $combo = "Erin's night">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Erin's night">>
 
 <<elseif $selected.includesAll("Caf Patch", "Sigils")>>
-        <<set $combo = "Justin and Erin setting up for the dinner">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Justin and Erin setting up for the dinner">>
 
 <!--1st level-->
 <<elseif $selected.includesAll("Marijuana", "Medicine Reminder")>>
-        <<set $combo = "Bram and Annie's conversation in the garden">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Bram and Annie's conversation in the garden">>
 
 <<elseif $selected.includesAll("Nut Article", "Annie's Testimony")>>
-        <<set $combo = "Terry giving Justin the nut article">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Terry giving Justin the nut article">>
         
 <!--2nd level-->
 <<elseif $selected.includesAll("Straight Tie", "Bowtie")>>
-        <<set $combo = "Terry and Bram's conversation in her shop">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Terry and Bram's conversation in her shop">>
 
 <<elseif $selected.includesAll("Aconite Poison", "Wolfsbane")>>
-        <<set $combo = "the detective ruminating about the murder weapon">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "the detective ruminating about the murder weapon">>
 
 <<elseif $selected.includesAll("Crumpled Paper", "Sharpie")>>
-        <<set $combo = "Justin, Annie, and sriracha">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Justin, Annie, and sriracha">>
 
 <<elseif $selected.includesAll("Justin's Keys", "Corkscrew")>>
-        <<set $combo = "you distracting Justin in front of Bram's house">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "you distracting Justin in front of Bram's house">>
 	
 <!--3rd level-->
 <<elseif $selected.includesAll("Petals", "Wolfsbane")>>
-        <<set $combo = "Annie and Erin talking about warding you away">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Annie and Erin talking about warding you away">>
 
 <!--4th level-->
 <<elseif $selected.includesAll("Shifty Person", "Cane")>>
-        <<set $combo = "Terry's boyfriend giving her some leaves">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Terry's boyfriend giving her some leaves">>
         
 <<elseif $selected.includesAll("Werewolf", "Potion")>>
-        <<set $combo = "Erin and Bram brewing you a potion">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Erin and Bram brewing you a potion">>
 
 <!--5th level-->
 <<elseif $selected.includesAll("Leaves", "Wolfsbane")>>
-        <<set $combo = "Bram realizing the wolfsbane was tampered with">>
-        <<set $selected = []>>
-        <<goto $combo>>
+        <<combine "Bram realizing the wolfsbane was tampered with">>
 
 <!--6th level-->
 <<elseif $selected.includesAny("Wolfsbane", "Leaves", "Aconite Poison") and $selected.includes("Salad") and !$thoughts.includesAll("Bram realizing the wolfsbane was tampered with", "the detective ruminating about the murder weapon")>>
     This very well may be the combo that killed you, but you don't want to jump to conclusions just yet. You think you should figure some more things out first.<<set $fail += 1>>
 
 <<elseif $selected.includesAny("Wolfsbane", "Leaves", "Aconite Poison") and $selected.includes("Salad") and $thoughts.includesAll("Bram realizing the wolfsbane was tampered with", "the detective ruminating about the murder weapon")>>
-    <<set $combo = "Terry poisoning your salad">>
+    <<combine "Terry poisoning your salad">>
     <<set $selected = []>>
     <<goto $combo>>
-<</if>>
 	
 <!--Invalid combo flavor text
 
