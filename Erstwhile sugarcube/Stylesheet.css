@@ -15,22 +15,22 @@ body[data-tags~="justin"] {
 	color: #1c3654;
 }
 
-body[data-tag~="terry"] {
+body[data-tags~="terry"] {
 	background-color: LightYellow;
 	color: #726918;
 }
 
-body[data-tag~="erin"]{
+body[data-tags~="erin"]{
 	background-color: #f0d2f9;
 	color: purple
 }
 
-body[data-tag~="annie"] {
+body[data-tags~="annie"] {
 	background-color: #f9deac;
 	color: #90671a
 }
 
-body[data-tag~="bram"] {
+body[data-tags~="bram"] {
 	background-color: #b3dda6;
 	color: forestgreen;
 }
