@@ -12,7 +12,7 @@ Seriously? Wolfsbane? You can't believe it. You were offed by a garden flower.
 
 A heavy sigh. "But on the other hand, that's just so neat and easy. I should know better than anyone that these cases are never so simple." They chuckle softly to themself.
 
-As the detective continues to think aloud, the [[memory->Clues]] drips away.
+As the detective continues to think aloud, the [[memory->Link Clues]] drips away.
 
 :: Bram and Annie's conversation in the garden [memory annie]
 <<if !$thoughts["Bram and Annie's conversation in the garden"]>>
@@ -49,7 +49,7 @@ Bram opens and closes his mouth a couple times. "Of course not." He continues. "
 Bram has walked over to a bed that's labeled: CAUTION, DO NOT TOUCH. There's a purple flower here, and it looks a bit mishandled. "Some of the leaves are ripped off." He pales. "That's. That's not good."
 <<set $clickedItem to "Wolfsbane">><<include "Add Item">>
 
-As this is said, the scene starts to smear and fade like mixed paint, and you find yourself back in your [[memories->Clues]] again.
+As this is said, the scene starts to smear and fade like mixed paint, and you find yourself back in your [[memories->Link Clues]] again.
 
 :: Erin's night [memory erin]
 <<if !$thoughts["Erin's night"]>>\
@@ -78,7 +78,7 @@ Well, except for Erin, <<linkappend "apparently">>
 
 And this person<</linkappend>><</linkappend>><</linkappend>><</linkappend>>.
 
-A mix of confusion and concern crosses Erin's face, but she does nothing but watch the man as he limps away. As she turns to head home, the memory [[fades->Clues]].
+A mix of confusion and concern crosses Erin's face, but she does nothing but watch the man as he limps away. As she turns to head home, the memory [[fades->Link Clues]].
 
 :: Terry giving Justin the nut article [memory justin]
 <<if !$thoughts["Terry giving Justin the nut article"]>>\
@@ -110,7 +110,7 @@ Nodding, Justin smiles at his wife. "Yes. What do you think they'd be good in?"
 
 "Oh, I don't know. Everything."
 
-The memory [[fades->Clues]].
+The memory [[fades->Link Clues]].
 
 :: Bram realizing the wolfsbane was tampered with [bram memory]
 <<if !$thoughts["Bram realizing the wolfsbane was tampered with"]>>\
@@ -128,7 +128,7 @@ No.
 
 You don't want to consider it. Terry? Kill you? You want to say there's no reason for it, even though a little voice in your mind tells you there are many. Still, how did she? How could she? You decide you'll believe it when you see her in the act. For now, you refuse to think about it.
 
-You [[refuse->Clues]].
+You [[refuse->Link Clues]].
 
 :: you drinking Erin's potion [memory erin]
 <<if !$thoughts["you drinking Erin's potion"]>>\
@@ -140,7 +140,7 @@ You see Erin approach you- that is, your living counterpart. She's holding out a
 
 She'd approached you multiple times before, each time more insistent that you drink the damn thing. As time passed and you kept refusing, she became more agitated. In fact, by the time you agreed to drink whatever it was she made - if only to prevent a scene from happening between RNA members - you were kind of scared of her.
 
-Erin hands the bottle to living Mort, and his face screws into a <<linkappend "sneer">>(apparently you didn't do as good of a job at hiding your frustration as you thought you did)<</linkappend>>. You watch yourself drink the potion, and then the memory [[dissipates->Clues]].
+Erin hands the bottle to living Mort, and his face screws into a <<linkappend "sneer">>(apparently you didn't do as good of a job at hiding your frustration as you thought you did)<</linkappend>>. You watch yourself drink the potion, and then the memory [[dissipates->Link Clues]].
 
 
 :: you and Bram drinking wine [memory bram]
@@ -175,7 +175,7 @@ You don't have to spell out everything you know all the time, do you? Jeez.<</li
 
 Living Mort chuckles again and takes another sip of wine. "Just keep doing this and it won't ever be a big problem. Right?" 
 
-Bram laughs nervously. You didn't realize it while you were living but you're pretty sure he's sweating. "Yep. Right." The memory [[swirls->Clues]] from view.
+Bram laughs nervously. You didn't realize it while you were living but you're pretty sure he's sweating. "Yep. Right." The memory [[swirls->Link Clues]] from view.
 
 :: Justin and Terry at the grocery store [justin memory]
 <<if !$thoughts["Justin and Terry at the grocery store"]>>\
@@ -209,7 +209,7 @@ Justin jerks awake and looks at her. "Good. Uh. Let's get going then." The two r
 
 "...Ok," he grunts. "But only for you." 
 
-He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, "Oh sugarbites, we forgot dressing." She looks at Justin meaningfully. It takes a moment for him to respond. "I'll - I'll go get some." He walks off quickly, and the memory [[fades->Clues]].
+He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, "Oh sugarbites, we forgot dressing." She looks at Justin meaningfully. It takes a moment for him to respond. "I'll - I'll go get some." He walks off quickly, and the memory [[fades->Link Clues]].
 
 :: your fight with Annie [memory annie]
 <<if !$thoughts["your fight with Annie"]>>\
@@ -240,7 +240,7 @@ When she's finished, she pulls out bread and other materials.
 
 Slowly, meticulously, she begins making a sandwich.
 
-And the memory [[slips->Clues]] from your sight.
+And the memory [[slips->Link Clues]] from your sight.
 
 :: Terry's phone conversation [memory terry]
 <<if !$thoughts["Terry's phone conversation"]>>\
@@ -275,7 +275,7 @@ You stare at her numbly. You can't believe she thinks of you that way. Terry see
 "Oh!" she says, standing up from the kitchen table. "I almost forgot to say. You left your tie here." She pulls something out of her pocket, a rolled up straight tie - navy blue with stripes. That's...weird. She is talking to Justin, right?
 <<set $clickedItem to "Straight Tie">><<include "Add Item">>
 
-"Yeah," she continues. "Just stop by the shop and I'll give it to you." She hangs up, and the memory [[smears away->Clues]].
+"Yeah," she continues. "Just stop by the shop and I'll give it to you." She hangs up, and the memory [[smears away->Link Clues]].
 
 
 :: Justin and Erin being siblings [justin memory]
@@ -336,7 +336,7 @@ Erin's face falls as her arms do, and she starts twirling her hair in her finger
 
 Justin bites his lip, then clears his throat. "I threw it out," he says gruffly. "I don't need reminders of that anymore. I'd rather just leave it all behind." Then, flatly, "Sorry."
 
-Erin looks like she's about to cry. "It's...I am too." She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears->Clues]].
+Erin looks like she's about to cry. "It's...I am too." She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears->Link Clues]].
 
 :: Justin and Erin setting up for the dinner [justin memory]
 <<if !$thoughts["Justin and Erin setting up for the dinner"]>>\
@@ -364,7 +364,7 @@ Her brows scrunch together. "But your fatigue! You can't just keep living off of
 "Look. Terry gave me this article the other day about the health benefits of nuts; it was almost interesting. Apparently they help with tiredness and all that. And did you notice the dinner?" He gestures to the food being set out. "It's freaking full of nuts. It'll help me more than any magic whatchmacallit. Sorry, but no thanks."
 <<set $clickedItem to "Nut Article">><<include "Add Item">>
 
-Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades->Clues]].
+Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades->Link Clues]].
 
 :: Terry and Bram's conversation in her shop [bram memory]
 <<if !$thoughts["Terry and Bram's conversation in her shop"]>>
@@ -413,7 +413,7 @@ Coldly, she says, "What are you even doing here, Bram? I thought you didn't drin
 
 You scowl at his slip up as Terry looks at him suspiciously. She opens her mouth to speak but Bram quickly says, "I guess you must've gotten tired of Justin and his bowties, huh? What with that necktie and all."
 
-The tenseness is palpable as the memory [[fades->Clues]].
+The tenseness is palpable as the memory [[fades->Link Clues]].
 
 
 :: Justin, Annie, and sriracha [annie memory]
@@ -464,7 +464,7 @@ That's it? You want to laugh with how giddy you feel. Sriracha?
 
 "You know I'm definitely not actually buying this, right Granny?" Justin stuffs the note into his pants pocket.
 
-The memory [[fades->Clues]].
+The memory [[fades->Link Clues]].
 
 :: you distracting Justin in front of Bram's house [bram memory]
 <<if !$thoughts["you distracting Justin in front of Bram's house"]>>\
@@ -516,7 +516,7 @@ Bram, who'd been stiff with fear for much of the interaction, melts and walks ov
 
 "Nothing, Mort."
 
-The memory [[fades->Clues]].
+The memory [[fades->Link Clues]].
 
 :: Annie and Erin talking about warding you away [erin memory]
 <<if !$thoughts["Annie and Erin talking about warding you away"]>>\
@@ -549,7 +549,7 @@ And warding you away? The more memories you see, the more hurt you feel about yo
 
 "Oh, you know." Erin twirls her hand vaguely. "Hunters."
 
-As you stew on this, the memory [[slips away->Clues]].
+As you stew on this, the memory [[slips away->Link Clues]].
 
 
 :: Terry's boyfriend giving her some leaves [terry memory]
@@ -569,7 +569,7 @@ The guy mimes catching something, probably some gross air-kiss from Terry, then 
 Well, obviously you have to know what's in there. You float through the door easily and see Terry peering into the bag at a scattering of small leaves. She smiles. What the hell does she want with a pile of leaves?
 <<set $clickedItem to "Leaves">><<include "Add Item">>
 
-As you wonder this, the memory [[drips away->Clues]].
+As you wonder this, the memory [[drips away->Link Clues]].
 
 :: Erin and Bram brewing you a potion [erin memory]
 <<if !$thoughts["Erin and Bram brewing you a potion"]>>\
@@ -597,7 +597,7 @@ Pointing to one of the entries, Erin says, "Here. Potion of Continued Life." You
 
 "I think it's possible. You gonna help?" Erin looks over at Bram and smiles, though it's weak and born more of habit that cheer. When Bram nods, she drops it and looks melancholy. "Alright so, first we're going to need..."
 
-She continues on, but the memory [[fades->Clues]]. You're not sure what to think.
+She continues on, but the memory [[fades->Link Clues]]. You're not sure what to think.
 
 :: Terry poisoning your salad [terry memory]
 <<if !$thoughts["Terry poisoning your salad"]>>\
@@ -611,4 +611,4 @@ Not a second later - and too late, you think to yourself in dismay - Justin appe
 
 "Let's."
 
-The memory [[dissipates->Clues]].
+The memory [[dissipates->Link Clues]].
