@@ -1,0 +1,76 @@
+::StoryTitle
+combine test
+
+:: StorySettings
+ifid:50c7b890-497f-40e2-8fa4-f4cfbdca212a
+
+::Start
+<<set $inv = ["cheese", "pie", "cake"]>>
+[[Inventory]]
+ 
+::Inventory
+<<set $selected = []>>
+Click on two clues to try to link them.
+ 
+<span id="Selected"><<include "List Selected">></span>
+<span id="Inventory"><<include "List Inventory">></span>
+ 
+:: List Selected [nobr]
+<<if $selected.length > 0>>
+    <<for _item range $selected>>
+        _item selected.<br>
+    <</for>>
+<</if>>
+ 
+<<if $selected.length == 2>><br>
+<<link "Combine">><<include "Combine Selected">><br><</link>><</if>>
+ 
+<<if $selected.length > 0>>
+    <<link "Reset selected">>
+        <<set $selected = []>>
+        <<replace "#Selected">>
+            <<include "List Selected">>
+        <</replace>>
+    <</link>> (You can also click a 3rd item to reset!)<br>
+<</if>>
+
+<<if $selected.length > 1>>
+    <<set $selected = []>>
+        <<replace "#Selected">>
+            <<include "List Selected">>
+        <</replace>>
+<</if>>
+ 
+:: List Inventory [nobr]
+/* Sets the clickedItem variable and opens the check. */
+<<if $inv.length > 0>>
+    <<for _n, _item range $inv>>
+        <<if passage() == "Clues">>
+           [[_item]]
+        <<elseif passage() == "Inventory">>
+            <<capture _item>>
+                <<link _item>>
+                    <<set $selected.push(_item)>>
+                    <<replace "#Selected">>
+                        <<include "List Selected">>
+                    <</replace>>
+                <</link>><<if _n < $inv.length - 1>>, <</if>>
+            <</capture>>
+        <</if>>
+    <</for>>
+<</if>>
+ 
+:: Combine Selected [nobr]
+/* 0th level */
+<<if $selected.includesAll("cheese", "cake")>>
+        <<set $combo = "cheesecake">>
+        <<goto $combo>>
+        <<set $selected = []>>
+<<else>>You can't see how those clues are related, at least not right now./*<<set $fail += 1>>*/<</if>>
+ 
+:: cheesecake
+Cheesecake:
+ 
+Delicious!
+<<set $inv.push("cheesecake")>>
+[[Inventory]]

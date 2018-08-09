@@ -5,7 +5,7 @@ body {
 }
 
 body[data-tags~="detective"] {
-	background: #d8d8d8;
+	background-color: #d8d8d8;
     color: #545454;
 }
 
