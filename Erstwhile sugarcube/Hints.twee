@@ -2,7 +2,7 @@
 <h1>Hints</h1>
 <<set $bigHints = ["Several of the clues cannot be combined at all.", "Sure there's a reason why you don't want to think about some of the clues. Are you going to say what it is? Hell no."]>>
 
-<<if $inv.includesAll("Potion", "Erin's Testimony") and !$thoughts.includes("you drinking Erin's potion")>><<set $bigHints.pushUnique("Why is Erin under suspicion?")>><</if>>
+<<if $inv.includesAll("Potion", "Erin's Testimony") and !Object.keys($thoughts).includes("you drinking Erin's potion")>><<set $bigHints.pushUnique("Why is Erin under suspicion?")>><</if>>
  
 <<if $inv.includesAll("Wine", "Gift Request")and !Object.keys($thoughts).includes("you and Bram drinking wine")>><<set $bigHints.pushUnique("That gift Bram got you was of a great year. Tasted amazing.")>><</if>>
  
