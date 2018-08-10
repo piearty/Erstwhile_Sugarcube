@@ -172,7 +172,7 @@ Click on two clues to try to link them.
 	
 <!--Invalid combo flavor text-->
 
-<<elseif $selected.includesAny($LexaItems)>>You doubt at least one of these items is connected to your death.
+<<elseif $selected.includesAny($lexaItems)>>You doubt at least one of these items is connected to your death.
 
 <<print either($lexaItemAnger)>><<set $fail += 1>>
 

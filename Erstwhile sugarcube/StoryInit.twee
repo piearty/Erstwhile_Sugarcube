@@ -8,7 +8,7 @@
 <<set $noncombinables to ["Congratulatory Card", "Money", "Postcard"]>>
 
 <!--Lexa stuff-->
-<<set $lexaItems = ["Photograph", "Sticky Note", "Rap Sheet", "Consent Form", "Hospital Stickers", "Burning Letter"]>>
+<<set $lexaItems = ["Photograph", "Sticky Note", "Rap Sheet", "Consent Form", "Hospital Stickers", "Burning Letter", "Petition", "Old Newspaper"]>>
 
 <!--Hints-->
 <<set $fail = 0>>
