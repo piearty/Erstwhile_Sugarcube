@@ -31,6 +31,8 @@
 
 <!--Have you visited a mind yet?-->
 <<set $mindVisited to false>>
+<!--Which minds?-->
+<<set $visitedMinds = []>>
 
 <!--Checks if item been used up or not (resets upon leaving item passage)-->
 <<set $isItemUsed = false>>
