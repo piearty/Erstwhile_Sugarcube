@@ -4,20 +4,19 @@ aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's tes
 [[Testing]]
     <<set $thoughts["Bram realizing the wolfsbane was tampered with"] = "- blop">>
     <<set $thoughts["the detective ruminating about the murder weapon"] = "- blarp">>
-    <<set $clickedItem to "Aconite Poison">><<include "Add Item">>
-    <<set $clickedItem to "Medicine Reminder">><<include "Add Item">>
-    <<set $clickedItem to "Sigils">><<include "Add Item">>
-    <<set $clickedItem to "Potion">><<include "Add Item">>
-    <<set $clickedItem to "Straight Tie">><<include "Add Item">>
-    <<set $clickedItem to "Bowtie">><<include "Add Item">>
-    <<set $clickedItem to "Article">><<include "Add Item">>
-    <<set $clickedItem to "Justin's Testimony">><<include "Add Item">>
-    <<set $clickedItem to "Sandwich">><<include "Add Item">>
-    <<set $clickedItem to "Salad">><<include "Add Item">>
-    <<set $clickedItem to "Marijuana">><<include "Add Item">>
-    <<set $clickedItem to "Wolfsbane">><<include "Add Item">>
-    <<set $clickedItem to "Werewolf">><<include "Add Item">>
-    <<set $clickedItem to "Money">><<include "Add Item">>
-    <<set $clickedItem to "Hospital Stickers">><<include "Add Item">>
+    <<add "Aconite Poison">>
+    <<add "Medicine Reminder">>
+    <<add "Sigils">>
+    <<add "Potion">>
+    <<add "Straight Tie">>
+    <<add "Bowtie">>
+    <<add "Justin's Testimony">>
+    <<add "Sandwich">>
+    <<add "Salad">>
+    <<add "Marijuana">>
+    <<add "Wolfsbane">>
+    <<add "Werewolf">>
+    <<add "Money">>
+    <<add "Hospital Stickers">>
 :: Testing [lexa]
 <<print $inv.length>>

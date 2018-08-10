@@ -42,15 +42,24 @@ Oh. You guess your mind //is// a place you can actually visit. Is this some ghos
 <</if>>\
 <<if $inv.length > 0>>
 You have these clues:
-
-<<include "List Link Clues">>
-
+<<nobr>><<set _tmp = "">><table><col width="40%"><col width="40%"><col width="40%">
+    <<for _i, _item range $inv.sort()>>
+        <<set _tmp += "<td>[[" + _item + "]]</td>">>
+        <<if _i % 3 == 2>>
+            <<print "<tr>" + _tmp + "</tr>">>
+            <<set _tmp = "">>
+        <</if>>
+<</for>>
+<<if _tmp != "">>
+    <<print "<tr>" + _tmp + "</tr>">>
+<</if>>
+</table><</nobr>>
 <<else>>
 You remember a lot of things, but nothing that seems important right now.
 
 <</if>>\
 <<if $inv.length > 1>>
-There are still gaps in the story. You can try [[linking|Link Clues]] two clues if you want, see if there's a connection.
+There are still gaps in the story. You can try [[linking|Link Clues]] two clues if you want; see if there's a connection.
 
 <</if>>\
 <<if $thoughts.length > 0>>

@@ -72,8 +72,6 @@ Click on two clues to try to link them.
 /* Sets the clickedItem variable and opens the check. */
 <<if $inv.length > 0>>
     <<for _n, _item range $inv>>
-        <<if passage() == "Clues">>
-            [[_item]],
         <<elseif passage() == "Link Clues">>
             <<capture _item>>
                 <<link _item>>
