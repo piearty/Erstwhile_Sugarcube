@@ -4,6 +4,12 @@
     <<if $inv.length is 0>>
         <br>You make a note to remember this, because it might be important. As you do, you almost feel it added to your mind, as if that's an actual space you can visit.<br>
     <</if>>
+    <<if $noncombinables.includes($args[0])>>
+    <br>It's probably not relevant to the murder, you guess, but you are curious about it...<br>
+    <</if>>
+    <<if $lexaItems.includes($args[0])>>
+    <br>It's probably not relevant to the murder. <<print either($lexaItemAnger)>><br>
+    <</if>>
 <!--Links to item's page and adds it to the inventory-->
     <br>//(The clue, <nowiki>"</nowiki>[[$args[0]]]<nowiki>"</nowiki> has been added to your memories.)//<<set $inv.pushUnique($args[0])>>
 <</widget>>

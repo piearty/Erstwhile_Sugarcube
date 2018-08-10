@@ -353,5 +353,11 @@ Hospital stickers, dozens of them, found in Terry's mind. The earliest is dated 
 
 <<set $isItemUsed = true>>
 
+:: Rap Sheet [item lexa noncombinable]
+<h3>Rap Sheet</h3>
+A few DUIs of yours and some other thing from over a decade ago. The last one is dated 11/14. It was on the detective's mind-desk.
+
+<<set $isItemUsed = true>>
+
 :: Used Item [noinv nosave]
 You think you've gotten all the info out of this clue now.

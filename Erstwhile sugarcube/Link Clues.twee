@@ -172,11 +172,11 @@ Click on two clues to try to link them.
 	
 <!--Invalid combo flavor text-->
 
-<<elseif $selected.includesAny("Photograph", "Sticky Note", "Rap Sheet", "Consent Form", "Hospital Stickers", "Burning Letter")>>You doubt at least one of these items is connected to your death.
+<<elseif $selected.includesAny($LexaItems)>>You doubt at least one of these items is connected to your death.
 
 <<print either($lexaItemAnger)>><<set $fail += 1>>
 
-<<elseif $selected.includesAny("Congratulatory Card", "Money", "Postcard")>>You doubt at least one of these items is connected to your death.
+<<elseif $selected.includesAny($noncombinables)>>You doubt at least one of these items is connected to your death.
 
 <<<<elseif $selected.includesAny("Wolfsbane", "Leaves", "Aconite Poison") and $selected.includesAny("Sandwich", "Potion") and Object.keys($thoughts).includesAll("Bram realizing the wolfsbane was tampered with", "the detective ruminating about the murder weapon")>>You're pretty sure that this particular combo isn't what killed you, now.<<set $fail += 1>>
 

@@ -4,6 +4,12 @@
 <<set $thoughts to {}>>
 <<set $selected to []>>
 
+<!--Noncombinables-->
+<<set $noncombinables to ["Congratulatory Card", "Money", "Postcard"]>>
+
+<!--Lexa stuff-->
+<<set $lexaItems = ["Photograph", "Sticky Note", "Rap Sheet", "Consent Form", "Hospital Stickers", "Burning Letter"]>>
+
 <!--Hints-->
 <<set $fail = 0>>
 <<set $smallhints = ["The connections aren't random! Try to find different ways things can be related.",
