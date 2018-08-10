@@ -1,0 +1,56 @@
+:: Detective's mind [detective]
+You find yourself in a small office, drab and plain. Judging by the worn brown jacket hung up on the coat rack, the room is the detective's.
+<<if visited() is 1>>
+You're not sure what just happened but you're trying to roll with it. Did you...teleport or something?
+
+Hmm, no. Something tells you this isn't an actual office; it's more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren't looking, there's nothing at all. Are you in the detective's <<linkreplace "dream?">><<linkreplace "memory?">><<linkappend "mind?">>
+
+Yeah. Mind feels right to you, going by your //ghost sense//...or whatever it is.
+
+Looks like you were wrong about your lack of <<link "ghost powers">><<replace "#powers">>Though you don't recall mind-jumping to be a 'ghost' thing...still, rolling with it. What else would you do?<</replace>><</link>> after all. <span id="powers"></span><</linkappend>><</linkreplace>><</linkreplace>><</if>>
+
+The walls, an inoffensive light grey, are covered in <<link "photographs">><<replace "#photos">>
+
+Hey, there's you! You don't look that good. You wish they'd used a picture from when you were alive, at the very least.<</replace>><</link>> of missing persons and dead people. <span id="photos"></span>
+
+The <<link "desk">><<replace "#desk">>
+
+You feel a little daunted at the idea of going through the giant stack of papers, especially when you can't actually touch things. Fortunately it looks like none of them are that important, fuzzy and indistinct like the detective doesn't care to focus on them right now.
+
+There's some stuff on the desk though that's almost //too// in focus though, like when you wear a glasses prescription that's a shade too strong. The first is a <<link "sandwich">><<replace "#sandwich">>
+<<add "Sandwich">><</replace>><</link>>, the next is a <<link "potion">><<replace "#potion">>
+<<add "Potion">><</replace>><</link>>, the last is a <<link "salad">><<replace "#salad">>
+<<add "Salad">><</replace>><</link>>. These are all things you had at the dinner. Weird. You consumed the real objects so you guess that confirms this place isn't real.<<nobr>>
+<span id="sandwich"></span>
+<span id="potion"></span>
+<span id ="salad"></span><</nobr>>
+
+There seems to be a few papers here too, also in sharp detail:
+
+a <<link "rap sheet">><<replace "#rap">>
+
+And whose rap sheet might this b - 
+
+Ah.
+
+Yours.
+
+Ok so you have a record. So what? A few DUIs, some...other stuff. You swear you've <<linkprepend "gone straight">>mostly <</linkprepend>> now, cleaned up your <<linkappend "act!">> Not that it matters since you're, well, dead.<</linkappend>> The last thing is dated November 14th, over a decade ago so...
+
+What is it doing here?
+<<add "Rap Sheet">>
+<</replace>><</link>>, <span id="rap"></span>
+and a <<link "report.">><<replace "#report">>
+
+You squint at the paper. At the top in large bold letters are the words "//''AUTOPSY REPORT''//". You see the name "//Mort Freedman//" - your name - as well, and feel cold. Wow. You really are dead.
+
+"//From the anatomical findings and pertinent history I ascribe the death to:
+ACONITE POISONING//"
+
+Oh.
+
+How unpleasant.
+<<add "Report">><</replace>><</link>><span id="report"></span>
+<</if>><</replace>><</link>>
+
+<<if lastVisited("Questioning) is 1>><<link "Leave room." "Police Station">><</link>><<if lastVisited($who) is 1>><<link "Leave room." $who>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
