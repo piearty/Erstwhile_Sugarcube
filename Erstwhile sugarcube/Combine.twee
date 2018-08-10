@@ -201,10 +201,12 @@ Click on two clues to try to link them.
 
 Need a <<link "hint?">>
 
-<<print either($smallhints)>>
+    <<replace "#smallHints">><br><<print either($smallhints)>>
 
     <<if $fail >= 5>>
-    Need a [[bigger hint?->Hints]]
+    Need a [[bigger hint?|Hints]]
     <</if>>
+    <</replace>>
 <</link>>
 <</if>>
+<span id="smallHints"></span>

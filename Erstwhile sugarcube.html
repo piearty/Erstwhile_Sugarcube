@@ -414,74 +414,72 @@ Click on two clues to try to link them.
 &lt;!--Default failure--&gt;
 &lt;&lt;else&gt;&gt;You can&#39;t see how those clues are related, at least not right now.&lt;&lt;set $fail += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $fail &gt; 2&gt;&gt;
+&lt;&lt;if $fail &gt;= 3&gt;&gt;
 
 Need a &lt;&lt;link &quot;hint?&quot;&gt;&gt;
 
-&lt;&lt;print either(
-&quot;The connections aren&#39;t random! Try to find different ways things can be related.&quot;,
-&quot;Are there any odd inconsistencies between two clues? Does combining the clues get a contradiction of some sort?&quot;,
-&quot;Do any clues have some sort of quality in common?&quot;,
-&quot;Maybe someone said something important in their testimony.&quot;,
-&quot;You can combine a clue more than once!&quot;,
-&quot;You can combine clues found from unlocked memories to unlock even //more// memories!&quot;,
-&quot;A certain set of clues can be combined only after you deduce a connection between them by unlocking certain memories. It should be obvious when that happens.&quot;)&gt;&gt;
+    &lt;&lt;replace &quot;#smallHints&quot;&gt;&gt;&lt;br&gt;&lt;&lt;print either($smallhints)&gt;&gt;
 
-    &lt;&lt;if $fail &gt; 5&gt;&gt;
-    Need a [[bigger hint?-&gt;Hints]]
+    &lt;&lt;if $fail &gt;= 5&gt;&gt;
+    Need a [[bigger hint?|Hints]]
     &lt;&lt;/if&gt;&gt;
+    &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Hints" tags="noinv nosave" position="975,100">!Hints
-&lt;&lt;set $hints = [&quot;Several of the clues cannot be combined at all.&quot;, &quot;Sure there&#39;s a reason why you don&#39;t want to think about some of the clues. Are you going to say what it is? Hell no.&quot;]&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+&lt;span id=&quot;smallHints&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="8" name="Hints" tags="noinv nosave nobr" position="975,100">&lt;h1&gt;Hints&lt;/h1&gt;
+&lt;&lt;set $bigHints = [&quot;Several of the clues cannot be combined at all.&quot;, &quot;Sure there&#39;s a reason why you don&#39;t want to think about some of the clues. Are you going to say what it is? Hell no.&quot;]&gt;&gt;
 
-&lt;&lt;if $inv.includesAll(&quot;Potion&quot;, &quot;Erin&#39;s Testimony&quot;) and !$thoughts.includes(&quot;you drinking Erin&#39;s potion&quot;)&gt;&gt;&lt;&lt;set $hints.pushUnique(&quot;Why is Erin under suspicion?&quot;)&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Potion&quot;, &quot;Erin&#39;s Testimony&quot;) and !$thoughts.includes(&quot;you drinking Erin&#39;s potion&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Why is Erin under suspicion?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Wine&quot;, &quot;Gift Request&quot;)and !Object.keys($thoughts).includes(&quot;you and Bram drinking wine&quot;)&lt;&lt;set $hints.pushUnique(&quot;That gift Bram got you was of a great year. Tasted amazing.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Wine&quot;, &quot;Gift Request&quot;)and !Object.keys($thoughts).includes(&quot;you and Bram drinking wine&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;That gift Bram got you was of a great year. Tasted amazing.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAny(&quot;Justin&#39;s Testimony&quot;, &quot;Terry&#39;s Testimony&quot;) and $inv.includes(&quot;Salad&quot;) and !Object.keys($thoughts).includes(&quot;Justin and Terry at the grocery store&quot;)&lt;&lt;set $hints.pushUnique(&quot;Why are Justin and Terry under suspicion?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAny(&quot;Justin&#39;s Testimony&quot;, &quot;Terry&#39;s Testimony&quot;) and $inv.includes(&quot;Salad&quot;) and !Object.keys($thoughts).includes(&quot;Justin and Terry at the grocery store&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Why are Justin and Terry under suspicion?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Sandwich&quot;, &quot;Annie&#39;s Testimony&quot;)and !Object.keys($thoughts).includes(&quot;your fight with Annie&quot;)&lt;&lt;set $hints.pushUnique(&quot;Why is Annie under suspicion?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Sandwich&quot;, &quot;Annie&#39;s Testimony&quot;)and !Object.keys($thoughts).includes(&quot;your fight with Annie&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Why is Annie under suspicion?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Old Newspaper&quot;, &quot;Petition&quot;)and !Object.keys($thoughts).includes(&quot;Terry&#39;s phone conversation&quot;)&lt;&lt;set $hints.pushUnique(&quot;Two of your clues mention a certain place.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Old Newspaper&quot;, &quot;Petition&quot;)and !Object.keys($thoughts).includes(&quot;Terry&#39;s phone conversation&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Two of your clues mention a certain place.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Crescent Charm&quot;, &quot;Gibbous Charm&quot;)and !Object.keys($thoughts).includes(&quot;Justin and Erin being siblings&quot;)&lt;&lt;set $hints.pushUnique(&quot;Two of these clues are obviously part of a set.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Crescent Charm&quot;, &quot;Gibbous Charm&quot;)and !Object.keys($thoughts).includes(&quot;Justin and Erin being siblings&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Two of these clues are obviously part of a set.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Sigils&quot;, &quot;Potions&quot;)and !Object.keys($thoughts).includes(&quot;Erin&#39;s night&quot;)&lt;&lt;set $hints.pushUnique(&quot;There are two clues you&#39;ve found that…//allegedly// help with protection.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Sigils&quot;, &quot;Potions&quot;)and !Object.keys($thoughts).includes(&quot;Erin&#39;s night&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;There are two clues you&#39;ve found that…//allegedly// help with protection.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Caf Patch&quot;, &quot;Sigils&quot;)and !Object.keys($thoughts).includes(&quot;Justin and Erin setting up for the dinner&quot;)&lt;&lt;set $hints.pushUnique(&quot;Justin&#39;s been tired lately, hasn&#39;t he? There&#39;s some clues you have that ostensibly help.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Caf Patch&quot;, &quot;Sigils&quot;)and !Object.keys($thoughts).includes(&quot;Justin and Erin setting up for the dinner&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Justin&#39;s been tired lately, hasn&#39;t he? There&#39;s some clues you have that ostensibly help.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Marijuana&quot;, &quot;Medicine Reminder&quot;)and !Object.keys($thoughts).includes(&quot;Bram and Annie&#39;s conversation in the garden&quot;)&lt;&lt;set $hints.pushUnique(&quot;Who&#39;s Bram even selling that marijuana to, anyway?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Marijuana&quot;, &quot;Medicine Reminder&quot;)and !Object.keys($thoughts).includes(&quot;Bram and Annie&#39;s conversation in the garden&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Who&#39;s Bram even selling that marijuana to, anyway?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Nut Article&quot;, &quot;Annie&#39;s Testimony&quot;)and !Object.keys($thoughts).includes(&quot;Terry giving Justin the nut article&quot;)&lt;&lt;set $hints.pushUnique(&quot;Oh so that&#39;s where Justin got the nuts idea? That makes sense, according to...&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Nut Article&quot;, &quot;Annie&#39;s Testimony&quot;)and !Object.keys($thoughts).includes(&quot;Terry giving Justin the nut article&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Oh so that&#39;s where Justin got the nuts idea? That makes sense, according to...&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Straight Tie&quot;, &quot;Bowtie&quot;)and !Object.keys($thoughts).includes(&quot;Terry and Bram&#39;s conversation in her shop&quot;)&lt;&lt;set $hints.pushUnique(&quot;Justin only has a few distinctive features, so why is it that...&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Straight Tie&quot;, &quot;Bowtie&quot;)and !Object.keys($thoughts).includes(&quot;Terry and Bram&#39;s conversation in her shop&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Justin only has a few distinctive features, so why is it that...&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Aconite Poison&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;the detective ruminating about the murder weapon&quot;)&lt;&lt;set $hints.pushUnique(&quot;There are a couple clues you have that are rather poisonous, aren&#39;t there?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Aconite Poison&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;the detective ruminating about the murder weapon&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;There are a couple clues you have that are rather poisonous, aren&#39;t there?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Crumpled Paper&quot;, &quot;Sharpie&quot;)and !Object.keys($thoughts).includes(&quot;Justin, Annie, and sriracha&quot;)&lt;&lt;set $hints.pushUnique(&quot;Orange is quite a distinctive color.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Crumpled Paper&quot;, &quot;Sharpie&quot;)and !Object.keys($thoughts).includes(&quot;Justin, Annie, and sriracha&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Orange is quite a distinctive color.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Justin&#39;s Keys&quot;, &quot;Corkscrew&quot;)and !Object.keys($thoughts).includes(&quot;you distracting Justin in front of Bram&#39;s house&quot;)&lt;&lt;set $hints.pushUnique(&quot;Where did the thing that used to be on Justin&#39;s keys go?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Justin&#39;s Keys&quot;, &quot;Corkscrew&quot;)and !Object.keys($thoughts).includes(&quot;you distracting Justin in front of Bram&#39;s house&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Where did the thing that used to be on Justin&#39;s keys go?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Petals&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;Annie and Erin talking about warding you away&quot;)&lt;&lt;set $hints.pushUnique(&quot;Bram was giving what to who again?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Petals&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;Annie and Erin talking about warding you away&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Bram was giving what to who again?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Shifty Person&quot;, &quot;Cane&quot;)and !Object.keys($thoughts).includes(&quot;Terry&#39;s boyfriend giving her some leaves&quot;)&lt;&lt;set $hints.pushUnique(&quot;Sometimes people have pretty distinct items on their person.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Shifty Person&quot;, &quot;Cane&quot;)and !Object.keys($thoughts).includes(&quot;Terry&#39;s boyfriend giving her some leaves&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Sometimes people have pretty distinct items on their person.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Potion&quot;, &quot;Werewolf&quot;)and !Object.keys($thoughts).includes(&quot;Erin and Bram brewing you a potion&quot;)&lt;&lt;set $hints.pushUnique(&quot;What was Erin making to specifically protect you?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Potion&quot;, &quot;Werewolf&quot;)and !Object.keys($thoughts).includes(&quot;Erin and Bram brewing you a potion&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;What was Erin making to specifically protect you?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(&quot;Leaves&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;Bram realizing the wolfsbane was tampered with&quot;)&lt;&lt;set $hints.pushUnique(&quot;Something was damaged and robbed, and you think you found the item taken.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $inv.includesAll(&quot;Leaves&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;Bram realizing the wolfsbane was tampered with&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Something was damaged and robbed, and you think you found the item taken.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
  
-&lt;&lt;if $inv.includesAll(any of $poisons, &quot;Salad&quot; and Object.keys($thoughts).includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;and !Object.keys($thoughts).includes(&quot;Terry poisoning your salad&quot;)&lt;&lt;set $hints.pushUnique(&quot;You have to confirm who did it, and with what. Sure it may be obvious now but...you have to see for yourself.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $inv.includesAny(&quot;Leaves&quot;, &quot;Wolfsbane&quot;, &quot;Aconite&quot;) and $inv.includes(&quot;Salad&quot;) and Object.keys($thoughts).includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;) and !Object.keys($thoughts).includes(&quot;Terry poisoning your salad&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;You have to confirm who did it, and with what. Sure it may be obvious now but...you have to see for yourself.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;set _temp = clone($hints)&gt;&gt;
-&lt;span id=&quot;Done&quot;&gt;&lt;&lt;link &quot;Link Text&quot;&gt;&gt;
-    &lt;&lt;append &quot;#SpanID&quot;&gt;&gt;&lt;&lt;print _temp.pluck()&gt;&gt;&lt;br&gt;&lt;&lt;/append&gt;&gt;
+&lt;&lt;set _temp = clone($bigHints)&gt;&gt;
+&lt;span id=&quot;Done&quot;&gt;&lt;&lt;link &quot;Hints: &lt;br&gt;&quot;&gt;&gt;
+    &lt;&lt;append &quot;#bigHints&quot;&gt;&gt;
+        &lt;&lt;print _temp.pluck()&gt;&gt;&lt;br&gt;
+    &lt;&lt;/append&gt;&gt;
     &lt;&lt;if _temp.length == 0&gt;&gt;
         &lt;&lt;remove &quot;#Done&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/link&gt;&gt;&lt;/span&gt;
-&lt;span id=&quot;SpanID&quot;&gt;&lt;/span&gt;
-
-[[Link more clues.-&gt;Link Clues]]
+&lt;span id=&quot;bigHints&quot;&gt;&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+[[Link more clues.-&gt;Link Clues]]&lt;br&gt;
 [[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="9" name="Salad" tags="item" position="1100,100">&lt;h3&gt;Salad&lt;/h3&gt;
 It&#39;s a caesar salad with vinaigrette. Terry and Justin got it for you when you couldn&#39;t eat anything at the party. It was on the detective&#39;s mind-desk.\
 &lt;&lt;if hasVisited(&quot;Justin and Terry at the grocery store&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
@@ -1321,6 +1319,13 @@ In other words, you&#39;re a ghost now.
 
 &lt;!--Hints--&gt;
 &lt;&lt;set $fail = 0&gt;&gt;
+&lt;&lt;set $smallhints = [&quot;The connections aren&#39;t random! Try to find different ways things can be related.&quot;,
+&quot;Are there any odd inconsistencies between two clues? Does combining the clues get a contradiction of some sort?&quot;,
+&quot;Do any clues have some sort of quality in common?&quot;,
+&quot;Maybe someone said something important in their testimony.&quot;,
+&quot;You can combine a clue more than once!&quot;,
+&quot;You can combine clues found from unlocked memories to unlock even //more// memories!&quot;,
+&quot;A certain set of clues can be combined only after you deduce a connection between them by unlocking certain memories. It should be obvious when that happens.&quot;]&gt;&gt;
 
 &lt;!--Mort&#39;s ranting when you come across an item related to Lexa.--&gt;
 &lt;&lt;set $lexaItemAnger to [
