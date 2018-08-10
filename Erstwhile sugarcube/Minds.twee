@@ -50,7 +50,49 @@ ACONITE POISONING//"
 Oh.
 
 How unpleasant.
-<<add "Report">><</replace>><</link>><span id="report"></span>
-<</if>><</replace>><</link>>
+<<add "Aconite Poison">><</replace>><</link>><span id="report"></span>
+<</replace>><</link>><<if lastVisited("Questioning") is 1>>
+    <<link "Leave room." "Police Station">><</link>>
+<<elseif lastVisited($who) is 1>>
+    <<link "Leave room." "$who">><</link>>
+<</if>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
 
-<<if lastVisited("Questioning) is 1>><<link "Leave room." "Police Station">><</link>><<if lastVisited($who) is 1>><<link "Leave room." $who>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
+:: Justin's mind [justin mind]
+It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic, a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<link "newspaper">><<replace "#newspaper">>
+
+The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, "**Local Activists Protest Paving Over Park**", is unrealistically sharp, ink unfaded by time inside Justin's memories. You don't want to think about it too much.
+<<add "Old Newspaper">><</replace>><</link>> on it. <span id="newspaper"></span>
+
+The police reports and coffee table books lack most discernable details, their words blurry and indistinct. If Justin doesn't find them important enough to remember them properly, well, neither do you.
+
+On the couch, along with a few throw pillows and a bottle of <<linkappend "black hair dye,">> (Must be going grey early, huh?<</linkappend>> is a small box of <<linkappend "stick-on patches.">>
+
+The box stands out unpleasantly from the faded indigo upholstery and creamy white pillows, being a garish, saturated green. ~CAF PATCH!~ it proclaims in violent pink letters. Underneath, in purple, it says, "8 hours of energy guaranteed! Stick on and enjoy the ride!"
+
+Is this like an energy drink condensed into patch form? That's a bit worrisome. Terry has said before that she's sworn off caffeine for 'diet reasons', so you assume the box belongs to Justin.
+
+One of the patches has spilled out of the box. It looks a bit like a band-aid.
+<<add "Caf Patch">><</linkappend>>
+
+In here, for some bizarre reason, the walls are made of metal - steel, it looks like. Crushed steel, specifically; they're warped and corrugated as if the whole room is being squeezed by a giant vise. Something <<link "shiny">><<replace "#shiny">> - 
+
+You float closer and squint in the recesses of the crevice. There's a crescent moon charm glinting in there. Why, you don't rightly know, but you suspect its placement means something metaphorical, since the actual Whittaker house does not have metal walls and therefore does not have things stuck between said walls.
+<<add "Crescent Charm">>
+
+<</replace>><</link>><span id="shiny"></span> and something <<link "glittery">><<replace "#glittery">> 
+
+The glittery thing turns out to be a postcard stuffed into one of the cracks. It's open and says
+
+//"Congratulations! ==It's== You're a boy!
+
+~Erin xoxo"//
+
+The 'congratulations' is half obscured by the metal wall . The 'it's' has been crossed out with a purple gel pen, which was also used for her signature.
+
+Erin's a peculiar one, alright.
+
+<<add "Congratulatory Card">><</replace>><</link>> appear to be wedged between creases in the twisted metal. <span id="glittery"></span>
+
+On account of the bent walls, the ceiling is much, //much// closer to the floor than you're used to, and you're glad you're not enough of a presence to need to duck.
+
+[[Leave.->Justin]]
