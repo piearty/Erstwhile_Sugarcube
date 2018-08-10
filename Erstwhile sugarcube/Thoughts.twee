@@ -31,6 +31,4 @@ On this wacky journey of trying to figure out your own murderer, you've discover
 
 <<print Object.values($thoughts).join("<br>")>>
 
-<<link "Open your eyes.">>
-    <<goto $returnTo>>
-<</link>>
+[[Open your eyes.|$returnTo]]

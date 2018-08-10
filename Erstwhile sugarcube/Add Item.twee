@@ -8,5 +8,5 @@
     <</if>>
 <!--Links to item's page and adds it to the inventory-->
     <br>
-    //(The clue, "[[$clickedItem]]", has been added to your memories.)//<<set $inv.push($clickedItem)>>
+    //(The clue, "[[$clickedItem]]", has been added to your memories.)//<<set $inv.pushUnique($clickedItem)>>
 <</nobr>>

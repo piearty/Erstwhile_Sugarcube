@@ -57,8 +57,4 @@ There are still gaps in the story. You can try [[linking|Link Clues]] two clues 
 You can [[review->Thoughts]] the things you've figured out, now.
 
 <</if>>\
-<<nobr>>
-    <<link "Open your eyes.">>
-        <<goto $returnTo>>
-    <</link>>
-<</nobr>>
+[[Open your eyes.|$returnTo]]
