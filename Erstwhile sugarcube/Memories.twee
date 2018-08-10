@@ -47,7 +47,7 @@ Bram opens and closes his mouth a couple times. "Of course not." He continues. "
 "Somethin' wrong?"
 
 Bram has walked over to a bed that's labeled: CAUTION, DO NOT TOUCH. There's a purple flower here, and it looks a bit mishandled. "Some of the leaves are ripped off." He pales. "That's. That's not good."
-<<set $clickedItem to "Wolfsbane">><<include "Add Item">>
+<<add "Wolfsbane">>
 
 As this is said, the scene starts to smear and fade like mixed paint, and you find yourself back in your [[memories->Link Clues]] again.
 
@@ -66,7 +66,7 @@ Abruptly, she stops in the middle of the sidewalk and makes an annoyed noise, th
 Continuing along the road out of the residential area and into the town proper, Erin puts sigils up on various buildings until she reaches the graveyard. For a moment, you wonder if she's going to go inside, and if you have the nerve to follow her. Instead, she mouths something that looks like "this'll show him" and begins scattering violet petals around the front gate.
 
 After a few moments of scattering petals and chanting...something, she turns back toward the street and her eyes widen, her mouth parting into a little o-shape. You turn to see what she's looking at, and as you do you see someone dressed in dark clothing walking in the distance toward the main part of town, holding something long that glints silver in the moonlight.
- <<set $clickedItem to "Shifty Person">><<include "Add Item">> <<set $clickedItem to "Petals">><<include "Add Item">>
+ <<add "Shifty Person">> <<add "Petals">>
 
 That's...<<linkappend "suspicious">>
 
@@ -150,7 +150,7 @@ Erin hands the bottle to living Mort, and his face screws into a <<linkappend "s
 Bram's living room comes into view, and you recognize the scene immediately. This meeting happened a day or so before the party. The living you is sitting on Bram's couch, with Bram in an armchair across from you. Two empty wine glasses stand on the coffee table between the two of you. Bram is trying to open a bottle of Loup-Rouge with a tacky shark-shaped corkscrew, one of those ones that attaches to a keychain. Your living counterpart smirks in amusement.
 
 "I can't get over that silly corkscrew," living Mort says, chuckling.
-<<set $clickedItem to "Corkscrew">><<include "Add Item">>
+<<add "Corkscrew">>
 
 As Bram finally gets the bottle open, he replies weakly, "I didn't buy it, it was a gift." He sets the bottle down on the coffee table. When he makes no move to pour any wine, Mort reaches over and begins filling up both glasses.
 
@@ -171,7 +171,7 @@ Oh, hold on, was that supposed to be something you were figuring <<linkappend "o
 Of course you know about Bram growing marijuana. You've been blackmailing him about it for <<linkappend "ages.">>
 
 You don't have to spell out everything you know all the time, do you? Jeez.<</linkappend>><</linkappend>><</replace>><<link>> for...what was it? "Medicinal purposes"? That's a little problem. Thanks to me, of course."
-<<set $clickedItem to "Marijuana">><<include "Add Item">><span id="m"></span>
+<<add "Marijuana">><span id="m"></span>
 
 Living Mort chuckles again and takes another sip of wine. "Just keep doing this and it won't ever be a big problem. Right?" 
 
@@ -234,7 +234,7 @@ Annie stares at you. "And yet you're surprised I'm offended? You don't think abo
 Through the kitchen window, you see living Mort walk calmly out of the house. None of this "storming out" business.
 
 As every else stare in shock at your receding form, Annie lets out a puff of air and whispers, "Mort." She walks into the kitchen, grabs an orange sharpie and a piece of paper, and begins writing.
-<<set $clickedItem to "Sharpie">><<include "Add Item">>
+<<add "Sharpie">>
 
 When she's finished, she pulls out bread and other materials.
 
@@ -275,7 +275,7 @@ You stare at her numbly. How could she think of you that way?
 Terry seems to have calmed down a bit, nodding to whatever the person on the other line is saying. "You know, maybe I will," she says. "Maybe I will."
 
 "Oh!" she says, standing up from the kitchen table. "I almost forgot to say. You left your tie here." She pulls something out of her pocket, a rolled up straight tie - navy blue with stripes. That's...weird. She is talking to Justin, right?
-<<set $clickedItem to "Straight Tie">><<include "Add Item">>
+<<add "Straight Tie">>
 
 "Yeah," she continues. "Just stop by the shop and I'll give it to you." She hangs up, and the memory [[smears away->Link Clues]].
 
@@ -285,7 +285,7 @@ Terry seems to have calmed down a bit, nodding to whatever the person on the oth
     <<set $thoughts["Justin and Erin being siblings"] = "- Erin and Justin are brother and sister. How in the world did you never notice before? (crescent charm + gibbous charm)">>\
 <</if>>\
 You lose sight of what's around you, and then a dark street forms. The moon, nearly full, is high in the sky. Despite the clearly late hour, Justin is walking down the sidewalk, twirling his keys around his finger absentmindedly. Something looks missing from them, though you're not sure what. A charm or tool of some sort? You remember it was kind of tacky, but that's all you recall about it.
-<<set $clickedItem to "Justin's Keys">><<include "Add Item">>
+<<add "Justin's Keys">>
 
 Justin looks annoyed and is grumbling about patrolling.
 
@@ -310,7 +310,7 @@ Wait.
 "I, uh. Yes. Thank you. The bowtie was very nice."
 
 ""Well, if you insist on wearing those rather than a regular tie, you have to make up for it with fun patterns and cool colors," she sighs.
-<<set $clickedItem to "Bowtie">><<include "Add Item">>
+<<add "Bowtie">>
 
 "And what about the charm from our parents?" She holds hers up, the gibbous moon charm, attached to a silvery chain around her neck. "What did you think of that?"
 
@@ -347,7 +347,7 @@ Erin looks like she's about to cry. "It's...I am too." She walks past Justin, wh
 The first thing you see as the memory comes into focus is Justin leaning against a plane tree. The rest of the scene fades in - chairs, food, the festive Thanksgiving-themed tablecloths, and the awning draped above them. As you look around you spot other RNA members, including yourself, bustling about and getting the dinner preparations set up.
 
 Justin exhales heavily and sticks his hand in his pocket, rummaging around for something. When he withdraws it, you see he's holding one of those caffeine patches and a crumpled piece of paper. You can't make out what the paper says; all you can tell is that it's written in orange ink.
-<<set $clickedItem to "Crumpled Paper">><<include "Add Item">>
+<<add "Crumpled Paper">>
 
 He unceremoniously stuffs the paper back in his pocket, then peels off the backing of the caffeine patch. When he rolls up his sleeve to stick the patch on his wrist, you see that there's a faint lighter patch on his skin, square like the patch is. Is that a caffeine patch //tan line//? Wow, he must use them a lot. Come to think of it, the bags under his eyes are pretty heavy indeed...
 
@@ -364,7 +364,7 @@ Justin takes the paper and examines it. "How do you know if it's fully charged?"
 Her brows scrunch together. "But your fatigue! You can't just keep living off of caffeine patches and coffee!"
 
 "Look. Terry gave me this article the other day about the health benefits of nuts; it was almost interesting. Apparently they help with tiredness and all that. And did you notice the dinner?" He gestures to the food being set out. "It's freaking full of nuts. It'll help me more than any magic whatchmacallit. Sorry, but no thanks."
-<<set $clickedItem to "Nut Article">><<include "Add Item">>
+<<add "Nut Article">>
 
 Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades->Link Clues]].
 
@@ -379,7 +379,7 @@ You'd probably pull the same expression Bram is making, were you to still have a
 Bram goes to the door and makes to open it. Is he going to confront Terry or something? You can't imagine your friend ever doing that. Apparently he's not so sure either, his hand reaching for and pulling back from the bottle-shaped handle nervously.
 
 The door opens and Bram starts back, then the man emerges. He leans heavily on the silver-tipped cane he's holding, but otherwise he looks like your average, generic 30-something brunette guy. Unremarkable, even. And yet...
-<<set $clickedItem to "Cane">><<include "Add Item">>
+<<add "Cane">>
 
 He nods to Bram perfunctorily; Bram only eyes him warily in return. As the man walks off, Bram catches the door before it closes and heads hesitantly into the store.
 
@@ -541,7 +541,7 @@ Noticing this, Erin holds the grass up. "I'm just braiding grass. It makes it st
 Annie looks Erin up and down, and upon finding her to be completely serious, Annie lets out a sigh. "Well, thanks, I guess. If Mort really is a, uh, werewolf - well, I appreciate it, Erin. Thank you."
 
 You can't believe that Annie is going along with this farce - thinking you're a werewolf, how patently ridiculous! When have you ever acted like a goddamn supernatural creature? ...Present state aside.
-<<set $clickedItem to "Werewolf">><<include "Add Item">>
+<<add "Werewolf">>
 
 And warding you away? The more memories you see, the more hurt you feel about your so-called friends. Even though you know that Erin's mumbo jumbo wouldn't actually work, and without a doubt Annie knows too, the fact that she was willing to even //humor// Ms. Wicca just to keep you away...it's unpleasant, to say the least.
 
@@ -569,7 +569,7 @@ It's the guy - her - her paramour, waving back. He looks slightly disheveled, an
 The guy mimes catching something, probably some gross air-kiss from Terry, then turns and walks toward a car that is presumably his, cane clicking on the pavement. You look at Terry again; she is shouldering the door closed and beginning to look in the bag.
 
 Well, obviously you have to know what's in there. You float through the door easily and see Terry peering into the bag at a scattering of small leaves. She smiles. What the hell does she want with a pile of leaves?
-<<set $clickedItem to "Leaves">><<include "Add Item">>
+<<add "Leaves">>
 
 As you wonder this, the memory [[drips away->Link Clues]].
 
