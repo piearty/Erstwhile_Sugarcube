@@ -21,9 +21,7 @@
     <</if>>
     
 <!--Unless a passage is an item, a memory, or is not supposed to display an inventory, add the inventory link to every passage-->
-    <<if tags().includes("noinv") or tags().includes("item") or tags().includes("memory")>>
-<!--Do nothing-->
-    <<else>>
+    <<if !tags().includesAny("noinv", "item", "memory")>>
 <!--Saves where you were and sends you to the inventory page if clicked-->
         <<link "<br>Remember.">>
             <<set $returnTo to passage()>>

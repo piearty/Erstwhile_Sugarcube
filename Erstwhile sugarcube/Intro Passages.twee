@@ -1,0 +1,145 @@
+::Start [noinv]
+It was a pretty good Thanksgiving until you keeled over and died.
+
+The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less <<linkappend "//eavesdropping//">>, regardless of what Bram said,<</linkappend>> and more //surveying//, - it was having the bonding effect you wanted all along.
+
+Yes, everything was going perfectly - that is, until you started feeling, quoth yourself as beads of sweat dripped down your chin, "a bit crappy". "Crappy" turned out to be a terribly understated description of your heart attack, especially with the <<linkappend "vomiting and suffocation">> - which you personally found excessive -<</linkappend>> piled on top of it. Though 911 was called as soon as you started convulsing, and the EMTs tried their damndest to save you, things ended in a non-miraculous way.
+
+In other words, you're a ghost now.
+
+[[Welp.|Title]]
+
+[[Skip Intro and start at the police station.|Police Station]]
+<<nobr>>
+    <<if Save.slots.has(0)>>
+        <<link "Go back to where you were.">>
+            <<script>>
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            <</script>>
+        <</link>>
+    <</if>>
+<</nobr>>
+
+:: Title [noinv]
+<h1>Erstwhile</h1>
+<h4>Maddie Fialla and Marijke Perry</h4>
+<<link "//One need not be a chamber to be haunted,<br>One need not be a house;<br>The brain has corridors surpassing<br>Material place.<br><br>-Emily Dickinson//">><<goto "Welp">><</link>>
+
+:: Welp [noinv]
+Even though you're dead, a nagging feeling at the back of your no-longer-corporeal head is telling you you've got some <<link "business">><<replace "#business">> - or should you say...//unfinished business//<</replace>><</link>> to attend to still<span id="business"></span>. Otherwise why would you still be here?
+
+You glance around the party, or what's left of it anyway, hoping to find some hint as to the answer to that question.
+
+Most of the remaining guests are murmuring quietly to each other in shock and horror.
+
+The stench of death still lingers in the air. It doesn't mix well with the turkey.
+<<if hasVisited("Guests", "Food", "Mort")>>
+You can't figure out anything else you can do right now, being a ghost, other than wait around a bit.<</if>>
+
+[[Look at yourself.|Mort]]
+[[Look at the guests.|Guests]]
+[[Look at the food.|Food]]
+[[Be a poltergeist.|Poltergeist]]
+<<if hasVisited("Guests", "Food", "Mort")>>[[Wait.]]<</if>>
+
+::Mort [noinv]
+Well, you - your corpse, rather, was taken away by the EMTs a while ago and you have no desire to look at it - yourself? Again. You liked how you looked better when you were alive, rather than the cold, pale look of the dead.
+
+You're - you //were// a handsome man, even with your slightly thinning hair; getting on in years but still maintaining a youthful <<linkappend "charm">> (the charm was probably diminished when you vomited on yourself)<</linkappend>> and vigor, if you do say so yourself.
+
+Unfortunately you're not a mortician so you can't determine cause of death, though you wish you could. Yeah, the whole 'heart stopped beating' part seems to supply the cause just fine. But you weren't //that// <<linkappend "old">> (56 is barely middle aged!)<</linkappend>> and had no history of heart problems in your life or in your family. Plus, you've no idea where the other symptoms came from. You suspect there's something else going on.
+
+[[Look around some more.|Welp]]
+
+::Guests [noinv]
+You don't know who most of these people are, but you feel sorry for them nonetheless. You probably traumatized them all about the concept of Thanksgiving by having to go and die. You disappoint yourself sometimes.
+
+The other core members of the Neighborhood Association have stayed, maybe out of some sense of obligation. Justin is trying to calm the adults while his wife Terry is trying to calm the kids. Erin is running around gesticulating and doing...whatever, you don't really know or care. Annie and Bram are clearing the tables of food since, of course, the party is over.
+
+[[Look at Justin.]]
+[[Look at Terry.]]
+[[Look at Erin.]]
+[[Look at Annie.]]
+[[Look at Bram.]]
+[[Look around some more.|Welp]]
+
+:: Look at Justin. [noinv]
+Justin Whittaker is a cop in his mid-30's and husband to Terry. He's got jet-black hair, a bowtie, a perpetually furrowed brow. He's sort of gruff and unpleasant, but you like him fine anyway. Right now he's calming some other guests down and reassuring them that things will be <<linkappend "alright.">> You'd beg to differ.<</linkappend>>
+
+He's handling this remarkably well; makes sense since he's probably seen this kind of macabre stuff before.
+
+Still, you wish he was a little more affected by a friend's death than he appears to be.
+
+[[Look at more guests.|Guests]]
+
+:: Look at Terry. [noinv]
+Terry Whittaker is a pleasant, energetic wine store owner and wife to Justin, around the same age as him. Brown curls fall into her face and cling to the wet streaks left by tears. She looks distraught but is trying to put on a happy face for the kids who have flocked around her for comfort.
+
+Terry has always been the most helpful member of the association, after you of course. You can't imagine how much this is affecting her.
+
+[[Look at other guests.|Guests]]
+
+
+:: Look at Erin. [noinv]
+Erin Moonchild is...well, she's something alright. You don't pretend to understand why she thinks things like potions and spells and <<linkreplace "magic">> sorry, //magick//<</linkreplace>> are real, but she does, and everyone else has just had to deal with it. You find it a bit inappropriate in a woman of her age, already in her 30's. Her weird gestures right now are probably her trying to cast some incantation. You're not entirely sure she knows what just happened.
+
+You sigh.
+
+[[Look at other guests.|Guests]]
+
+:: Look at Annie. [noinv]
+Annie Smith is a stern but <<linkappend "kind">> (too kind, really)<</linkappend>> black woman in her 70's, retired. Right now she's shaking her head sadly as she packs up the mashed potatoes.
+
+You know there's no way she's a grandma but everyone calls her Granny Smith anyway. She cooked everything for the dinner, which must've taken her days. You'd really appreciate it if not for all the nuts; for most of the dinner you were just frustratedly staring and drooling at all the stuff you couldn't eat because of your deadly allergy.
+
+Not that it ended up mattering.
+
+[[Look at other guests.|Guests]]
+
+:: Look at Bram. [noinv]
+Bram Locklear is the closest to you in age and you were fairly close friends. In fact, you're not entirely sure what he's going to do now that you're gone. He wears his hair in a long braid down his back, and tends to the <<linkappend "community greenhouse">>, though it's really more just Bram's greenhouse at this point<</linkappend>>. He also has a garden in his backyard, and sells the produce he grows there at the farmer's market for a living.
+
+Bram is currently wrapping the turkey in tin foil with a worried, upset look on his face. You wish you could pat him on the shoulder and say it'll be alright. But you can't, and it won't.
+
+[[Look at other guests.|Guests]]
+
+:: Food [noinv]
+Just about everything is covered in nuts, or is nut-based in some way. The turkey, the stuffing, the mashed potatoes. You have no idea why. You <<linkappend "can't">><<linkappend " (or couldn't, anyway)">> (or still can't, being as you're a ghost)<</linkappend>><</linkappend>> eat any of it, oh, what with your //nut allergy//. You'd grind your teeth if you weren't intangible. How the hell was that overlooked?!
+ 
+[[Look around some more.|Welp]]
+
+:: Poltergeist [noinv]
+You try to make the stuffing float, just for <<linkappend kicks.>> And also to find some sort of solace in the fact that you're dead.<</linkappend>>
+
+Quickly you realize you have no idea how to do that. You try using your ~special ghost powers~, but after a whole minute of straining on your part and a complete lack of floating on the stuffing's part, you figure those probably don't exist.
+
+Trying to grab the stuffing proves futile as well, as your spectral hand can't touch it. Maybe this would be easier if you could //see// your spectral hand or the rest of your ghostly body. Maybe you're less of a ghost and more of a...presence? To be honest, you're not sure how this works.
+
+[[Look around some more.|Welp]]
+
+:: Wait. [noinv]
+It isn't long before, to your surprise, police cars show up. You float closer to try and figure out what's going on.
+
+Justin and one of the policemen are talking. Justin looks <<linkappend "irritated">>, even more so than usual<</linkappend>>, fiddling with his bowtie. It seems that the medical examiner at the hospital suspected something was off about your death - turns out the inability to breathe and the barfing were excessive after all.
+
+Or perhaps a better word would be suspicious. 
+
+ An autopsy is ordered post-haste and your friends are all detained as officers investigate the area and do basic interrogations, which takes a few hours. You float around the scene aimlessly, not really absorbing any information in your shock. Eventually the police inform the Neighborhood Association that they're to be taken in for questioning, having been deemed the group most likely to have had a hand in your <<linkappend "death">> - no -
+
+Your murder<</linkappend>>.
+
+[[Follow them to the station.|Questioning]]
+
+:: Questioning [noinv]
+<<set _pronouns to "he">>\
+You're disturbed by the thought; it's all you could think about as the investigation went on. You were //murdered//? And not only murdered, but by one of your friends? Who would want to murder you? Why? How?
+
+You cycle through the rest of the <<linkappend "5 Ws">> (and 1 H)<</linkappend>> and other questions over and over as you float behind the police cars driving to the station, following with apparent ease despite their speed. Able to pass through the walls of the station just as easily, you find the area with all of the interview rooms and wait for someone to show up.
+
+A detective with cropped red hair, a worn brown coat, and an androgynous look walks into the hallway, chewing on an unlit cigarette. <<linkreplace "He paces">><<linkreplace "She paces?">>Honestly you can't tell what gender the detective is so you're gonna play it safe and go with //they// - They pace<<append "#muttering">>
+
+You bring yourself closer to hear what they're saying, but just at that moment they start pacing in your direction. You instinctively try to back up, but before you do, your ghostly form and the detective collide and you feel a strong tug. The last thing you see before the world fades is the detective shuddering.
+
+[[Wait, what?->Detective's mind]]<</append>><</linkreplace>><</linkreplace>> up and down the hall while muttering, presumably about the case. <span id="muttering"></span>

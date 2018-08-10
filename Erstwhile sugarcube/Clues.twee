@@ -4,7 +4,7 @@
     <<if $inv.length > 1>>
         | [[Link Clues]]
     <</if>>
-    <<if $thoughts.length is not 0>>
+    <<if $thoughts.length > 0>>
         | [[Thoughts]]
     <</if>>
      |  <<linkreplace "Save">>
