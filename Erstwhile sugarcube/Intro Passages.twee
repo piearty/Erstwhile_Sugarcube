@@ -25,7 +25,7 @@ In other words, you're a ghost now.
 :: Title [noinv]
 <h1>Erstwhile</h1>
 <h4>Maddie Fialla and Marijke Perry</h4>
-<<link "//One need not be a chamber to be haunted,<br>One need not be a house;<br>The brain has corridors surpassing<br>Material place.<br><br>-Emily Dickinson//">><<goto "Welp">><</link>>
+<<link "//One need not be a chamber to be haunted,<br>One need not be a house;<br>The brain has corridors surpassing<br>Material place.<br><br>-Emily Dickinson//" "Welp">><</link>>
 
 :: Welp [noinv]
 Even though you're dead, a nagging feeling at the back of your no-longer-corporeal head is telling you you've got some <<link "business">><<replace "#business">> - or should you say...//unfinished business//<</replace>><</link>> to attend to still<span id="business"></span>. Otherwise why would you still be here?
