@@ -71,7 +71,7 @@ Click on two clues to try to link them.
 :: List Link Clues [nobr]
 /* Sets the clickedItem variable and opens the check. */
 <<if $inv.length > 0>>
-    <<for _n, _item range $inv>>
+    <<for _n, _item range $inv.sort()>>
         <<if passage() == "Link Clues">>
             <<capture _item>>
                 <<link _item>>

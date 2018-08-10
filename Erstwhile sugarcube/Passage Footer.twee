@@ -1,5 +1,5 @@
-::PassageFooter [nobr]
-<!--Indicates this item can't be combined-->
+::PassageFooter
+<<nobr>><!--Indicates this item can't be combined-->
     <<if tags().includes("noncombinable")>>
         <br>
         This probably isn't relevant to the murder...
@@ -37,3 +37,4 @@
         <</if>>
         <<back "Back to what you were doing.">>
     <</if>>
+<</nobr>>
