@@ -1,0 +1,4 @@
+::PassageHeader
+<<if tags().includes("memory") and $thoughts.length = 0>>As you connect the two clues in your mind, you feel a strong tide of emotions and sensations flood your senses, and you know they're not your own.
+
+<</if>>
