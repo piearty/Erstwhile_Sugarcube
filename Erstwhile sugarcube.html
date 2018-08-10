@@ -169,7 +169,7 @@ Config.saves.autosave = "autosave";</script><tw-passagedata pid="1" name="Add It
     &lt;&lt;/if&gt;&gt;
 &lt;!--Links to item&#39;s page and adds it to the inventory--&gt;
     &lt;br&gt;
-    //(The clue, &quot;[[$clickedItem]]&quot;, has been added to your memories.)//&lt;&lt;set $inv.push($clickedItem)&gt;&gt;
+    //(The clue, &quot;[[$clickedItem]]&quot;, has been added to your memories.)//&lt;&lt;set $inv.pushUnique($clickedItem)&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Clues" tags="noinv save" position="225,100">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;Clues
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
@@ -228,11 +228,7 @@ There are still gaps in the story. You can try [[linking|Link Clues]] two clues 
 You can [[review-&gt;Thoughts]] the things you&#39;ve figured out, now.
 
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;nobr&gt;&gt;
-    &lt;&lt;link &quot;Open your eyes.&quot;&gt;&gt;
-        &lt;&lt;goto $returnTo&gt;&gt;
-    &lt;&lt;/link&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Link Clues" tags="noinv save" position="350,100">&lt;&lt;nobr&gt;&gt;
+[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="3" name="Link Clues" tags="noinv save" position="350,100">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]]
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
         | Link Clues
@@ -266,6 +262,7 @@ This will erase your progress and saves. Are you sure?
         &lt;&lt;/if&gt;&gt;
      | [[Credits]]&lt;/strong&gt;
 &lt;&lt;/nobr&gt;&gt;
+
 Click on two clues to try to link them.
  
 &lt;span id=&quot;Selected&quot;&gt;&lt;&lt;include &quot;List Selected&quot;&gt;&gt;&lt;/span&gt;
@@ -381,104 +378,111 @@ Click on two clues to try to link them.
 &lt;!--5th level--&gt;
 &lt;&lt;elseif $selected.includesAll(&quot;Leaves&quot;, &quot;Wolfsbane&quot;)&gt;&gt;
         &lt;&lt;combine &quot;Bram realizing the wolfsbane was tampered with&quot;&gt;&gt;
+        
+&lt;&lt;elseif $selected.includesAll(&quot;Leaves&quot;, &quot;Aconite&quot;) and $selected.includes(&quot;Wolfsbane&quot;)&gt;&gt;
+        &lt;&lt;combine &quot;Bram realizing the wolfsbane was tampered with&quot;&gt;&gt;
 
 &lt;!--6th level--&gt;
-&lt;&lt;elseif $selected.includesAny(&quot;Wolfsbane&quot;, &quot;Leaves&quot;, &quot;Aconite Poison&quot;) and $selected.includes(&quot;Salad&quot;) and !$thoughts.includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;)&gt;&gt;
-    This very well may be the combo that killed you, but you don&#39;t want to jump to conclusions just yet. You think you should figure some more things out first.&lt;&lt;set $fail += 1&gt;&gt;
-
-&lt;&lt;elseif $selected.includesAny(&quot;Wolfsbane&quot;, &quot;Leaves&quot;, &quot;Aconite Poison&quot;) and $selected.includes(&quot;Salad&quot;) and $thoughts.includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;)&gt;&gt;
+&lt;&lt;elseif $selected.includesAny(&quot;Wolfsbane&quot;, &quot;Leaves&quot;, &quot;Aconite Poison&quot;) and $selected.includes(&quot;Salad&quot;) and Object.keys($thoughts).includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;)&gt;&gt;
     &lt;&lt;combine &quot;Terry poisoning your salad&quot;&gt;&gt;
-    &lt;&lt;set $selected = []&gt;&gt;
-    &lt;&lt;goto $combo&gt;&gt;
+    
+&lt;&lt;elseif $selected.includesAny(&quot;Wolfsbane&quot;, &quot;Leaves&quot;, &quot;Aconite Poison&quot;) and $selected.includesAny(&quot;Salad&quot;, &quot;Sandwich&quot;, &quot;Potion&quot;) and !Object.keys($thoughts).includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;)&gt;&gt;
+    This very well may be the combo that killed you, but you don&#39;t want to jump to conclusions just yet. You think you should figure some more things out first.&lt;&lt;set $fail += 1&gt;&gt;
 	
-&lt;!--Invalid combo flavor text
+&lt;!--Invalid combo flavor text--&gt;
 
 &lt;&lt;elseif $selected.includesAny(&quot;Photograph&quot;, &quot;Sticky Note&quot;, &quot;Rap Sheet&quot;, &quot;Consent Form&quot;, &quot;Hospital Stickers&quot;, &quot;Burning Letter&quot;)&gt;&gt;You doubt at least one of these items is connected to your death.
 
-&lt;&lt;print either($lexaItemAnger)&gt;&gt;/*(set: $fail to it + 1)*/
+&lt;&lt;print either($lexaItemAnger)&gt;&gt;&lt;&lt;set: $fail += 1&gt;&gt;
 
-&lt;!--(elseif: $selected contains &quot;Congratulatory Card&quot; or $selected contains &quot;Money&quot; or $selected contains &quot;Postcard&quot;)[You doubt at least one of these items is connected to your death.]
+&lt;&lt;elseif $selected.includesAny(&quot;Congratulatory Card&quot;, &quot;Money&quot;, &quot;Postcard&quot;)&gt;&gt;You doubt at least one of these items is connected to your death.
 
-(elseif: $selected contains any of $poisons and $selected contains any of (ds: &quot;Potion&quot;, &quot;Sandwich&quot;))[(if: $thoughts contains &quot;Bram realizing the wolfsbane was tampered with&quot; and $thoughts contains &quot;the detective ruminating about the murder weapon&quot;)[This very well may be the combo that killed you, but you don&#39;t want to jump to conclusions just yet. You think you should figure some more things out first.(set: $fail to it + 1)]
-(else:) [You&#39;re pretty sure that this particular combo isn&#39;t what killed you, now.(set: $fail to it + 1)]]
+&lt;&lt;&lt;&lt;elseif $selected.includesAny(&quot;Wolfsbane&quot;, &quot;Leaves&quot;, &quot;Aconite Poison&quot;) and $selected.includesAny(&quot;Sandwich&quot;, &quot;Potion&quot;) and Object.keys($thoughts).includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;)&gt;&gt;You&#39;re pretty sure that this particular combo isn&#39;t what killed you, now.&lt;&lt;set $fail += 1&gt;&gt;
 
-&lt;!--Extra flavor text for failures
+&lt;!--Extra flavor text for failures--&gt;
 
-(elseif: $selected contains &quot;Leaves&quot; and $selected contains &quot;Petals&quot;)[They&#39;re both probably from the same plant, but you can&#39;t see any other way they&#39;re connected meaningfully.(set: $fail to it + 1)]
+&lt;&lt;elseif $selected.includesAll(&quot;Leaves&quot;, &quot;Petals&quot;)&gt;&gt;They&#39;re both probably from the same plant, but you can&#39;t see any other way they&#39;re connected meaningfully.&lt;&lt;set $fail += 1&gt;&gt;
 
-(elseif: $selected contains &quot;Cane&quot; and $selected contains &quot;Straight Tie&quot;)[Well, you&#39;ve definitely figured out that these belong to the same guy - Terry&#39;s boyfriend. You don&#39;t want to think about him further.(set: $fail to it + 1)]
+&lt;&lt;elseif $selected.includesAll(&quot;Cane&quot;, &quot;Straight Tie&quot;)&gt;&gt;Well, you&#39;ve definitely figured out that these belong to the same guy - Terry&#39;s boyfriend. You don&#39;t want to think about him further.&lt;&lt;set $fail += 1&gt;&gt;
 
-(elseif: $selected contains &quot;Leaves&quot; and $selected contains &quot;Marijuana&quot;)[It&#39;s a good thought, but these are not marijuana leaves.(set: $fail to it + 1)]
+&lt;&lt;elseif $selected.includesAll(&quot;Leaves&quot;, &quot;Marijuana&quot;)&gt;&gt;It&#39;s a good thought, but these are not marijuana leaves.&lt;&lt;set $fail += 1&gt;&gt;
 
-(elseif: $selected contains &quot;Werewolf&quot; and $selected contains &quot;Cane&quot;)[You&#39;re not //actually// a werewolf, so silver wouldn&#39;t really do |much&gt;[much] to you, would it?(click: ?much)[ Unlike the //poison//...](set: $fail to it + 1)]
+&lt;&lt;elseif $selected.includesAll(&quot;Werewolf&quot;, &quot;Cane&quot;)&gt;&gt;You&#39;re not //actually// a werewolf, so silver wouldn&#39;t really do &lt;&lt;link &quot;much&quot;&gt;&gt;&lt;&lt;replace &quot;#much&quot;&gt;&gt;Unlike the //poison//...&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; to you, would it? &lt;span id=&quot;much&quot;&gt;&lt;/span&gt;&lt;&lt;set $fail += 1&gt;&gt;
 
-(elseif: $selected contains &quot;Werewolf&quot; and $selected contains &quot;Wolfsbane&quot;)[Well yes, wolfsbane //would// kill a werewolf but...it would kill //anybody//.(set: $fail to it + 1)]--&gt;
+&lt;&lt;elseif $selected.includesAll(&quot;Werewolf&quot;, &quot;Wolfsbane&quot;)&gt;&gt;Well yes, wolfsbane //would// kill a werewolf but, newsflash, it would kill //anybody//.&lt;&lt;set $fail += 1&gt;&gt;
 
 &lt;!--Default failure--&gt;
-&lt;&lt;else&gt;&gt;You can&#39;t see how those clues are related, at least not right now./*&lt;&lt;set $fail += 1&gt;&gt;*/&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;You can&#39;t see how those clues are related, at least not right now.&lt;&lt;set $fail += 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;!--(if: $fail &gt; 2)[
+&lt;&lt;if $fail &gt; 2&gt;&gt;
 
-Need a |h1&gt;[hint? 
+Need a &lt;&lt;link &quot;hint?&quot;&gt;&gt;
 
-(click: ?h1)[(either:
+&lt;&lt;print either(
 &quot;The connections aren&#39;t random! Try to find different ways things can be related.&quot;,
 &quot;Are there any odd inconsistencies between two clues? Does combining the clues get a contradiction of some sort?&quot;,
 &quot;Do any clues have some sort of quality in common?&quot;,
 &quot;Maybe someone said something important in their testimony.&quot;,
 &quot;You can combine a clue more than once!&quot;,
 &quot;You can combine clues found from unlocked memories to unlock even //more// memories!&quot;,
-&quot;A certain set of clues can be combined only after you deduce a connection between them by unlocking certain memories. It should be obvious when that happens.&quot;,)]]]\
+&quot;A certain set of clues can be combined only after you deduce a connection between them by unlocking certain memories. It should be obvious when that happens.&quot;)&gt;&gt;
 
-(if: $fail &gt; 9)[
-Need a [[bigger hint?-&gt;Hints]]]--&gt;</tw-passagedata><tw-passagedata pid="8" name="Hints" tags="noinv nosave" position="975,100">**Hints**
-(set: $hints to (ds: &quot;Several of the clues cannot be combined at all.&quot;, &quot;Sure there&#39;s a reason why you don&#39;t want to think about some of the clues. Are you going to say what it is? Hell no.&quot;))\
-{(if: $inv contains &quot;Potion&quot; and $inv contains &quot;Erin&#39;s Testimony&quot;)[(unless: $thoughts contains &quot;you drinking Erin&#39;s potion&quot;)[(set: $hints to it + (ds: &quot;Why is Erin under suspicion?&quot;))]]
- 
-(if: $inv contains &quot;Wine&quot; and $inv contains &quot;Gift Request&quot;)[(unless: $thoughts contains &quot;you and Bram drinking wine&quot;)[(set: $hints to it + (ds: &quot;That gift Bram got you was of a great year. Tasted amazing.&quot;))]]
- 
-(if: $inv contains any of (ds: &quot;Justin&#39;s Testimony&quot;, &quot;Terry&#39;s Testimony&quot;) and $inv contains &quot;Salad&quot;)[(unless: $thoughts contains &quot;Justin and Terry at the grocery store&quot;)[(set: $hints to it + (ds: &quot;Why are Justin and Terry under suspicion?&quot;))]]
- 
-(if: $inv contains &quot;Sandwich&quot; and $inv contains &quot;Annie&#39;s Testimony&quot;)[(unless: $thoughts contains &quot;your fight with Annie&quot;)[(set: $hints to it + (ds: &quot;Why is Annie under suspicion?&quot;))]]
- 
-(if: $inv contains &quot;Old Newspaper&quot; and $inv contains &quot;Petition&quot;)[(unless: $thoughts contains &quot;Terry&#39;s phone conversation&quot;)[(set: $hints to it + (ds: &quot;Two of your clues mention a certain place.&quot;))]]
- 
-(if: $inv contains &quot;Crescent Charm&quot; and $inv contains &quot;Gibbous Charm&quot;)[(unless: $thoughts contains &quot;Justin and Erin being siblings&quot;)[(set: $hints to it + (ds: &quot;Two of these clues are obviously part of a set.&quot;))]]
- 
-(if: $inv contains &quot;Sigils&quot; and $inv contains &quot;Potions&quot;)[(unless: $thoughts contains &quot;Erin&#39;s night&quot;)[(set: $hints to it + (ds: &quot;There are two clues you&#39;ve found that…//allegedly// help with protection.&quot;))]]
- 
-(if: $inv contains &quot;Caf Patch&quot; and $inv contains &quot;Sigils&quot;)[(unless: $thoughts contains &quot;Justin and Erin setting up for the dinner&quot;)[(set: $hints to it + (ds: &quot;Justin&#39;s been tired lately, hasn&#39;t he? There&#39;s some clues you have that ostensibly help.&quot;))]]
- 
-(if: $inv contains &quot;Marijuana&quot; and $inv contains &quot;Medicine Reminder&quot;)[(unless: $thoughts contains &quot;Bram and Annie&#39;s conversation in the garden&quot;)[(set: $hints to it + (ds: &quot;Who&#39;s Bram even selling that marijuana to, anyway?&quot;))]]
- 
-(if: $inv contains &quot;Nut Article&quot; and $inv contains &quot;Annie&#39;s Testimony&quot;)[(unless: $thoughts contains &quot;Terry giving Justin the nut article&quot;)[(set: $hints to it + (ds: &quot;Oh so that&#39;s where Justin got the nuts idea? That makes sense, according to...&quot;))]]
- 
-(if: $inv contains &quot;Straight Tie&quot; and $inv contains &quot;Bowtie&quot;)[(unless: $thoughts contains &quot;Terry and Bram&#39;s conversation in her shop&quot;)[(set: $hints to it + (ds: &quot;Justin only has a few distinctive features, so why is it that...&quot;))]]
- 
-(if: $inv contains &quot;Aconite Poison&quot; and $inv contains &quot;Wolfsbane&quot;)[(unless: $thoughts contains &quot;the detective ruminating about the murder weapon&quot;)[(set: $hints to it + (ds: &quot;There are a couple clues you have that are rather poisonous, aren&#39;t there?&quot;))]]
- 
-(if: $inv contains &quot;Crumpled Paper&quot; and $inv contains &quot;Sharpie&quot;)[(unless: $thoughts contains &quot;Justin, Annie, and sriracha&quot;)[(set: $hints to it + (ds: &quot;Orange is quite a distinctive color.&quot;))]]
- 
-(if: $inv contains &quot;Justin&#39;s Keys&quot; and $inv contains &quot;Corkscrew&quot;)[(unless: $thoughts contains &quot;you distracting Justin in front of Bram&#39;s house&quot;)[(set: $hints to it + (ds: &quot;Where did the thing that used to be on Justin&#39;s keys go?&quot;))]]
- 
-(if: $inv contains &quot;Petals&quot; and $inv contains &quot;Wolfsbane&quot;)[(unless: $thoughts contains &quot;Annie and Erin talking about warding you away&quot;)[(set: $hints to it + (ds: &quot;Bram was giving what to who again?&quot;))]]
- 
-(if: $inv contains &quot;Shifty Person&quot; and $inv contains &quot;Cane&quot;)[(unless: $thoughts contains &quot;Terry&#39;s boyfriend giving her some leaves&quot;)[(set: $hints to it + (ds: &quot;Sometimes people have pretty distinct items on their person.&quot;))]]
- 
-(if: $inv contains &quot;Potion&quot; and $inv contains &quot;Werewolf&quot;)[(unless: $thoughts contains &quot;Erin and Bram brewing you a potion&quot;)[(set: $hints to it + (ds: &quot;What was Erin making to specifically protect you?&quot;))]]
- 
-(if: $inv contains &quot;Leaves&quot; and $inv contains &quot;Wolfsbane&quot;)[(unless: $thoughts contains &quot;Bram realizing the wolfsbane was tampered with&quot;)[(set: $hints to it + (ds: &quot;Something was damaged and robbed, and you think you found the item taken.&quot;))]]
- 
-(if: $inv contains any of $poisons and $inv contains &quot;Salad&quot; and $thoughts contains &quot;Bram realizing the wolfsbane was tampered with&quot; and $thoughts contains &quot;the detective ruminating about the murder weapon&quot;)[(unless: $thoughts contains &quot;Terry poisoning your salad&quot;)[(set: $hints to it + (ds: &quot;You have to confirm who did it, and with what. Sure it may be obvious now but…you have to see for yourself.&quot;))]]}\
-(unless: length of $hints &lt; 3)[(linkrepeat: &quot;Hints:
+    &lt;&lt;if $fail &gt; 5&gt;&gt;
+    Need a [[bigger hint?-&gt;Hints]]
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Hints" tags="noinv nosave" position="975,100">!Hints
+&lt;&lt;set $hints = [&quot;Several of the clues cannot be combined at all.&quot;, &quot;Sure there&#39;s a reason why you don&#39;t want to think about some of the clues. Are you going to say what it is? Hell no.&quot;]&gt;&gt;\
 
-&quot;)[(set: $hints to (rotated: 1, ...$hints))[(print: 1st of $hints)
+&lt;&lt;if $inv.includesAll(&quot;Potion&quot;, &quot;Erin&#39;s Testimony&quot;) and !$thoughts.includes(&quot;you drinking Erin&#39;s potion&quot;)&gt;&gt;&lt;&lt;set $hints.pushUnique(&quot;Why is Erin under suspicion?&quot;)&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Wine&quot;, &quot;Gift Request&quot;)and !Object.keys($thoughts).includes(&quot;you and Bram drinking wine&quot;)&lt;&lt;set $hints.pushUnique(&quot;That gift Bram got you was of a great year. Tasted amazing.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAny(&quot;Justin&#39;s Testimony&quot;, &quot;Terry&#39;s Testimony&quot;) and $inv.includes(&quot;Salad&quot;) and !Object.keys($thoughts).includes(&quot;Justin and Terry at the grocery store&quot;)&lt;&lt;set $hints.pushUnique(&quot;Why are Justin and Terry under suspicion?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Sandwich&quot;, &quot;Annie&#39;s Testimony&quot;)and !Object.keys($thoughts).includes(&quot;your fight with Annie&quot;)&lt;&lt;set $hints.pushUnique(&quot;Why is Annie under suspicion?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Old Newspaper&quot;, &quot;Petition&quot;)and !Object.keys($thoughts).includes(&quot;Terry&#39;s phone conversation&quot;)&lt;&lt;set $hints.pushUnique(&quot;Two of your clues mention a certain place.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Crescent Charm&quot;, &quot;Gibbous Charm&quot;)and !Object.keys($thoughts).includes(&quot;Justin and Erin being siblings&quot;)&lt;&lt;set $hints.pushUnique(&quot;Two of these clues are obviously part of a set.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Sigils&quot;, &quot;Potions&quot;)and !Object.keys($thoughts).includes(&quot;Erin&#39;s night&quot;)&lt;&lt;set $hints.pushUnique(&quot;There are two clues you&#39;ve found that…//allegedly// help with protection.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Caf Patch&quot;, &quot;Sigils&quot;)and !Object.keys($thoughts).includes(&quot;Justin and Erin setting up for the dinner&quot;)&lt;&lt;set $hints.pushUnique(&quot;Justin&#39;s been tired lately, hasn&#39;t he? There&#39;s some clues you have that ostensibly help.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Marijuana&quot;, &quot;Medicine Reminder&quot;)and !Object.keys($thoughts).includes(&quot;Bram and Annie&#39;s conversation in the garden&quot;)&lt;&lt;set $hints.pushUnique(&quot;Who&#39;s Bram even selling that marijuana to, anyway?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Nut Article&quot;, &quot;Annie&#39;s Testimony&quot;)and !Object.keys($thoughts).includes(&quot;Terry giving Justin the nut article&quot;)&lt;&lt;set $hints.pushUnique(&quot;Oh so that&#39;s where Justin got the nuts idea? That makes sense, according to...&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Straight Tie&quot;, &quot;Bowtie&quot;)and !Object.keys($thoughts).includes(&quot;Terry and Bram&#39;s conversation in her shop&quot;)&lt;&lt;set $hints.pushUnique(&quot;Justin only has a few distinctive features, so why is it that...&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Aconite Poison&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;the detective ruminating about the murder weapon&quot;)&lt;&lt;set $hints.pushUnique(&quot;There are a couple clues you have that are rather poisonous, aren&#39;t there?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Crumpled Paper&quot;, &quot;Sharpie&quot;)and !Object.keys($thoughts).includes(&quot;Justin, Annie, and sriracha&quot;)&lt;&lt;set $hints.pushUnique(&quot;Orange is quite a distinctive color.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Justin&#39;s Keys&quot;, &quot;Corkscrew&quot;)and !Object.keys($thoughts).includes(&quot;you distracting Justin in front of Bram&#39;s house&quot;)&lt;&lt;set $hints.pushUnique(&quot;Where did the thing that used to be on Justin&#39;s keys go?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Petals&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;Annie and Erin talking about warding you away&quot;)&lt;&lt;set $hints.pushUnique(&quot;Bram was giving what to who again?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Shifty Person&quot;, &quot;Cane&quot;)and !Object.keys($thoughts).includes(&quot;Terry&#39;s boyfriend giving her some leaves&quot;)&lt;&lt;set $hints.pushUnique(&quot;Sometimes people have pretty distinct items on their person.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Potion&quot;, &quot;Werewolf&quot;)and !Object.keys($thoughts).includes(&quot;Erin and Bram brewing you a potion&quot;)&lt;&lt;set $hints.pushUnique(&quot;What was Erin making to specifically protect you?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(&quot;Leaves&quot;, &quot;Wolfsbane&quot;)and !Object.keys($thoughts).includes(&quot;Bram realizing the wolfsbane was tampered with&quot;)&lt;&lt;set $hints.pushUnique(&quot;Something was damaged and robbed, and you think you found the item taken.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
+ 
+&lt;&lt;if $inv.includesAll(any of $poisons, &quot;Salad&quot; and Object.keys($thoughts).includesAll(&quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;the detective ruminating about the murder weapon&quot;and !Object.keys($thoughts).includes(&quot;Terry poisoning your salad&quot;)&lt;&lt;set $hints.pushUnique(&quot;You have to confirm who did it, and with what. Sure it may be obvious now but...you have to see for yourself.&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;\
 
-]]]
-(else:)[You can&#39;t think of any other hints for now.]
+&lt;&lt;set _temp = clone($hints)&gt;&gt;
+&lt;span id=&quot;Done&quot;&gt;&lt;&lt;link &quot;Link Text&quot;&gt;&gt;
+    &lt;&lt;append &quot;#SpanID&quot;&gt;&gt;&lt;&lt;print _temp.pluck()&gt;&gt;&lt;br&gt;&lt;&lt;/append&gt;&gt;
+    &lt;&lt;if _temp.length == 0&gt;&gt;
+        &lt;&lt;remove &quot;#Done&quot;&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;/span&gt;
+&lt;span id=&quot;SpanID&quot;&gt;&lt;/span&gt;
 
-[[Link more clues.-&gt;Inventory]]
-(link: &quot;Open your eyes.&quot;)[(go-to: $returnTo)]</tw-passagedata><tw-passagedata pid="9" name="Salad" tags="item" position="1100,100">&lt;h3&gt;Salad&lt;/h3&gt;
+[[Link more clues.-&gt;Link Clues]]
+[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="9" name="Salad" tags="item" position="1100,100">&lt;h3&gt;Salad&lt;/h3&gt;
 It&#39;s a caesar salad with vinaigrette. Terry and Justin got it for you when you couldn&#39;t eat anything at the party. It was on the detective&#39;s mind-desk.\
 &lt;&lt;if hasVisited(&quot;Justin and Terry at the grocery store&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
@@ -709,7 +713,7 @@ Seriously? Wolfsbane? You can&#39;t believe it. You were offed by a garden flowe
 
 A heavy sigh. &quot;But on the other hand, that&#39;s just so neat and easy. I should know better than anyone that these cases are never so simple.&quot; They chuckle softly to themself.
 
-As the detective continues to think aloud, the [[memory-&gt;Clues]] drips away.</tw-passagedata><tw-passagedata pid="51" name="Bram and Annie&#39;s conversation in the garden" tags="memory annie" position="100,725">&lt;&lt;if !$thoughts[&quot;Bram and Annie&#39;s conversation in the garden&quot;]&gt;&gt;
+As the detective continues to think aloud, the [[memory-&gt;Link Clues]] drips away.</tw-passagedata><tw-passagedata pid="51" name="Bram and Annie&#39;s conversation in the garden" tags="memory annie" position="100,725">&lt;&lt;if !$thoughts[&quot;Bram and Annie&#39;s conversation in the garden&quot;]&gt;&gt;
     &lt;&lt;set $thoughts[&quot;Bram and Annie&#39;s conversation in the garden&quot;] = &quot;- Annie uses Bram&#39;s marijuana medicinally, though she couldn&#39;t pay last time. (marijuana + reminder)&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 A murmuring of voices greets you first, then bright colors. It&#39;s daylight streaking across the community garden - the real one - and Bram is there talking to Annie, who is seated on a white stone bench. 
@@ -743,7 +747,7 @@ Bram opens and closes his mouth a couple times. &quot;Of course not.&quot; He co
 Bram has walked over to a bed that&#39;s labeled: CAUTION, DO NOT TOUCH. There&#39;s a purple flower here, and it looks a bit mishandled. &quot;Some of the leaves are ripped off.&quot; He pales. &quot;That&#39;s. That&#39;s not good.&quot;
 &lt;&lt;set $clickedItem to &quot;Wolfsbane&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
 
-As this is said, the scene starts to smear and fade like mixed paint, and you find yourself back in your [[memories-&gt;Clues]] again.</tw-passagedata><tw-passagedata pid="52" name="Erin&#39;s night" tags="memory erin" position="225,725">&lt;&lt;if !$thoughts[&quot;Erin&#39;s night&quot;]&gt;&gt;\
+As this is said, the scene starts to smear and fade like mixed paint, and you find yourself back in your [[memories-&gt;Link Clues]] again.</tw-passagedata><tw-passagedata pid="52" name="Erin&#39;s night" tags="memory erin" position="225,725">&lt;&lt;if !$thoughts[&quot;Erin&#39;s night&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Erin&#39;s night&quot;] = &quot;- Erin didn&#39;t take your taking down her sigils well at all and decided to put up more. (potion + sigils)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 A memory swirls into view. The scene is dark, but Erin&#39;s blonde hair manages to refract the light from the dull streetlamps anyway, making her stand out noticeably as she walks down the boulevard. You almost make a note to check the last time the bulbs were changed, but then you remember you are dead. Bummer. 
@@ -769,7 +773,7 @@ Well, except for Erin, &lt;&lt;linkappend &quot;apparently&quot;&gt;&gt;
 
 And this person&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;.
 
-A mix of confusion and concern crosses Erin&#39;s face, but she does nothing but watch the man as he limps away. As she turns to head home, the memory [[fades-&gt;Clues]].</tw-passagedata><tw-passagedata pid="53" name="Terry giving Justin the nut article" tags="memory justin" position="350,725">&lt;&lt;if !$thoughts[&quot;Terry giving Justin the nut article&quot;]&gt;&gt;\
+A mix of confusion and concern crosses Erin&#39;s face, but she does nothing but watch the man as he limps away. As she turns to head home, the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="53" name="Terry giving Justin the nut article" tags="memory justin" position="350,725">&lt;&lt;if !$thoughts[&quot;Terry giving Justin the nut article&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry giving Justin the nut article&quot;] = &quot;- Terry is why Justin insisted Annie put nuts on the menu. (article + Annie&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You find yourself in the Whittaker household. The walls are bright and stark with lots of current photos on them. Justin is sitting at a table. Based on the newspaper lying on top of it, it&#39;s the day before Thanksgiving. 
@@ -798,7 +802,7 @@ Nodding, Justin smiles at his wife. &quot;Yes. What do you think they&#39;d be g
 
 &quot;Oh, I don&#39;t know. Everything.&quot;
 
-The memory [[fades-&gt;Clues]].</tw-passagedata><tw-passagedata pid="54" name="Bram realizing the wolfsbane was tampered with" tags="bram memory" position="475,725">&lt;&lt;if !$thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;]&gt;&gt;\
+The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="54" name="Bram realizing the wolfsbane was tampered with" tags="bram memory" position="475,725">&lt;&lt;if !$thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;] = &quot;- Terry&#39;s paramour stole the wolfsbane from Bram&#39;s garden in the middle of the night. (leaves + wolfsbane)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 It&#39;s the community garden again. Bram is standing in front of the mishandled wolfsbane plant and Annie seems to have just left. He squats down to get a better look and so do you, as you only got to glance at it before. Wolfsbane is actually a rather pretty plant, you think to yourself, with numerous deep purple petals hanging off a delicate stalk. Its beauty is clear despite this one looking worse for wear, with several petals having fallen to the ground, flowers battered, stem kinked. You examine the remaining leaves on the plant and with a sinking feeling realize they match the leaves that were in the bag Terry&#39;s boyfriend gave her.
@@ -813,7 +817,7 @@ No.
 
 You don&#39;t want to consider it. Terry? Kill you? You want to say there&#39;s no reason for it, even though a little voice in your mind tells you there are many. Still, how did she? How could she? You decide you&#39;ll believe it when you see her in the act. For now, you refuse to think about it.
 
-You [[refuse-&gt;Clues]].</tw-passagedata><tw-passagedata pid="55" name="you drinking Erin&#39;s potion" tags="memory erin" position="600,725">&lt;&lt;if !$thoughts[&quot;you drinking Erin&#39;s potion&quot;]&gt;&gt;\
+You [[refuse-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="55" name="you drinking Erin&#39;s potion" tags="memory erin" position="600,725">&lt;&lt;if !$thoughts[&quot;you drinking Erin&#39;s potion&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;you drinking Erin&#39;s potion&quot;] = &quot;- You drank Erin&#39;s disgusting potion at her insistence. Sigh. (potion + Erin&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 A flash of color, and you find yourself back at the party. You spot yourself sitting at a picnic table. It&#39;s- it&#39;s weird to see yourself though, you must say. You look pretty good for a man about to die. Your suit is impeccably ironed, and the comb-over is hardly noticeable.
@@ -822,7 +826,7 @@ You see Erin approach you- that is, your living counterpart. She&#39;s holding o
 
 She&#39;d approached you multiple times before, each time more insistent that you drink the damn thing. As time passed and you kept refusing, she became more agitated. In fact, by the time you agreed to drink whatever it was she made - if only to prevent a scene from happening between RNA members - you were kind of scared of her.
 
-Erin hands the bottle to living Mort, and his face screws into a &lt;&lt;linkappend &quot;sneer&quot;&gt;&gt;(apparently you didn&#39;t do as good of a job at hiding your frustration as you thought you did)&lt;&lt;/linkappend&gt;&gt;. You watch yourself drink the potion, and then the memory [[dissipates-&gt;Clues]].</tw-passagedata><tw-passagedata pid="56" name="you and Bram drinking wine" tags="memory bram" position="725,725">&lt;&lt;if !$thoughts[&quot;you and Bram drinking wine&quot;]&gt;&gt;\
+Erin hands the bottle to living Mort, and his face screws into a &lt;&lt;linkappend &quot;sneer&quot;&gt;&gt;(apparently you didn&#39;t do as good of a job at hiding your frustration as you thought you did)&lt;&lt;/linkappend&gt;&gt;. You watch yourself drink the potion, and then the memory [[dissipates-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="56" name="you and Bram drinking wine" tags="memory bram" position="725,725">&lt;&lt;if !$thoughts[&quot;you and Bram drinking wine&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;you and Bram drinking wine&quot;] = &quot;- You were blackmailing Bram into buying wine for you. What? Does someone have a problem with that? (wine + gift request)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 Bram&#39;s living room comes into view, and you recognize the scene immediately. This meeting happened a day or so before the party. The living you is sitting on Bram&#39;s couch, with Bram in an armchair across from you. Two empty wine glasses stand on the coffee table between the two of you. Bram is trying to open a bottle of Loup-Rouge with a tacky shark-shaped corkscrew, one of those ones that attaches to a keychain. Your living counterpart smirks in amusement.
@@ -853,7 +857,7 @@ You don&#39;t have to spell out everything you know all the time, do you? Jeez.&
 
 Living Mort chuckles again and takes another sip of wine. &quot;Just keep doing this and it won&#39;t ever be a big problem. Right?&quot; 
 
-Bram laughs nervously. You didn&#39;t realize it while you were living but you&#39;re pretty sure he&#39;s sweating. &quot;Yep. Right.&quot; The memory [[swirls-&gt;Clues]] from view.</tw-passagedata><tw-passagedata pid="57" name="Justin and Terry at the grocery store" tags="justin memory" position="850,725">&lt;&lt;if !$thoughts[&quot;Justin and Terry at the grocery store&quot;]&gt;&gt;\
+Bram laughs nervously. You didn&#39;t realize it while you were living but you&#39;re pretty sure he&#39;s sweating. &quot;Yep. Right.&quot; The memory [[swirls-&gt;Link Clues]] from view.</tw-passagedata><tw-passagedata pid="57" name="Justin and Terry at the grocery store" tags="justin memory" position="850,725">&lt;&lt;if !$thoughts[&quot;Justin and Terry at the grocery store&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin and Terry at the grocery store&quot;] = &quot;- Terry and Justin got you a salad at the store. (salad + Justin&#39;s testimony or Terry&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The Ronton grocery store forms around you. The Whittakers are here, with their shopping cart containing last minute items for the party - extra paper plates and napkins, sauce, some beer, and the like. 
@@ -884,7 +888,7 @@ Justin jerks awake and looks at her. &quot;Good. Uh. Let&#39;s get going then.&q
 
 &quot;...Ok,&quot; he grunts. &quot;But only for you.&quot; 
 
-He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, &quot;Oh sugarbites, we forgot dressing.&quot; She looks at Justin meaningfully. It takes a moment for him to respond. &quot;I&#39;ll - I&#39;ll go get some.&quot; He walks off quickly, and the memory [[fades-&gt;Clues]].</tw-passagedata><tw-passagedata pid="58" name="your fight with Annie" tags="memory annie" position="975,725">&lt;&lt;if !$thoughts[&quot;your fight with Annie&quot;]&gt;&gt;\
+He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, &quot;Oh sugarbites, we forgot dressing.&quot; She looks at Justin meaningfully. It takes a moment for him to respond. &quot;I&#39;ll - I&#39;ll go get some.&quot; He walks off quickly, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="58" name="your fight with Annie" tags="memory annie" position="975,725">&lt;&lt;if !$thoughts[&quot;your fight with Annie&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;your fight with Annie&quot;] = &quot;- Man, Annie just does not get the concept of allergies. (sandwich + Annie&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 A memory forms around you, and it&#39;s a familiar scene. You&#39;re in Annie&#39;s kitchen, and everything is calm. This must&#39;ve been before-
@@ -912,7 +916,7 @@ When she&#39;s finished, she pulls out bread and other materials.
 
 Slowly, meticulously, she begins making a sandwich.
 
-And the memory [[slips-&gt;Clues]] from your sight.</tw-passagedata><tw-passagedata pid="59" name="Terry&#39;s phone conversation" tags="memory terry" position="1100,725">&lt;&lt;if !$thoughts[&quot;Terry&#39;s phone conversation&quot;]&gt;&gt;\
+And the memory [[slips-&gt;Link Clues]] from your sight.</tw-passagedata><tw-passagedata pid="59" name="Terry&#39;s phone conversation" tags="memory terry" position="1100,725">&lt;&lt;if !$thoughts[&quot;Terry&#39;s phone conversation&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry&#39;s phone conversation&quot;] = &quot;- Terry took your idea to put up a memorial as a huge affront and was venting about it to someone over the phone. (newspaper + petition)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You&#39;re in the regular, not-metal-walled Whittaker house and Terry is talking to someone on her cell phone, sounding irate. The clock on the wall says it&#39;s 8am in the morning and she&#39;s got the clothes she wears to the wine store on, so you suppose she&#39;s getting ready for work.
@@ -944,7 +948,7 @@ You stare at her numbly. You can&#39;t believe she thinks of you that way. Terry
 &quot;Oh!&quot; she says, standing up from the kitchen table. &quot;I almost forgot to say. You left your tie here.&quot; She pulls something out of her pocket, a rolled up straight tie - navy blue with stripes. That&#39;s...weird. She is talking to Justin, right?
 &lt;&lt;set $clickedItem to &quot;Straight Tie&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
 
-&quot;Yeah,&quot; she continues. &quot;Just stop by the shop and I&#39;ll give it to you.&quot; She hangs up, and the memory [[smears away-&gt;Clues]].</tw-passagedata><tw-passagedata pid="60" name="Justin and Erin being siblings" tags="justin memory" position="1225,725">&lt;&lt;if !$thoughts[&quot;Justin and Erin being siblings&quot;]&gt;&gt;\
+&quot;Yeah,&quot; she continues. &quot;Just stop by the shop and I&#39;ll give it to you.&quot; She hangs up, and the memory [[smears away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="60" name="Justin and Erin being siblings" tags="justin memory" position="1225,725">&lt;&lt;if !$thoughts[&quot;Justin and Erin being siblings&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin and Erin being siblings&quot;] = &quot;- Erin and Justin are brother and sister. How in the world did you never notice before? (crescent charm + gibbous charm)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You lose sight of what&#39;s around you, and then a dark street forms. The moon, nearly full, is high in the sky. Despite the clearly late hour, Justin is walking down the sidewalk, twirling his keys around his finger absentmindedly. Something looks missing from them, though you&#39;re not sure what. A charm or tool of some sort? You remember it was kind of tacky, but that&#39;s all you recall about it.
@@ -1001,7 +1005,7 @@ Erin&#39;s face falls as her arms do, and she starts twirling her hair in her fi
 
 Justin bites his lip, then clears his throat. &quot;I threw it out,&quot; he says gruffly. &quot;I don&#39;t need reminders of that anymore. I&#39;d rather just leave it all behind.&quot; Then, flatly, &quot;Sorry.&quot;
 
-Erin looks like she&#39;s about to cry. &quot;It&#39;s...I am too.&quot; She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears-&gt;Clues]].</tw-passagedata><tw-passagedata pid="61" name="Justin and Erin setting up for the dinner" tags="justin memory" position="100,850">&lt;&lt;if !$thoughts[&quot;Justin and Erin setting up for the dinner&quot;]&gt;&gt;\
+Erin looks like she&#39;s about to cry. &quot;It&#39;s...I am too.&quot; She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="61" name="Justin and Erin setting up for the dinner" tags="justin memory" position="100,850">&lt;&lt;if !$thoughts[&quot;Justin and Erin setting up for the dinner&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin and Erin setting up for the dinner&quot;] = &quot;- Justin&#39;s been so exhausted he&#39;s had to rely on caffeine patches to get through the day. (caf patch + sigils)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The first thing you see as the memory comes into focus is Justin leaning against a plane tree. The rest of the scene fades in - chairs, food, the festive Thanksgiving-themed tablecloths, and the awning draped above them. As you look around you spot other RNA members, including yourself, bustling about and getting the dinner preparations set up.
@@ -1026,7 +1030,7 @@ Her brows scrunch together. &quot;But your fatigue! You can&#39;t just keep livi
 &quot;Look. Terry gave me this article the other day about the health benefits of nuts; it was almost interesting. Apparently they help with tiredness and all that. And did you notice the dinner?&quot; He gestures to the food being set out. &quot;It&#39;s freaking full of nuts. It&#39;ll help me more than any magic whatchmacallit. Sorry, but no thanks.&quot;
 &lt;&lt;set $clickedItem to &quot;Nut Article&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
 
-Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades-&gt;Clues]].</tw-passagedata><tw-passagedata pid="62" name="Terry and Bram&#39;s conversation in her shop" tags="bram memory" position="225,850">&lt;&lt;if !$thoughts[&quot;Terry and Bram&#39;s conversation in her shop&quot;]&gt;&gt;
+Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="62" name="Terry and Bram&#39;s conversation in her shop" tags="bram memory" position="225,850">&lt;&lt;if !$thoughts[&quot;Terry and Bram&#39;s conversation in her shop&quot;]&gt;&gt;
     &lt;&lt;set $thoughts[&quot;Terry and Bram&#39;s conversation in her shop&quot;] = &quot;- Terry is having an affair with a customer at her wine shop, and Bram knows it. (bowtie + straight tie)&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 You find yourself just outside Whittaker Wines. Bram is outside too, staring through the wall-to-floor front windows with a shocked expression on his face, sweat beading on his forehead. You look inside as well, but all you see is some man with a cane talking to Terry. Brown hair, dress shirt; you don&#39;t find him terribly relevant at all until Terry pulls on his tie and kisses him on the lean in.
@@ -1072,7 +1076,7 @@ Coldly, she says, &quot;What are you even doing here, Bram? I thought you didn&#
 
 You scowl at his slip up as Terry looks at him suspiciously. She opens her mouth to speak but Bram quickly says, &quot;I guess you must&#39;ve gotten tired of Justin and his bowties, huh? What with that necktie and all.&quot;
 
-The tenseness is palpable as the memory [[fades-&gt;Clues]].</tw-passagedata><tw-passagedata pid="63" name="Justin, Annie, and sriracha" tags="annie memory" position="350,850">&lt;&lt;if !$thoughts[&quot;Justin, Annie, and sriracha&quot;]&gt;&gt;\
+The tenseness is palpable as the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="63" name="Justin, Annie, and sriracha" tags="annie memory" position="350,850">&lt;&lt;if !$thoughts[&quot;Justin, Annie, and sriracha&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin, Annie, and sriracha&quot;] = &quot;- Annie couldn&#39;t think to do anything worse to me than put hot sauce in my sandwich and Justin couldn&#39;t even bear that. Looks like they&#39;re both innocent. (crumpled paper + sharpie)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 Lights up on Annie&#39;s house. Living-Mort is nowhere to be seen, so this must be after the fight. Justin and Terry are putting on their jackets, probably to head to the store.
@@ -1119,7 +1123,7 @@ That&#39;s it? You want to laugh with how giddy you feel. Sriracha?
 
 &quot;You know I&#39;m definitely not actually buying this, right Granny?&quot; Justin stuffs the note into his pants pocket.
 
-The memory [[fades-&gt;Clues]].</tw-passagedata><tw-passagedata pid="64" name="you distracting Justin in front of Bram&#39;s house" tags="bram memory" position="475,850">&lt;&lt;if !$thoughts[&quot;you distracting Justin in front of Bram&#39;s house&quot;]&gt;&gt;\
+The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="64" name="you distracting Justin in front of Bram&#39;s house" tags="bram memory" position="475,850">&lt;&lt;if !$thoughts[&quot;you distracting Justin in front of Bram&#39;s house&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;you distracting Justin in front of Bram&#39;s house&quot;] = &quot;- Bram was seriously thinking about killing you but realized he needs you to keep Justin off his back. He&#39;s innocent. (keys + corkscrew)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The feeling of a memory forming washes over you again, and you find yourself in Bram&#39;s house again. You&#39;ve materialized in the kitchen this time, and Bram is there, the Loup-Rouge resting on the counter. Bram&#39;s wearing the same clothing he was when you shared drinks with him - it must be the same day. 
@@ -1168,7 +1172,7 @@ Bram, who&#39;d been stiff with fear for much of the interaction, melts and walk
 
 &quot;Nothing, Mort.&quot;
 
-The memory [[fades-&gt;Clues]].</tw-passagedata><tw-passagedata pid="65" name="Annie and Erin talking about warding you away" tags="erin memory" position="600,850">&lt;&lt;if !$thoughts[&quot;Annie and Erin talking about warding you away&quot;]&gt;&gt;\
+The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="65" name="Annie and Erin talking about warding you away" tags="erin memory" position="600,850">&lt;&lt;if !$thoughts[&quot;Annie and Erin talking about warding you away&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Annie and Erin talking about warding you away&quot;] = &quot;- Annie and Erin want to ward you off from paying your respects... (petals + wolfsbane)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You appear to be in the local park. This is where the dinner happened, though nothing has been set up yet in the memory. The area is mostly empty, except Erin, Annie, and the plane tree. Annie is sitting on a park bench adjacent to the tree, and Erin is on the ground, her head resting against the trunk. 
@@ -1198,7 +1202,7 @@ And warding you away? The more memories you see, the more hurt you feel about yo
 
 &quot;Oh, you know.&quot; Erin twirls her hand vaguely. &quot;Hunters.&quot;
 
-As you stew on this, the memory [[slips away-&gt;Clues]].</tw-passagedata><tw-passagedata pid="66" name="Terry&#39;s boyfriend giving her some leaves" tags="terry memory" position="725,850">&lt;&lt;if !$thoughts[&quot;Terry&#39;s boyfriend giving her some leaves&quot;]&gt;&gt;\
+As you stew on this, the memory [[slips away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="66" name="Terry&#39;s boyfriend giving her some leaves" tags="terry memory" position="725,850">&lt;&lt;if !$thoughts[&quot;Terry&#39;s boyfriend giving her some leaves&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry&#39;s boyfriend giving her some leaves&quot;] = &quot;- Terry&#39;s boyfriend was sneaking around in the garden and stole some leaves. (cane + shifty person)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You&#39;re floating on the boulevard in front of the Whittaker house, with Terry standing in the frame of the open door and the light from inside flooding onto the porch. Terry is looking at you and waving. &quot;Thank you again for this!&quot; she says, raising the bag she&#39;s holding.
@@ -1214,7 +1218,7 @@ The guy mimes catching something, probably some gross air-kiss from Terry, then 
 Well, obviously you have to know what&#39;s in there. You float through the door easily and see Terry peering into the bag at a scattering of small leaves. She smiles. What the hell does she want with a pile of leaves?
 &lt;&lt;set $clickedItem to &quot;Leaves&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
 
-As you wonder this, the memory [[drips away-&gt;Clues]].</tw-passagedata><tw-passagedata pid="67" name="Erin and Bram brewing you a potion" tags="erin memory" position="850,850">&lt;&lt;if !$thoughts[&quot;Erin and Bram brewing you a potion&quot;]&gt;&gt;\
+As you wonder this, the memory [[drips away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="67" name="Erin and Bram brewing you a potion" tags="erin memory" position="850,850">&lt;&lt;if !$thoughts[&quot;Erin and Bram brewing you a potion&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Erin and Bram brewing you a potion&quot;] = &quot;- Erin and Bram created a &#39;Potion of Continued Life&#39; for you that did not contain wolfsbane. Erin, at the least, is innocent. (potion + werewolf)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The memory starts with a knock, and the sound resonates through your ears as the scene comes into view. Bram is standing in front of a familiar door, a bundle of herbs and other plant substances swaddled in his arms. He&#39;s having a difficult time balancing it all, especially since he keeps reaching an arm out to knock.
@@ -1239,7 +1243,7 @@ Pointing to one of the entries, Erin says, &quot;Here. Potion of Continued Life.
 
 &quot;I think it&#39;s possible. You gonna help?&quot; Erin looks over at Bram and smiles, though it&#39;s weak and born more of habit that cheer. When Bram nods, she drops it and looks melancholy. &quot;Alright so, first we&#39;re going to need...&quot;
 
-She continues on, but the memory [[fades-&gt;Clues]]. You&#39;re not sure what to think.</tw-passagedata><tw-passagedata pid="68" name="Terry poisoning your salad" tags="terry memory" position="975,850">&lt;&lt;if !$thoughts[&quot;Terry poisoning your salad&quot;]&gt;&gt;\
+She continues on, but the memory [[fades-&gt;Link Clues]]. You&#39;re not sure what to think.</tw-passagedata><tw-passagedata pid="68" name="Terry poisoning your salad" tags="terry memory" position="975,850">&lt;&lt;if !$thoughts[&quot;Terry poisoning your salad&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry poisoning your salad&quot;] = &quot;- Terry poisoned you. Terry poisoned you and you feel like a chump. (aconite, wolfsbane, or leaves + salad)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You&#39;re back in the grocery store, moments after the previous memory there left off, it seems. Justin is walking back to the salad bar and Terry is watching him go with a pensive look on her face. She bites her lip. Then, she quickly pulls the lid off the salad and takes something - looks like a box for pushpins or the like - out of her purse. Inside - the leaves, the wolfsbane leaves that she got from her boyfriend. No - //no//. You watch helplessly as she dumps the leaves into the salad, tamps the lid back on, and gives it a good shake. That means - she definitely -
@@ -1250,7 +1254,7 @@ Not a second later - and too late, you think to yourself in dismay - Justin appe
 
 &quot;Let&#39;s.&quot;
 
-The memory [[dissipates-&gt;Clues]].</tw-passagedata><tw-passagedata pid="69" name="PassageFooter" tags="nobr" position="1100,850">&lt;!--Indicates this item can&#39;t be combined--&gt;
+The memory [[dissipates-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="69" name="PassageFooter" tags="nobr" position="1100,850">&lt;!--Indicates this item can&#39;t be combined--&gt;
     &lt;&lt;if tags().includes(&quot;noncombinable&quot;)&gt;&gt;
         &lt;br&gt;
         This probably isn&#39;t relevant to the murder...
@@ -1315,6 +1319,9 @@ In other words, you&#39;re a ghost now.
 &lt;&lt;set $thoughts to {}&gt;&gt;
 &lt;&lt;set $selected to []&gt;&gt;
 
+&lt;!--Hints--&gt;
+&lt;&lt;set $fail = 0&gt;&gt;
+
 &lt;!--Mort&#39;s ranting when you come across an item related to Lexa.--&gt;
 &lt;&lt;set $lexaItemAnger to [
     &quot;Anyway, who cares, right?&quot;,
@@ -1337,8 +1344,8 @@ In other words, you&#39;re a ghost now.
 &lt;&lt;set $isItemUsed = false&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="Start" tags="justin" position="225,975">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
 
 [[Testing]]
-    &lt;&lt;set $thoughts[&quot;Overwork&quot;] = &quot;- blop&quot;&gt;&gt;
-    &lt;&lt;set $thoughts[&quot;Blackmail&quot;] = &quot;- blarp&quot;&gt;&gt;
+    &lt;&lt;set $thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;] = &quot;- blop&quot;&gt;&gt;
+    &lt;&lt;set $thoughts[&quot;the detective ruminating about the murder weapon&quot;] = &quot;- blarp&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Aconite Poison&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Medicine Reminder&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
     &lt;&lt;set $clickedItem to &quot;Sigils&quot;&gt;&gt;&lt;&lt;include &quot;Add Item&quot;&gt;&gt;
@@ -1385,9 +1392,7 @@ On this wacky journey of trying to figure out your own murderer, you&#39;ve disc
 
 &lt;&lt;print Object.values($thoughts).join(&quot;&lt;br&gt;&quot;)&gt;&gt;
 
-&lt;&lt;link &quot;Open your eyes.&quot;&gt;&gt;
-    &lt;&lt;goto $returnTo&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Title" tags="noinv" position="600,975">&lt;h1&gt;Erstwhile&lt;/h1&gt;
+[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="75" name="Title" tags="noinv" position="600,975">&lt;h1&gt;Erstwhile&lt;/h1&gt;
 &lt;h4&gt;Maddie Fialla and Marijke Perry&lt;/h4&gt;
 &lt;&lt;link &quot;//One need not be a chamber to be haunted,&lt;br&gt;One need not be a house;&lt;br&gt;The brain has corridors surpassing&lt;br&gt;Material place.&lt;br&gt;&lt;br&gt;-Emily Dickinson//&quot;&gt;&gt;&lt;&lt;goto &quot;Welp&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">

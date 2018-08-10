@@ -2,8 +2,8 @@
 aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's testimony, sandwich, potion, salad added
 
 [[Testing]]
-    <<set $thoughts["Overwork"] = "- blop">>
-    <<set $thoughts["Blackmail"] = "- blarp">>
+    <<set $thoughts["Bram realizing the wolfsbane was tampered with"] = "- blop">>
+    <<set $thoughts["the detective ruminating about the murder weapon"] = "- blarp">>
     <<set $clickedItem to "Aconite Poison">><<include "Add Item">>
     <<set $clickedItem to "Medicine Reminder">><<include "Add Item">>
     <<set $clickedItem to "Sigils">><<include "Add Item">>

@@ -4,6 +4,16 @@
 <<set $thoughts to {}>>
 <<set $selected to []>>
 
+<!--Hints-->
+<<set $fail = 0>>
+<<set $smallhints = ["The connections aren't random! Try to find different ways things can be related.",
+"Are there any odd inconsistencies between two clues? Does combining the clues get a contradiction of some sort?",
+"Do any clues have some sort of quality in common?",
+"Maybe someone said something important in their testimony.",
+"You can combine a clue more than once!",
+"You can combine clues found from unlocked memories to unlock even //more// memories!",
+"A certain set of clues can be combined only after you deduce a connection between them by unlocking certain memories. It should be obvious when that happens."]>>
+
 <!--Mort's ranting when you come across an item related to Lexa.-->
 <<set $lexaItemAnger to [
     "Anyway, who cares, right?",

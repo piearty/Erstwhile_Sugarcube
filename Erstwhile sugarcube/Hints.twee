@@ -1,49 +1,53 @@
 :: Hints [noinv nosave]
-**Hints**
-(set: $hints to (ds: "Several of the clues cannot be combined at all.", "Sure there's a reason why you don't want to think about some of the clues. Are you going to say what it is? Hell no."))\
-{(if: $inv contains "Potion" and $inv contains "Erin's Testimony")[(unless: $thoughts contains "you drinking Erin's potion")[(set: $hints to it + (ds: "Why is Erin under suspicion?"))]]
- 
-(if: $inv contains "Wine" and $inv contains "Gift Request")[(unless: $thoughts contains "you and Bram drinking wine")[(set: $hints to it + (ds: "That gift Bram got you was of a great year. Tasted amazing."))]]
- 
-(if: $inv contains any of (ds: "Justin's Testimony", "Terry's Testimony") and $inv contains "Salad")[(unless: $thoughts contains "Justin and Terry at the grocery store")[(set: $hints to it + (ds: "Why are Justin and Terry under suspicion?"))]]
- 
-(if: $inv contains "Sandwich" and $inv contains "Annie's Testimony")[(unless: $thoughts contains "your fight with Annie")[(set: $hints to it + (ds: "Why is Annie under suspicion?"))]]
- 
-(if: $inv contains "Old Newspaper" and $inv contains "Petition")[(unless: $thoughts contains "Terry's phone conversation")[(set: $hints to it + (ds: "Two of your clues mention a certain place."))]]
- 
-(if: $inv contains "Crescent Charm" and $inv contains "Gibbous Charm")[(unless: $thoughts contains "Justin and Erin being siblings")[(set: $hints to it + (ds: "Two of these clues are obviously part of a set."))]]
- 
-(if: $inv contains "Sigils" and $inv contains "Potions")[(unless: $thoughts contains "Erin's night")[(set: $hints to it + (ds: "There are two clues you've found that…//allegedly// help with protection."))]]
- 
-(if: $inv contains "Caf Patch" and $inv contains "Sigils")[(unless: $thoughts contains "Justin and Erin setting up for the dinner")[(set: $hints to it + (ds: "Justin's been tired lately, hasn't he? There's some clues you have that ostensibly help."))]]
- 
-(if: $inv contains "Marijuana" and $inv contains "Medicine Reminder")[(unless: $thoughts contains "Bram and Annie's conversation in the garden")[(set: $hints to it + (ds: "Who's Bram even selling that marijuana to, anyway?"))]]
- 
-(if: $inv contains "Nut Article" and $inv contains "Annie's Testimony")[(unless: $thoughts contains "Terry giving Justin the nut article")[(set: $hints to it + (ds: "Oh so that's where Justin got the nuts idea? That makes sense, according to..."))]]
- 
-(if: $inv contains "Straight Tie" and $inv contains "Bowtie")[(unless: $thoughts contains "Terry and Bram's conversation in her shop")[(set: $hints to it + (ds: "Justin only has a few distinctive features, so why is it that..."))]]
- 
-(if: $inv contains "Aconite Poison" and $inv contains "Wolfsbane")[(unless: $thoughts contains "the detective ruminating about the murder weapon")[(set: $hints to it + (ds: "There are a couple clues you have that are rather poisonous, aren't there?"))]]
- 
-(if: $inv contains "Crumpled Paper" and $inv contains "Sharpie")[(unless: $thoughts contains "Justin, Annie, and sriracha")[(set: $hints to it + (ds: "Orange is quite a distinctive color."))]]
- 
-(if: $inv contains "Justin's Keys" and $inv contains "Corkscrew")[(unless: $thoughts contains "you distracting Justin in front of Bram's house")[(set: $hints to it + (ds: "Where did the thing that used to be on Justin's keys go?"))]]
- 
-(if: $inv contains "Petals" and $inv contains "Wolfsbane")[(unless: $thoughts contains "Annie and Erin talking about warding you away")[(set: $hints to it + (ds: "Bram was giving what to who again?"))]]
- 
-(if: $inv contains "Shifty Person" and $inv contains "Cane")[(unless: $thoughts contains "Terry's boyfriend giving her some leaves")[(set: $hints to it + (ds: "Sometimes people have pretty distinct items on their person."))]]
- 
-(if: $inv contains "Potion" and $inv contains "Werewolf")[(unless: $thoughts contains "Erin and Bram brewing you a potion")[(set: $hints to it + (ds: "What was Erin making to specifically protect you?"))]]
- 
-(if: $inv contains "Leaves" and $inv contains "Wolfsbane")[(unless: $thoughts contains "Bram realizing the wolfsbane was tampered with")[(set: $hints to it + (ds: "Something was damaged and robbed, and you think you found the item taken."))]]
- 
-(if: $inv contains any of $poisons and $inv contains "Salad" and $thoughts contains "Bram realizing the wolfsbane was tampered with" and $thoughts contains "the detective ruminating about the murder weapon")[(unless: $thoughts contains "Terry poisoning your salad")[(set: $hints to it + (ds: "You have to confirm who did it, and with what. Sure it may be obvious now but…you have to see for yourself."))]]}\
-(unless: length of $hints < 3)[(linkrepeat: "Hints:
+!Hints
+<<set $hints = ["Several of the clues cannot be combined at all.", "Sure there's a reason why you don't want to think about some of the clues. Are you going to say what it is? Hell no."]>>\
 
-")[(set: $hints to (rotated: 1, ...$hints))[(print: 1st of $hints)
+<<if $inv.includesAll("Potion", "Erin's Testimony") and !$thoughts.includes("you drinking Erin's potion")>><<set $hints.pushUnique("Why is Erin under suspicion?")>>
+ 
+<<if $inv.includesAll("Wine", "Gift Request")and !Object.keys($thoughts).includes("you and Bram drinking wine")<<set $hints.pushUnique("That gift Bram got you was of a great year. Tasted amazing.")>><</if>>
+ 
+<<if $inv.includesAny("Justin's Testimony", "Terry's Testimony") and $inv.includes("Salad") and !Object.keys($thoughts).includes("Justin and Terry at the grocery store")<<set $hints.pushUnique("Why are Justin and Terry under suspicion?")>><</if>>
+ 
+<<if $inv.includesAll("Sandwich", "Annie's Testimony")and !Object.keys($thoughts).includes("your fight with Annie")<<set $hints.pushUnique("Why is Annie under suspicion?")>><</if>>
+ 
+<<if $inv.includesAll("Old Newspaper", "Petition")and !Object.keys($thoughts).includes("Terry's phone conversation")<<set $hints.pushUnique("Two of your clues mention a certain place.")>><</if>>
+ 
+<<if $inv.includesAll("Crescent Charm", "Gibbous Charm")and !Object.keys($thoughts).includes("Justin and Erin being siblings")<<set $hints.pushUnique("Two of these clues are obviously part of a set.")>><</if>>
+ 
+<<if $inv.includesAll("Sigils", "Potions")and !Object.keys($thoughts).includes("Erin's night")<<set $hints.pushUnique("There are two clues you've found that…//allegedly// help with protection.")>><</if>>
+ 
+<<if $inv.includesAll("Caf Patch", "Sigils")and !Object.keys($thoughts).includes("Justin and Erin setting up for the dinner")<<set $hints.pushUnique("Justin's been tired lately, hasn't he? There's some clues you have that ostensibly help.")>><</if>>
+ 
+<<if $inv.includesAll("Marijuana", "Medicine Reminder")and !Object.keys($thoughts).includes("Bram and Annie's conversation in the garden")<<set $hints.pushUnique("Who's Bram even selling that marijuana to, anyway?")>><</if>>
+ 
+<<if $inv.includesAll("Nut Article", "Annie's Testimony")and !Object.keys($thoughts).includes("Terry giving Justin the nut article")<<set $hints.pushUnique("Oh so that's where Justin got the nuts idea? That makes sense, according to...")>><</if>>
+ 
+<<if $inv.includesAll("Straight Tie", "Bowtie")and !Object.keys($thoughts).includes("Terry and Bram's conversation in her shop")<<set $hints.pushUnique("Justin only has a few distinctive features, so why is it that...")>><</if>>
+ 
+<<if $inv.includesAll("Aconite Poison", "Wolfsbane")and !Object.keys($thoughts).includes("the detective ruminating about the murder weapon")<<set $hints.pushUnique("There are a couple clues you have that are rather poisonous, aren't there?")>><</if>>
+ 
+<<if $inv.includesAll("Crumpled Paper", "Sharpie")and !Object.keys($thoughts).includes("Justin, Annie, and sriracha")<<set $hints.pushUnique("Orange is quite a distinctive color.")>><</if>>
+ 
+<<if $inv.includesAll("Justin's Keys", "Corkscrew")and !Object.keys($thoughts).includes("you distracting Justin in front of Bram's house")<<set $hints.pushUnique("Where did the thing that used to be on Justin's keys go?")>><</if>>
+ 
+<<if $inv.includesAll("Petals", "Wolfsbane")and !Object.keys($thoughts).includes("Annie and Erin talking about warding you away")<<set $hints.pushUnique("Bram was giving what to who again?")>><</if>>
+ 
+<<if $inv.includesAll("Shifty Person", "Cane")and !Object.keys($thoughts).includes("Terry's boyfriend giving her some leaves")<<set $hints.pushUnique("Sometimes people have pretty distinct items on their person.")>><</if>>
+ 
+<<if $inv.includesAll("Potion", "Werewolf")and !Object.keys($thoughts).includes("Erin and Bram brewing you a potion")<<set $hints.pushUnique("What was Erin making to specifically protect you?")>><</if>>
+ 
+<<if $inv.includesAll("Leaves", "Wolfsbane")and !Object.keys($thoughts).includes("Bram realizing the wolfsbane was tampered with")<<set $hints.pushUnique("Something was damaged and robbed, and you think you found the item taken.")>><</if>>
+ 
+<<if $inv.includesAll(any of $poisons, "Salad" and Object.keys($thoughts).includesAll("Bram realizing the wolfsbane was tampered with", "the detective ruminating about the murder weapon"and !Object.keys($thoughts).includes("Terry poisoning your salad")<<set $hints.pushUnique("You have to confirm who did it, and with what. Sure it may be obvious now but...you have to see for yourself.")>><</if>>\
 
-]]]
-(else:)[You can't think of any other hints for now.]
+<<set _temp = clone($hints)>>
+<span id="Done"><<link "Link Text">>
+    <<append "#SpanID">><<print _temp.pluck()>><br><</append>>
+    <<if _temp.length == 0>>
+        <<remove "#Done">>
+    <</if>>
+<</link>></span>
+<span id="SpanID"></span>
 
-[[Link more clues.->Inventory]]
-(link: "Open your eyes.")[(go-to: $returnTo)]
+[[Link more clues.->Link Clues]]
+[[Open your eyes.|$returnTo]]
