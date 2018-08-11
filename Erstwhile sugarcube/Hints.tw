@@ -41,7 +41,7 @@
 <<if $inv.includesAny("Leaves", "Wolfsbane", "Aconite") and $inv.includes("Salad") and Object.keys($thoughts).includesAll("Bram realizing the wolfsbane was tampered with", "the detective ruminating about the murder weapon") and !Object.keys($thoughts).includes("Terry poisoning your salad")>><<set $bigHints.pushUnique("You have to confirm who did it, and with what. Sure it may be obvious now but...you have to see for yourself.")>><</if>>
 
 <<set _temp = clone($bigHints)>>
-<span id="Done"><<link "Hints: <br>">>
+<span id="Done"><<link "Click here for a hint! <br>">>
     <<append "#bigHints">>
         <<print _temp.pluck()>><br>
     <</append>>
