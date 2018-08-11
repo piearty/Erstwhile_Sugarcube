@@ -53,7 +53,7 @@ Bram was telling Annie about it while he sold her some <<linkappend "weed.">> - 
 "I hope you all find the killer soon and bring them to justice. I didn't exactly call Mort a friend - I - to be completely honest I didn't like him very much, but I-" He clears his throat. "I never wished him dead."\
 <<if hasVisited("Justin and Terry at the grocery store")>>
 
-<<include "Used Item>><</if>>
+<<set $isItemUsed to true>><</if>>
 
 :: Terry's Testimony [item]
 <h3>Terry's Testimony</h3>
@@ -309,7 +309,7 @@ A postcard from a pride parade from who knows how many years ago, with Justin an
 <h3>Congratulatory Card</h3>
 Found stuffed in Justin's weird mind-walls.
 
-"Congratulations! (textstyle: "strike">>It's] You're a boy!
+"Congratulations! ==It's== You're a boy!
 
 ~Erin xoxo"
 
@@ -358,6 +358,3 @@ Hospital stickers, dozens of them, found in Terry's mind. The earliest is dated 
 A few DUIs of yours and some other thing from over a decade ago. The last one is dated 11/14. It was on the detective's mind-desk.
 
 <<set $isItemUsed = true>>
-
-:: Used Item [noinv nosave]
-You think you've gotten all the info out of this clue now.

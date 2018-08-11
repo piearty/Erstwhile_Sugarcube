@@ -33,6 +33,7 @@
     <br>
     <br>
         <<if $isItemUsed == true>>
+            You think you've gotten all the info out of this clue now.
             <<set $isItemUsed = false>>
         <</if>>
         <<back "Back to what you were doing.">>

@@ -445,7 +445,7 @@ Bram was telling Annie about it while he sold her some &lt;&lt;linkappend &quot;
 &quot;I hope you all find the killer soon and bring them to justice. I didn&#39;t exactly call Mort a friend - I - to be completely honest I didn&#39;t like him very much, but I-&quot; He clears his throat. &quot;I never wished him dead.&quot;\
 &lt;&lt;if hasVisited(&quot;Justin and Terry at the grocery store&quot;)&gt;&gt;
 
-&lt;&lt;include &quot;Used Item&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Terry&#39;s Testimony" tags="item" position="475,350">&lt;h3&gt;Terry&#39;s Testimony&lt;/h3&gt;
+&lt;&lt;set $isItemUsed to true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Terry&#39;s Testimony" tags="item" position="475,350">&lt;h3&gt;Terry&#39;s Testimony&lt;/h3&gt;
 &quot;I-I just can&#39;t believe - I&#39;m - oh my word I can&#39;t do this. Sorry, I need a minute...&quot; She takes a shaky breath and fans herself. &quot;It&#39;s just, I never, I never thought that - Mort of all people!
 
 &quot;Sorry yes, what happened...t-the dinner. W-well, the RNA thought up the idea a while ago. A big feast. E-everyone was so excited! Mort, Justin, and I didn&#39;t cook but we were all pitching in in some way. B-but then - we found out M-Mort couldn&#39;t eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he&#39;s been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I&#39;d do if he wasn&#39;t there for me -
@@ -602,7 +602,7 @@ A postcard from a pride parade from who knows how many years ago, with Justin an
 &lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Congratulatory Card" tags="item noncombinable" position="100,725">&lt;h3&gt;Congratulatory Card&lt;/h3&gt;
 Found stuffed in Justin&#39;s weird mind-walls.
 
-&quot;Congratulations! (textstyle: &quot;strike&quot;&gt;&gt;It&#39;s] You&#39;re a boy!
+&quot;Congratulations! ==It&#39;s== You&#39;re a boy!
 
 ~Erin xoxo&quot;
 
@@ -629,7 +629,7 @@ Hospital stickers, dozens of them, found in Terry&#39;s mind. The earliest is da
 &lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Rap Sheet" tags="item lexa noncombinable" position="975,725">&lt;h3&gt;Rap Sheet&lt;/h3&gt;
 A few DUIs of yours and some other thing from over a decade ago. The last one is dated 11/14. It was on the detective&#39;s mind-desk.
 
-&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Used Item" tags="noinv nosave" position="1100,725">You think you&#39;ve gotten all the info out of this clue now.</tw-passagedata><tw-passagedata pid="60" name="Link Clues" tags="noinv save" position="1225,725">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Link Clues" tags="noinv save" position="1100,725">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]]
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
         | Link Clues
@@ -667,7 +667,7 @@ This will erase your progress and saves. Are you sure?
 Click on two clues to try to link them.
  
 &lt;span id=&quot;Selected&quot;&gt;&lt;&lt;include &quot;List Selected&quot;&gt;&gt;&lt;/span&gt;
-&lt;span id=&quot;Link Clues&quot;&gt;&lt;&lt;include &quot;List Link Clues&quot;&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="61" name="List Selected" tags="nobr" position="100,850">&lt;&lt;if $selected.length &gt; 0&gt;&gt;
+&lt;span id=&quot;Link Clues&quot;&gt;&lt;&lt;include &quot;List Link Clues&quot;&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="60" name="List Selected" tags="nobr" position="1225,725">&lt;&lt;if $selected.length &gt; 0&gt;&gt;
     &lt;&lt;for _item range $selected&gt;&gt;
         _item selected.&lt;br&gt;
     &lt;&lt;/for&gt;&gt;
@@ -693,7 +693,7 @@ Click on two clues to try to link them.
         &lt;&lt;replace &quot;#Selected&quot;&gt;&gt;
             &lt;&lt;include &quot;List Selected&quot;&gt;&gt;
         &lt;&lt;/replace&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="List Link Clues" tags="nobr" position="225,850">/* Sets the clickedItem variable and opens the check. */
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="List Link Clues" tags="nobr" position="100,850">/* Sets the clickedItem variable and opens the check. */
 &lt;&lt;if $inv.length &gt; 0&gt;&gt;
     &lt;&lt;for _n, _item range $inv.sort()&gt;&gt;
         &lt;&lt;if passage() == &quot;Link Clues&quot;&gt;&gt;
@@ -707,7 +707,7 @@ Click on two clues to try to link them.
             &lt;&lt;/capture&gt;&gt;
         &lt;&lt;/if&gt;&gt;
     &lt;&lt;/for&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Combovaluation" tags="widget nobr" position="350,850">&lt;&lt;widget &quot;combine&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Combovaluation" tags="widget nobr" position="225,850">&lt;&lt;widget &quot;combine&quot;&gt;&gt;
 &lt;&lt;set $combo = $args[0]&gt;&gt;
 &lt;&lt;set $selected = []&gt;&gt;
 &lt;&lt;if hasVisited($combo)&gt;&gt;
@@ -715,7 +715,7 @@ Click on two clues to try to link them.
 &lt;&lt;else&gt;&gt;
     &lt;&lt;goto $combo&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Combine Selected" tags="nobr" position="475,850">/* 0th level */
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Combine Selected" tags="nobr" position="350,850">/* 0th level */
 &lt;&lt;if $selected.includesAll(&quot;Potion&quot;, &quot;Erin&#39;s Testimony&quot;)&gt;&gt;
         &lt;&lt;combine &quot;you drinking Erin&#39;s potion&quot;&gt;&gt;
         
@@ -827,7 +827,7 @@ Need a &lt;&lt;link &quot;hint?&quot;&gt;&gt;
     &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;span id=&quot;smallHints&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="65" name="the detective ruminating about the murder weapon" tags="memory detective" position="600,850">&lt;&lt;if !$thoughts[&quot;the detective ruminating about the murder weapon&quot;]&gt;&gt;\
+&lt;span id=&quot;smallHints&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="64" name="the detective ruminating about the murder weapon" tags="memory detective" position="475,850">&lt;&lt;if !$thoughts[&quot;the detective ruminating about the murder weapon&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;the detective ruminating about the murder weapon&quot;] = &quot;- You were killed by ingesting wolfsbane. Defeated by a plant, and not even the one you&#39;re allergic to. Unbelievable. (aconite + wolfsbane)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You&#39;re back in that small grey office, though it&#39;s distinctly less blurry and dream-like now. The detective is hunched in the chair next to their desk, muttering to themself. You float closer to peer over their shoulder.
@@ -840,7 +840,7 @@ Seriously? Wolfsbane? You can&#39;t believe it. You were offed by a garden flowe
 
 A heavy sigh comes from the detective. &quot;But on the other hand, that&#39;s just so neat and easy. I should know better than anyone that these cases are never so simple.&quot; They chuckle softly to themself.
 
-As the detective continues to think aloud, the [[memory-&gt;Link Clues]] drips away.</tw-passagedata><tw-passagedata pid="66" name="Bram and Annie&#39;s conversation in the garden" tags="memory annie" position="725,850">&lt;&lt;if !$thoughts[&quot;Bram and Annie&#39;s conversation in the garden&quot;]&gt;&gt;
+As the detective continues to think aloud, the [[memory-&gt;Link Clues]] drips away.</tw-passagedata><tw-passagedata pid="65" name="Bram and Annie&#39;s conversation in the garden" tags="memory annie" position="600,850">&lt;&lt;if !$thoughts[&quot;Bram and Annie&#39;s conversation in the garden&quot;]&gt;&gt;
     &lt;&lt;set $thoughts[&quot;Bram and Annie&#39;s conversation in the garden&quot;] = &quot;- Annie uses Bram&#39;s marijuana medicinally, though she couldn&#39;t pay last time. (marijuana + reminder)&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 A murmuring of voices greets you first, then bright colors. It&#39;s daylight streaking across the community garden - the real one - and Bram is there talking to Annie, who is seated on a white stone bench. 
@@ -874,7 +874,7 @@ Bram opens and closes his mouth a couple times. &quot;Of course not.&quot; He co
 Bram has walked over to a bed that&#39;s labeled: CAUTION, DO NOT TOUCH. There&#39;s a purple flower here, and it looks a bit mishandled. &quot;Some of the leaves are ripped off.&quot; He pales. &quot;That&#39;s. That&#39;s not good.&quot;
 &lt;&lt;add &quot;Wolfsbane&quot;&gt;&gt;
 
-As this is said, the scene starts to smear and fade like mixed paint, and you find yourself back in your [[memories-&gt;Link Clues]] again.</tw-passagedata><tw-passagedata pid="67" name="Erin&#39;s night" tags="memory erin" position="850,850">&lt;&lt;if !$thoughts[&quot;Erin&#39;s night&quot;]&gt;&gt;\
+As this is said, the scene starts to smear and fade like mixed paint, and you find yourself back in your [[memories-&gt;Link Clues]] again.</tw-passagedata><tw-passagedata pid="66" name="Erin&#39;s night" tags="memory erin" position="725,850">&lt;&lt;if !$thoughts[&quot;Erin&#39;s night&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Erin&#39;s night&quot;] = &quot;- Erin didn&#39;t take your taking down her sigils well at all and decided to put up more. (potion + sigils)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 A memory swirls into view. The scene is dark, but Erin&#39;s blonde hair manages to refract the light from the dull streetlamps anyway, making her stand out noticeably as she walks down the boulevard. You almost make a note to check the last time the bulbs were changed, but then you remember you are dead. Bummer. 
@@ -900,7 +900,7 @@ Well, except for Erin, &lt;&lt;linkappend &quot;apparently&quot;&gt;&gt;
 
 And this person&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;.
 
-A mix of confusion and concern crosses Erin&#39;s face, but she does nothing but watch the man as he limps away. As she turns to head home, the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="68" name="Terry giving Justin the nut article" tags="memory justin" position="975,850">&lt;&lt;if !$thoughts[&quot;Terry giving Justin the nut article&quot;]&gt;&gt;\
+A mix of confusion and concern crosses Erin&#39;s face, but she does nothing but watch the man as he limps away. As she turns to head home, the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="67" name="Terry giving Justin the nut article" tags="memory justin" position="850,850">&lt;&lt;if !$thoughts[&quot;Terry giving Justin the nut article&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry giving Justin the nut article&quot;] = &quot;- Terry is why Justin insisted Annie put nuts on the menu. (article + Annie&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You fade into the Whittaker household. The walls are bright and stark with lots of photos of the two on them. Justin is sitting at a table, staring blankly at a newspaper in his hands. Based on the date on the front page, it&#39;s the day before Thanksgiving.
@@ -929,7 +929,7 @@ Nodding, Justin smiles at his wife. &quot;Yes. What do you think they&#39;d be g
 
 &quot;Oh, I don&#39;t know. Everything.&quot;
 
-The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="69" name="Bram realizing the wolfsbane was tampered with" tags="bram memory" position="1100,850">&lt;&lt;if !$thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;]&gt;&gt;\
+The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="68" name="Bram realizing the wolfsbane was tampered with" tags="bram memory" position="975,850">&lt;&lt;if !$thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;] = &quot;- Terry&#39;s paramour stole the wolfsbane from Bram&#39;s garden in the middle of the night. (leaves + wolfsbane)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 It&#39;s the community garden again. Bram is standing in front of the mishandled wolfsbane plant and Annie seems to have just left. He squats down to get a better look and so do you, as you only got to glance at it before. Wolfsbane is actually a rather pretty plant, you think to yourself, with numerous deep-purple petals hanging off a delicate stalk. Its beauty is clear despite this one looking worse for wear, with several petals having fallen to the ground, flowers battered, stem kinked. You examine the remaining leaves on the plant and, with a sinking feeling, realize they match the leaves that were in the bag Terry&#39;s boyfriend gave her.
@@ -944,7 +944,7 @@ No.
 
 You don&#39;t want to consider it. Terry? Kill you? You want to say there&#39;s no reason for it, even though a little voice in your mind tells you there are many. Still, how did she? How could she? You decide you&#39;ll believe it when you see her in the act. For now, you refuse to think about it.
 
-You [[refuse-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="70" name="you drinking Erin&#39;s potion" tags="memory erin" position="1225,850">&lt;&lt;if !$thoughts[&quot;you drinking Erin&#39;s potion&quot;]&gt;&gt;\
+You [[refuse-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="69" name="you drinking Erin&#39;s potion" tags="memory erin" position="1100,850">&lt;&lt;if !$thoughts[&quot;you drinking Erin&#39;s potion&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;you drinking Erin&#39;s potion&quot;] = &quot;- You drank Erin&#39;s disgusting potion at her insistence. Sigh. (potion + Erin&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 A flash of color, and you find yourself back at the party. You spot yourself sitting at a picnic table. It&#39;s - it&#39;s weird to see yourself though, you must say. You look pretty good for a man about to die. Your suit is impeccably ironed, and the comb-over is hardly noticeable.
@@ -953,7 +953,7 @@ You see Erin approach you - that is, your living counterpart. She&#39;s holding 
 
 She&#39;d approached you multiple times before, each time more insistent that you drink the damn thing. As time passed and you kept refusing, she became more agitated. In fact, by the time you agreed to drink whatever it was she made - if only to prevent a scene from happening between RNA members - you were kind of scared of her.
 
-Erin hands the bottle to living Mort, and his face screws into a &lt;&lt;linkappend &quot;sneer&quot;&gt;&gt;(apparently you didn&#39;t do as good of a job at hiding your frustration as you thought you did)&lt;&lt;/linkappend&gt;&gt;. You watch yourself drink the potion, and then the memory [[dissipates-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="71" name="you and Bram drinking wine" tags="memory bram" position="100,975">&lt;&lt;if !$thoughts[&quot;you and Bram drinking wine&quot;]&gt;&gt;\
+Erin hands the bottle to living Mort, and his face screws into a &lt;&lt;linkappend &quot;sneer&quot;&gt;&gt;(apparently you didn&#39;t do as good of a job at hiding your frustration as you thought you did)&lt;&lt;/linkappend&gt;&gt;. You watch yourself drink the potion, and then the memory [[dissipates-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="70" name="you and Bram drinking wine" tags="memory bram" position="1225,850">&lt;&lt;if !$thoughts[&quot;you and Bram drinking wine&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;you and Bram drinking wine&quot;] = &quot;- You were blackmailing Bram into buying wine for you. What? Does someone have a problem with that? (wine + gift request)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 Bram&#39;s living room comes into view, and you recognize the scene immediately. This meeting happened a day or so before the party. The living you is sitting on Bram&#39;s couch, with Bram in an armchair across from you. Two empty wine glasses stand on the coffee table between the two of you. Bram is trying to open a bottle of Loup-Rouge with a tacky shark-shaped corkscrew, one of those ones that attaches to a keychain. Your living counterpart smirks in amusement.
@@ -984,7 +984,7 @@ You don&#39;t have to spell out everything you know all the time, do you? Jeez.&
 
 Living Mort chuckles again and takes another sip of wine. &quot;Just keep doing this and it won&#39;t ever be a big problem. Right?&quot; 
 
-Bram laughs nervously. You didn&#39;t realize it while you were living but you&#39;re pretty sure he&#39;s sweating. &quot;Yep. Right.&quot; The memory [[swirls-&gt;Link Clues]] from view.</tw-passagedata><tw-passagedata pid="72" name="Justin and Terry at the grocery store" tags="justin memory" position="225,975">&lt;&lt;if !$thoughts[&quot;Justin and Terry at the grocery store&quot;]&gt;&gt;\
+Bram laughs nervously. You didn&#39;t realize it while you were living but you&#39;re pretty sure he&#39;s sweating. &quot;Yep. Right.&quot; The memory [[swirls-&gt;Link Clues]] from view.</tw-passagedata><tw-passagedata pid="71" name="Justin and Terry at the grocery store" tags="justin memory" position="100,975">&lt;&lt;if !$thoughts[&quot;Justin and Terry at the grocery store&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin and Terry at the grocery store&quot;] = &quot;- Terry and Justin got you a salad at the store. (salad + Justin&#39;s testimony or Terry&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The Ronton grocery store forms around you. The Whittakers are here, with their shopping cart containing last minute items for the party - extra paper plates and napkins, sauce, some beer, and the like. 
@@ -1015,7 +1015,7 @@ Justin jerks awake and looks at her. &quot;Good. Uh. Let&#39;s get going then.&q
 
 &quot;...Ok,&quot; he grunts. &quot;But only for you.&quot; 
 
-He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, &quot;Oh sugarbites, we forgot dressing.&quot; She looks at Justin meaningfully. It takes a moment for him to respond. &quot;I&#39;ll - I&#39;ll go get some.&quot; He walks off quickly, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="73" name="your fight with Annie" tags="memory annie" position="350,975">&lt;&lt;if !$thoughts[&quot;your fight with Annie&quot;]&gt;&gt;\
+He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, &quot;Oh sugarbites, we forgot dressing.&quot; She looks at Justin meaningfully. It takes a moment for him to respond. &quot;I&#39;ll - I&#39;ll go get some.&quot; He walks off quickly, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="72" name="your fight with Annie" tags="memory annie" position="225,975">&lt;&lt;if !$thoughts[&quot;your fight with Annie&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;your fight with Annie&quot;] = &quot;- Man, Annie just does not get the concept of allergies. (sandwich + Annie&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 A memory forms around you, and it&#39;s a familiar scene. You&#39;re in Annie&#39;s kitchen, and everything is calm. This must&#39;ve been before -
@@ -1043,7 +1043,7 @@ When she&#39;s finished, she pulls out bread and other materials.
 
 Slowly, meticulously, she begins making a sandwich.
 
-And the memory [[slips-&gt;Link Clues]] from your sight.</tw-passagedata><tw-passagedata pid="74" name="Terry&#39;s phone conversation" tags="memory terry" position="475,975">&lt;&lt;if !$thoughts[&quot;Terry&#39;s phone conversation&quot;]&gt;&gt;\
+And the memory [[slips-&gt;Link Clues]] from your sight.</tw-passagedata><tw-passagedata pid="73" name="Terry&#39;s phone conversation" tags="memory terry" position="350,975">&lt;&lt;if !$thoughts[&quot;Terry&#39;s phone conversation&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry&#39;s phone conversation&quot;] = &quot;- Terry took your idea to put up a memorial as a huge affront and was venting about it to someone over the phone. (newspaper + petition)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You&#39;re in the regular, not-metal-walled Whittaker house and Terry is talking to someone on her cell phone, sounding irate. The clock on the wall says it&#39;s 8am in the morning and she&#39;s got the clothes she wears to the wine store on, so you suppose she&#39;s getting ready for work.
@@ -1077,7 +1077,7 @@ Terry seems to have calmed down a bit, nodding to whatever the person on the oth
 &quot;Oh!&quot; she says, standing up from the kitchen table. &quot;I almost forgot to say. You left your tie here.&quot; She pulls something out of her pocket, a rolled up straight tie - navy blue with stripes. That&#39;s...weird. She is talking to Justin, right?
 &lt;&lt;add &quot;Straight Tie&quot;&gt;&gt;
 
-&quot;Yeah,&quot; she continues. &quot;Just stop by the shop and I&#39;ll give it to you.&quot; She hangs up, and the memory [[smears away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="75" name="Justin and Erin being siblings" tags="justin memory" position="600,975">&lt;&lt;if !$thoughts[&quot;Justin and Erin being siblings&quot;]&gt;&gt;\
+&quot;Yeah,&quot; she continues. &quot;Just stop by the shop and I&#39;ll give it to you.&quot; She hangs up, and the memory [[smears away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="74" name="Justin and Erin being siblings" tags="justin memory" position="475,975">&lt;&lt;if !$thoughts[&quot;Justin and Erin being siblings&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin and Erin being siblings&quot;] = &quot;- Erin and Justin are brother and sister. How in the world did you never notice before? (crescent charm + gibbous charm)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You lose sight of what&#39;s around you, and then a dark street forms. The moon, nearly full, is high in the sky. Despite the clearly late hour, Justin is walking down the sidewalk, twirling his keys around his finger absentmindedly. Something looks missing from them, though you&#39;re not sure what. A charm or tool of some sort? You remember it was kind of tacky, but that&#39;s all you recall about it.
@@ -1134,7 +1134,7 @@ Erin&#39;s face falls as her arms do, and she starts twirling her hair in her fi
 
 Justin bites his lip, then clears his throat. &quot;I threw it out,&quot; he says gruffly. &quot;I don&#39;t need reminders of that anymore. I&#39;d rather just leave it all behind.&quot; Then, flatly, &quot;Sorry.&quot;
 
-Erin looks like she&#39;s about to cry. &quot;It&#39;s...I am too.&quot; She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="76" name="Justin and Erin setting up for the dinner" tags="justin memory" position="725,975">&lt;&lt;if !$thoughts[&quot;Justin and Erin setting up for the dinner&quot;]&gt;&gt;\
+Erin looks like she&#39;s about to cry. &quot;It&#39;s...I am too.&quot; She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="75" name="Justin and Erin setting up for the dinner" tags="justin memory" position="600,975">&lt;&lt;if !$thoughts[&quot;Justin and Erin setting up for the dinner&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin and Erin setting up for the dinner&quot;] = &quot;- Justin&#39;s been so exhausted he&#39;s had to rely on caffeine patches to get through the day. (caf patch + sigils)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The first thing you see as the memory comes into focus is Justin leaning against a plane tree. The rest of the scene fades in - chairs, food, the festive Thanksgiving-themed tablecloths, and the awning draped above them. As you look around you spot other RNA members, including yourself, bustling about and getting the dinner preparations set up.
@@ -1159,7 +1159,7 @@ Her brows scrunch together. &quot;But your fatigue! You can&#39;t just keep livi
 &quot;Look. Terry gave me this article the other day about the health benefits of nuts; it was almost interesting. Apparently they help with tiredness and all that. And did you notice the dinner?&quot; He gestures to the food being set out. &quot;It&#39;s freaking full of nuts. It&#39;ll help me more than any magic whatchmacallit. Sorry, but no thanks.&quot;
 &lt;&lt;add &quot;Nut Article&quot;&gt;&gt;
 
-Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="77" name="Terry and Bram&#39;s conversation in her shop" tags="bram memory" position="850,975">&lt;&lt;if !$thoughts[&quot;Terry and Bram&#39;s conversation in her shop&quot;]&gt;&gt;
+Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="76" name="Terry and Bram&#39;s conversation in her shop" tags="bram memory" position="725,975">&lt;&lt;if !$thoughts[&quot;Terry and Bram&#39;s conversation in her shop&quot;]&gt;&gt;
     &lt;&lt;set $thoughts[&quot;Terry and Bram&#39;s conversation in her shop&quot;] = &quot;- Terry is having an affair with a customer at her wine shop, and Bram knows it. (bowtie + straight tie)&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 You find yourself just outside Whittaker Wines. Bram is outside too, staring through the wall-to-floor front windows with a shocked expression on his face, sweat beading on his forehead. You look inside as well, but all you see is some man with a cane talking to Terry. Brown hair, dress shirt; you don&#39;t find him terribly relevant at all until Terry pulls on his tie and kisses him on the lean in.
@@ -1205,7 +1205,7 @@ Coldly, she says, &quot;What are you even doing here, Bram? I thought you didn&#
 
 You scowl at his slip up as Terry looks at him suspiciously. She opens her mouth to speak but Bram quickly says, &quot;I guess you must&#39;ve gotten tired of Justin and his bowties, huh? What with that necktie and all.&quot;
 
-The tenseness is palpable as the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="78" name="Justin, Annie, and sriracha" tags="annie memory" position="975,975">&lt;&lt;if !$thoughts[&quot;Justin, Annie, and sriracha&quot;]&gt;&gt;\
+The tenseness is palpable as the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="77" name="Justin, Annie, and sriracha" tags="annie memory" position="850,975">&lt;&lt;if !$thoughts[&quot;Justin, Annie, and sriracha&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin, Annie, and sriracha&quot;] = &quot;- Annie couldn&#39;t think to do anything worse to me than put hot sauce in my sandwich and Justin couldn&#39;t even bear that. Looks like they&#39;re both innocent. (crumpled paper + sharpie)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 Lights up on Annie&#39;s house. Living-Mort is nowhere to be seen, so this must be after the fight. Justin and Terry are putting on their jackets, probably to head to the store.
@@ -1252,7 +1252,7 @@ That&#39;s it? You want to laugh with how giddy you feel. Sriracha?
 
 &quot;You know I&#39;m definitely not actually buying this, right Granny?&quot; Justin stuffs the note into his pants pocket.
 
-The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="79" name="you distracting Justin in front of Bram&#39;s house" tags="bram memory" position="1100,975">&lt;&lt;if !$thoughts[&quot;you distracting Justin in front of Bram&#39;s house&quot;]&gt;&gt;\
+The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="78" name="you distracting Justin in front of Bram&#39;s house" tags="bram memory" position="975,975">&lt;&lt;if !$thoughts[&quot;you distracting Justin in front of Bram&#39;s house&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;you distracting Justin in front of Bram&#39;s house&quot;] = &quot;- Bram was seriously thinking about killing you but realized he needs you to keep Justin off his back. He&#39;s innocent. (keys + corkscrew)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The feeling of a memory forming washes over you again, and you find yourself in Bram&#39;s house. You&#39;ve materialized in the kitchen this time, and Bram is there, the Loup-Rouge resting on the counter. Bram&#39;s wearing the same clothing he was when you shared drinks with him - it must be the same day.
@@ -1301,7 +1301,7 @@ Bram, who&#39;d been stiff with fear for much of the interaction, melts and walk
 
 &quot;Nothing, Mort.&quot;
 
-The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="80" name="Annie and Erin talking about warding you away" tags="erin memory" position="1225,975">&lt;&lt;if !$thoughts[&quot;Annie and Erin talking about warding you away&quot;]&gt;&gt;\
+The memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="79" name="Annie and Erin talking about warding you away" tags="erin memory" position="1100,975">&lt;&lt;if !$thoughts[&quot;Annie and Erin talking about warding you away&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Annie and Erin talking about warding you away&quot;] = &quot;- Annie and Erin want to ward you off from paying your respects... (petals + wolfsbane)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You appear to be in the local park. This is where the dinner happened, though nothing has been set up yet in the memory. The area is mostly empty, except Erin, Annie, and the plane tree. Annie is sitting on a park bench adjacent to the tree, and Erin is on the ground, her head resting against the trunk. 
@@ -1331,7 +1331,7 @@ And warding you away? The more memories you see, the more hurt you feel about yo
 
 &quot;Oh, you know.&quot; Erin twirls her hand vaguely. &quot;Hunters.&quot;
 
-As you stew on this, the memory [[slips away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="81" name="Terry&#39;s boyfriend giving her some leaves" tags="terry memory" position="100,1100">&lt;&lt;if !$thoughts[&quot;Terry&#39;s boyfriend giving her some leaves&quot;]&gt;&gt;\
+As you stew on this, the memory [[slips away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="80" name="Terry&#39;s boyfriend giving her some leaves" tags="terry memory" position="1225,975">&lt;&lt;if !$thoughts[&quot;Terry&#39;s boyfriend giving her some leaves&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry&#39;s boyfriend giving her some leaves&quot;] = &quot;- Terry&#39;s boyfriend was sneaking around in the garden and stole some leaves. (cane + shifty person)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You&#39;re floating on the boulevard in front of the Whittaker house, with Terry standing in the frame of the open door in her bathrobe. Terry, silhouetted in the light that&#39;s flooding onto the porch, is looking at you and waving. &quot;Thank you again for this!&quot; she says, raising the bag she&#39;s holding.
@@ -1347,7 +1347,7 @@ The guy mimes catching something, probably some gross air-kiss from Terry, then 
 Well, obviously you have to know what&#39;s in there. You float through the door easily and see Terry peering into the bag at a scattering of small leaves. She smiles. What the hell does she want with a pile of leaves?
 &lt;&lt;add &quot;Leaves&quot;&gt;&gt;
 
-As you wonder this, the memory [[drips away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="82" name="Erin and Bram brewing you a potion" tags="erin memory" position="225,1100">&lt;&lt;if !$thoughts[&quot;Erin and Bram brewing you a potion&quot;]&gt;&gt;\
+As you wonder this, the memory [[drips away-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="81" name="Erin and Bram brewing you a potion" tags="erin memory" position="100,1100">&lt;&lt;if !$thoughts[&quot;Erin and Bram brewing you a potion&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Erin and Bram brewing you a potion&quot;] = &quot;- Erin and Bram created a &#39;Potion of Continued Life&#39; for you that did not contain wolfsbane. Erin, at the least, is innocent. (potion + werewolf)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The memory starts with a knock, and the sound resonates through your ears as the scene comes into view. Bram is standing in front of a familiar door, a bundle of herbs and other plant substances swaddled in his arms. He&#39;s having a difficult time balancing it all, especially since he keeps reaching an arm out to knock.
@@ -1372,7 +1372,7 @@ Pointing to one of the entries, Erin says, &quot;Here. Potion of Continued Life.
 
 &quot;I think it&#39;s possible. You gonna help?&quot; Erin looks over at Bram and smiles, though it&#39;s weak and born more of habit that cheer. When Bram nods, she drops it and looks melancholy. &quot;Alright so, first we&#39;re going to need...&quot;
 
-She continues on, but the memory [[fades-&gt;Link Clues]]. You&#39;re not sure what to think.</tw-passagedata><tw-passagedata pid="83" name="Terry poisoning your salad" tags="terry memory" position="350,1100">&lt;&lt;if !$thoughts[&quot;Terry poisoning your salad&quot;]&gt;&gt;\
+She continues on, but the memory [[fades-&gt;Link Clues]]. You&#39;re not sure what to think.</tw-passagedata><tw-passagedata pid="82" name="Terry poisoning your salad" tags="terry memory" position="225,1100">&lt;&lt;if !$thoughts[&quot;Terry poisoning your salad&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry poisoning your salad&quot;] = &quot;- Terry poisoned you. Terry poisoned you and you feel like a chump. (aconite, wolfsbane, or leaves + salad)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 You&#39;re back in the grocery store, moments after the previous memory there left off, it seems. Justin is walking back to the salad bar and Terry is watching him go with a pensive look on her face. She bites her lip. Then, she quickly pulls the lid off the salad and takes something - looks like a box for pushpins or the like - out of her purse. Inside - the leaves, the wolfsbane leaves that she got from her boyfriend. No - //no//. You watch helplessly as she dumps the leaves into the salad, tamps the lid back on, and gives it a good shake. That means - she definitely -
@@ -1383,7 +1383,7 @@ Not a second later - and too late, you think to yourself in dismay - Justin appe
 
 &quot;Let&#39;s.&quot;
 
-The memory [[dissipates-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="84" name="Detective&#39;s mind" tags="detective" position="475,1100">You find yourself in a small office, drab and plain. Judging by the worn brown jacket hung up on the coat rack, the room is the detective&#39;s.
+The memory [[dissipates-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="83" name="Detective&#39;s mind" tags="detective mind" position="350,1100">You find yourself in a small office, drab and plain. Judging by the worn brown jacket hung up on the coat rack, the room is the detective&#39;s.
 &lt;&lt;if visited() is 1&gt;&gt;
 You&#39;re not sure what just happened but you&#39;re trying to roll with it. Did you...teleport or something?
 
@@ -1438,8 +1438,8 @@ How unpleasant.
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if lastVisited(&quot;Questioning&quot;) is 1&gt;&gt;
     &lt;&lt;link &quot;Leave room.&quot; &quot;Police Station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif lastVisited($who) is 1&gt;&gt;
-    &lt;&lt;link &quot;Leave room.&quot; &quot;$who&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt; situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this &lt;&lt;linkreplace &quot;man&quot;&gt;&gt;&lt;&lt;linkreplace &quot;woman&quot;&gt;&gt;person&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).&lt;span id=&quot;desk&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="85" name="Justin&#39;s mind" tags="justin mind" position="600,1100">It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic, a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a &lt;&lt;link &quot;newspaper&quot;&gt;&gt;&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
+    &lt;&lt;link &quot;Leave room.&quot; $who&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt; situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this &lt;&lt;linkreplace &quot;man&quot;&gt;&gt;&lt;&lt;linkreplace &quot;woman&quot;&gt;&gt;person&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).&lt;span id=&quot;desk&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="84" name="Justin&#39;s mind" tags="justin mind" position="475,1100">It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a &lt;&lt;link &quot;newspaper&quot;&gt;&gt;&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
 
 The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, &quot;**Local Activists Protest Paving Over Park**&quot;, is unrealistically sharp, ink unfaded by time inside Justin&#39;s memories. You don&#39;t want to think about it too much.
 &lt;&lt;add &quot;Old Newspaper&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; on it. &lt;span id=&quot;newspaper&quot;&gt;&lt;/span&gt;
@@ -1471,12 +1471,37 @@ The glittery thing turns out to be a postcard stuffed into one of the cracks. It
 The &#39;congratulations&#39; is half obscured by the metal wall . The &#39;it&#39;s&#39; has been crossed out with a purple gel pen, which was also used for her signature.
 
 Erin&#39;s a peculiar one, alright.
-
 &lt;&lt;add &quot;Congratulatory Card&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; appear to be wedged between creases in the twisted metal. &lt;span id=&quot;glittery&quot;&gt;&lt;/span&gt;
 
 On account of the bent walls, the ceiling is much, //much// closer to the floor than you&#39;re used to, and you&#39;re glad you&#39;re not enough of a presence to need to duck.
 
-[[Leave.-&gt;Justin]]</tw-passagedata><tw-passagedata pid="86" name="PassageFooter" tags="" position="725,1100">&lt;&lt;nobr&gt;&gt;&lt;!--Indicates this item can&#39;t be combined--&gt;
+[[Leave.-&gt;Justin]]</tw-passagedata><tw-passagedata pid="85" name="Terry&#39;s mind" tags="terry mind" position="600,1100">You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents and works at. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
+
+Looking closer though, you see that the wine bottles are not jutting out of wooden racks, but out of honeycombs. Presumably made of beeswax, the combs ooze with honey that drips down and off the necks of the bottles onto the hardwood floor. In combs without bottles, there are assorted objects that you can only assume have some relevance to Terry. They&#39;re hard to see through the viscous layers of honey, though.
+
+One of the &lt;&lt;link &quot;cells&quot;&gt;&gt;&lt;&lt;replace &quot;#c1&quot;&gt;&gt;
+
+The bits of paper have stuff written on them. You can make out PE-, memori-, -xa, and what look like parts of signatures. Oh! This is the petition that you created to put up that plaque in the park.
+
+Torn into pieces.
+&lt;&lt;add &quot;Petition&quot;&gt;&gt;
+
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; is in sharper focus than the rest; inside, there appear to be bits of ripped up paper floating in the golden goop.&lt;span id=&quot;c1&quot;&gt;&lt;/span&gt;
+&lt;&lt;link &quot;Another cell&quot;&gt;&gt;&lt;&lt;replace &quot;#Another&quot;&gt;&gt;
+
+It&#39;s a bottle of Loup-Rouge. Dusty, like no one&#39;s touched it in ages. There&#39;s a paper here also - a merchant&#39;s copy of a purchase of the wine a couple days ago. It&#39;s got Bram&#39;s signature on it.
+
+If Bram bought this bottle, what&#39;s it still doing here in Terry&#39;s mind? Did she really find it that important to remember?
+&lt;&lt;add &quot;Wine&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;, also one of the only things in focus, has a bottle of wine in it that you know well.&lt;span id=&quot;Another&quot;&gt;&lt;/span&gt;
+
+The last cell with actually discernable things in it contains, oddly enough, dozens of &lt;&lt;link &quot;stickers&quot;&gt;&gt;&lt;&lt;replace &quot;#stickers&quot;&gt;&gt;[
+
+It&#39;s hard to get a good look at all of them, but they seem to be hospital stickers from various dates, the oldest dated 11/14 over a decade ago, the latest dated a couple days ago.
+
+You really hope they&#39;re not for what you suspect they&#39;re for.
+&lt;&lt;add &quot;Hospital Stickers&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; suspended in the fluid at various angles. &lt;span id=&quot;stickers&quot;&gt;&lt;/span&gt;
+
+[[Leave.-&gt;Terry]]</tw-passagedata><tw-passagedata pid="86" name="PassageFooter" tags="" position="725,1100">&lt;&lt;nobr&gt;&gt;&lt;!--Indicates this item can&#39;t be combined--&gt;
     &lt;&lt;if tags().includes(&quot;noncombinable&quot;)&gt;&gt;
         &lt;br&gt;
         This probably isn&#39;t relevant to the murder...
@@ -1510,6 +1535,7 @@ On account of the bent walls, the ceiling is much, //much// closer to the floor 
     &lt;br&gt;
     &lt;br&gt;
         &lt;&lt;if $isItemUsed == true&gt;&gt;
+            You think you&#39;ve gotten all the info out of this clue now.
             &lt;&lt;set $isItemUsed = false&gt;&gt;
         &lt;&lt;/if&gt;&gt;
         &lt;&lt;back &quot;Back to what you were doing.&quot;&gt;&gt;

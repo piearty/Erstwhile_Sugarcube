@@ -1,4 +1,4 @@
-:: Detective's mind [detective]
+:: Detective's mind [detective mind]
 You find yourself in a small office, drab and plain. Judging by the worn brown jacket hung up on the coat rack, the room is the detective's.
 <<if visited() is 1>>
 You're not sure what just happened but you're trying to roll with it. Did you...teleport or something?
@@ -54,11 +54,11 @@ How unpleasant.
 <</replace>><</link>><<if lastVisited("Questioning") is 1>>
     <<link "Leave room." "Police Station">><</link>>
 <<elseif lastVisited($who) is 1>>
-    <<link "Leave room." "$who">><</link>>
+    <<link "Leave room." $who>><</link>>
 <</if>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
 
 :: Justin's mind [justin mind]
-It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic, a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<link "newspaper">><<replace "#newspaper">>
+It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<link "newspaper">><<replace "#newspaper">>
 
 The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, "**Local Activists Protest Paving Over Park**", is unrealistically sharp, ink unfaded by time inside Justin's memories. You don't want to think about it too much.
 <<add "Old Newspaper">><</replace>><</link>> on it. <span id="newspaper"></span>
@@ -90,9 +90,38 @@ The glittery thing turns out to be a postcard stuffed into one of the cracks. It
 The 'congratulations' is half obscured by the metal wall . The 'it's' has been crossed out with a purple gel pen, which was also used for her signature.
 
 Erin's a peculiar one, alright.
-
 <<add "Congratulatory Card">><</replace>><</link>> appear to be wedged between creases in the twisted metal. <span id="glittery"></span>
 
 On account of the bent walls, the ceiling is much, //much// closer to the floor than you're used to, and you're glad you're not enough of a presence to need to duck.
 
 [[Leave.->Justin]]
+
+:: Terry's mind [terry mind]
+You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents and works at. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
+
+Looking closer though, you see that the wine bottles are not jutting out of wooden racks, but out of honeycombs. Presumably made of beeswax, the combs ooze with honey that drips down and off the necks of the bottles onto the hardwood floor. In combs without bottles, there are assorted objects that you can only assume have some relevance to Terry. They're hard to see through the viscous layers of honey, though.
+
+One of the <<link "cells">><<replace "#c1">>
+
+The bits of paper have stuff written on them. You can make out PE-, memori-, -xa, and what look like parts of signatures. Oh! This is the petition that you created to put up that plaque in the park.
+
+Torn into pieces.
+<<add "Petition">>
+
+<</replace>><</link>> is in sharper focus than the rest; inside, there appear to be bits of ripped up paper floating in the golden goop.<span id="c1"></span>
+
+<<link "Another cell">><<replace "#Another">>
+
+It's a bottle of Loup-Rouge. Dusty, like no one's touched it in ages. There's a paper here also - a merchant's copy of a purchase of the wine a couple days ago. It's got Bram's signature on it.
+
+If Bram bought this bottle, what's it still doing here in Terry's mind? Did she really find it that important to remember?
+<<add "Wine">><</replace>><</link>>, also one of the only things in focus, has a bottle of wine in it that you know well.<span id="Another"></span>
+
+The last cell with actually discernable things in it contains, oddly enough, dozens of <<link "stickers">><<replace "#stickers">>[
+
+It's hard to get a good look at all of them, but they seem to be hospital stickers from various dates, the oldest dated 11/14 over a decade ago, the latest dated a couple days ago.
+
+You really hope they're not for what you suspect they're for.
+<<add "Hospital Stickers">><</replace>><</link>> suspended in the fluid at various angles. <span id="stickers"></span>
+
+[[Leave.|Terry]]
