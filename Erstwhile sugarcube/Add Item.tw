@@ -6,20 +6,6 @@
     <<elseif $inv.length is 0 and $lexaItems.includes($args[0]) or $inv.length is 0 and $noncombinables.includes($args[0])>>
         <br>You're not sure if you should care about this. But, just by looking at it, you can almost feel it added to your mind, as if that's an actual space you can visit.<br>
     <</if>>
- <!--Indicates this item can't be combined-->
-        <<if $noncombinables.includes($args[0])>>
-        <br>
-        This probably isn't relevant to the murder...
-            <<if !$lexaItems.includes($args[0])>>
-                but you are curious about it...
-            <</if>><br>
-        <</if>>
-<!--If something is related to Lexa, display a randomly selected angry statement from Mort.-->
-        <<if $lexaItems.includes($args[0])>>
-        <br>
-        <<print either($lexaItemAnger)>>
-        <br>
-    <</if>>
 <!--Links to item's page and adds it to the inventory-->
     <br>//(The clue, <nowiki>"</nowiki>[[$args[0]]]<nowiki>"</nowiki> has been added to your memories.)//<<set $inv.pushUnique($args[0])>>
 <</widget>>
