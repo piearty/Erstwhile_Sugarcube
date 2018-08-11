@@ -3,11 +3,11 @@ You find yourself in a small office, drab and plain. Judging by the worn brown j
 <<if visited() is 1>>
 You're not sure what just happened but you're trying to roll with it. Did you...teleport or something?
 
-Hmm, no. Something tells you this isn't an actual office; it's more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren't looking, there's nothing at all. Are you in the detective's  <<openlink "dream?" "uniqueID">><<linkreplace "memory?">><<linkappend "mind?">>
+Hmm, no. Something tells you this isn't an actual office; it's more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren't looking, there's nothing at all. Are you in the detective's <<linkreplace "dream?">><<linkreplace "memory?">><<linkappend "mind?">>
 
 Yeah. Mind feels right to you, going by your //ghost sense//...or whatever it is.
 
-Looks like you were wrong about your lack of <<link "ghost powers">><<replace "#powers">>Though you don't recall mind-jumping to be a 'ghost' thing...still, rolling with it. What else would you do?<</replace>><</link>> after all. <span id="powers"></span><</linkappend>><</linkreplace>><</linkreplace>><</if>><</openlink>>
+Looks like you were wrong about your lack of <<link "ghost powers">><<replace "#powers">>Though you don't recall mind-jumping to be a 'ghost' thing...still, rolling with it. What else would you do?<</replace>><</link>> after all. <span id="powers"></span><</linkappend>><</linkreplace>><</linkreplace>><</if>>
 The walls, an inoffensive light grey, are covered in <<link "photographs">><<replace "#photos">>
 
 Hey, there's you! You don't look that good. You wish they'd used a picture from when you were alive, at the very least.<</replace>><</link>> of missing persons and dead people. <span id="photos"></span>
@@ -133,9 +133,9 @@ That's no moon. Or rather, that's no //real// moon. Well, it wasn't anyway since
 
 There's clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed <<link "picture">><<replace "#picture">>
 
-Teenaged Terry, Erin, and some other girl who you don't care about, smiling for a picture. You - you guess that's Erin at least? Her hair is cropped short and she's wearing boyish clothes. It never occured to you she could've ever been a tomboy, but you suppose people <<link "change>><<replace "#change">>Though this would be a bi-i-ig change, you admit.<</replace>><</link>> over time. <span id="change"></span> Her arm is around the...the other girl's waist. You wonder who took the picture.
+Teenaged Terry, Erin, and some other girl who you don't care about, smiling for a picture. You - you guess that's Erin at least? Her hair is cropped short and she's wearing boyish clothes. It never occured to you she could've ever been a tomboy, but you suppose people <<link "change">><<replace "#change">>Though this would be a bi-i-ig change, you admit.<</replace>><</link>> over time. <span id="change"></span> Her arm is around the...the other girl's waist. You wonder who took the picture.
 
-They're all sitting in front of a very familiar plane tree in the park.<<add "Photograph">><</replace>><</link>>; and even a freaking crystal ball. And, to no surprise, <<link "sigils">><<replace "#sigils">>[
+They're all sitting in front of a very familiar plane tree in the park.<<add "Photograph">><</replace>><</link>>; and even a freaking crystal ball. And, to no surprise, <<link "sigils">><<replace "#sigils">>
 
 Several different <<linkappend "sigils">>, or as you like to call them, 'magical' <<linkappend "squiggles">> (squigils?)<</linkappend>><</linkappend>>. Most of them are labeled as 'protection' sigils, but one says it's to 'renew energy and de-stress', and is marked for Justin.
 <<add "Sigils">><</replace>><</link>> papered everywhere that there's an open area to tape them to.<span id="picture"></span><span id="sigils"></span>
