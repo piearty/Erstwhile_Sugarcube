@@ -1,0 +1,58 @@
+:: Credits [noinv nosave]
+<<nobr>>
+    <strong>[[Clues]]
+    <<if $inv.length > 1>>
+        | [[Link Clues]]
+    <</if>>
+    <<if $thoughts.length > 0>>
+        | [[Thoughts]]
+    <</if>>
+     |  <<linkreplace "Save">>
+            <<script>>
+                if (Save.ok()) { 
+                    Save.slots.save(0);
+                }
+            <</script>>
+            Game saved.
+        <</linkreplace>>
+        <<if Save.slots.has(0)>>
+     |      <<linkreplace "Restart">>
+This will erase your progress and saves. Are you sure?
+                <<link "Yes">>
+                    <<script>>
+                        if (Save.slots.has(0)) {
+                            Save.slots.delete(0);
+                        }
+                        if (Save.autosave.has()) {
+                            Save.autosave.delete();                           
+                        }
+                        Engine.restart();
+                        <</script>>
+                <</link>>
+            <</linkreplace>>
+        <</if>>
+     | Credits</strong>
+<</nobr>>
+
+**Writers:** Maddie Fialla and Marijke Perry
+
+**Coder:** Maddie Fialla
+
+Thank you to all of our numerous playtesters, who helped us immensely in making the game not only fun to play, but, you know, actually playable:
+
+Anna
+Ava
+Brigit
+Eleanor
+Element
+Emma
+Haberdasher
+James
+Khun
+Kyra
+Lordlyhour
+Morgan
+Rebekka
+</div>
+
+[[Open your eyes.|$returnTo]]

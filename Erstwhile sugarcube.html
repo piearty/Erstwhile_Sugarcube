@@ -621,12 +621,12 @@ A postcard from a pride parade from who knows how many years ago, with Justin an
 &lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Congratulatory Card" tags="item noncombinable" position="100,725">&lt;h3&gt;Congratulatory Card&lt;/h3&gt;
 Found stuffed in Justin&#39;s weird mind-walls.
 
-&quot;Congratulations! ==It&#39;s== You&#39;re a boy!
+//&quot;Congratulations! ==It&#39;s== You&#39;re a boy!
 
-~Erin xoxo&quot;
+~Erin xoxo&quot;//
 
 &lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Sticky Note" tags="noncombinable item lexa" position="225,725">&lt;h3&gt;Sticky Note&lt;/h3&gt;
-&quot;There&#39;s $24 missing from my purse. You&#39;d better explain when you get home, missy. 11/14&quot; A passive-aggressive sticky note from ages ago stuck to Annie&#39;s mind-fridge.
+//&quot;There&#39;s $24 missing from my purse. You&#39;d better explain when you get home, missy. 11/14&quot;// A passive-aggressive sticky note from ages ago stuck to Annie&#39;s mind-fridge.
 
 &lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Consent Form" tags="item noncombinable lexa" position="350,725">&lt;h3&gt;Consent Form&lt;/h3&gt;
 Dated a few days ago, it&#39;s for non-voluntary...well...you know. Found half-buried in the sands of Annie&#39;s mind.
@@ -1618,9 +1618,10 @@ You float under the raised box to examine the item. It&#39;s a piece of paper wi
     &lt;&lt;/if&gt;&gt;
     
 &lt;!--If item has been used, show this--&gt;
-    &lt;&lt;if $isItemUsed == true&gt;&gt;
+    &lt;&lt;if tags().includes(&quot;item&quot;) and $isItemUsed == true&gt;&gt;
         &lt;br&gt;
         You think you&#39;ve gotten all the info out of this clue now.
+        &lt;&lt;set $isItemUsed = false&gt;&gt;
     &lt;&lt;/if&gt;&gt;
     
 &lt;!--Unless a passage is an item, a memory, or is not supposed to display an inventory, add the inventory link to every passage--&gt;
@@ -1635,7 +1636,7 @@ You float under the raised box to examine the item. It&#39;s a piece of paper wi
     &lt;&lt;if tags().includes(&quot;item&quot;)&gt;&gt;
     &lt;br&gt;
     &lt;br&gt;
-        &lt;&lt;back &quot;Back to what you were doing.&quot;&gt;&gt;
+        &lt;&lt;return &quot;Back to what you were doing.&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="PassageHeader" tags="" position="1225,1100">&lt;&lt;if tags().includes(&quot;memory&quot;) and $thoughts.length == 0&gt;&gt;As you connect the two clues in your mind, you feel a strong tide of emotions and sensations flood your senses, and you know they&#39;re not your own.
 
