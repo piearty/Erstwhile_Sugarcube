@@ -12,7 +12,7 @@ The walls, an inoffensive light grey, are covered in <<link "photographs">><<rep
 
 Hey, there's you! You don't look that good. You wish they'd used a picture from when you were alive, at the very least.<</replace>><</link>> of missing persons and dead people. <span id="photos"></span>
 
-The <<link "desk">><<replace "#desk">>
+The <<openlink "desk" "deskText">>desk<<replace "#desk">>
 
 You feel a little daunted at the idea of going through the giant stack of papers, especially when you can't actually touch things. Fortunately it looks like none of them are that important, fuzzy and indistinct like the detective doesn't care to focus on them right now.
 
@@ -26,7 +26,7 @@ There's some stuff on the desk though that's almost //too// in focus though, lik
 
 There seems to be a few papers here too, also in sharp detail:
 
-a <<link "rap sheet">><<replace "#rap">>
+a <<openlink "rap sheet" "rapText">>rap sheet<<replace "#rap">>
 
 And whose rap sheet might this b - 
 
@@ -38,8 +38,8 @@ Ok so you have a record. So what? A few DUIs, some...other stuff. You swear you'
 
 What is it doing here?
 <<add "Rap Sheet">>
-<</replace>><</link>>, <span id="rap"></span>
-and a <<link "report.">><<replace "#report">>
+<</replace>><</openlink>>, <span id="rap"></span>
+and a <<link "report." "reportText">>report.<<replace "#report">>
 
 You squint at the paper. At the top in large bold letters are the words "//''AUTOPSY REPORT''//". You see the name "//Mort Freedman//" - your name - as well, and feel cold. Wow. You really are dead.
 
@@ -49,36 +49,36 @@ ACONITE POISONING//"
 Oh.
 
 How unpleasant.
-<<add "Aconite Poison">><</replace>><</link>><span id="report"></span>
-<</replace>><</link>><<if lastVisited("Questioning") is 1>>
+<<add "Aconite Poison">><</replace>><</openlink>><span id="report"></span>
+<</replace>><</openlink>><<if lastVisited("Questioning") is 1>>
     <<link "Leave room." "Police Station">><</link>>
 <<elseif lastVisited($who) is 1>>
     <<link "Leave room." $who>><</link>>
 <</if>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
 
 :: Justin's mind [justin mind]
-It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<link "newspaper">><<replace "#newspaper">>
+It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<openlink "newspaper" "newspaperText">>newspaper<<replace "#newspaper">>
 
 The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, "**Local Activists Protest Paving Over Park**", is unrealistically sharp, ink unfaded by time inside Justin's memories. You don't want to think about it too much.
-<<add "Old Newspaper">><</replace>><</link>> on it. <span id="newspaper"></span>
+<<add "Old Newspaper">><</replace>><</openlink>> on it. <span id="newspaper"></span>
 
 The police reports and coffee table books lack most discernable details, their words blurry and indistinct. If Justin doesn't find them important enough to remember them properly, well, neither do you.
 
-On the couch, along with a few throw pillows and a bottle of <<linkappend "black hair dye,">> (Must be going grey early, huh?<</linkappend>> is a small box of <<linkappend "stick-on patches.">>
+On the couch, along with a few throw pillows and a bottle of <<linkappend "black hair dye,">> (Must be going grey early, huh?<</linkappend>> is a small box of <<openlink "stick-on patches." "patchesText">>stick on patches.<<replace "#patches">>
 
 The box stands out unpleasantly from the faded indigo upholstery and creamy white pillows, being a garish, saturated green. ~CAF PATCH!~ it proclaims in violent pink letters. Underneath, in purple, it says, "8 hours of energy guaranteed! Stick on and enjoy the ride!"
 
 Is this like an energy drink condensed into patch form? That's a bit worrisome. Terry has said before that she's sworn off caffeine for 'diet reasons', so you assume the box belongs to Justin.
 
 One of the patches has spilled out of the box. It looks a bit like a band-aid.
-<<add "Caf Patch">><</linkappend>>
+<<add "Caf Patch">><</openlink>> <span id="patches"></span>
 
-In here, for some bizarre reason, the walls are made of metal - steel, it looks like. Crushed steel, specifically; they're warped and corrugated as if the whole room is being squeezed by a giant vise. Something <<link "shiny">><<replace "#shiny">> - 
+In here, for some bizarre reason, the walls are made of metal - steel, it looks like. Crushed steel, specifically; they're warped and corrugated as if the whole room is being squeezed by a giant vise. Something <<openlink "shiny">>shiny<<replace "#shiny">> - 
 
 You float closer and squint in the recesses of the crevice. There's a crescent moon charm glinting in there. Why, you don't rightly know, but you suspect its placement means something metaphorical, since the actual Whittaker house does not have metal walls and therefore does not have things stuck between said walls.
 <<add "Crescent Charm">>
 
-<</replace>><</link>><span id="shiny"></span> and something <<link "glittery">><<replace "#glittery">> 
+<</replace>><</openlink>><span id="shiny"></span> and something <<openlink "glittery">>glittery<<replace "#glittery">> 
 
 The glittery thing turns out to be a postcard stuffed into one of the cracks. It's open and says
 
@@ -89,7 +89,7 @@ The glittery thing turns out to be a postcard stuffed into one of the cracks. It
 The 'congratulations' is half obscured by the metal wall . The 'it's' has been crossed out with a purple gel pen, which was also used for her signature.
 
 Erin's a peculiar one, alright.
-<<add "Congratulatory Card">><</replace>><</link>> appear to be wedged between creases in the twisted metal. <span id="glittery"></span>
+<<add "Congratulatory Card">><</replace>><</openlink>> appear to be wedged between creases in the twisted metal. <span id="glittery"></span>
 
 On account of the bent walls, the ceiling is much, //much// closer to the floor than you're used to, and you're glad you're not enough of a presence to need to duck.
 
@@ -100,54 +100,57 @@ You recognize the place as Whittaker Wines, the wine store that Terry inherited 
 
 Looking closer though, you see that the wine bottles are not jutting out of wooden racks, but out of honeycombs. Presumably made of beeswax, the combs ooze with honey that drips down and off the necks of the bottles onto the hardwood floor. In combs without bottles, there are assorted objects that you can only assume have some relevance to Terry. They're hard to see through the viscous layers of honey, though.
 
-One of the <<link "cells">><<replace "#c1">>
+One of the <<openlink "cells" "petitionText">>cells<<replace "#petition">>
 
 The bits of paper have stuff written on them. You can make out PE-, memori-, -xa, and what look like parts of signatures. Oh! This is the petition that you created to put up that plaque in the park.
 
 Torn into pieces.
 <<add "Petition">>
 
-<</replace>><</link>> is in sharper focus than the rest; inside, there appear to be bits of ripped up paper floating in the golden goop.<span id="c1"></span>
+<</replace>><</openlink>> is in sharper focus than the rest; inside, there appear to be bits of ripped up paper floating in the golden goop.<span id="petition"></span>
 
-<<link "Another cell">><<replace "#Another">>
+<<link "Another cell" "wineText">>Another cell<<replace "#wine">>
 
 It's a bottle of Loup-Rouge. Dusty, like no one's touched it in ages. There's a paper here also - a merchant's copy of a purchase of the wine a couple days ago. It's got Bram's signature on it.
 
 If Bram bought this bottle, what's it still doing here in Terry's mind? Did she really find it that important to remember?
-<<add "Wine">><</replace>><</link>>, also one of the only things in focus, has a bottle of wine in it that you know well.<span id="Another"></span>
+<<add "Wine">><</replace>><</openlink>>, also one of the only things in focus, has a bottle of wine in it that you know well.<span id="wine"></span>
 
-The last cell with actually discernable things in it contains, oddly enough, dozens of <<link "stickers">><<replace "#stickers">>[
+The last cell with actually discernable things in it contains, oddly enough, dozens of <<openlink "stickers" "stickersText">>stickers<<replace "#stickers">>
 
 It's hard to get a good look at all of them, but they seem to be hospital stickers from various dates, the oldest dated 11/14 over a decade ago, the latest dated a couple days ago.
 
 You really hope they're not for what you suspect they're for.
-<<add "Hospital Stickers">><</replace>><</link>> suspended in the fluid at various angles. <span id="stickers"></span>
+<<add "Hospital Stickers">><</replace>><</openlink>> suspended in the fluid at various angles. <span id="stickers"></span>
 
 [[Leave.|Terry]]
 
 :: Erin's mind [erin mind]
-It looks like a study but. Weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking <<link "moon">><<replace "#moon">>
+
+It looks like a study but. Weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking <<openlink "moon" "moonText">>moon<<replace "#moon">>
 
 That's no moon. Or rather, that's no //real// moon. Well, it wasn't anyway since it's simply a metaphysical representation of a - your point is, it's actually a charm. Just hanging in the sky, pretending to be a celestial body. You can see the metallic luster of it and the tiny loop on top for attaching to keychains or necklaces or the like. Weird.
-<<add "Gibbous Charm">><</replace>><</link>> hang in the purple-velvet night. <span id="moon"></span>
+<<add "Gibbous Charm">><</replace>><</openlink>> hang in the purple-velvet night. <span id="moon"></span>
 
-There's clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed <<link "picture">><<replace "#picture">>
+There's clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed <<openlink "picture" "pictureText">>picture<<replace "#picture">>
 
 Teenaged Terry, Erin, and some other girl who you don't care about, smiling for a picture. You - you guess that's Erin at least? Her hair is cropped short and she's wearing boyish clothes. It never occured to you she could've ever been a tomboy, but you suppose people <<link "change">><<replace "#change">>Though this would be a bi-i-ig change, you admit.<</replace>><</link>> over time. <span id="change"></span> Her arm is around the...the other girl's waist. You wonder who took the picture.
 
-They're all sitting in front of a very familiar plane tree in the park.<<add "Photograph">><</replace>><</link>>; and even a freaking crystal ball. And, to no surprise, <<link "sigils">><<replace "#sigils">>
+They're all sitting in front of a very familiar plane tree in the park.<<add "Photograph">><</replace>><</openlink>>; and even a freaking crystal ball. And, to no surprise, <<openlink "sigils" "sigilsText">>sigils<<replace "#sigils">>
 
 Several different <<linkappend "sigils">>, or as you like to call them, 'magical' <<linkappend "squiggles">> (squigils?)<</linkappend>><</linkappend>>. Most of them are labeled as 'protection' sigils, but one says it's to 'renew energy and de-stress', and is marked for Justin.
-<<add "Sigils">><</replace>><</link>> papered everywhere that there's an open area to tape them to.<span id="picture"></span><span id="sigils"></span>
+<<add "Sigils">><</replace>><</openlink>> papered everywhere that there's an open area to tape them to.<span id="picture"></span><span id="sigils"></span>
 
-To your somewhat greater surprise, there is a <<link "letter">><<replace "#letter">>
+To your somewhat greater surprise, there is a <<openlink "letter" "letterText">>letter<<replace "#letter">>
 
 You //would// be shocked that a letter could burn perpetually in a highly flammable container while still having its words clearly readable. But you're a ghost floating around in someone's mind and peering at their memories, so who are you to judge?
 
-In a looping orange scrawl it says, //"I demand you stop dating my daughter. I know she sneaks over to your and your witch sister's house at night. I won't put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won't have you corrupting Le - "//
+In a looping orange scrawl it says, 
+
+//"I demand you stop dating my daughter. I know she sneaks over to your and your witch sister's house at night. I won't put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won't have you corrupting Le - "//
 
 You decide to stop reading.
-<<add "Burning Letter">><</replace>><</link>> in the wicker trashcan in the corner.<span id="letter"></span>
+<<add "Burning Letter">><</replace>><</openlink>> in the wicker trashcan in the corner.<span id="letter"></span>
 
 The downright oddest thing about the room is that the walls, floor, and ceiling appear to be pressing outward, curving due to some unseen pressure from inside. They're barely attached at the corners, but open where each wall would meet another, as if they're ripping at the seams. Through the openings, you glimpse more stars and dark space. Is this room just floating in a void?
 
