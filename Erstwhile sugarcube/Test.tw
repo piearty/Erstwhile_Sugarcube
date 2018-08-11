@@ -1,7 +1,7 @@
-:: Test [justin]
+:: Test [justin mind]
 aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's testimony, sandwich, potion, salad added
 
-<<openlink "test" "uniqueID">>hidden text<</openlink>>
+<<openlink "test" "ID">>hidden text<</openlink>>
 
 [[Testing]]
     <<set $thoughts["Bram realizing the wolfsbane was tampered with"] = "- blop">>

@@ -1,4 +1,4 @@
-:: Story Javascript [script]
+<!--:: Story Javascript [script]
 postdisplay['open-links'] = function (t) {
     if (!tags().includes('mind')) {
         return; 
@@ -7,7 +7,7 @@ postdisplay['open-links'] = function (t) {
     var $openLinks = $('.link-open a, .link-open button').toArray();
     $openLinks.forEach( function (link)) {
         var $link = $(link);
-        if (sv.openLinks.includes($link.attr('id')) {
+        if (sv.openLinks.includes($link.attr('id'))) {
             $link.trigger('click');
         }
     });
@@ -20,13 +20,13 @@ Macro.add('openlink', {
            .addClass('link-open');
         var $link = $(document.createElement('a'))
            .wiki(this.args[0])
-           .attr('id', Util.slugify(this.args[1])
+           .attr('id', Util.slugify(this.args[1]))
            .ariaClick( function () {
-                $wrapper.empty().wiki(this.payload[0].contents));
+                $wrapper.empty().wiki(this.payload[0].contents);
                 var sv = State.variables;
                 sv.openLinks = sv.openLinks || [];
                 sv.openLinks.push($(this).attr('id'));
             });
         $wrapper.append($link).appendTo(this.output);
     }
-});
+});-->
