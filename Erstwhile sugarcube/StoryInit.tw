@@ -1,4 +1,5 @@
-:: StoryInit [nobr]
+:: StoryInit
+<<nobr>>
 <!--Inventory-->
 <<set $inv to []>>
 <<set $thoughts to {}>>
@@ -40,3 +41,4 @@
 
 <!--Checks if item been used up or not (resets upon leaving item passage)-->
 <<set $isItemUsed = false>>
+<</nobr>>
