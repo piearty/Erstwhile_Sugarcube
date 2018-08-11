@@ -3,12 +3,11 @@ You find yourself in a small office, drab and plain. Judging by the worn brown j
 <<if visited() is 1>>
 You're not sure what just happened but you're trying to roll with it. Did you...teleport or something?
 
-Hmm, no. Something tells you this isn't an actual office; it's more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren't looking, there's nothing at all. Are you in the detective's <<linkreplace "dream?">><<linkreplace "memory?">><<linkappend "mind?">>
+Hmm, no. Something tells you this isn't an actual office; it's more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren't looking, there's nothing at all. Are you in the detective's  <<openlink "dream?" "uniqueID">><<linkreplace "memory?">><<linkappend "mind?">>
 
 Yeah. Mind feels right to you, going by your //ghost sense//...or whatever it is.
 
-Looks like you were wrong about your lack of <<link "ghost powers">><<replace "#powers">>Though you don't recall mind-jumping to be a 'ghost' thing...still, rolling with it. What else would you do?<</replace>><</link>> after all. <span id="powers"></span><</linkappend>><</linkreplace>><</linkreplace>><</if>>
-
+Looks like you were wrong about your lack of <<link "ghost powers">><<replace "#powers">>Though you don't recall mind-jumping to be a 'ghost' thing...still, rolling with it. What else would you do?<</replace>><</link>> after all. <span id="powers"></span><</linkappend>><</linkreplace>><</linkreplace>><</if>><</openlink>>
 The walls, an inoffensive light grey, are covered in <<link "photographs">><<replace "#photos">>
 
 Hey, there's you! You don't look that good. You wish they'd used a picture from when you were alive, at the very least.<</replace>><</link>> of missing persons and dead people. <span id="photos"></span>
@@ -94,7 +93,7 @@ Erin's a peculiar one, alright.
 
 On account of the bent walls, the ceiling is much, //much// closer to the floor than you're used to, and you're glad you're not enough of a presence to need to duck.
 
-[[Leave.->Justin]]
+[[Leave.|Justin]]
 
 :: Terry's mind [terry mind]
 You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents and works at. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
@@ -125,3 +124,33 @@ You really hope they're not for what you suspect they're for.
 <<add "Hospital Stickers">><</replace>><</link>> suspended in the fluid at various angles. <span id="stickers"></span>
 
 [[Leave.|Terry]]
+
+:: Erin's mind [erin mind]
+It looks like a study but. Weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking <<link "moon">><<replace "#moon">>
+
+That's no moon. Or rather, that's no //real// moon. Well, it wasn't anyway since it's simply a metaphysical representation of a - your point is, it's actually a charm. Just hanging in the sky, pretending to be a celestial body. You can see the metallic luster of it and the tiny loop on top for attaching to keychains or necklaces or the like. Weird.
+<<add "Gibbous Charm">><</replace>><</link>> hang in the purple-velvet night. <span id="moon"></span>
+
+There's clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed <<link "picture">><<replace "#picture">>
+
+Teenaged Terry, Erin, and some other girl who you don't care about, smiling for a picture. You - you guess that's Erin at least? Her hair is cropped short and she's wearing boyish clothes. It never occured to you she could've ever been a tomboy, but you suppose people <<link "change>><<replace "#change">>Though this would be a bi-i-ig change, you admit.<</replace>><</link>> over time. <span id="change"></span> Her arm is around the...the other girl's waist. You wonder who took the picture.
+
+They're all sitting in front of a very familiar plane tree in the park.<<add "Photograph">><</replace>><</link>>; and even a freaking crystal ball. And, to no surprise, <<link "sigils">><<replace "#sigils">>[
+
+Several different <<linkappend "sigils">>, or as you like to call them, 'magical' <<linkappend "squiggles">> (squigils?)<</linkappend>><</linkappend>>. Most of them are labeled as 'protection' sigils, but one says it's to 'renew energy and de-stress', and is marked for Justin.
+<<add "Sigils">><</replace>><</link>> papered everywhere that there's an open area to tape them to.<span id="picture"></span><span id="sigils"></span>
+
+To your somewhat greater surprise, there is a <<link "letter">><<replace "#letter">>
+
+You //would// be shocked that a letter could burn perpetually in a highly flammable container while still having its words clearly readable. But you're a ghost floating around in someone's mind and peering at their memories, so who are you to judge?
+
+In a looping orange scrawl it says, //"I demand you stop dating my daughter. I know she sneaks over to your and your witch sister's house at night. I won't put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won't have you corrupting Le - "//
+
+You decide to stop reading.
+<<add "Burning Letter">><</replace>><</link>> in the wicker trashcan in the corner.<span id="letter"></span>
+
+The downright oddest thing about the room is that the walls, floor, and ceiling appear to be pressing outward, curving due to some unseen pressure from inside. They're barely attached at the corners, but open where each wall would meet another, as if they're ripping at the seams. Through the openings, you glimpse more stars and dark space. Is this room just floating in a void?
+
+You look out the window to check. Huh. It appears so.
+
+[[Leave.->Erin]]
