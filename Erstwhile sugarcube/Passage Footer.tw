@@ -15,9 +15,10 @@
     <</if>>
     
 <!--If item has been used, show this-->
-    <<if $isItemUsed == true>>
+    <<if tags().includes("item") and $isItemUsed == true>>
         <br>
         You think you've gotten all the info out of this clue now.
+        <<set $isItemUsed = false>>
     <</if>>
     
 <!--Unless a passage is an item, a memory, or is not supposed to display an inventory, add the inventory link to every passage-->
@@ -32,6 +33,6 @@
     <<if tags().includes("item")>>
     <br>
     <br>
-        <<back "Back to what you were doing.">>
+        <<return "Back to what you were doing.">>
     <</if>>
 <</nobr>>

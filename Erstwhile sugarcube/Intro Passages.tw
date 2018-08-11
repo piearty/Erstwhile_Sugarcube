@@ -136,10 +136,10 @@ Your murder<</linkappend>>.
 <<set _pronouns to "he">>\
 You're disturbed by the thought; it's all you could think about as the investigation went on. You were //murdered//? And not only murdered, but by one of your friends? Who would want to murder you? Why? How?
 
-You cycle through the rest of the <<linkappend "5 Ws">> (and 1 H)<</linkappend>> and other questions over and over as you float behind the police cars driving to the station, following with apparent ease despite their speed. Able to pass through the walls of the station just as easily, you find the area with all of the interview rooms and wait for someone to show up.
+You cycle through the rest of the <<linkappend "5 Ws">> (and 1 H)<</linkappend>> and other questions over and over as you float behind the police cars driving to the station, able to follow with apparent ease despite the cars' speed. Able to pass through the walls of the station just as easily, you find the area with all of the interview rooms and wait for someone to show up.
 
-A detective with cropped red hair, a worn brown coat, and an androgynous look walks into the hallway, chewing on an unlit cigarette. <<linkreplace "He paces">><<linkreplace "She paces?">>Honestly you can't tell what gender the detective is so you're gonna play it safe and go with //they// - They pace<<append "#muttering">>
+A detective with cropped red hair, a worn brown coat, and an androgynous look walks into the hallway, chewing on an unlit cigarette. <<linkreplace "He paces">><<linkreplace "She paces?">>Honestly you can't tell what gender the detective is so you're gonna play it safe and go with //they// - They pace<<replace "#muttering">>
 
 You bring yourself closer to hear what they're saying, but just at that moment they start pacing in your direction. You instinctively try to back up, but before you do, your ghostly form and the detective collide and you feel a strong tug. The last thing you see before the world fades is the detective shuddering.
 
-[[Wait, what?->Detective's mind]]<</append>><</linkreplace>><</linkreplace>> up and down the hall while muttering, presumably about the case. <span id="muttering"></span>
+[[Wait, what?->Detective's mind]]<</replace>><</linkreplace>><</linkreplace>> up and down the hall while muttering, presumably about the case. <span id="muttering"></span>
