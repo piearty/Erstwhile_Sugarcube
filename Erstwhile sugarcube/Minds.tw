@@ -198,3 +198,21 @@ It's dated a few days ago...a consent form for non-voluntary eu - Ah //crap//.
 <</replace>><</openlink>> <span id="form"></span>
 
 [[Leave.|Annie]]
+
+:: Bram's mind [bram mind]
+As you step into Bram's mind, a fantastical version of the community greenhouse appears in your vision, with blossoming, well pruned plants from all seasons. The flowers are arranged meticulously and are being lightly watered by sprinklers from above; thankfully the drops pass right through you.
+
+The glass panes that make up the greenhouse let light stream in, and though it's too bright to see outside, you aren't blinded either. As you squint at the panes, you realize they're held up by vines rather than their usual metal frames. Caught up in some vines, extremely high up, are some <<openlink "dollar bills." "moneyText">>dollar bills.<<replace "#money">>
+
+You float on up there and see a $20 and four $1 bills, with creases from being folded repeatedly. Not sure what they're doing there, though you'd assume they were obtained from one of his sales.
+
+<<add "Money">><</replace>><</openlink>> <span id="money"></span>
+
+You also spot <<openlink "something" "giftText">>something<<replace "#gift">>
+
+You float under the raised box to examine the item. It's a piece of paper with handwriting on it - your handwriting. It's too dark to read well in the shadows, but you already know what it says.
+
+"Thanks ahead of time for the gift I expect you're getting me. Tell you what, when you get the stuff, why don't you share it with me? We'll make a toast to old friends. Make sure it's aged over a decade, don't cheap out on me here. You know the brand I like. - Mort"
+<<add "Gift Request">><</replace>><</openlink>> shrouded in shadow under one of the plant boxes. <span id="gift"></span>
+
+[[Leave.|Bram]]
