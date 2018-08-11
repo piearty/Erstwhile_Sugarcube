@@ -102,7 +102,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="90" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
+	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="86" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
 body {
     background: white;
     color: black;
@@ -161,39 +161,7 @@ a:active {
 Config.saves.isAllowed = function () {
     return tags().includesAny("save", "autosave");
 };
-Config.saves.autosave = "autosave";
-/* twine-user-script #2: "Story Javascript" */
-postdisplay['open-links'] = function (t) {
-if (!tags().includes('mind')) {
-        return; 
-    }
-    var sv = State.variables; 
-    var $openLinks = $('.link-open a, .link-open button').toArray();
-    $openLinks.forEach( function (link) {
-        var $link = $(link);
-        if (sv.openLinks.includes($link.attr('id')) {
-            $link.trigger('click');
-        }
-    });
-};
-
-Macro.add('openlink', {
-    tags : null, 
-    handler : function () {
-        var $wrapper = $(document.createElement('span'))
-           .addClass('link-open');
-        var $link = $(document.createElement('a'))
-           .wiki(this.args[0])
-           .attr('id', Util.slugify(this.args[1])
-           .ariaClick( function () {
-                $wrapper.empty().wiki(this.payload[0].contents);
-                var sv = State.variables;
-                sv.openLinks = sv.openLinks || [];
-                sv.openLinks.push($(this).attr('id'));
-            });
-        $wrapper.append($link).appendTo(this.output);
-    }
-});</script><tw-passagedata pid="1" name="Add Item" tags="widget nobr" position="100,100">&lt;&lt;widget &quot;add&quot;&gt;&gt;
+Config.saves.autosave = "autosave";</script><tw-passagedata pid="1" name="Add Item" tags="widget nobr" position="100,100">&lt;&lt;widget &quot;add&quot;&gt;&gt;
 &lt;!--If you haven&#39;t picked up an item before--&gt;
     &lt;&lt;if $inv.length is 0 and !$noncombinables.includes($args[0]) and !$lexaItems.includes($args[0])&gt;&gt;
         &lt;br&gt;You make a note to remember this, because it might be important. As you do, you almost feel it added to your mind, as if that&#39;s an actual space you can visit.&lt;br&gt;
@@ -1419,11 +1387,11 @@ The memory [[dissipates-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="8
 &lt;&lt;if visited() is 1&gt;&gt;
 You&#39;re not sure what just happened but you&#39;re trying to roll with it. Did you...teleport or something?
 
-Hmm, no. Something tells you this isn&#39;t an actual office; it&#39;s more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren&#39;t looking, there&#39;s nothing at all. Are you in the detective&#39;s  &lt;&lt;openlink &quot;dream?&quot; &quot;uniqueID&quot;&gt;&gt;&lt;&lt;linkreplace &quot;memory?&quot;&gt;&gt;&lt;&lt;linkappend &quot;mind?&quot;&gt;&gt;
+Hmm, no. Something tells you this isn&#39;t an actual office; it&#39;s more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren&#39;t looking, there&#39;s nothing at all. Are you in the detective&#39;s &lt;&lt;linkreplace &quot;dream?&quot;&gt;&gt;&lt;&lt;linkreplace &quot;memory?&quot;&gt;&gt;&lt;&lt;linkappend &quot;mind?&quot;&gt;&gt;
 
 Yeah. Mind feels right to you, going by your //ghost sense//...or whatever it is.
 
-Looks like you were wrong about your lack of &lt;&lt;link &quot;ghost powers&quot;&gt;&gt;&lt;&lt;replace &quot;#powers&quot;&gt;&gt;Though you don&#39;t recall mind-jumping to be a &#39;ghost&#39; thing...still, rolling with it. What else would you do?&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; after all. &lt;span id=&quot;powers&quot;&gt;&lt;/span&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/openlink&gt;&gt;
+Looks like you were wrong about your lack of &lt;&lt;link &quot;ghost powers&quot;&gt;&gt;&lt;&lt;replace &quot;#powers&quot;&gt;&gt;Though you don&#39;t recall mind-jumping to be a &#39;ghost&#39; thing...still, rolling with it. What else would you do?&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; after all. &lt;span id=&quot;powers&quot;&gt;&lt;/span&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
 The walls, an inoffensive light grey, are covered in &lt;&lt;link &quot;photographs&quot;&gt;&gt;&lt;&lt;replace &quot;#photos&quot;&gt;&gt;
 
 Hey, there&#39;s you! You don&#39;t look that good. You wish they&#39;d used a picture from when you were alive, at the very least.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; of missing persons and dead people. &lt;span id=&quot;photos&quot;&gt;&lt;/span&gt;
@@ -1540,9 +1508,9 @@ That&#39;s no moon. Or rather, that&#39;s no //real// moon. Well, it wasn&#39;t 
 
 There&#39;s clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed &lt;&lt;link &quot;picture&quot;&gt;&gt;&lt;&lt;replace &quot;#picture&quot;&gt;&gt;
 
-Teenaged Terry, Erin, and some other girl who you don&#39;t care about, smiling for a picture. You - you guess that&#39;s Erin at least? Her hair is cropped short and she&#39;s wearing boyish clothes. It never occured to you she could&#39;ve ever been a tomboy, but you suppose people &lt;&lt;link &quot;change&gt;&gt;&lt;&lt;replace &quot;#change&quot;&gt;&gt;Though this would be a bi-i-ig change, you admit.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; over time. &lt;span id=&quot;change&quot;&gt;&lt;/span&gt; Her arm is around the...the other girl&#39;s waist. You wonder who took the picture.
+Teenaged Terry, Erin, and some other girl who you don&#39;t care about, smiling for a picture. You - you guess that&#39;s Erin at least? Her hair is cropped short and she&#39;s wearing boyish clothes. It never occured to you she could&#39;ve ever been a tomboy, but you suppose people &lt;&lt;link &quot;change&quot;&gt;&gt;&lt;&lt;replace &quot;#change&quot;&gt;&gt;Though this would be a bi-i-ig change, you admit.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; over time. &lt;span id=&quot;change&quot;&gt;&lt;/span&gt; Her arm is around the...the other girl&#39;s waist. You wonder who took the picture.
 
-They&#39;re all sitting in front of a very familiar plane tree in the park.&lt;&lt;add &quot;Photograph&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;; and even a freaking crystal ball. And, to no surprise, &lt;&lt;link &quot;sigils&quot;&gt;&gt;&lt;&lt;replace &quot;#sigils&quot;&gt;&gt;[
+They&#39;re all sitting in front of a very familiar plane tree in the park.&lt;&lt;add &quot;Photograph&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;; and even a freaking crystal ball. And, to no surprise, &lt;&lt;link &quot;sigils&quot;&gt;&gt;&lt;&lt;replace &quot;#sigils&quot;&gt;&gt;
 
 Several different &lt;&lt;linkappend &quot;sigils&quot;&gt;&gt;, or as you like to call them, &#39;magical&#39; &lt;&lt;linkappend &quot;squiggles&quot;&gt;&gt; (squigils?)&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;. Most of them are labeled as &#39;protection&#39; sigils, but one says it&#39;s to &#39;renew energy and de-stress&#39;, and is marked for Justin.
 &lt;&lt;add &quot;Sigils&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; papered everywhere that there&#39;s an open area to tape them to.&lt;span id=&quot;picture&quot;&gt;&lt;/span&gt;&lt;span id=&quot;sigils&quot;&gt;&lt;/span&gt;
@@ -1601,7 +1569,8 @@ You look out the window to check. Huh. It appears so.
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="PassageHeader" tags="" position="975,1100">&lt;&lt;if tags().includes(&quot;memory&quot;) and $thoughts.length == 0&gt;&gt;As you connect the two clues in your mind, you feel a strong tide of emotions and sensations flood your senses, and you know they&#39;re not your own.
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="StoryInit" tags="nobr" position="1100,1100">&lt;!--Inventory--&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="StoryInit" tags="" position="1100,1100">&lt;&lt;nobr&gt;&gt;
+&lt;!--Inventory--&gt;
 &lt;&lt;set $inv to []&gt;&gt;
 &lt;&lt;set $thoughts to {}&gt;&gt;
 &lt;&lt;set $selected to []&gt;&gt;
@@ -1641,9 +1610,8 @@ You look out the window to check. Huh. It appears so.
 &lt;&lt;set $mindVisited to false&gt;&gt;
 
 &lt;!--Checks if item been used up or not (resets upon leaving item passage)--&gt;
-&lt;&lt;set $isItemUsed = false&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Test" tags="justin" position="1225,1100">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
-
-&lt;&lt;openlink &quot;test&quot; &quot;uniqueID&quot;&gt;&gt;hidden text&lt;&lt;/openlink&gt;&gt;
+&lt;&lt;set $isItemUsed = false&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Test" tags="justin mind" position="1225,1100">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
 
 [[Testing]]
     &lt;&lt;set $thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;] = &quot;- blop&quot;&gt;&gt;
