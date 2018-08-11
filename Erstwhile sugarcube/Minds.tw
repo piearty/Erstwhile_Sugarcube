@@ -167,14 +167,14 @@ Its corners are beveled, very 1960's <<linkappend "retro.">> Actually, you would
 
 A few things catch your eye - the only readable writing in the blur of notes:
 
-a <<openlink "postcard" "postcardText">>postcard<<replace "#postcard">> - 
+a <<openlink "postcard," "postcardText">>postcard<<replace "#postcard">> - 
 
 Hmm. It's an old postcard depicting the local pride parade. It looks rather faded.
 
 Peering closer at it, you see that she and Justin just so happen to be in the crowd. You probably wouldn't have noticed, but they're the only people in focus - another memory trick, most likely. They both look younger and Annie is enthusiastically waving a rainbow flag.
 
 <<add "Postcard">><</replace>><</openlink>> <span id="postcard"></span>
-a <<openlink "sticky note" "stickyText">>sticky note<<replace "#sticky">> -
+a <<openlink "sticky note," "stickyText">>sticky note<<replace "#sticky">> -
 
 Looks like the classic passive-aggressive sticky note.
 
@@ -182,7 +182,7 @@ Looks like the classic passive-aggressive sticky note.
 
 Ah crap.
 <<add "Sticky Note">><</replace>><</openlink>> <span id="sticky"></span>
-and a <<openlink "reminder." "reminderText">>reminder.<<replace "#reminder">> -
+and a <<openlink "reminder." "reminderText">>reminder.<<replace "#reminder">>
 
 "Pay Bram for medicine" is scrawled on it. You wouldn't have spotted it in real life unless you were looking for it.
 

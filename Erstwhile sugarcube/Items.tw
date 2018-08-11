@@ -309,15 +309,15 @@ A postcard from a pride parade from who knows how many years ago, with Justin an
 <h3>Congratulatory Card</h3>
 Found stuffed in Justin's weird mind-walls.
 
-"Congratulations! ==It's== You're a boy!
+//"Congratulations! ==It's== You're a boy!
 
-~Erin xoxo"
+~Erin xoxo"//
 
 <<set $isItemUsed = true>>
 
 :: Sticky Note [noncombinable item lexa]
 <h3>Sticky Note</h3>
-"There's $24 missing from my purse. You'd better explain when you get home, missy. 11/14" A passive-aggressive sticky note from ages ago stuck to Annie's mind-fridge.
+//"There's $24 missing from my purse. You'd better explain when you get home, missy. 11/14"// A passive-aggressive sticky note from ages ago stuck to Annie's mind-fridge.
 
 <<set $isItemUsed = true>>
 
