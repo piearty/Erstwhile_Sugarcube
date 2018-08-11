@@ -102,7 +102,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="86" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
+	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="87" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
 body {
     background: white;
     color: black;
@@ -199,7 +199,7 @@ Macro.add('openlink', {
     &lt;&lt;if $inv.length is 0 and !$noncombinables.includes($args[0]) and !$lexaItems.includes($args[0])&gt;&gt;
         &lt;br&gt;You make a note to remember this, because it might be important. As you do, you almost feel it added to your mind, as if that&#39;s an actual space you can visit.&lt;br&gt;
     &lt;&lt;elseif $inv.length is 0 and $lexaItems.includes($args[0]) or $inv.length is 0 and $noncombinables.includes($args[0])&gt;&gt;
-        &lt;br&gt;You don&#39;t really want to think about this. But, just by looking at it, you can almost feel it added to your mind, as if that&#39;s an actual space you can visit.&lt;br&gt;
+        &lt;br&gt;You&#39;re not sure if you should care about this. But, just by looking at it, you can almost feel it added to your mind, as if that&#39;s an actual space you can visit.&lt;br&gt;
     &lt;&lt;/if&gt;&gt;
  &lt;!--Indicates this item can&#39;t be combined--&gt;
         &lt;&lt;if $noncombinables.includes($args[0])&gt;&gt;
@@ -1429,7 +1429,7 @@ The walls, an inoffensive light grey, are covered in &lt;&lt;link &quot;photogra
 
 Hey, there&#39;s you! You don&#39;t look that good. You wish they&#39;d used a picture from when you were alive, at the very least.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; of missing persons and dead people. &lt;span id=&quot;photos&quot;&gt;&lt;/span&gt;
 
-The &lt;&lt;link &quot;desk&quot;&gt;&gt;&lt;&lt;replace &quot;#desk&quot;&gt;&gt;
+The &lt;&lt;openlink &quot;desk&quot; &quot;deskText&quot;&gt;&gt;desk&lt;&lt;replace &quot;#desk&quot;&gt;&gt;
 
 You feel a little daunted at the idea of going through the giant stack of papers, especially when you can&#39;t actually touch things. Fortunately it looks like none of them are that important, fuzzy and indistinct like the detective doesn&#39;t care to focus on them right now.
 
@@ -1443,7 +1443,7 @@ There&#39;s some stuff on the desk though that&#39;s almost //too// in focus tho
 
 There seems to be a few papers here too, also in sharp detail:
 
-a &lt;&lt;link &quot;rap sheet&quot;&gt;&gt;&lt;&lt;replace &quot;#rap&quot;&gt;&gt;
+a &lt;&lt;openlink &quot;rap sheet&quot; &quot;rapText&quot;&gt;&gt;rap sheet&lt;&lt;replace &quot;#rap&quot;&gt;&gt;
 
 And whose rap sheet might this b - 
 
@@ -1455,8 +1455,8 @@ Ok so you have a record. So what? A few DUIs, some...other stuff. You swear you&
 
 What is it doing here?
 &lt;&lt;add &quot;Rap Sheet&quot;&gt;&gt;
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;, &lt;span id=&quot;rap&quot;&gt;&lt;/span&gt;
-and a &lt;&lt;link &quot;report.&quot;&gt;&gt;&lt;&lt;replace &quot;#report&quot;&gt;&gt;
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt;, &lt;span id=&quot;rap&quot;&gt;&lt;/span&gt;
+and a &lt;&lt;link &quot;report.&quot; &quot;reportText&quot;&gt;&gt;report.&lt;&lt;replace &quot;#report&quot;&gt;&gt;
 
 You squint at the paper. At the top in large bold letters are the words &quot;//&#39;&#39;AUTOPSY REPORT&#39;&#39;//&quot;. You see the name &quot;//Mort Freedman//&quot; - your name - as well, and feel cold. Wow. You really are dead.
 
@@ -1466,33 +1466,33 @@ ACONITE POISONING//&quot;
 Oh.
 
 How unpleasant.
-&lt;&lt;add &quot;Aconite Poison&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;span id=&quot;report&quot;&gt;&lt;/span&gt;
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if lastVisited(&quot;Questioning&quot;) is 1&gt;&gt;
+&lt;&lt;add &quot;Aconite Poison&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt;&lt;span id=&quot;report&quot;&gt;&lt;/span&gt;
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt;&lt;&lt;if lastVisited(&quot;Questioning&quot;) is 1&gt;&gt;
     &lt;&lt;link &quot;Leave room.&quot; &quot;Police Station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif lastVisited($who) is 1&gt;&gt;
     &lt;&lt;link &quot;Leave room.&quot; $who&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt; situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this &lt;&lt;linkreplace &quot;man&quot;&gt;&gt;&lt;&lt;linkreplace &quot;woman&quot;&gt;&gt;person&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).&lt;span id=&quot;desk&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="84" name="Justin&#39;s mind" tags="justin mind" position="475,1100">It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a &lt;&lt;link &quot;newspaper&quot;&gt;&gt;&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt; situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this &lt;&lt;linkreplace &quot;man&quot;&gt;&gt;&lt;&lt;linkreplace &quot;woman&quot;&gt;&gt;person&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).&lt;span id=&quot;desk&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="84" name="Justin&#39;s mind" tags="justin mind" position="475,1100">It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a &lt;&lt;openlink &quot;newspaper&quot; &quot;newspaperText&quot;&gt;&gt;newspaper&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
 
 The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, &quot;**Local Activists Protest Paving Over Park**&quot;, is unrealistically sharp, ink unfaded by time inside Justin&#39;s memories. You don&#39;t want to think about it too much.
-&lt;&lt;add &quot;Old Newspaper&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; on it. &lt;span id=&quot;newspaper&quot;&gt;&lt;/span&gt;
+&lt;&lt;add &quot;Old Newspaper&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; on it. &lt;span id=&quot;newspaper&quot;&gt;&lt;/span&gt;
 
 The police reports and coffee table books lack most discernable details, their words blurry and indistinct. If Justin doesn&#39;t find them important enough to remember them properly, well, neither do you.
 
-On the couch, along with a few throw pillows and a bottle of &lt;&lt;linkappend &quot;black hair dye,&quot;&gt;&gt; (Must be going grey early, huh?&lt;&lt;/linkappend&gt;&gt; is a small box of &lt;&lt;linkappend &quot;stick-on patches.&quot;&gt;&gt;
+On the couch, along with a few throw pillows and a bottle of &lt;&lt;linkappend &quot;black hair dye,&quot;&gt;&gt; (Must be going grey early, huh?&lt;&lt;/linkappend&gt;&gt; is a small box of &lt;&lt;openlink &quot;stick-on patches.&quot; &quot;patchesText&quot;&gt;&gt;stick on patches.&lt;&lt;replace &quot;#patches&quot;&gt;&gt;
 
 The box stands out unpleasantly from the faded indigo upholstery and creamy white pillows, being a garish, saturated green. ~CAF PATCH!~ it proclaims in violent pink letters. Underneath, in purple, it says, &quot;8 hours of energy guaranteed! Stick on and enjoy the ride!&quot;
 
 Is this like an energy drink condensed into patch form? That&#39;s a bit worrisome. Terry has said before that she&#39;s sworn off caffeine for &#39;diet reasons&#39;, so you assume the box belongs to Justin.
 
 One of the patches has spilled out of the box. It looks a bit like a band-aid.
-&lt;&lt;add &quot;Caf Patch&quot;&gt;&gt;&lt;&lt;/linkappend&gt;&gt;
+&lt;&lt;add &quot;Caf Patch&quot;&gt;&gt;&lt;&lt;/openlink&gt;&gt; &lt;span id=&quot;patches&quot;&gt;&lt;/span&gt;
 
-In here, for some bizarre reason, the walls are made of metal - steel, it looks like. Crushed steel, specifically; they&#39;re warped and corrugated as if the whole room is being squeezed by a giant vise. Something &lt;&lt;link &quot;shiny&quot;&gt;&gt;&lt;&lt;replace &quot;#shiny&quot;&gt;&gt; - 
+In here, for some bizarre reason, the walls are made of metal - steel, it looks like. Crushed steel, specifically; they&#39;re warped and corrugated as if the whole room is being squeezed by a giant vise. Something &lt;&lt;openlink &quot;shiny&quot;&gt;&gt;shiny&lt;&lt;replace &quot;#shiny&quot;&gt;&gt; - 
 
 You float closer and squint in the recesses of the crevice. There&#39;s a crescent moon charm glinting in there. Why, you don&#39;t rightly know, but you suspect its placement means something metaphorical, since the actual Whittaker house does not have metal walls and therefore does not have things stuck between said walls.
 &lt;&lt;add &quot;Crescent Charm&quot;&gt;&gt;
 
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;span id=&quot;shiny&quot;&gt;&lt;/span&gt; and something &lt;&lt;link &quot;glittery&quot;&gt;&gt;&lt;&lt;replace &quot;#glittery&quot;&gt;&gt; 
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt;&lt;span id=&quot;shiny&quot;&gt;&lt;/span&gt; and something &lt;&lt;openlink &quot;glittery&quot;&gt;&gt;glittery&lt;&lt;replace &quot;#glittery&quot;&gt;&gt; 
 
 The glittery thing turns out to be a postcard stuffed into one of the cracks. It&#39;s open and says
 
@@ -1503,7 +1503,7 @@ The glittery thing turns out to be a postcard stuffed into one of the cracks. It
 The &#39;congratulations&#39; is half obscured by the metal wall . The &#39;it&#39;s&#39; has been crossed out with a purple gel pen, which was also used for her signature.
 
 Erin&#39;s a peculiar one, alright.
-&lt;&lt;add &quot;Congratulatory Card&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; appear to be wedged between creases in the twisted metal. &lt;span id=&quot;glittery&quot;&gt;&lt;/span&gt;
+&lt;&lt;add &quot;Congratulatory Card&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; appear to be wedged between creases in the twisted metal. &lt;span id=&quot;glittery&quot;&gt;&lt;/span&gt;
 
 On account of the bent walls, the ceiling is much, //much// closer to the floor than you&#39;re used to, and you&#39;re glad you&#39;re not enough of a presence to need to duck.
 
@@ -1511,57 +1511,97 @@ On account of the bent walls, the ceiling is much, //much// closer to the floor 
 
 Looking closer though, you see that the wine bottles are not jutting out of wooden racks, but out of honeycombs. Presumably made of beeswax, the combs ooze with honey that drips down and off the necks of the bottles onto the hardwood floor. In combs without bottles, there are assorted objects that you can only assume have some relevance to Terry. They&#39;re hard to see through the viscous layers of honey, though.
 
-One of the &lt;&lt;link &quot;cells&quot;&gt;&gt;&lt;&lt;replace &quot;#c1&quot;&gt;&gt;
+One of the &lt;&lt;openlink &quot;cells&quot; &quot;petitionText&quot;&gt;&gt;cells&lt;&lt;replace &quot;#petition&quot;&gt;&gt;
 
 The bits of paper have stuff written on them. You can make out PE-, memori-, -xa, and what look like parts of signatures. Oh! This is the petition that you created to put up that plaque in the park.
 
 Torn into pieces.
 &lt;&lt;add &quot;Petition&quot;&gt;&gt;
 
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; is in sharper focus than the rest; inside, there appear to be bits of ripped up paper floating in the golden goop.&lt;span id=&quot;c1&quot;&gt;&lt;/span&gt;
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; is in sharper focus than the rest; inside, there appear to be bits of ripped up paper floating in the golden goop.&lt;span id=&quot;petition&quot;&gt;&lt;/span&gt;
 
-&lt;&lt;link &quot;Another cell&quot;&gt;&gt;&lt;&lt;replace &quot;#Another&quot;&gt;&gt;
+&lt;&lt;link &quot;Another cell&quot; &quot;wineText&quot;&gt;&gt;Another cell&lt;&lt;replace &quot;#wine&quot;&gt;&gt;
 
 It&#39;s a bottle of Loup-Rouge. Dusty, like no one&#39;s touched it in ages. There&#39;s a paper here also - a merchant&#39;s copy of a purchase of the wine a couple days ago. It&#39;s got Bram&#39;s signature on it.
 
 If Bram bought this bottle, what&#39;s it still doing here in Terry&#39;s mind? Did she really find it that important to remember?
-&lt;&lt;add &quot;Wine&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;, also one of the only things in focus, has a bottle of wine in it that you know well.&lt;span id=&quot;Another&quot;&gt;&lt;/span&gt;
+&lt;&lt;add &quot;Wine&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt;, also one of the only things in focus, has a bottle of wine in it that you know well.&lt;span id=&quot;wine&quot;&gt;&lt;/span&gt;
 
-The last cell with actually discernable things in it contains, oddly enough, dozens of &lt;&lt;link &quot;stickers&quot;&gt;&gt;&lt;&lt;replace &quot;#stickers&quot;&gt;&gt;[
+The last cell with actually discernable things in it contains, oddly enough, dozens of &lt;&lt;openlink &quot;stickers&quot; &quot;stickersText&quot;&gt;&gt;stickers&lt;&lt;replace &quot;#stickers&quot;&gt;&gt;
 
 It&#39;s hard to get a good look at all of them, but they seem to be hospital stickers from various dates, the oldest dated 11/14 over a decade ago, the latest dated a couple days ago.
 
 You really hope they&#39;re not for what you suspect they&#39;re for.
-&lt;&lt;add &quot;Hospital Stickers&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; suspended in the fluid at various angles. &lt;span id=&quot;stickers&quot;&gt;&lt;/span&gt;
+&lt;&lt;add &quot;Hospital Stickers&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; suspended in the fluid at various angles. &lt;span id=&quot;stickers&quot;&gt;&lt;/span&gt;
 
 [[Leave.|Terry]]</tw-passagedata><tw-passagedata pid="86" name="Erin&#39;s mind" tags="erin mind" position="725,1100">It looks like a study but. Weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking &lt;&lt;openlink &quot;moon&quot; &quot;moonText&quot;&gt;&gt;moon&lt;&lt;replace &quot;#moon&quot;&gt;&gt;
 
 That&#39;s no moon. Or rather, that&#39;s no //real// moon. Well, it wasn&#39;t anyway since it&#39;s simply a metaphysical representation of a - your point is, it&#39;s actually a charm. Just hanging in the sky, pretending to be a celestial body. You can see the metallic luster of it and the tiny loop on top for attaching to keychains or necklaces or the like. Weird.
 &lt;&lt;add &quot;Gibbous Charm&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; hang in the purple-velvet night. &lt;span id=&quot;moon&quot;&gt;&lt;/span&gt;
 
-There&#39;s clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed &lt;&lt;link &quot;picture&quot;&gt;&gt;&lt;&lt;replace &quot;#picture&quot;&gt;&gt;
+There&#39;s clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed &lt;&lt;openlink &quot;picture&quot; &quot;pictureText&quot;&gt;&gt;picture&lt;&lt;replace &quot;#picture&quot;&gt;&gt;
 
 Teenaged Terry, Erin, and some other girl who you don&#39;t care about, smiling for a picture. You - you guess that&#39;s Erin at least? Her hair is cropped short and she&#39;s wearing boyish clothes. It never occured to you she could&#39;ve ever been a tomboy, but you suppose people &lt;&lt;link &quot;change&quot;&gt;&gt;&lt;&lt;replace &quot;#change&quot;&gt;&gt;Though this would be a bi-i-ig change, you admit.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; over time. &lt;span id=&quot;change&quot;&gt;&lt;/span&gt; Her arm is around the...the other girl&#39;s waist. You wonder who took the picture.
 
-They&#39;re all sitting in front of a very familiar plane tree in the park.&lt;&lt;add &quot;Photograph&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;; and even a freaking crystal ball. And, to no surprise, &lt;&lt;link &quot;sigils&quot;&gt;&gt;&lt;&lt;replace &quot;#sigils&quot;&gt;&gt;
+They&#39;re all sitting in front of a very familiar plane tree in the park.&lt;&lt;add &quot;Photograph&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt;; and even a freaking crystal ball. And, to no surprise, &lt;&lt;openlink &quot;sigils&quot; &quot;sigilsText&quot;&gt;&gt;sigils&lt;&lt;replace &quot;#sigils&quot;&gt;&gt;
 
 Several different &lt;&lt;linkappend &quot;sigils&quot;&gt;&gt;, or as you like to call them, &#39;magical&#39; &lt;&lt;linkappend &quot;squiggles&quot;&gt;&gt; (squigils?)&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;. Most of them are labeled as &#39;protection&#39; sigils, but one says it&#39;s to &#39;renew energy and de-stress&#39;, and is marked for Justin.
-&lt;&lt;add &quot;Sigils&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; papered everywhere that there&#39;s an open area to tape them to.&lt;span id=&quot;picture&quot;&gt;&lt;/span&gt;&lt;span id=&quot;sigils&quot;&gt;&lt;/span&gt;
+&lt;&lt;add &quot;Sigils&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; papered everywhere that there&#39;s an open area to tape them to.&lt;span id=&quot;picture&quot;&gt;&lt;/span&gt;&lt;span id=&quot;sigils&quot;&gt;&lt;/span&gt;
 
-To your somewhat greater surprise, there is a &lt;&lt;link &quot;letter&quot;&gt;&gt;&lt;&lt;replace &quot;#letter&quot;&gt;&gt;
+To your somewhat greater surprise, there is a &lt;&lt;openlink &quot;letter&quot; &quot;letterText&quot;&gt;&gt;letter&lt;&lt;replace &quot;#letter&quot;&gt;&gt;
 
 You //would// be shocked that a letter could burn perpetually in a highly flammable container while still having its words clearly readable. But you&#39;re a ghost floating around in someone&#39;s mind and peering at their memories, so who are you to judge?
 
-In a looping orange scrawl it says, //&quot;I demand you stop dating my daughter. I know she sneaks over to your and your witch sister&#39;s house at night. I won&#39;t put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won&#39;t have you corrupting Le - &quot;//
+In a looping orange scrawl it says, 
+
+//&quot;I demand you stop dating my daughter. I know she sneaks over to your and your witch sister&#39;s house at night. I won&#39;t put up with it anymore. I thought you would like to know, being gay is a sin in the eyes of the Lord. That goes for lesbians too, and I won&#39;t have you corrupting Le - &quot;//
 
 You decide to stop reading.
-&lt;&lt;add &quot;Burning Letter&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; in the wicker trashcan in the corner.&lt;span id=&quot;letter&quot;&gt;&lt;/span&gt;
+&lt;&lt;add &quot;Burning Letter&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; in the wicker trashcan in the corner.&lt;span id=&quot;letter&quot;&gt;&lt;/span&gt;
 
 The downright oddest thing about the room is that the walls, floor, and ceiling appear to be pressing outward, curving due to some unseen pressure from inside. They&#39;re barely attached at the corners, but open where each wall would meet another, as if they&#39;re ripping at the seams. Through the openings, you glimpse more stars and dark space. Is this room just floating in a void?
 
 You look out the window to check. Huh. It appears so.
 
-[[Leave.-&gt;Erin]]</tw-passagedata><tw-passagedata pid="87" name="PassageFooter" tags="" position="850,1100">&lt;&lt;nobr&gt;&gt;&lt;!--Indicates this item can&#39;t be combined--&gt;
+[[Leave.|Erin]]</tw-passagedata><tw-passagedata pid="87" name="Annie&#39;s mind" tags="annie mind" position="850,1100">Annie&#39;s mind seems to be her kitchen.  You remember it well; this is where you had the fight. The first thing that strikes you is the lack of color. The walls, the lights, the appliances- everything is in sepia. You look out of the window to see that the whole world seems to be the same dull, old-timey orange. 
+
+There are far fewer decorations than in an average kitchen, but sticky notes and bits of random papers are stuck with big clip bag magnets onto the fridge.
+
+Its corners are beveled, very 1960&#39;s &lt;&lt;linkappend &quot;retro.&quot;&gt;&gt; Actually, you wouldn&#39;t be surprised if it was from back then and Annie never bothered to get a new one.&lt;&lt;/linkappend&gt;&gt; You remember that the actual fridge is a pastel pink, but here of course, it just looks brownish. The papers and notes on its sides are blurry and unreadable to you right now, but you know that they&#39;re for birthdays and phone numbers and recipes, anything likely to slip an ailing 70-something&#39;s mind. Some of them look remarkably old, with faded ink and sun-bleached colored paper, perhaps put there years ago.
+
+A few things catch your eye - the only readable writing in the blur of notes:
+
+a &lt;&lt;openlink &quot;postcard&quot; &quot;postcardText&quot;&gt;&gt;postcard&lt;&lt;replace &quot;#postcard&quot;&gt;&gt; - 
+
+Hmm. It&#39;s an old postcard depicting the local pride parade. It looks rather faded.
+
+Peering closer at it, you see that she and Justin just so happen to be in the crowd. You probably wouldn&#39;t have noticed, but they&#39;re the only people in focus - another memory trick, most likely. They both look younger and Annie is enthusiastically waving a rainbow flag.
+
+&lt;&lt;add &quot;Postcard&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; &lt;span id=&quot;postcard&quot;&gt;&lt;/span&gt;
+a &lt;&lt;openlink &quot;sticky note&quot; &quot;stickyText&quot;&gt;&gt;sticky note&lt;&lt;replace &quot;#sticky&quot;&gt;&gt; -
+
+Looks like the classic passive-aggressive sticky note.
+
+&quot;There&#39;s $24 missing from my purse. You&#39;d better explain when you get home, missy. 11/14&quot;
+
+Ah crap.
+&lt;&lt;add &quot;Sticky Note&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; &lt;span id=&quot;sticky&quot;&gt;&lt;/span&gt;
+and a &lt;&lt;openlink &quot;reminder.&quot; &quot;reminderText&quot;&gt;&gt;reminder.&lt;&lt;replace &quot;#reminder&quot;&gt;&gt; -
+
+&quot;Pay Bram for medicine&quot; is scrawled on it. You wouldn&#39;t have spotted it in real life unless you were looking for it.
+
+Huh. You never would have guessed.
+&lt;&lt;add &quot;Medicine Reminder&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; &lt;span id=&quot;reminder&quot;&gt;&lt;/span&gt;
+
+On the counter sit a &lt;&lt;linkreplace &quot;flower&quot;&gt;&gt;hyacinth, maybe,&lt;&lt;/linkreplace&gt;&gt; and grains of... sand?
+
+You look down. The floor is covered in sand. Or maybe it&#39;s just entirely sand; you&#39;ve no way of knowing. You&#39;re not really sure why that is, but you&#39;ve decided to accept it. Hmm, is there something buried in there? Looks like some sort of &lt;&lt;openlink &quot;form.&quot; &quot;formText&quot;&gt;&gt;form.&lt;&lt;replace &quot;#form&quot;&gt;&gt; -
+
+It&#39;s dated a few days ago...a consent form for non-voluntary eu - Ah //crap//.
+&lt;&lt;add &quot;Consent Form&quot;&gt;&gt;
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; &lt;span id=&quot;form&quot;&gt;&lt;/span&gt;
+
+[[Leave.|Annie]]</tw-passagedata><tw-passagedata pid="88" name="PassageFooter" tags="" position="975,1100">&lt;&lt;nobr&gt;&gt;&lt;!--Indicates this item can&#39;t be combined--&gt;
     &lt;&lt;if tags().includes(&quot;noncombinable&quot;)&gt;&gt;
         &lt;br&gt;
         This probably isn&#39;t relevant to the murder...
@@ -1600,9 +1640,9 @@ You look out the window to check. Huh. It appears so.
         &lt;&lt;/if&gt;&gt;
         &lt;&lt;back &quot;Back to what you were doing.&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="PassageHeader" tags="" position="975,1100">&lt;&lt;if tags().includes(&quot;memory&quot;) and $thoughts.length == 0&gt;&gt;As you connect the two clues in your mind, you feel a strong tide of emotions and sensations flood your senses, and you know they&#39;re not your own.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="PassageHeader" tags="" position="1100,1100">&lt;&lt;if tags().includes(&quot;memory&quot;) and $thoughts.length == 0&gt;&gt;As you connect the two clues in your mind, you feel a strong tide of emotions and sensations flood your senses, and you know they&#39;re not your own.
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="StoryInit" tags="" position="1100,1100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="StoryInit" tags="" position="1225,1100">&lt;&lt;nobr&gt;&gt;
 &lt;!--Inventory--&gt;
 &lt;&lt;set $inv to []&gt;&gt;
 &lt;&lt;set $thoughts to {}&gt;&gt;
@@ -1644,7 +1684,7 @@ You look out the window to check. Huh. It appears so.
 
 &lt;!--Checks if item been used up or not (resets upon leaving item passage)--&gt;
 &lt;&lt;set $isItemUsed = false&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Test" tags="justin mind" position="1225,1100">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Test" tags="justin mind" position="100,1225">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
 
 [[Testing]]
     &lt;&lt;set $thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;] = &quot;- blop&quot;&gt;&gt;
@@ -1662,7 +1702,7 @@ You look out the window to check. Huh. It appears so.
     &lt;&lt;add &quot;Wolfsbane&quot;&gt;&gt;
     &lt;&lt;add &quot;Werewolf&quot;&gt;&gt;
     &lt;&lt;add &quot;Money&quot;&gt;&gt;
-    &lt;&lt;add &quot;Hospital Stickers&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="Testing" tags="lexa" position="100,1225">&lt;&lt;print $inv.length&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Thoughts" tags="noinv save" position="225,1225">&lt;&lt;nobr&gt;&gt;
+    &lt;&lt;add &quot;Hospital Stickers&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Testing" tags="lexa" position="225,1225">&lt;&lt;print $inv.length&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="Thoughts" tags="noinv save" position="350,1225">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]] | [[Link Clues]] | Thoughts
     |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
             &lt;&lt;script&gt;&gt;

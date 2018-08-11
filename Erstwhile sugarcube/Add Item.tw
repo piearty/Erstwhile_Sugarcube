@@ -4,7 +4,7 @@
     <<if $inv.length is 0 and !$noncombinables.includes($args[0]) and !$lexaItems.includes($args[0])>>
         <br>You make a note to remember this, because it might be important. As you do, you almost feel it added to your mind, as if that's an actual space you can visit.<br>
     <<elseif $inv.length is 0 and $lexaItems.includes($args[0]) or $inv.length is 0 and $noncombinables.includes($args[0])>>
-        <br>You don't really want to think about this. But, just by looking at it, you can almost feel it added to your mind, as if that's an actual space you can visit.<br>
+        <br>You're not sure if you should care about this. But, just by looking at it, you can almost feel it added to your mind, as if that's an actual space you can visit.<br>
     <</if>>
  <!--Indicates this item can't be combined-->
         <<if $noncombinables.includes($args[0])>>

@@ -156,4 +156,45 @@ The downright oddest thing about the room is that the walls, floor, and ceiling 
 
 You look out the window to check. Huh. It appears so.
 
-[[Leave.->Erin]]
+[[Leave.|Erin]]
+
+:: Annie's mind [annie mind]
+Annie's mind seems to be her kitchen.  You remember it well; this is where you had the fight. The first thing that strikes you is the lack of color. The walls, the lights, the appliances- everything is in sepia. You look out of the window to see that the whole world seems to be the same dull, old-timey orange. 
+
+There are far fewer decorations than in an average kitchen, but sticky notes and bits of random papers are stuck with big clip bag magnets onto the fridge.
+
+Its corners are beveled, very 1960's <<linkappend "retro.">> Actually, you wouldn't be surprised if it was from back then and Annie never bothered to get a new one.<</linkappend>> You remember that the actual fridge is a pastel pink, but here of course, it just looks brownish. The papers and notes on its sides are blurry and unreadable to you right now, but you know that they're for birthdays and phone numbers and recipes, anything likely to slip an ailing 70-something's mind. Some of them look remarkably old, with faded ink and sun-bleached colored paper, perhaps put there years ago.
+
+A few things catch your eye - the only readable writing in the blur of notes:
+
+a <<openlink "postcard" "postcardText">>postcard<<replace "#postcard">> - 
+
+Hmm. It's an old postcard depicting the local pride parade. It looks rather faded.
+
+Peering closer at it, you see that she and Justin just so happen to be in the crowd. You probably wouldn't have noticed, but they're the only people in focus - another memory trick, most likely. They both look younger and Annie is enthusiastically waving a rainbow flag.
+
+<<add "Postcard">><</replace>><</openlink>> <span id="postcard"></span>
+a <<openlink "sticky note" "stickyText">>sticky note<<replace "#sticky">> -
+
+Looks like the classic passive-aggressive sticky note.
+
+"There's $24 missing from my purse. You'd better explain when you get home, missy. 11/14"
+
+Ah crap.
+<<add "Sticky Note">><</replace>><</openlink>> <span id="sticky"></span>
+and a <<openlink "reminder." "reminderText">>reminder.<<replace "#reminder">> -
+
+"Pay Bram for medicine" is scrawled on it. You wouldn't have spotted it in real life unless you were looking for it.
+
+Huh. You never would have guessed.
+<<add "Medicine Reminder">><</replace>><</openlink>> <span id="reminder"></span>
+
+On the counter sit a <<linkreplace "flower">>hyacinth, maybe,<</linkreplace>> and grains of... sand?
+
+You look down. The floor is covered in sand. Or maybe it's just entirely sand; you've no way of knowing. You're not really sure why that is, but you've decided to accept it. Hmm, is there something buried in there? Looks like some sort of <<openlink "form." "formText">>form.<<replace "#form">> -
+
+It's dated a few days ago...a consent form for non-voluntary eu - Ah //crap//.
+<<add "Consent Form">>
+<</replace>><</openlink>> <span id="form"></span>
+
+[[Leave.|Annie]]
