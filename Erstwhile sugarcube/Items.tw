@@ -3,7 +3,7 @@
 It's a caesar salad with vinaigrette. Terry and Justin got it for you when you couldn't eat anything at the party. It was on the detective's mind-desk.\
 <<if hasVisited("Justin and Terry at the grocery store", "Terry poisoning your salad")>>
 
-<<set $isItemUsed = True>><</if>>
+<<set $isItemUsed = true>><</if>>
 
 :: Aconite Poison [item]
 <h3>Aconite Poison</h3>
@@ -280,7 +280,7 @@ A dusty bottle of Loup-Rouge wine, bought by Bram a couple days ago, floating in
 :: Corkscrew [item]
 <h3>Corkscrew</h3>
 A //really// tacky shark-shaped keychain corkscrew that Bram used to open your bottle of Loup-Rouge.\
-<<if $visitedPages contains "you distracting Justin in front of Bram's house">>
+<<if hasVisited("you distracting Justin in front of Bram's house")>>
 
 <<set $isItemUsed = true>><</if>>
 

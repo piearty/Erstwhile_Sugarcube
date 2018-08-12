@@ -116,7 +116,7 @@ Click on two clues to try to link them.
         <<combine "Justin and Terry at the grocery store">>
     
 <<elseif $selected.includesAll("Sandwich", "Annie's Testimony")>>
-        <<combine ""your fight with Annie>>
+        <<combine "your fight with Annie">>
         
 <<elseif $selected.includesAll("Old Newspaper", "Petition")>>
         <<combine "Terry's phone conversation">>
