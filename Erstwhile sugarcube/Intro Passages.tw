@@ -6,13 +6,13 @@ Wanna <<link "go back">><<script>>
                     Save.autosave.load();
                 }
             <</script>><</link>> to where you were?
-
+<<if Save.slots.has(0)>>
 Restore from a <<link "save">><<script>>
                 if (Save.slots.has(0)) { 
                     Save.slots.load(0);
                 } 
             <</script>><</link>>?
-
+<</if>>
 Or maybe just skip to the <<link "police station" "Police Station">><<set $PoliceStationStart to true>><</link>>?
 
 You can still <<link "restart">><<script>>
@@ -163,7 +163,7 @@ You bring yourself closer to hear what they're saying, but just at that moment t
 :: Police Station
 <<if $policeStationStart is true>>
 You're in the police station, watching as the RNA shuffle into the interview rooms. [[Aconite Poison]], the [[Potion]], the [[Rap Sheet]], [[Sandwich]], and the [[Salad]] are already in your inventory.<<set $inv.pushUnique("Aconite Poison", "Potion", "Rap Sheet", "Sandwich", "Salad")>>\
-<<elseif visited("Detective's mind") is 2>>You're shunted out of the detective's mind and back into the hallway. The detective is looking a bit disoriented, holding their hand to their head. While you and they try to reorient yourselves, the other members of the RNA start to head into the hallway, and then the separate interview rooms where they're to be questioned by the police.\
+<<elseif visited("Detective's mind") == 1>>You're shunted out of the detective's mind and back into the hallway. The detective is looking a bit disoriented, holding their hand to their head. While you and they try to reorient yourselves, the other members of the RNA start to head into the hallway, and then the separate interview rooms where they're to be questioned by the police.\
 <<else>>The RNA members - the suspects - are sitting in their separate interview rooms, being questioned by the police.<</if>>
 
 This is your chance to listen to their testimonies and maybe figure out what happened to you.

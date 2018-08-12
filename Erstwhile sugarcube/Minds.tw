@@ -52,11 +52,12 @@ How unpleasant.
 <<add "Aconite Poison">><</replace>><</openlink>><span id="report"></span>
 <</replace>><</openlink>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
 
-<<nobr>><<if lastVisited("Questioning") is 1 or lastVisited("Police Station") is 1>>
-    <<link "Leave room." "Police Station">><</link>>
-<<elseif lastVisited($who) is 1>>
+<<nobr>>
+<<if lastVisited($who) is 1>>
     <<link "Leave room." $who>><</link>>
-<</if>><</nobr>>
+<<else>><<link "Leave room." "Police Station">><</link>>
+<</if>>
+<</nobr>>
 
 :: Justin's mind [justin mind]
 <<set $mindVisited to true>>It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<openlink "newspaper" "newspaperText">>newspaper<<replace "#newspaper">>

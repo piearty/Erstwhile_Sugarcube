@@ -10,7 +10,12 @@
             Game saved.
         <</linkreplace>>
         <<if Save.slots.has(0)>>
-     |      <<linkreplace "Restart">>
+    |    <<link "Restore Save">><<script>>
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            <</script>><</link>>
+    |      <<linkreplace "Restart">>
 This will erase your progress and saves. Are you sure?
                 <<link "Yes">>
                     <<script>>

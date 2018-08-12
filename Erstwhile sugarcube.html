@@ -212,10 +212,10 @@ UIBar.destroy();</script><tw-passagedata pid="1" name="Add Item" tags="widget no
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
         | [[Link Clues]]
     &lt;&lt;/if&gt;&gt;
-    &lt;&lt;if $thoughts.length &gt; 0&gt;&gt;
+    &lt;&lt;if Object.keys($thoughts).length &gt; 0&gt;&gt;
         | [[Thoughts]]
     &lt;&lt;/if&gt;&gt;
-     |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
+    |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
             &lt;&lt;script&gt;&gt;
                 if (Save.ok()) { 
                     Save.slots.save(0);
@@ -224,7 +224,12 @@ UIBar.destroy();</script><tw-passagedata pid="1" name="Add Item" tags="widget no
             Game saved.
         &lt;&lt;/linkreplace&gt;&gt;
         &lt;&lt;if Save.slots.has(0)&gt;&gt;
-     |      &lt;&lt;linkreplace &quot;Restart&quot;&gt;&gt;
+    |    &lt;&lt;link &quot;Restore Save&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            &lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+    |      &lt;&lt;linkreplace &quot;Restart&quot;&gt;&gt;
 This will erase your progress and saves. Are you sure?
                 &lt;&lt;link &quot;Yes&quot;&gt;&gt;
                     &lt;&lt;script&gt;&gt;
@@ -279,10 +284,10 @@ You can [[review-&gt;Thoughts]] the things you&#39;ve figured out, now.
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
         | [[Link Clues]]
     &lt;&lt;/if&gt;&gt;
-    &lt;&lt;if $thoughts.length &gt; 0&gt;&gt;
+    &lt;&lt;if Object.keys($thoughts).length &gt; 0&gt;&gt;
         | [[Thoughts]]
     &lt;&lt;/if&gt;&gt;
-     |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
+    |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
             &lt;&lt;script&gt;&gt;
                 if (Save.ok()) { 
                     Save.slots.save(0);
@@ -291,7 +296,12 @@ You can [[review-&gt;Thoughts]] the things you&#39;ve figured out, now.
             Game saved.
         &lt;&lt;/linkreplace&gt;&gt;
         &lt;&lt;if Save.slots.has(0)&gt;&gt;
-     |      &lt;&lt;linkreplace &quot;Restart&quot;&gt;&gt;
+    |    &lt;&lt;link &quot;Restore Save&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            &lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+    |      &lt;&lt;linkreplace &quot;Restart&quot;&gt;&gt;
 This will erase your progress and saves. Are you sure?
                 &lt;&lt;link &quot;Yes&quot;&gt;&gt;
                     &lt;&lt;script&gt;&gt;
@@ -392,13 +402,13 @@ Wanna &lt;&lt;link &quot;go back&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
                     Save.autosave.load();
                 }
             &lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt; to where you were?
-
+&lt;&lt;if Save.slots.has(0)&gt;&gt;
 Restore from a &lt;&lt;link &quot;save&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
                 if (Save.slots.has(0)) { 
                     Save.slots.load(0);
                 } 
             &lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;?
-
+&lt;&lt;/if&gt;&gt;
 Or maybe just skip to the &lt;&lt;link &quot;police station&quot; &quot;Police Station&quot;&gt;&gt;&lt;&lt;set $PoliceStationStart to true&gt;&gt;&lt;&lt;/link&gt;&gt;?
 
 You can still &lt;&lt;link &quot;restart&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
@@ -503,7 +513,7 @@ You bring yourself closer to hear what they&#39;re saying, but just at that mome
 
 [[Wait, what?-&gt;Detective&#39;s mind]]&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; up and down the hall while muttering, presumably about the case. &lt;span id=&quot;muttering&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="20" name="Police Station" tags="" position="1225,225">&lt;&lt;if $policeStationStart is true&gt;&gt;
 You&#39;re in the police station, watching as the RNA shuffle into the interview rooms. [[Aconite Poison]], the [[Potion]], the [[Rap Sheet]], [[Sandwich]], and the [[Salad]] are already in your inventory.&lt;&lt;set $inv.pushUnique(&quot;Aconite Poison&quot;, &quot;Potion&quot;, &quot;Rap Sheet&quot;, &quot;Sandwich&quot;, &quot;Salad&quot;)&gt;&gt;\
-&lt;&lt;elseif visited(&quot;Detective&#39;s mind&quot;) is 2&gt;&gt;You&#39;re shunted out of the detective&#39;s mind and back into the hallway. The detective is looking a bit disoriented, holding their hand to their head. While you and they try to reorient yourselves, the other members of the RNA start to head into the hallway, and then the separate interview rooms where they&#39;re to be questioned by the police.\
+&lt;&lt;elseif visited(&quot;Detective&#39;s mind&quot;) == 1&gt;&gt;You&#39;re shunted out of the detective&#39;s mind and back into the hallway. The detective is looking a bit disoriented, holding their hand to their head. While you and they try to reorient yourselves, the other members of the RNA start to head into the hallway, and then the separate interview rooms where they&#39;re to be questioned by the police.\
 &lt;&lt;else&gt;&gt;The RNA members - the suspects - are sitting in their separate interview rooms, being questioned by the police.&lt;&lt;/if&gt;&gt;
 
 This is your chance to listen to their testimonies and maybe figure out what happened to you.
@@ -741,7 +751,7 @@ A few DUIs of yours and some other thing from over a decade ago. The last one is
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
         | Link Clues
     &lt;&lt;/if&gt;&gt;
-    &lt;&lt;if $thoughts.length &gt; 0&gt;&gt;
+    &lt;&lt;if Object.keys($thoughts).length &gt; 0&gt;&gt;
         | [[Thoughts]]
     &lt;&lt;/if&gt;&gt;
     |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
@@ -753,7 +763,12 @@ A few DUIs of yours and some other thing from over a decade ago. The last one is
             Game saved.
         &lt;&lt;/linkreplace&gt;&gt;
         &lt;&lt;if Save.slots.has(0)&gt;&gt;
-     |      &lt;&lt;linkreplace &quot;Restart&quot;&gt;&gt;
+    |    &lt;&lt;link &quot;Restore Save&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            &lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+    |      &lt;&lt;linkreplace &quot;Restart&quot;&gt;&gt;
 This will erase your progress and saves. Are you sure?
                 &lt;&lt;link &quot;Yes&quot;&gt;&gt;
                     &lt;&lt;script&gt;&gt;
@@ -1543,11 +1558,12 @@ How unpleasant.
 &lt;&lt;add &quot;Aconite Poison&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt;&lt;span id=&quot;report&quot;&gt;&lt;/span&gt;
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this &lt;&lt;linkreplace &quot;man&quot;&gt;&gt;&lt;&lt;linkreplace &quot;woman&quot;&gt;&gt;person&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).&lt;span id=&quot;desk&quot;&gt;&lt;/span&gt;
 
-&lt;&lt;nobr&gt;&gt;&lt;&lt;if lastVisited(&quot;Questioning&quot;) is 1 or lastVisited(&quot;Police Station&quot;) is 1&gt;&gt;
-    &lt;&lt;link &quot;Leave room.&quot; &quot;Police Station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;elseif lastVisited($who) is 1&gt;&gt;
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if lastVisited($who) is 1&gt;&gt;
     &lt;&lt;link &quot;Leave room.&quot; $who&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="Justin&#39;s mind" tags="justin mind" position="850,1100">&lt;&lt;set $mindVisited to true&gt;&gt;It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a &lt;&lt;openlink &quot;newspaper&quot; &quot;newspaperText&quot;&gt;&gt;newspaper&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;link &quot;Leave room.&quot; &quot;Police Station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="Justin&#39;s mind" tags="justin mind" position="850,1100">&lt;&lt;set $mindVisited to true&gt;&gt;It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a &lt;&lt;openlink &quot;newspaper&quot; &quot;newspaperText&quot;&gt;&gt;newspaper&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
 
 The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, &#39;&#39;&quot;Local Activists Protest Paving Over Park&quot;&#39;&#39;, is unrealistically sharp, ink unfaded by time inside Justin&#39;s memories. You don&#39;t want to think about it too much.
 &lt;&lt;add &quot;Old Newspaper&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; on it. &lt;span id=&quot;newspaper&quot;&gt;&lt;/span&gt;
@@ -2162,7 +2178,12 @@ Bram gulps and nods weakly. You think you&#39;ve heard everything important now,
             Game saved.
         &lt;&lt;/linkreplace&gt;&gt;
         &lt;&lt;if Save.slots.has(0)&gt;&gt;
-     |      &lt;&lt;linkreplace &quot;Restart&quot;&gt;&gt;
+    |    &lt;&lt;link &quot;Restore Save&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            &lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+    |      &lt;&lt;linkreplace &quot;Restart&quot;&gt;&gt;
 This will erase your progress and saves. Are you sure?
                 &lt;&lt;link &quot;Yes&quot;&gt;&gt;
                     &lt;&lt;script&gt;&gt;
