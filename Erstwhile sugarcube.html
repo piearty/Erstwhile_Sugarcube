@@ -202,7 +202,7 @@ UIBar.destroy();</script><tw-passagedata pid="1" name="Add Item" tags="widget no
     &lt;&lt;/if&gt;&gt;
 &lt;!--Links to item&#39;s page and adds it to the inventory--&gt;
     &lt;br&gt;//(The clue, &lt;nowiki&gt;&quot;&lt;/nowiki&gt;[[$args[0]]]&lt;nowiki&gt;&quot;&lt;/nowiki&gt; has been added to your memories.)//&lt;&lt;set $inv.pushUnique($args[0])&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Clues" tags="noinv save" position="225,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Clues" tags="noinv" position="225,100">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;Clues
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
         | [[Link Clues]]
@@ -269,7 +269,7 @@ There are still gaps in the story. You can try [[linking|Link Clues]] two clues 
 You can [[review-&gt;Thoughts]] the things you&#39;ve figured out, now.
 
 &lt;&lt;/if&gt;&gt;\
-[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="3" name="Credits" tags="noinv nosave" position="350,100">&lt;&lt;nobr&gt;&gt;
+[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="3" name="Credits" tags="noinv" position="350,100">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]]
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
         | [[Link Clues]]
@@ -304,9 +304,9 @@ This will erase your progress and saves. Are you sure?
      | Credits&lt;/strong&gt;
 &lt;&lt;/nobr&gt;&gt;
 
-**Writers:** Maddie Fialla and Marijke Perry
+&#39;&#39;Writers:&#39;&#39; Maddie Fialla and Marijke Perry
 
-**Coder:** Maddie Fialla
+&#39;&#39;Coder:&#39;&#39; Maddie Fialla
 
 Thank you to all of our numerous playtesters, who helped us immensely in making the game not only fun to play, but, you know, actually playable:
 
@@ -326,9 +326,7 @@ Rebekka
 
 Extra special thanks to Chapel and TheMadExile from the Twine discord server! Thank you for helping me with code and generally being awesome.
 
-&lt;/div&gt;
-
-[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="4" name="Hints" tags="noinv nosave nobr" position="475,100">&lt;h1&gt;Hints&lt;/h1&gt;
+[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="4" name="Hints" tags="noinv nobr" position="475,100">&lt;h1&gt;Hints&lt;/h1&gt;
 &lt;&lt;set $bigHints = [&quot;Several of the clues cannot be combined at all.&quot;, &quot;Sure there&#39;s a reason why you don&#39;t want to think about some of the clues. Are you going to say what it is? Hell no.&quot;]&gt;&gt;
 
 &lt;&lt;if $inv.includesAll(&quot;Potion&quot;, &quot;Erin&#39;s Testimony&quot;) and !Object.keys($thoughts).includes(&quot;you drinking Erin&#39;s potion&quot;)&gt;&gt;&lt;&lt;set $bigHints.pushUnique(&quot;Why is Erin under suspicion?&quot;)&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -382,7 +380,7 @@ Extra special thanks to Chapel and TheMadExile from the Twine discord server! Th
 &lt;br&gt;
 &lt;br&gt;
 [[Link more clues.-&gt;Link Clues]]&lt;br&gt;
-[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="5" name="Start" tags="nosave noinv" position="600,100">&lt;&lt;if (Save.autosave.has())&gt;&gt;You could start the story over, but you don&#39;t want to bore yourself with things you&#39;ve gone over before.
+[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="5" name="Start" tags="noinv" position="600,100">&lt;&lt;if Save.slots.has(0) or Save.autosave.has()&gt;&gt;You could start the story over, but you don&#39;t want to bore yourself with things you&#39;ve gone over before.
 
 Wanna &lt;&lt;link &quot;go back&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
                 if (Save.autosave.has()) { 
@@ -619,7 +617,7 @@ A navy blue, striped straight tie that Terry was holding for someone she was tal
 &lt;&lt;if hasVisited(&quot;Terry and Bram&#39;s conversation in her shop&quot;)&gt;&gt;
 
 &lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Old Newspaper" tags="item lexa" position="350,475">&lt;h3&gt;Old Newspaper&lt;/h3&gt;
-A yellowing newspaper on Justin&#39;s mind-coffee-table. Terry and another girl are on the front page, chained to a plane tree. The headline says, &quot;**Local Activists Protest Paving Over Park**&quot;.\
+A yellowing newspaper on Justin&#39;s mind-coffee-table. Terry and another girl are on the front page, chained to a plane tree. The headline says, &#39;&#39;&quot;Local Activists Protest Paving Over Park&quot;&#39;&#39;.\
 &lt;&lt;if hasVisited(&quot;Terry&#39;s phone conversation&quot;)&gt;&gt;
 
 &lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Shifty Person" tags="item" position="475,475">&lt;h3&gt;Shifty Person&lt;/h3&gt;
@@ -733,7 +731,7 @@ Hospital stickers, dozens of them, found in Terry&#39;s mind. The earliest is da
 &lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Rap Sheet" tags="item lexa noncombinable" position="100,850">&lt;h3&gt;Rap Sheet&lt;/h3&gt;
 A few DUIs of yours and some other thing from over a decade ago. The last one is dated 11/14. It was on the detective&#39;s mind-desk.
 
-&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Link Clues" tags="noinv save" position="225,850">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Link Clues" tags="noinv" position="225,850">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]]
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
         | Link Clues
@@ -1546,7 +1544,7 @@ How unpleasant.
     &lt;&lt;link &quot;Leave room.&quot; $who&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="Justin&#39;s mind" tags="justin mind" position="850,1100">&lt;&lt;set $mindVisited to true&gt;&gt;It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a &lt;&lt;openlink &quot;newspaper&quot; &quot;newspaperText&quot;&gt;&gt;newspaper&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
 
-The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, &quot;**Local Activists Protest Paving Over Park**&quot;, is unrealistically sharp, ink unfaded by time inside Justin&#39;s memories. You don&#39;t want to think about it too much.
+The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, &#39;&#39;&quot;Local Activists Protest Paving Over Park&quot;&#39;&#39;, is unrealistically sharp, ink unfaded by time inside Justin&#39;s memories. You don&#39;t want to think about it too much.
 &lt;&lt;add &quot;Old Newspaper&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; on it. &lt;span id=&quot;newspaper&quot;&gt;&lt;/span&gt;
 
 The police reports and coffee table books lack most discernable details, their words blurry and indistinct. If Justin doesn&#39;t find them important enough to remember them properly, well, neither do you.
@@ -1745,7 +1743,7 @@ You float under the raised box to examine the item. It&#39;s a piece of paper wi
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="PassageHeader" tags="" position="350,1225">&lt;&lt;if tags().includes(&quot;memory&quot;) and $thoughts.length == 0&gt;&gt;As you connect the two clues in your mind, you feel a strong tide of emotions and sensations flood your senses, and you know they&#39;re not your own.
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Possession" tags="noinv nosave" position="475,1225">You decide to spend the rest of your ghostly energy, or whatever the hell it is, to possess $who&#39;s body itself and get it to do your bidding, though you feel you&#39;ll only have enough power to say one thing. Steeling yourself for impact, you collide with $who and extend your influence over &lt;&lt;if $who is &quot;Justin&quot;  or &quot;Bram&quot;&gt;&gt;his&lt;&lt;else&gt;&gt;her&lt;&lt;/if&gt;&gt; person.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Possession" tags="noinv" position="475,1225">You decide to spend the rest of your ghostly energy, or whatever the hell it is, to possess $who&#39;s body itself and get it to do your bidding, though you feel you&#39;ll only have enough power to say one thing. Steeling yourself for impact, you collide with $who and extend your influence over &lt;&lt;if $who is &quot;Justin&quot;  or &quot;Bram&quot;&gt;&gt;his&lt;&lt;else&gt;&gt;her&lt;&lt;/if&gt;&gt; person.
 
 Warmth and bone and flesh wrap around you again, and you open your, or rather, $who&#39;s eyes to see the rest of the suspects and the detective looking over all of you. You must have taken longer than you realized to gain control, because everyone by now has already gathered in the waiting area to hear what the detective wants to do with them next.
 
@@ -2148,7 +2146,7 @@ Bram gulps and nods weakly. You think you&#39;ve heard everything important now,
 &lt;&lt;add &quot;Bram&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Bram&#39;s mind&quot;)&gt;&gt;He looks even sweatier than he normally is, eyes darting back and forth, giving the distinct impression of a trapped rabbit.&lt;&lt;else&gt;&gt;Bram sits at the table quietly, sweat dripping from his brow.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Thoughts" tags="noinv save" position="1225,1350">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Thoughts" tags="noinv" position="1225,1350">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]] | [[Link Clues]] | Thoughts
     |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
             &lt;&lt;script&gt;&gt;

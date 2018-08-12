@@ -146,7 +146,7 @@ A navy blue, striped straight tie that Terry was holding for someone she was tal
 
 :: Old Newspaper [item lexa]
 <h3>Old Newspaper</h3>
-A yellowing newspaper on Justin's mind-coffee-table. Terry and another girl are on the front page, chained to a plane tree. The headline says, "**Local Activists Protest Paving Over Park**".\
+A yellowing newspaper on Justin's mind-coffee-table. Terry and another girl are on the front page, chained to a plane tree. The headline says, ''"Local Activists Protest Paving Over Park"''.\
 <<if hasVisited("Terry's phone conversation")>>
 
 <<set $isItemUsed = true>><</if>>

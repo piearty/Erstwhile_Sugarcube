@@ -61,7 +61,7 @@ How unpleasant.
 :: Justin's mind [justin mind]
 <<set $mindVisited to true>>It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<openlink "newspaper" "newspaperText">>newspaper<<replace "#newspaper">>
 
-The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, "**Local Activists Protest Paving Over Park**", is unrealistically sharp, ink unfaded by time inside Justin's memories. You don't want to think about it too much.
+The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, ''"Local Activists Protest Paving Over Park"'', is unrealistically sharp, ink unfaded by time inside Justin's memories. You don't want to think about it too much.
 <<add "Old Newspaper">><</replace>><</openlink>> on it. <span id="newspaper"></span>
 
 The police reports and coffee table books lack most discernable details, their words blurry and indistinct. If Justin doesn't find them important enough to remember them properly, well, neither do you.
