@@ -39,7 +39,7 @@ Ok so you have a record. So what? A few DUIs, some...other stuff. You swear you'
 What is it doing here?
 <<add "Rap Sheet">>
 <</replace>><</openlink>>, <span id="rap"></span>
-and a <<link "report." "reportText">>report.<<replace "#report">>
+and a <<openlink "report." "reportText">>report.<<replace "#report">>
 
 You squint at the paper. At the top in large bold letters are the words "//''AUTOPSY REPORT''//". You see the name "//Mort Freedman//" - your name - as well, and feel cold. Wow. You really are dead.
 
@@ -50,11 +50,13 @@ Oh.
 
 How unpleasant.
 <<add "Aconite Poison">><</replace>><</openlink>><span id="report"></span>
-<</replace>><</openlink>><<if lastVisited("Questioning") is 1>>
+<</replace>><</openlink>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
+
+<<nobr>><<if lastVisited("Questioning") is 1 or lastVisited("Police Station") is 1>>
     <<link "Leave room." "Police Station">><</link>>
 <<elseif lastVisited($who) is 1>>
     <<link "Leave room." $who>><</link>>
-<</if>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
+<</if>><</nobr>>
 
 :: Justin's mind [justin mind]
 <<set $mindVisited to true>>It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<openlink "newspaper" "newspaperText">>newspaper<<replace "#newspaper">>

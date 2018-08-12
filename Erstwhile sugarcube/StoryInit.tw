@@ -41,4 +41,7 @@
 
 <!--Checks if item been used up or not (resets upon leaving item passage)-->
 <<set $isItemUsed = false>>
+
+<!--Checks if you skip to the police station.-->
+<<set $policeStationStart to false>>
 <</nobr>>

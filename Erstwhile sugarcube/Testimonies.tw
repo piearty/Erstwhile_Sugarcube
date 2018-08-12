@@ -19,7 +19,8 @@
 <<testimony "Erin">>
 <<testimony "Annie">>
 <<testimony "Bram">>
-<</nobr>>
+<</nobr>>[[Go back to the detective's mind|Detective's mind]]
+
 <<linkappend `"Possess " + $who + "."`>>
 
 What's this? A new ability has revealed itself to you: possession. You can feel how powerful it is, so you don't think that once you use it you'll be able to stick around any longer on Earth. But you must have it for some sick reason, right? And then it occurs to you - you could get the killer to confess, right in this station. It wouldn't fix you being dead, of course, but least then you could go to the big shining light at the end of the tunnel knowing that your death was avenged...by yourself. Hey, maybe that's your unfinished business?
