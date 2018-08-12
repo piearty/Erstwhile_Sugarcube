@@ -1,0 +1,220 @@
+::Testimony links [widget nobr]
+<<widget "testimony">>
+<<if hasVisited($args[0]) and $who is not $args[0]>>
+<<link `"Go back to " + $args[0] + "."` $args[0]>><</link>><br>
+<<elseif $who is not $args[0]>>
+<<link `"Listen to " + $args[0] + "."` $args[0]>><</link>><br>
+<</if>>
+<</widget>>
+
+:: Listen to Testimonies
+<<if $mindVisited is false>>You think about how you went inside the detective's mind. If you could find a clue there, then surely you'd be able to figure out more from the minds of the suspects themselves, right?
+
+<</if>>\
+<<link `"Enter " + $who + "'s mind."` `$who + "'s mind"`>><</link>>
+
+<<nobr>>
+<<testimony "Justin">>
+<<testimony "Terry">>
+<<testimony "Erin">>
+<<testimony "Annie">>
+<<testimony "Bram">>
+<</nobr>>
+<<linkappend `"Possess " + $who + "."`>>
+
+What's this? A new ability has revealed itself to you: possession. You can feel how powerful it is, so you don't think that once you use it you'll be able to stick around any longer on Earth. But you must have it for some sick reason, right? And then it occurs to you - you could get the killer to confess, right in this station. It wouldn't fix you being dead, of course, but least then you could go to the big shining light at the end of the tunnel knowing that your death was avenged...by yourself. Hey, maybe that's your unfinished business?
+
+You should only do it once you're absolutely sure who it is, though. Are you?
+
+[[Yes, you're sure.|Possession]]<</linkappend>>
+
+:: Justin
+<<set $who to "Justin">><<if visited() is 1>>Justin comes into the room silently, fidgeting with his bowtie. He sits down without hesitation.
+
+"Mr. Whittaker," says the officer, "Could you please describe the events of the dinner and the surrounding circumstances?" 
+
+Clearing his throat, Justin nods. "Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before the day itself. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn't because I was," he pinches the bridge of his nose, "busy, but..."
+
+"Busy?"
+
+"Yeah, patrols, talks with schools, //more// patrols...I mean. You know how it is."
+
+The officer gives him a sympathetic smile. "Please, continue."
+
+"Mort wasn't helping out because he was also busy with RNA matters. Apparently." He mutters the last word. <<if !hasVisited("Annie's Testimony")>>
+
+What is that supposed to mean?
+
+<</if>>"So when we met on Thanksgiving day at Annie's place to touch base, he got all angry that there were nuts in every dish that'd been cooked. Some nut allergy. I - I had no idea about that or I would never have..." He trails off and furrows his brow. <<if hasVisited("Annie's Testimony")>>
+
+Sure he didn't.
+
+<</if>>"Annie and he had some sort of fight, since she had created the menu..." Justin shakes his head and sighs. "That happened before the dinner. Kinda turned everything sour from the start. Thinking about Mort sitting and eating nothing, well, even I felt sorry for him. So the wife suggested we get him a salad. Sure. We forgot dressing though, so she had me go back to get it." 
+
+He pauses for a moment. "Then we prepared for the dinner for a couple hours, it started, and...well."
+
+He exhales slowly, gathering his thoughts. "I hope you all find the killer soon and bring them to justice. I didn't exactly call Mort a friend - I - to be completely honest I didn't like him very much, but I-" He clears his throat. "I never wished him dead."
+
+<<if !hasVisited("Annie's Testimony")>>What? You aren't friends? He doesn't like you? Well! This is certainly news to you. You drift closer, wishing you could ask Justin why he would say something like that.\
+<<else>>You'd be highly surprised that Justin didn't like you before, but with the knowledge that he told Annie to add nuts to everything, this just makes a terrible sort of sense. You drift closer, feeling cold.<</if>> His face is impassive - no signs of sorrow belying his calm demeanor.
+
+All this time you've spent on the RNA assuming you were on good terms, giving him plenty to do and valuing him as a member of the association, and he can't even bother to cry about your tragic, untimely death.
+
+The officer keeps interviewing Justin, asking him to recount the information in different ways, and he complies without issue. You think you've heard everything important, though.\
+<<add "Justin's Testimony">>
+<<elseif hasVisited("Justin's mind")>>Justin looks irritated again and is rubbing his arms.<<else>>Justin is done with his testimony and is sitting stiffly, adjusting his bowtie occasionally.<</if>>
+
+<<include "Listen to Testimonies">>
+
+:: Terry
+<<set $who to "Terry">><<if visited() is 1>>Terry enters the room already speaking. She's sobbing heavily and keeps trying to wipe away her tears with her sleeve. 
+
+"I-I just can't believe - I'm - oh my word I can't do this. Sorry, I need a minute..." She takes a shaky breath and fans herself. "It's just, I never, I never thought that - Mort of all people!"
+
+The officer sitting at the table interrupts, "Mrs. Whittaker. Could you tell me what happened at the dinner and its surrounding circumstances?"
+
+"Sorry yes, what happened...t-the dinner," she says, sniffling. "W-well, the RNA thought up the idea a while ago. A big feast. E-everyone was so excited! Mort, Justin, and I didn't cook but we were all pitching in in some way. B-but then - " she wipes her eyes with her sleeve - "we found out M-Mort couldn't eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he's been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I'd do if he wasn't there for me -"
+
+"Mrs. Whittaker, please continue with your testimony."
+
+Terry blinks. "Sorry, right..."
+
+There's a hint of empathy as the officer says, "It's alright. You were getting a salad?" 
+
+Terry tries to reign in her tears and continues, "Yes, we drove to the grocery to get a small salad for Mort. It was the least we could do so the poor man could have something to eat...poor Mort, oh!"
+
+She's not doing a very good job of keeping composed. You never realized you meant this much to Terry. You're touched, really.
+
+"We headed to the park after that... to help set up, you know? When the dinner started, before the poor man could die of hunger, we gave Mort our salad - oh, and Annie, she gave him a sandwich. Then Erin..." Terry's face shows a marked change, going from despair to disgust. "Erin gave him a silly little potion, going on and on about protection or something. He drank it, though I can't imagine why, and well...! Next thing you know he's d-dead on the floor!" She sobs again.
+
+<<if !hasVisited("Erin's Testimony")>>Oh yeah, you remember that. You drank it, just to stop her from nagging you about it. It tasted like manure.
+<<else>>You'd swear you just felt a shiver go down your spine, were it not for your lack of a spine. Erin?<</if>> She could be a bit odd, but it hadn't occurred to you that she could be dangerous...
+
+Still upset, but more angry, Terry continues, "That girl, I just - she has no idea what she's doing with her so-called magic, I wouldn't be surprised if drinking that finally...oh I don't want to think about it! But she's done terrible things before...regardless, whoever did it should be ashamed..."
+
+The officer keeps interviewing Terry, asking her to recount her testimony. You wonder if the officer feels bad for pushing Terry to speak, or if these types are used to that sort of  thing. You think you've heard everything important, though.\
+<<add "Terry's Testimony">>
+<<elseif hasVisited("Terry's mind")>>Terry has her arms wrapped around her, her teeth chattering. She looks down at the table.<<else>>Terry has gone back to crying. It's beginning to get concerning, if you're being honest.<</if>>
+
+<<include "Listen to Testimonies">>
+
+:: Erin
+<<set $who to "Erin">><<if visited() is 1>>
+When you float into the room, Erin is sitting in the cold metal chair, unspeaking. She looks uncomfortable and shakes slightly. Tears threaten to spill from her eyes, wide with bewilderment.
+
+Before that can happen, the officer speaks. "Hello, Ms. Moonchild. If you could, would you please explain the events leading up to Mr. Freedman's death?" 
+
+Erin frowns. "I knew this would happen..."
+
+The officer's eyes narrow slightly. "Could you explain that statement?
+
+She wrings her hands. "See, the association came up with the idea for the dinner, and everyone was really excited, but there was a negative aura in the air, I could feel it."
+
+"Aura...? Why would there be a negative aura?"
+
+"Well I think that's obvious," she says dismissively.
+
+"No, I don't think it is," the officer says with a hint of impatience. "Please. Elaborate."
+
+"Well," Erin replies, blinking, "earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We'd baked everything the day before- Annie, Bram, and I, and for some reason Mort didn't like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie's aura flared up, and of course everyone loves Annie so everyone else got frustrated-"
+
+The officer interrupts. "Excuse me, Miss. What, exactly, happened at that meeting?"
+
+"Well, Mort didn't want to eat any of the dishes- couldn't? He said something like that.  I kept trying to give him the potion, but he ignored me! Everyone ignores me," she says softly. She shakes her head. "He left all angrily, and then Justin and Terry went off to get Mort something, salad maybe? I didn't pay too much attention." She pauses. "Well, I did, but not because I was stalking them or anything." (What?) "I was just concerned about Justin. He hasn't been talking to me at all. I tried to tell him about the bad energies and signs I've felt lately, but he wouldn't listen, and then this had to go and happen!"
+
+She throws her hands up in the air. The officer makes a noise as if to question her, but she keeps going. "Anyway, we all set up the dinner for a couple hours. Then I gave Mort the potion at the party. I watched him drink it and then went back to the party, feeling better, until..." She looks down sadly. 
+
+You frown. Before the officer can interrupt, she continues, "I had prepared the potion for Mort because I thought he was in danger, and I was right." She looks down and wipes a single tear from her eye.
+
+"What was in the potion?" There's a slight edge to the officer's voice.\
+<<if hasVisited("Terry's Testimony")>>
+
+Yeah, given Terry's statements, now you're wondering too.<</if>>
+                      
+"Ingredients that protect, of course," Erin says, as if it's the most obvious thing in the world. By the distant look on her face, both you and, it seems, the officer, know that's all you're gonna get out of her about that. <<if hasVisited("Terry's Testimony")>>You want to scream.<</if>>
+
+Before the officer can ask anything else, Erin adds, "I thought the potion would work. It was supposed to protect him, though I guess he never did want my protection."
+
+Never did want - is she talking about those creepy sigils you took down? She does know that was vandalism, right? 
+
+Whatever. You don't really understand Erin.
+
+The officer keeps interviewing Erin, asking her to recount the information in different ways, though you're not sure she's going to get any clearer. You think you've heard everything important, though.\
+<<add "Erin's Testimony">>
+<<elseif hasVisited("Erin's mind")>>Erin is turning her head sharply to look about the room, looking like a startled bird. "Mort!" she cries, and you freeze in place, surprised. "Is that you? Are you a spirit now?"
+
+You don't know if it's possible to respond and you're not sure you want to.
+<<else>>Erin is wringing her hands and repeating, "oh, oh, oh" to herself.<</if>>
+
+<<include "Listen to Testimonies">>
+
+
+:: Annie
+<<set $who to "Annie">><<if visited() is 1>>The officer has just begun speaking when you enter the room. "Good day, Ms. Smith-"
+
+Annie interrupts, saying, "I guess it coulda been, but there's a dead man. Did you forget that or somethin'?"
+
+"Well, yes, there is." The officer seems caught off guard. "I'd like to ask you a few questions about that, actually. What happened leading up to Mr. Freedman's death?"
+
+Annie's face twists into a displeased expression. About your untimely murder, you assume. "Where are we startin'? We fought this morning..."
+
+"That works, Ms. Smith."
+
+Nodding, Annie begins her story. "Well, all of yesterday Erin, Bram, and I were baking. Justin couldn't make it, busy as always, and Terry is a terrible cook. Mort was no help. If he'd been there we wouldn't have had - " 
+
+"Ms. Smith, the fight?"
+
+"I was getting there, officer. If he'd been there we wouldn't have had the fight. He was sayin' he wouldn't eat the food, and naturally I took offense to that, I mean, spendin' hours in the kitchen cookin' just to have your friend refuse because he don't like nuts!"
+
+Again you twitch with the urge to explain the difference between a //dislike// and an //allergy that can kill you//, but alas, you are dead and cannot speak.
+
+"Now, if only he'd helped he coulda said that while we were baking. //Before// I put the nuts in everything." Annie shakes her head. "And after Justin said it'd be fine, encouraged me even...hmph."
+
+There's a mental needle scratch. Justin said it'd be fine? He wasn't even working on making the food! <<if !hasVisited("Justin's Testimony")>>Here you though the two of you were friends, but if you were, then what was he doing purposely putting nuts on the menu? Was he //trying// to kill you?
+
+Oh no.
+<<else>>You feel somewhat surprised, but now that you know that he never even liked you in the first place, all you can feel is bitter.<</if>>
+
+Annie continues, "I couldn't just let the man starve. After we exchanged some fighting words, I made him a sandwich. Everyone else went off to the party- except Justin and Terry. They went to the store."
+
+When Annie falls silent, the officer prompts, "What did you do with the sandwich?"
+
+"I gave it to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?" She paused. "I wish we'd made up. Feels wrong to have ill thoughts of the dead." 
+
+The officer keeps interviewing Annie, asking her to recount her testimony. "Weren't you listening?" she says grouchily before repeating. You think you've heard everything important, though.\
+<<add "Annie's Testimony">>
+<<elseif hasVisited("Annie's Mind")>> and how her bones ache, her eyebrows knitted together.<<else>>Now that her testimony's over, Annie sits quietly at the table, gazing at her clasped hands.<</if>>
+
+<<include "Listen to Testimonies">>
+
+:: Bram
+<<set $who to "Bram">><<if visited() is 1>>
+Bram, poor guy, enters the room sweating, dabbing at his forehead with a handkerchief. It's clear he's nervous. You have a few guesses as to why.
+
+He sits down slowly, and listens for the officer. The officer speaks, "Mr. Locklear, could you please describe the events leading up to and around Mr. Freedman's death?"
+
+"Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn't there though, so where should I start, officer? I don't want to slow you down with irrelevant info, ha." Bram laughs nervously. 
+
+The officer doesn't respond for a moment, not realizing Bram's invitation to talk. Then, "Wherever you think is the most relevant. If I think you're leaving something out, I will ask." 
+
+Bram furrows his eyebrows. "O-okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin's idea apparently- I don't know if Justin knew about the allergy, of course! Anyway, that's why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It's like she doesn't know what allergies are." 
+
+He laughs again, his expression pained. If only you weren't dead, you could remind him that laughing while being asked about a murder is a bad idea.
+
+"Mort left, which was really uncomfortable, but we tried to finish the meeting anyway. Then we all went to the party. Or the store. Or the kitchen. I went to the party to set up." 
+
+After a short silence, the officer says, "Mr. Locklear, we believe that Mr. Freedman was killed with a poison. Are you aware of how aconite is made?"
+
+Bram takes a moment to process the question, then puts his hands up and sputters out an objection, "B-before you start asking about the wolfsbane in the garden, Erin asked me to plant it. She uses it for spells. But I wasn't growing it to poison Mort!"
+
+The officer hums and writes something down. "Thank you, Mr. Locklear." 
+
+"W-wait, what are you writing down?" Bram stammers. "I said I wasn't - "
+
+"Could you please go over your testimony one more time?"
+
+Bram gulps and nods weakly. You think you've heard everything important now, though.\
+<<add "Bram's Testimony">>
+<<elseif hasVisited("Bram's mind")>>He looks even sweatier than he normally is, eyes darting back and forth, giving the distinct impression of a trapped rabbit.<<else>>Bram sits at the table quietly, sweat dripping from his brow.<</if>>
+
+<<include "Listen to Testimonies">>

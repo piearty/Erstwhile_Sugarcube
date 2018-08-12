@@ -1,5 +1,5 @@
 :: Detective's mind [detective mind]
-You find yourself in a small office, drab and plain. Judging by the worn brown jacket hung up on the coat rack, the room is the detective's.
+<<set $mindVisited to true>>You find yourself in a small office, drab and plain. Judging by the worn brown jacket hung up on the coat rack, the room is the detective's.
 <<if visited() is 1>>
 You're not sure what just happened but you're trying to roll with it. Did you...teleport or something?
 
@@ -57,7 +57,7 @@ How unpleasant.
 <</if>> situated in the corner of the room has a few incongruous objects on it, along with a stack of papers that seem to reach the ceiling. Clearly this <<linkreplace "man">><<linkreplace "woman">>person<</linkreplace>><</linkreplace>> has some problems with paperwork (which is something you deal - dealt with a lot as RNA chairman).<span id="desk"></span>
 
 :: Justin's mind [justin mind]
-It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<openlink "newspaper" "newspaperText">>newspaper<<replace "#newspaper">>
+<<set $mindVisited to true>>It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<openlink "newspaper" "newspaperText">>newspaper<<replace "#newspaper">>
 
 The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, "**Local Activists Protest Paving Over Park**", is unrealistically sharp, ink unfaded by time inside Justin's memories. You don't want to think about it too much.
 <<add "Old Newspaper">><</replace>><</openlink>> on it. <span id="newspaper"></span>
@@ -96,7 +96,7 @@ On account of the bent walls, the ceiling is much, //much// closer to the floor 
 [[Leave.|Justin]]
 
 :: Terry's mind [terry mind]
-You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents and works at. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
+<<set $mindVisited to true>>You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents and works at. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
 
 Looking closer though, you see that the wine bottles are not jutting out of wooden racks, but out of honeycombs. Presumably made of beeswax, the combs ooze with honey that drips down and off the necks of the bottles onto the hardwood floor. In combs without bottles, there are assorted objects that you can only assume have some relevance to Terry. They're hard to see through the viscous layers of honey, though.
 
@@ -109,7 +109,7 @@ Torn into pieces.
 
 <</replace>><</openlink>> is in sharper focus than the rest; inside, there appear to be bits of ripped up paper floating in the golden goop.<span id="petition"></span>
 
-<<link "Another cell" "wineText">>Another cell<<replace "#wine">>
+<<openlink "Another cell" "wineText">>Another cell<<replace "#wine">>
 
 It's a bottle of Loup-Rouge. Dusty, like no one's touched it in ages. There's a paper here also - a merchant's copy of a purchase of the wine a couple days ago. It's got Bram's signature on it.
 
@@ -126,8 +126,7 @@ You really hope they're not for what you suspect they're for.
 [[Leave.|Terry]]
 
 :: Erin's mind [erin mind]
-
-It looks like a study but. Weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking <<openlink "moon" "moonText">>moon<<replace "#moon">>
+<<set $mindVisited to true>>It looks like a study but. Weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking <<openlink "moon" "moonText">>moon<<replace "#moon">>
 
 That's no moon. Or rather, that's no //real// moon. Well, it wasn't anyway since it's simply a metaphysical representation of a - your point is, it's actually a charm. Just hanging in the sky, pretending to be a celestial body. You can see the metallic luster of it and the tiny loop on top for attaching to keychains or necklaces or the like. Weird.
 <<add "Gibbous Charm">><</replace>><</openlink>> hang in the purple-velvet night. <span id="moon"></span>
@@ -159,7 +158,7 @@ You look out the window to check. Huh. It appears so.
 [[Leave.|Erin]]
 
 :: Annie's mind [annie mind]
-Annie's mind seems to be her kitchen.  You remember it well; this is where you had the fight. The first thing that strikes you is the lack of color. The walls, the lights, the appliances- everything is in sepia. You look out of the window to see that the whole world seems to be the same dull, old-timey orange. 
+<<set $mindVisited to true>>Annie's mind seems to be her kitchen.  You remember it well; this is where you had the fight. The first thing that strikes you is the lack of color. The walls, the lights, the appliances- everything is in sepia. You look out of the window to see that the whole world seems to be the same dull, old-timey orange. 
 
 There are far fewer decorations than in an average kitchen, but sticky notes and bits of random papers are stuck with big clip bag magnets onto the fridge.
 
@@ -200,7 +199,7 @@ It's dated a few days ago...a consent form for non-voluntary eu - Ah //crap//.
 [[Leave.|Annie]]
 
 :: Bram's mind [bram mind]
-As you step into Bram's mind, a fantastical version of the community greenhouse appears in your vision, with blossoming, well pruned plants from all seasons. The flowers are arranged meticulously and are being lightly watered by sprinklers from above; thankfully the drops pass right through you.
+<<set $mindVisited to true>>As you step into Bram's mind, a fantastical version of the community greenhouse appears in your vision, with blossoming, well pruned plants from all seasons. The flowers are arranged meticulously and are being lightly watered by sprinklers from above; thankfully the drops pass right through you.
 
 The glass panes that make up the greenhouse let light stream in, and though it's too bright to see outside, you aren't blinded either. As you squint at the panes, you realize they're held up by vines rather than their usual metal frames. Caught up in some vines, extremely high up, are some <<openlink "dollar bills." "moneyText">>dollar bills.<<replace "#money">>
 
