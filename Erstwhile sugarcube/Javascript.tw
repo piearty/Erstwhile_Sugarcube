@@ -31,3 +31,5 @@ Macro.add('openlink', {
         $wrapper.append($link).appendTo(this.output);
     }
 });
+
+UIBar.destroy();

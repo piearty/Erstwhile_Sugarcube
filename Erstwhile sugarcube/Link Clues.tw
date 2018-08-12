@@ -1,4 +1,4 @@
-::Link Clues [noinv save]
+::Link Clues [noinv]
 <<nobr>>
     <strong>[[Clues]]
     <<if $inv.length > 1>>

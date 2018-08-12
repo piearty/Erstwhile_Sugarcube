@@ -1,4 +1,4 @@
-::Clues [noinv save]
+::Clues [noinv]
 <<nobr>>
     <strong>Clues
     <<if $inv.length > 1>>

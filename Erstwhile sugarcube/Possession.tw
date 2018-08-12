@@ -1,4 +1,4 @@
-:: Possession [noinv nosave]
+:: Possession [noinv]
 You decide to spend the rest of your ghostly energy, or whatever the hell it is, to possess $who's body itself and get it to do your bidding, though you feel you'll only have enough power to say one thing. Steeling yourself for impact, you collide with $who and extend your influence over <<if $who is "Justin"  or "Bram">>his<<else>>her<</if>> person.
 
 Warmth and bone and flesh wrap around you again, and you open your, or rather, $who's eyes to see the rest of the suspects and the detective looking over all of you. You must have taken longer than you realized to gain control, because everyone by now has already gathered in the waiting area to hear what the detective wants to do with them next.

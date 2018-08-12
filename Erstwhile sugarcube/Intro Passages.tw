@@ -1,4 +1,33 @@
-::Start [noinv]
+:: Start [noinv]
+<<if Save.slots.has(0) or (Save.autosave.has())>>You could start the story over, but you don't want to bore yourself with things you've gone over before.
+
+Wanna <<link "go back">><<script>>
+                if (Save.autosave.has()) { 
+                    Save.autosave.load();
+                }
+            <</script>><</link>> to where you were?
+
+Restore from a <<link "save">><<script>>
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            <</script>><</link>>?
+
+Or maybe just skip to the <<link "police station" "Police Station">><<set $PoliceStationStart to true>><</link>>?
+
+You can still <<link "restart">><<script>>
+                        if (Save.slots.has(0)) {
+                            Save.slots.delete(0);
+                        }
+                        if (Save.autosave.has()) {
+                            Save.autosave.delete();                           
+                        }
+                        Engine.restart();
+                        <</script>>
+                <</link>> everything if you want (This will erase your saves).
+<<else>><<goto "Intro">><</if>>
+
+:: Intro [noinv]
 It was a pretty good Thanksgiving until you keeled over and died.
 
 The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less <<linkappend "//eavesdropping//">>, regardless of what Bram said,<</linkappend>> and more //surveying//, - it was having the bonding effect you wanted all along.
@@ -8,19 +37,6 @@ Yes, everything was going perfectly - that is, until you started feeling, quoth 
 In other words, you're a ghost now.
 
 [[Welp.|Title]]
-
-<<link "Skip Intro and start at the police station." "Police Station">><<set $policeStationStart to true>><</link>>
-<<nobr>>
-    <<if Save.slots.has(0)>>
-        <<link "Go back to where you were.">>
-            <<script>>
-                if (Save.slots.has(0)) { 
-                    Save.slots.load(0);
-                } 
-            <</script>>
-        <</link>>
-    <</if>>
-<</nobr>>
 
 :: Title [noinv]
 <h1>Erstwhile</h1>

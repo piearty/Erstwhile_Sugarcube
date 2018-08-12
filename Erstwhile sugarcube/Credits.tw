@@ -1,4 +1,4 @@
-:: Credits [noinv nosave]
+:: Credits [noinv]
 <<nobr>>
     <strong>[[Clues]]
     <<if $inv.length > 1>>

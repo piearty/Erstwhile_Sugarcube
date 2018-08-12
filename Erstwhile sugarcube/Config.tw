@@ -1,5 +1,2 @@
 :: Config [script]
-Config.saves.isAllowed = function () {
-    return tags().includesAny("save", "autosave");
-};
-Config.saves.autosave = "autosave";
+Config.saves.autosave = "true";
