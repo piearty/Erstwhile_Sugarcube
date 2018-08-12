@@ -1,5 +1,5 @@
 :: Start [noinv]
-<<if Save.slots.has(0) or (Save.autosave.has())>>You could start the story over, but you don't want to bore yourself with things you've gone over before.
+<<if Save.slots.has(0) or Save.autosave.has()>>You could start the story over, but you don't want to bore yourself with things you've gone over before.
 
 Wanna <<link "go back">><<script>>
                 if (Save.autosave.has()) { 

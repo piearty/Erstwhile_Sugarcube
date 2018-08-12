@@ -158,7 +158,12 @@ a:active {
 	-moz-column-count: 3;
 	column-count: 3;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "Config" */
-Config.saves.autosave = "true";
+Config.saves.autosave = true;
+Config.saves.isAllowed = function () {
+	if (State.passage != "Start") {
+    return true;
+    };
+};
 /* twine-user-script #2: "Story Javascript" */
 postdisplay['open-links'] = function (t) {
     if (!tags().includes('mind')) {
@@ -324,7 +329,7 @@ Lordlyhour
 Morgan
 Rebekka
 
-Extra special thanks to Chapel and TheMadExile from the Twine discord server! Thank you for helping me with code and generally being awesome.
+Extra special thanks to Chapel and TheMadExile from the Twine discord server! Thank you for helping me with code and generally being awesome. - Maddie
 
 [[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="4" name="Hints" tags="noinv nobr" position="475,100">&lt;h1&gt;Hints&lt;/h1&gt;
 &lt;&lt;set $bigHints = [&quot;Several of the clues cannot be combined at all.&quot;, &quot;Sure there&#39;s a reason why you don&#39;t want to think about some of the clues. Are you going to say what it is? Hell no.&quot;]&gt;&gt;

@@ -1,2 +1,7 @@
 :: Config [script]
-Config.saves.autosave = "true";
+Config.saves.autosave = true;
+Config.saves.isAllowed = function () {
+	if (State.passage != "Start") {
+    return true;
+    };
+};
