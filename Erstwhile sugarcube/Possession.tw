@@ -1,0 +1,159 @@
+:: Possession [noinv nosave]
+You decide to spend the rest of your ghostly energy, or whatever the hell it is, to possess $who's body itself and get it to do your bidding, though you feel you'll only have enough power to say one thing. Steeling yourself for impact, you collide with $who and extend your influence over <<if $who is "Justin"  or "Bram">>his<<else>>her<</if>> person.
+
+Warmth and bone and flesh wrap around you again, and you open your, or rather, $who's eyes to see the rest of the suspects and the detective looking over all of you. You must have taken longer than you realized to gain control, because everyone by now has already gathered in the waiting area to hear what the detective wants to do with them next.
+
+You didn't realize how much you missed having a body, though you know it's fleeting, though it's not your own. You can sense $who's soul sort of stuffed down beneath you, silent but fighting to wrest back control. In the few seconds you have, you open your mouth to speak.
+
+<<link `"'I confess: I killed Mort.'"` `$who + "'s Confession"`)>><</link>>
+
+
+:: Justin's Confession [noinv nosave confession]
+You have just enough time to see everyone turn to look at you in shock before you're shoved out of Justin's body, perhaps from his soul fighting back at the indignance of it all. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+The detective is squinting at him with a strange look on their face. "What did you say?"
+
+"I. Er." Justin clears his throat, looking disquieted. "I'm not sure why I said that, detective, but I assure you it's not true. Whatever my feelings toward the deceased are or were, I would never - "
+
+"Yeah, I know. Given the evidence, the idea of you being the murderer makes no sense."
+
+Terry is looking on in horror at her husband, and beside her Annie furrows her eyebrows in confusion. You look at Bram and Erin; he's doing his best to look grieved, and Erin is... more distraught that you thought she'd be. You get the feeling you've made a mistake. The panic makes your tether to the world slip slightly and you feel weaker than you already felt, which is impressive given you've been a near-powerless ghost.
+
+"Still, your confession bears further investigation and interrogation. I'm afraid I'm going to have to question you further."
+
+With a chagrined look on his face, Justin says, "I understand, detective." 
+
+They turn to the other suspects. "The rest of you are dismissed." 
+
+Your tether finally snaps and you lose your grip on the scene around you. The last thing you wonder as your spirit fades away is who truly killed you.
+
+You guess you'll never find out.
+
+
+:: Terry's Confession [noinv nosave confession]
+You have just enough time to see everyone turn to look at you in shock before you're shoved out of Terry's body, perhaps from her soul fighting back in panic. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+The detective's glare is piercing, almost triumphant. "Did you just confess?"
+
+"What? No, I!" Terry looks distressed. Her hands flutter as she speaks. "I-I don't know what made me say that but no, I'm not, I swear, I'm not! I've - I've just been under so much stress lately that I don't know what I'm saying, I'm so sorry detective! So sorry!" She starts crying again.
+
+"Save your tears, Mrs. Whittaker. I don't know why you said that either, but a confession's a confession. I suspected your involvement anyway. All the evidence points to you."
+
+You would smile from ear to ear if you could smile, or had ears.
+
+"Now hold on, my wife would never - "
+
+"Mr. Whittaker," the detective holds up a hand as Justin begins to rise angrily from his seat. "You should know enough, as a police officer, not to obstruct justice."
+
+Terry chokes out a sob. "I…! No! Please, I can't go to jail! I didn't do it, I swear, I'm innocent!" She goes on like this for a bit further and you bask in both her histrionics and the detective's cool indifference. When she realizes that this is having no effect, she calms down for the first time since she entered the police station.
+
+She sniffles, and when she speaks this time, her voice is hard and cold. "Fine. If you're so convinced, then fine. I won't say he completely deserved it, but that bastard had it coming anyway. He stomped over all of us and acted like he could do whatever he wanted because the community adored him, or whoever they thought he was. In my opinion that's enough of a reason. But I'll never forget what he did all those years ago. And what he was going to do to her memory."
+
+Terry looks to Annie and Justin, expecting sympathy. Instead, she sees that Annie is scowling and Justin is... devastated. It hadn't occurred to you that he wouldn't know she was the killer. Erin reaches out to him and grabs his hand, which, for once, he doesn't reject.
+
+And Bram, well, he just doesn't seem to know what's going on. This pleases you somewhat; at least the man you thought was your best friend didn't have anything to do with your death. 
+
+"That's enough," the detective says. "No one cares about your reasons. You killed a man. There's no reason or justification for that."
+
+She glares at them.
+
+The detective waves two officers over, one of whom pulls out handcuffs. "Take her away."
+
+Whatever binds you to the land of the living breaks and you begin to fade, feeling conscious thoughts die like blown out candles. Your influence has finally ended, and the last things you feel before you disappear is the joy of sweet comeuppance.
+
+And the slightest hint of guilt.
+
+:: Erin's Confession [noinv nosave confession]
+You have just enough time to see everyone turn to look at you in shock before you're pushed out of Erin's body, perhaps from some spiritual power of h- pff nah who are you kidding. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+There's a confusing mix of emotions on the detective's face. "What did you say?"
+
+Erin blinks and looks around. "Well," she says in an airy voice, "I suppose I just said I killed Mort."
+
+"And why would you say that?" the detective says slowly.
+
+"I don't really know, honestly. I didn't do it, you know, and I see no reason why I would say that naturally, so I suppose the natural conclusion is I was possessed by Mort's ghost and made to as some form of retribution." She states this as lightly as you would mention the weather outside, but it's so spot on that you wonder with a jolt if maybe you'd been wrong about her all this time.
+
+"Possessed." The detective stares at her in disbelief, then shakes their head. "Nevertheless, I've had several reason to suspect you as the culprit; I only hesitated because not everything added up."
+
+Crap, really? You were confident that it had to be her, but now this - her lack of panic, the detective's confusion, and the little things you'd decided to ignore - is filling you with waves of doubt.
+
+"Yet, a confession's a confession.  You were the one getting wolfsbane from Mr. Locklear in the first place; your involvement makes too much sense. Frankly, the thing I'm most surprised about is that it was intentional."
+
+Erin frowns at this, but says nothing.
+
+"Detective," Justin says hesitantly, "do you really think that she...I mean it's Erin..."
+
+He's right, you recognize. It's Erin. Did she really have it in her to murder you? You're starting to realize the real answer.
+
+Terry grabs Justin's hand, and he holds it loosely. You don't ponder that for too long and turn your attention to Annie and Bram. Bram's eyebrows are furrowed in as far as you think they can be, as though he's trying to figure out a very hard sudoku. Annie seems saddened and shifts a bit, opening her mouth to speak a couple times but ultimately saying nothing.
+
+The detective shakes their head. "My apologies, Ms. Moonchild. We're going to have to arrest you."
+
+All she does is bite her lip and nod.
+
+Finally you feel yourself fading. Doubt, panic, and guilt continue to course through you. At least when you're truly gone those feelings will go away as well.
+
+That's your last, awful thought.
+
+:: Annie's Confession [noinv nosave confession]
+You have just enough time to see everyone turn to look at you in shock before you're shoved out of Annie's body, perhaps from subconscious disgust at you. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+The detective stares at Annie, bewilderment evident on their face. "You confess?"
+
+She furrows her eyebrows. "I didn't mean to."
+
+"But you just said you killed Mr. Freedman?" the detective asks.
+
+Annie shakes her head. "I don't know why I said that. I don't know. I didn't kill him."
+
+There's some murmuring coming from the others in the room. You feel a twinge of panic creeping over you. Annie seemed so convinced that she didn't kill you, and you've never known her to be a liar. Then again, you never knew anyone here to be a murderer.
+
+After a moment, the detective bites their lip and then says, "Well, the evidence doesn't point to you, but that confession was pretty blatant, even if you're saying you're innocent." They look at Annie. "You understand, right?"
+
+Annie looks upset, and you feel... guilty. You were so sure she did it. Next to Annie, Justin's breath has stilled, and he runs his hand over his pocket with the note sticking out. His other hand is holding Terry's, and she looks incredibly distraught.
+
+"I understand," Annie says finally. 
+
+The detective nods. "Good. Annie, I'd like you to stay for more questioning. The rest of you are free to go." 
+
+You feel yourself fading, heading off to...'beyond', wherever that is. You're not sure who killed you, and you guess you'll never know. You realize this crowd of distraught faces is the last sight you'll ever see.
+
+But maybe that's for the best.
+
+:: Bram's Confession [noinv nosave confession]
+You have just enough time to see everyone turn to look at you in shock before you're shoved out of Bram's body, perhaps from subconscious revulsion at losing his autonomy. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+The detective stares for a few moments, their face focused as they work through evidence in their head. "Okay," they say finally.
+
+"Wait!" Bram exclaims. "I didn't kill him. I mean, I didn't like him-" rude "-but I would never have, I'd thought about it maybe, but I'd never have killed Mort!" Bram looks around, and sees the shocked faces of the neighborhood association. You're glad you're not alone in being surprised that he didn't like you. 
+
+"The evidence doesn't match you entirely," says the detective, "but the fact that you grew wolfsbane was enough to make you highly suspicious." 
+
+Erin looks over at Bram with a concerned look on her face. Bram sputters for a moment but doesn't respond.
+
+Then the detective bluntly asks, "Was this about the marijuana?" 
+
+"I didn't kill Mort!" Bram shouts. 
+
+Justin can't stop staring at Bram with a vaguely offended but accepting face. Terry's baffled, but Annie and Erin seem pretty expressionless. When Bram looks to anyone for support, the only one that will meet his eyes is Justin. You get the feeling that Bram did not want Justin to be the one he locked eyes with.
+
+When Bram turns back to the detective, the detective says, "Look, with your confession, there's a lot of evidence. You were read your Miranda Rights, right?" 
+
+"I did not kill him."
+
+The detective sighs. "Bram Locklear - "
+
+"I did not kill him," Bram insists, and he seems distraught enough that you start to believe him.
+
+The detective sighs. "Mr. Locklear." 
+
+"I didn't." Guilt creeps upon you.
+
+"Mr. Locklear... you can pretend we're just putting you under observation, but I'm afraid we have to arrest you." 
+
+Bram looks to the others, his eyes begging for anyone to support him, but even Justin isn't looking now. Again he says, "I'm innocent", but he doesn't seem to fully believe it either, now. He walks over the detective.
+
+You feel yourself ripped from the sorry scene and from the world. You're not sure how that'll end, but you can't even begin to guess who killed you now.
+
+You never will.

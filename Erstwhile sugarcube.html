@@ -102,7 +102,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="97" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
+	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="103" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
 body {
     background: white;
     color: black;
@@ -1694,9 +1694,167 @@ You float under the raised box to examine the item. It&#39;s a piece of paper wi
     &lt;br&gt;
         &lt;&lt;return &quot;Back to what you were doing.&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
+
+&lt;!--If passage is a confession, add Play again and restore from save buttons--&gt;
+&lt;&lt;if tags().includes(&quot;confession&quot;)&gt;&gt;
+&lt;&lt;if Save.slots.has(0)&gt;&gt;
+    &lt;br&gt;&lt;br&gt;&lt;&lt;link &quot;Wait, no! Go back to your save.&quot;&gt;&gt;
+        &lt;&lt;script&gt;&gt;
+            if (Save.slots.has(0)) { 
+                Save.slots.load(0);
+            } 
+        &lt;&lt;/script&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+&lt;br&gt;&lt;br&gt;&lt;&lt;link &quot;Play again.&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+        Engine.restart();
+    &lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="PassageHeader" tags="" position="100,1225">&lt;&lt;if tags().includes(&quot;memory&quot;) and $thoughts.length == 0&gt;&gt;As you connect the two clues in your mind, you feel a strong tide of emotions and sensations flood your senses, and you know they&#39;re not your own.
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="StoryInit" tags="" position="225,1225">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Possession" tags="noinv nosave" position="225,1225">You decide to spend the rest of your ghostly energy, or whatever the hell it is, to possess $who&#39;s body itself and get it to do your bidding, though you feel you&#39;ll only have enough power to say one thing. Steeling yourself for impact, you collide with $who and extend your influence over &lt;&lt;if $who is &quot;Justin&quot;  or &quot;Bram&quot;&gt;&gt;his&lt;&lt;else&gt;&gt;her&lt;&lt;/if&gt;&gt; person.
+
+Warmth and bone and flesh wrap around you again, and you open your, or rather, $who&#39;s eyes to see the rest of the suspects and the detective looking over all of you. You must have taken longer than you realized to gain control, because everyone by now has already gathered in the waiting area to hear what the detective wants to do with them next.
+
+You didn&#39;t realize how much you missed having a body, though you know it&#39;s fleeting, though it&#39;s not your own. You can sense $who&#39;s soul sort of stuffed down beneath you, silent but fighting to wrest back control. In the few seconds you have, you open your mouth to speak.
+
+&lt;&lt;link `&quot;&#39;I confess: I killed Mort.&#39;&quot;` `$who + &quot;&#39;s Confession&quot;`)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="Justin&#39;s Confession" tags="noinv nosave confession" position="350,1225">You have just enough time to see everyone turn to look at you in shock before you&#39;re shoved out of Justin&#39;s body, perhaps from his soul fighting back at the indignance of it all. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+The detective is squinting at him with a strange look on their face. &quot;What did you say?&quot;
+
+&quot;I. Er.&quot; Justin clears his throat, looking disquieted. &quot;I&#39;m not sure why I said that, detective, but I assure you it&#39;s not true. Whatever my feelings toward the deceased are or were, I would never - &quot;
+
+&quot;Yeah, I know. Given the evidence, the idea of you being the murderer makes no sense.&quot;
+
+Terry is looking on in horror at her husband, and beside her Annie furrows her eyebrows in confusion. You look at Bram and Erin; he&#39;s doing his best to look grieved, and Erin is... more distraught that you thought she&#39;d be. You get the feeling you&#39;ve made a mistake. The panic makes your tether to the world slip slightly and you feel weaker than you already felt, which is impressive given you&#39;ve been a near-powerless ghost.
+
+&quot;Still, your confession bears further investigation and interrogation. I&#39;m afraid I&#39;m going to have to question you further.&quot;
+
+With a chagrined look on his face, Justin says, &quot;I understand, detective.&quot; 
+
+They turn to the other suspects. &quot;The rest of you are dismissed.&quot; 
+
+Your tether finally snaps and you lose your grip on the scene around you. The last thing you wonder as your spirit fades away is who truly killed you.
+
+You guess you&#39;ll never find out.</tw-passagedata><tw-passagedata pid="94" name="Terry&#39;s Confession" tags="noinv nosave confession" position="475,1225">You have just enough time to see everyone turn to look at you in shock before you&#39;re shoved out of Terry&#39;s body, perhaps from her soul fighting back in panic. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+The detective&#39;s glare is piercing, almost triumphant. &quot;Did you just confess?&quot;
+
+&quot;What? No, I!&quot; Terry looks distressed. Her hands flutter as she speaks. &quot;I-I don&#39;t know what made me say that but no, I&#39;m not, I swear, I&#39;m not! I&#39;ve - I&#39;ve just been under so much stress lately that I don&#39;t know what I&#39;m saying, I&#39;m so sorry detective! So sorry!&quot; She starts crying again.
+
+&quot;Save your tears, Mrs. Whittaker. I don&#39;t know why you said that either, but a confession&#39;s a confession. I suspected your involvement anyway. All the evidence points to you.&quot;
+
+You would smile from ear to ear if you could smile, or had ears.
+
+&quot;Now hold on, my wife would never - &quot;
+
+&quot;Mr. Whittaker,&quot; the detective holds up a hand as Justin begins to rise angrily from his seat. &quot;You should know enough, as a police officer, not to obstruct justice.&quot;
+
+Terry chokes out a sob. &quot;I…! No! Please, I can&#39;t go to jail! I didn&#39;t do it, I swear, I&#39;m innocent!&quot; She goes on like this for a bit further and you bask in both her histrionics and the detective&#39;s cool indifference. When she realizes that this is having no effect, she calms down for the first time since she entered the police station.
+
+She sniffles, and when she speaks this time, her voice is hard and cold. &quot;Fine. If you&#39;re so convinced, then fine. I won&#39;t say he completely deserved it, but that bastard had it coming anyway. He stomped over all of us and acted like he could do whatever he wanted because the community adored him, or whoever they thought he was. In my opinion that&#39;s enough of a reason. But I&#39;ll never forget what he did all those years ago. And what he was going to do to her memory.&quot;
+
+Terry looks to Annie and Justin, expecting sympathy. Instead, she sees that Annie is scowling and Justin is... devastated. It hadn&#39;t occurred to you that he wouldn&#39;t know she was the killer. Erin reaches out to him and grabs his hand, which, for once, he doesn&#39;t reject.
+
+And Bram, well, he just doesn&#39;t seem to know what&#39;s going on. This pleases you somewhat; at least the man you thought was your best friend didn&#39;t have anything to do with your death. 
+
+&quot;That&#39;s enough,&quot; the detective says. &quot;No one cares about your reasons. You killed a man. There&#39;s no reason or justification for that.&quot;
+
+She glares at them.
+
+The detective waves two officers over, one of whom pulls out handcuffs. &quot;Take her away.&quot;
+
+Whatever binds you to the land of the living breaks and you begin to fade, feeling conscious thoughts die like blown out candles. Your influence has finally ended, and the last things you feel before you disappear is the joy of sweet comeuppance.
+
+And the slightest hint of guilt.</tw-passagedata><tw-passagedata pid="95" name="Erin&#39;s Confession" tags="noinv nosave confession" position="600,1225">You have just enough time to see everyone turn to look at you in shock before you&#39;re pushed out of Erin&#39;s body, perhaps from some spiritual power of h- pff nah who are you kidding. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+There&#39;s a confusing mix of emotions on the detective&#39;s face. &quot;What did you say?&quot;
+
+Erin blinks and looks around. &quot;Well,&quot; she says in an airy voice, &quot;I suppose I just said I killed Mort.&quot;
+
+&quot;And why would you say that?&quot; the detective says slowly.
+
+&quot;I don&#39;t really know, honestly. I didn&#39;t do it, you know, and I see no reason why I would say that naturally, so I suppose the natural conclusion is I was possessed by Mort&#39;s ghost and made to as some form of retribution.&quot; She states this as lightly as you would mention the weather outside, but it&#39;s so spot on that you wonder with a jolt if maybe you&#39;d been wrong about her all this time.
+
+&quot;Possessed.&quot; The detective stares at her in disbelief, then shakes their head. &quot;Nevertheless, I&#39;ve had several reason to suspect you as the culprit; I only hesitated because not everything added up.&quot;
+
+Crap, really? You were confident that it had to be her, but now this - her lack of panic, the detective&#39;s confusion, and the little things you&#39;d decided to ignore - is filling you with waves of doubt.
+
+&quot;Yet, a confession&#39;s a confession.  You were the one getting wolfsbane from Mr. Locklear in the first place; your involvement makes too much sense. Frankly, the thing I&#39;m most surprised about is that it was intentional.&quot;
+
+Erin frowns at this, but says nothing.
+
+&quot;Detective,&quot; Justin says hesitantly, &quot;do you really think that she...I mean it&#39;s Erin...&quot;
+
+He&#39;s right, you recognize. It&#39;s Erin. Did she really have it in her to murder you? You&#39;re starting to realize the real answer.
+
+Terry grabs Justin&#39;s hand, and he holds it loosely. You don&#39;t ponder that for too long and turn your attention to Annie and Bram. Bram&#39;s eyebrows are furrowed in as far as you think they can be, as though he&#39;s trying to figure out a very hard sudoku. Annie seems saddened and shifts a bit, opening her mouth to speak a couple times but ultimately saying nothing.
+
+The detective shakes their head. &quot;My apologies, Ms. Moonchild. We&#39;re going to have to arrest you.&quot;
+
+All she does is bite her lip and nod.
+
+Finally you feel yourself fading. Doubt, panic, and guilt continue to course through you. At least when you&#39;re truly gone those feelings will go away as well.
+
+That&#39;s your last, awful thought.</tw-passagedata><tw-passagedata pid="96" name="Annie&#39;s Confession" tags="noinv nosave confession" position="725,1225">You have just enough time to see everyone turn to look at you in shock before you&#39;re shoved out of Annie&#39;s body, perhaps from subconscious disgust at you. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+The detective stares at Annie, bewilderment evident on their face. &quot;You confess?&quot;
+
+She furrows her eyebrows. &quot;I didn&#39;t mean to.&quot;
+
+&quot;But you just said you killed Mr. Freedman?&quot; the detective asks.
+
+Annie shakes her head. &quot;I don&#39;t know why I said that. I don&#39;t know. I didn&#39;t kill him.&quot;
+
+There&#39;s some murmuring coming from the others in the room. You feel a twinge of panic creeping over you. Annie seemed so convinced that she didn&#39;t kill you, and you&#39;ve never known her to be a liar. Then again, you never knew anyone here to be a murderer.
+
+After a moment, the detective bites their lip and then says, &quot;Well, the evidence doesn&#39;t point to you, but that confession was pretty blatant, even if you&#39;re saying you&#39;re innocent.&quot; They look at Annie. &quot;You understand, right?&quot;
+
+Annie looks upset, and you feel... guilty. You were so sure she did it. Next to Annie, Justin&#39;s breath has stilled, and he runs his hand over his pocket with the note sticking out. His other hand is holding Terry&#39;s, and she looks incredibly distraught.
+
+&quot;I understand,&quot; Annie says finally. 
+
+The detective nods. &quot;Good. Annie, I&#39;d like you to stay for more questioning. The rest of you are free to go.&quot; 
+
+You feel yourself fading, heading off to...&#39;beyond&#39;, wherever that is. You&#39;re not sure who killed you, and you guess you&#39;ll never know. You realize this crowd of distraught faces is the last sight you&#39;ll ever see.
+
+But maybe that&#39;s for the best.</tw-passagedata><tw-passagedata pid="97" name="Bram&#39;s Confession" tags="noinv nosave confession" position="850,1225">You have just enough time to see everyone turn to look at you in shock before you&#39;re shoved out of Bram&#39;s body, perhaps from subconscious revulsion at losing his autonomy. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+
+The detective stares for a few moments, their face focused as they work through evidence in their head. &quot;Okay,&quot; they say finally.
+
+&quot;Wait!&quot; Bram exclaims. &quot;I didn&#39;t kill him. I mean, I didn&#39;t like him-&quot; rude &quot;-but I would never have, I&#39;d thought about it maybe, but I&#39;d never have killed Mort!&quot; Bram looks around, and sees the shocked faces of the neighborhood association. You&#39;re glad you&#39;re not alone in being surprised that he didn&#39;t like you. 
+
+&quot;The evidence doesn&#39;t match you entirely,&quot; says the detective, &quot;but the fact that you grew wolfsbane was enough to make you highly suspicious.&quot; 
+
+Erin looks over at Bram with a concerned look on her face. Bram sputters for a moment but doesn&#39;t respond.
+
+Then the detective bluntly asks, &quot;Was this about the marijuana?&quot; 
+
+&quot;I didn&#39;t kill Mort!&quot; Bram shouts. 
+
+Justin can&#39;t stop staring at Bram with a vaguely offended but accepting face. Terry&#39;s baffled, but Annie and Erin seem pretty expressionless. When Bram looks to anyone for support, the only one that will meet his eyes is Justin. You get the feeling that Bram did not want Justin to be the one he locked eyes with.
+
+When Bram turns back to the detective, the detective says, &quot;Look, with your confession, there&#39;s a lot of evidence. You were read your Miranda Rights, right?&quot; 
+
+&quot;I did not kill him.&quot;
+
+The detective sighs. &quot;Bram Locklear - &quot;
+
+&quot;I did not kill him,&quot; Bram insists, and he seems distraught enough that you start to believe him.
+
+The detective sighs. &quot;Mr. Locklear.&quot; 
+
+&quot;I didn&#39;t.&quot; Guilt creeps upon you.
+
+&quot;Mr. Locklear... you can pretend we&#39;re just putting you under observation, but I&#39;m afraid we have to arrest you.&quot; 
+
+Bram looks to the others, his eyes begging for anyone to support him, but even Justin isn&#39;t looking now. Again he says, &quot;I&#39;m innocent&quot;, but he doesn&#39;t seem to fully believe it either, now. He walks over the detective.
+
+You feel yourself ripped from the sorry scene and from the world. You&#39;re not sure how that&#39;ll end, but you can&#39;t even begin to guess who killed you now.
+
+You never will.</tw-passagedata><tw-passagedata pid="98" name="StoryInit" tags="" position="975,1225">&lt;&lt;nobr&gt;&gt;
 &lt;!--Inventory--&gt;
 &lt;&lt;set $inv to []&gt;&gt;
 &lt;&lt;set $thoughts to {}&gt;&gt;
@@ -1738,7 +1896,7 @@ You float under the raised box to examine the item. It&#39;s a piece of paper wi
 
 &lt;!--Checks if item been used up or not (resets upon leaving item passage)--&gt;
 &lt;&lt;set $isItemUsed = false&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="Test" tags="justin mind" position="350,1225">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="Test" tags="justin mind" position="1100,1225">aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie&#39;s testimony, sandwich, potion, salad added
 
 [[Testing]]
     &lt;&lt;set $thoughts[&quot;Bram realizing the wolfsbane was tampered with&quot;] = &quot;- blop&quot;&gt;&gt;
@@ -1756,13 +1914,13 @@ You float under the raised box to examine the item. It&#39;s a piece of paper wi
     &lt;&lt;add &quot;Wolfsbane&quot;&gt;&gt;
     &lt;&lt;add &quot;Werewolf&quot;&gt;&gt;
     &lt;&lt;add &quot;Money&quot;&gt;&gt;
-    &lt;&lt;add &quot;Hospital Stickers&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Testing" tags="lexa" position="475,1225">&lt;&lt;print $inv.length&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Testimony links" tags="widget nobr" position="600,1225">&lt;&lt;widget &quot;testimony&quot;&gt;&gt;
+    &lt;&lt;add &quot;Hospital Stickers&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="Testing" tags="lexa" position="1225,1225">&lt;&lt;print $inv.length&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Testimony links" tags="widget nobr" position="100,1350">&lt;&lt;widget &quot;testimony&quot;&gt;&gt;
 &lt;&lt;if hasVisited($args[0]) and $who is not $args[0]&gt;&gt;
 &lt;&lt;link `&quot;Go back to &quot; + $args[0] + &quot;.&quot;` $args[0]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;br&gt;
 &lt;&lt;elseif $who is not $args[0]&gt;&gt;
 &lt;&lt;link `&quot;Listen to &quot; + $args[0] + &quot;.&quot;` $args[0]&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="Listen to Testimonies" tags="" position="725,1225">&lt;&lt;if $mindVisited is false&gt;&gt;You think about how you went inside the detective&#39;s mind. If you could find a clue there, then surely you&#39;d be able to figure out more from the minds of the suspects themselves, right?
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Listen to Testimonies" tags="" position="225,1350">&lt;&lt;if $mindVisited is false&gt;&gt;You think about how you went inside the detective&#39;s mind. If you could find a clue there, then surely you&#39;d be able to figure out more from the minds of the suspects themselves, right?
 
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;link `&quot;Enter &quot; + $who + &quot;&#39;s mind.&quot;` `$who + &quot;&#39;s mind&quot;`&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -1780,7 +1938,7 @@ What&#39;s this? A new ability has revealed itself to you: possession. You can f
 
 You should only do it once you&#39;re absolutely sure who it is, though. Are you?
 
-[[Yes, you&#39;re sure.|Possession]]&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="Justin" tags="" position="850,1225">&lt;&lt;set $who to &quot;Justin&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;Justin comes into the room silently, fidgeting with his bowtie. He sits down without hesitation.
+[[Yes, you&#39;re sure.|Possession]]&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="Justin" tags="" position="350,1350">&lt;&lt;set $who to &quot;Justin&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;Justin comes into the room silently, fidgeting with his bowtie. He sits down without hesitation.
 
 &quot;Mr. Whittaker,&quot; says the officer, &quot;Could you please describe the events of the dinner and the surrounding circumstances?&quot; 
 
@@ -1815,7 +1973,7 @@ The officer keeps interviewing Justin, asking him to recount the information in 
 &lt;&lt;add &quot;Justin&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Justin&#39;s mind&quot;)&gt;&gt;Justin looks irritated again and is rubbing his arms.&lt;&lt;else&gt;&gt;Justin is done with his testimony and is sitting stiffly, adjusting his bowtie occasionally.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="Terry" tags="" position="975,1225">&lt;&lt;set $who to &quot;Terry&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;Terry enters the room already speaking. She&#39;s sobbing heavily and keeps trying to wipe away her tears with her sleeve. 
+&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="Terry" tags="" position="475,1350">&lt;&lt;set $who to &quot;Terry&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;Terry enters the room already speaking. She&#39;s sobbing heavily and keeps trying to wipe away her tears with her sleeve. 
 
 &quot;I-I just can&#39;t believe - I&#39;m - oh my word I can&#39;t do this. Sorry, I need a minute...&quot; She takes a shaky breath and fans herself. &quot;It&#39;s just, I never, I never thought that - Mort of all people!&quot;
 
@@ -1844,7 +2002,7 @@ The officer keeps interviewing Terry, asking her to recount her testimony. You w
 &lt;&lt;add &quot;Terry&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Terry&#39;s mind&quot;)&gt;&gt;Terry has her arms wrapped around her, her teeth chattering. She looks down at the table.&lt;&lt;else&gt;&gt;Terry has gone back to crying. It&#39;s beginning to get concerning, if you&#39;re being honest.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="Erin" tags="" position="1100,1225">&lt;&lt;set $who to &quot;Erin&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;
+&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Erin" tags="" position="600,1350">&lt;&lt;set $who to &quot;Erin&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;
 When you float into the room, Erin is sitting in the cold metal chair, unspeaking. She looks uncomfortable and shakes slightly. Tears threaten to spill from her eyes, wide with bewilderment.
 
 Before that can happen, the officer speaks. &quot;Hello, Ms. Moonchild. If you could, would you please explain the events leading up to Mr. Freedman&#39;s death?&quot; 
@@ -1891,7 +2049,7 @@ The officer keeps interviewing Erin, asking her to recount the information in di
 You don&#39;t know if it&#39;s possible to respond and you&#39;re not sure you want to.
 &lt;&lt;else&gt;&gt;Erin is wringing her hands and repeating, &quot;oh, oh, oh&quot; to herself.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="Annie" tags="" position="1225,1225">&lt;&lt;set $who to &quot;Annie&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;The officer has just begun speaking when you enter the room. &quot;Good day, Ms. Smith-&quot;
+&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="Annie" tags="" position="725,1350">&lt;&lt;set $who to &quot;Annie&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;The officer has just begun speaking when you enter the room. &quot;Good day, Ms. Smith-&quot;
 
 Annie interrupts, saying, &quot;I guess it coulda been, but there&#39;s a dead man. Did you forget that or somethin&#39;?&quot;
 
@@ -1926,7 +2084,7 @@ The officer keeps interviewing Annie, asking her to recount her testimony. &quot
 &lt;&lt;add &quot;Annie&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Annie&#39;s Mind&quot;)&gt;&gt; and how her bones ache, her eyebrows knitted together.&lt;&lt;else&gt;&gt;Now that her testimony&#39;s over, Annie sits quietly at the table, gazing at her clasped hands.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Bram" tags="" position="100,1350">&lt;&lt;set $who to &quot;Bram&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;
+&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Bram" tags="" position="850,1350">&lt;&lt;set $who to &quot;Bram&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;
 Bram, poor guy, enters the room sweating, dabbing at his forehead with a handkerchief. It&#39;s clear he&#39;s nervous. You have a few guesses as to why.
 
 He sits down slowly, and listens for the officer. The officer speaks, &quot;Mr. Locklear, could you please describe the events leading up to and around Mr. Freedman&#39;s death?&quot;
@@ -1955,7 +2113,7 @@ Bram gulps and nods weakly. You think you&#39;ve heard everything important now,
 &lt;&lt;add &quot;Bram&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Bram&#39;s mind&quot;)&gt;&gt;He looks even sweatier than he normally is, eyes darting back and forth, giving the distinct impression of a trapped rabbit.&lt;&lt;else&gt;&gt;Bram sits at the table quietly, sweat dripping from his brow.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Thoughts" tags="noinv save" position="225,1350">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Thoughts" tags="noinv save" position="975,1350">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;[[Clues]] | [[Link Clues]] | Thoughts
     |  &lt;&lt;linkreplace &quot;Save&quot;&gt;&gt;
             &lt;&lt;script&gt;&gt;

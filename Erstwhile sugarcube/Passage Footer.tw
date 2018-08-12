@@ -35,4 +35,22 @@
     <br>
         <<return "Back to what you were doing.">>
     <</if>>
+
+<!--If passage is a confession, add Play again and restore from save buttons-->
+<<if tags().includes("confession")>>
+<<if Save.slots.has(0)>>
+    <br><br><<link "Wait, no! Go back to your save.">>
+        <<script>>
+            if (Save.slots.has(0)) { 
+                Save.slots.load(0);
+            } 
+        <</script>>
+    <</link>>
+<br><<link "Play again.">>
+    <<script>>
+        Engine.restart();
+    <</script>>
+<</link>>
+<</if>>
+<</if>>
 <</nobr>>
