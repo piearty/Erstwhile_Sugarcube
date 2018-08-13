@@ -1,7 +1,8 @@
 :: Config [script]
 Config.saves.autosave = true;
 Config.saves.isAllowed = function () {
-	if (State.passage != "Start") {
-    return true;
-    };
+    if (passage() === 'Start' || tags().includes('confession')) {
+        return false;
+    }
+    return true; 
 };

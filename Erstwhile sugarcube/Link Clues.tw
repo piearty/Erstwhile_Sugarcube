@@ -73,6 +73,8 @@ Click on two clues to try to link them.
         <</replace>>
 <</if>>
 
+[[Open your eyes.|$returnTo]]
+
 :: List Link Clues [nobr]
 /* Sets the clickedItem variable and opens the check. */
 <<if $inv.length > 0>>
@@ -188,6 +190,8 @@ Click on two clues to try to link them.
 <!--Extra flavor text for failures-->
 
 <<elseif $selected.includesAll("Leaves", "Petals")>>They're both probably from the same plant, but you can't see any other way they're connected meaningfully.<<set $fail += 1>>
+
+<<elseif $selected.includesAll("Wine", "Corkscrew")>>
 
 <<elseif $selected.includesAll("Cane", "Straight Tie")>>Well, you've definitely figured out that these belong to the same guy - Terry's boyfriend. You don't want to think about him further.<<set $fail += 1>>
 

@@ -63,7 +63,7 @@ You have these clues:
 You remember a lot of things, but nothing that seems important right now.
 
 <</if>>\
-<<if $inv.length > 1>>
+<<if $inv.length > 1 and !hasVisited("Link Clues")>>
 There are still gaps in the story. You can try [[linking|Link Clues]] two clues if you want; see if there's a connection.
 
 <</if>>\

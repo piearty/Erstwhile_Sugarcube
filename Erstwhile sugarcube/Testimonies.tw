@@ -93,7 +93,7 @@ She's not doing a very good job of keeping composed. You never realized you mean
 
 Still upset, but more angry, Terry continues, "That girl, I just - she has no idea what she's doing with her so-called magic, I wouldn't be surprised if drinking that finally...oh I don't want to think about it! But she's done terrible things before...regardless, whoever did it should be ashamed..."
 
-The officer keeps interviewing Terry, asking her to recount her testimony. You wonder if the officer feels bad for pushing Terry to speak, or if these types are used to that sort of  thing. You think you've heard everything important, though.\
+The officer keeps interviewing Terry, asking her to recount her testimony. You wonder if the officer feels bad for pushing Terry to speak, or if these types are used to that sort of  thing. You think you've heard everything important, though.
 <<add "Terry's Testimony">>
 <<elseif hasVisited("Terry's mind")>>Terry has her arms wrapped around her, her teeth chattering. She looks down at the table.<<else>>Terry has gone back to crying. It's beginning to get concerning, if you're being honest.<</if>>
 
@@ -140,7 +140,7 @@ Never did want - is she talking about those creepy sigils you took down? She doe
 
 Whatever. You don't really understand Erin.
 
-The officer keeps interviewing Erin, asking her to recount the information in different ways, though you're not sure she's going to get any clearer. You think you've heard everything important, though.\
+The officer keeps interviewing Erin, asking her to recount the information in different ways, though you're not sure she's going to get any clearer. You think you've heard everything important, though.
 <<add "Erin's Testimony">>
 <<elseif hasVisited("Erin's mind")>>Erin is turning her head sharply to look about the room, looking like a startled bird. "Mort!" she cries, and you freeze in place, surprised. "Is that you? Are you a spirit now?"
 
@@ -182,7 +182,7 @@ When Annie falls silent, the officer prompts, "What did you do with the sandwich
 
 "I gave it to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?" She paused. "I wish we'd made up. Feels wrong to have ill thoughts of the dead." 
 
-The officer keeps interviewing Annie, asking her to recount her testimony. "Weren't you listening?" she says grouchily before repeating. You think you've heard everything important, though.\
+The officer keeps interviewing Annie, asking her to recount her testimony. "Weren't you listening?" she says grouchily before repeating. You think you've heard everything important, though.
 <<add "Annie's Testimony">>
 <<elseif hasVisited("Annie's Mind")>> and how her bones ache, her eyebrows knitted together.<<else>>Now that her testimony's over, Annie sits quietly at the table, gazing at her clasped hands.<</if>>
 
@@ -214,7 +214,7 @@ The officer hums and writes something down. "Thank you, Mr. Locklear."
 
 "Could you please go over your testimony one more time?"
 
-Bram gulps and nods weakly. You think you've heard everything important now, though.\
+Bram gulps and nods weakly. You think you've heard everything important now, though.
 <<add "Bram's Testimony">>
 <<elseif hasVisited("Bram's mind")>>He looks even sweatier than he normally is, eyes darting back and forth, giving the distinct impression of a trapped rabbit.<<else>>Bram sits at the table quietly, sweat dripping from his brow.<</if>>
 

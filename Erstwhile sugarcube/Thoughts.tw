@@ -36,4 +36,6 @@ On this wacky journey of trying to figure out your own murderer, you've discover
 
 <<print Object.values($thoughts).join("<br>")>>
 
+<<if !Object.keys($thoughts).length == 19>>It looks like you've found out everything there is to discover about your murder. Anything else, well. You don't care about that.<</if>>
+
 [[Open your eyes.|$returnTo]]

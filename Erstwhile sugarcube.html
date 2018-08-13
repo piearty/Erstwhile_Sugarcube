@@ -160,9 +160,10 @@ a:active {
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "Config" */
 Config.saves.autosave = true;
 Config.saves.isAllowed = function () {
-	if (State.passage != "Start") {
-    return true;
-    };
+    if (passage() === 'Start' || tags().includes('confession')) {
+        return false;
+    }
+    return true; 
 };
 /* twine-user-script #2: "Story Javascript" */
 postdisplay['open-links'] = function (t) {
@@ -205,8 +206,13 @@ UIBar.destroy();</script><tw-passagedata pid="1" name="Add Item" tags="widget no
     &lt;&lt;elseif $inv.length is 0 and $lexaItems.includes($args[0]) or $inv.length is 0 and $noncombinables.includes($args[0])&gt;&gt;
         &lt;br&gt;You&#39;re not sure if you should care about this. But, just by looking at it, you can almost feel it added to your mind, as if that&#39;s an actual space you can visit.&lt;br&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;!--Links to item&#39;s page and adds it to the inventory--&gt;
+&lt;!--Links to item&#39;s page and adds it to the inventory if it&#39;s not in it already--&gt;
+&lt;&lt;if $inv.includes($args[0])&gt;&gt;
+    //You&#39;ve found the clue, &lt;nowiki&gt;&quot;&lt;/nowiki&gt;[[$args[0]]]&lt;nowiki&gt;&quot;&lt;/nowiki&gt; already.//
+&lt;&lt;else&gt;&gt;
     &lt;br&gt;//(The clue, &lt;nowiki&gt;&quot;&lt;/nowiki&gt;[[$args[0]]]&lt;nowiki&gt;&quot;&lt;/nowiki&gt; has been added to your memories.)//&lt;&lt;set $inv.pushUnique($args[0])&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Clues" tags="noinv" position="225,100">&lt;&lt;nobr&gt;&gt;
     &lt;strong&gt;Clues
     &lt;&lt;if $inv.length &gt; 1&gt;&gt;
@@ -271,7 +277,7 @@ You have these clues:
 You remember a lot of things, but nothing that seems important right now.
 
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;if $inv.length &gt; 1&gt;&gt;
+&lt;&lt;if $inv.length &gt; 1 and !hasVisited(&quot;Link Clues&quot;)&gt;&gt;
 There are still gaps in the story. You can try [[linking|Link Clues]] two clues if you want; see if there&#39;s a connection.
 
 &lt;&lt;/if&gt;&gt;\
@@ -325,12 +331,15 @@ This will erase your progress and saves. Are you sure?
 
 Thank you to all of our numerous playtesters, who helped us immensely in making the game not only fun to play, but, you know, actually playable:
 
+Aaron
+Alex
 Anna
 Ava
 Brigit
 Eleanor
 Element
 Emma
+Fish
 Haberdasher
 James
 Khun
@@ -529,7 +538,7 @@ Who do you want to listen to?
 It&#39;s a caesar salad with vinaigrette. Terry and Justin got it for you when you couldn&#39;t eat anything at the party. It was on the detective&#39;s mind-desk.\
 &lt;&lt;if hasVisited(&quot;Justin and Terry at the grocery store&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
-&lt;&lt;set $isItemUsed = True&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Aconite Poison" tags="item" position="225,350">&lt;h3&gt;Aconite Poison&lt;/h3&gt;
+&lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Aconite Poison" tags="item" position="225,350">&lt;h3&gt;Aconite Poison&lt;/h3&gt;
 This is what you were poisoned with, apparently. It was written on the autopsy report on the detective&#39;s mind-desk.\
 &lt;&lt;if hasVisited(&quot;the detective ruminating about the murder weapon&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
@@ -703,7 +712,7 @@ A dusty bottle of Loup-Rouge wine, bought by Bram a couple days ago, floating in
 
 &lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Corkscrew" tags="item" position="1225,600">&lt;h3&gt;Corkscrew&lt;/h3&gt;
 A //really// tacky shark-shaped keychain corkscrew that Bram used to open your bottle of Loup-Rouge.\
-&lt;&lt;if $visitedPages contains &quot;you distracting Justin in front of Bram&#39;s house&quot;&gt;&gt;
+&lt;&lt;if hasVisited(&quot;you distracting Justin in front of Bram&#39;s house&quot;)&gt;&gt;
 
 &lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Werewolf" tags="item" position="100,725">&lt;h3&gt;Werewolf&lt;/h3&gt;
 You, apparently? According to Erin? That&#39;s what she was telling Annie anyway.\
@@ -815,7 +824,9 @@ Click on two clues to try to link them.
         &lt;&lt;replace &quot;#Selected&quot;&gt;&gt;
             &lt;&lt;include &quot;List Selected&quot;&gt;&gt;
         &lt;&lt;/replace&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="List Link Clues" tags="nobr" position="475,850">/* Sets the clickedItem variable and opens the check. */
+&lt;&lt;/if&gt;&gt;
+
+[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="64" name="List Link Clues" tags="nobr" position="475,850">/* Sets the clickedItem variable and opens the check. */
 &lt;&lt;if $inv.length &gt; 0&gt;&gt;
     &lt;&lt;for _n, _item range $inv.sort()&gt;&gt;
         &lt;&lt;if passage() == &quot;Link Clues&quot;&gt;&gt;
@@ -851,7 +862,7 @@ Click on two clues to try to link them.
         &lt;&lt;combine &quot;Justin and Terry at the grocery store&quot;&gt;&gt;
     
 &lt;&lt;elseif $selected.includesAll(&quot;Sandwich&quot;, &quot;Annie&#39;s Testimony&quot;)&gt;&gt;
-        &lt;&lt;combine &quot;&quot;your fight with Annie&gt;&gt;
+        &lt;&lt;combine &quot;your fight with Annie&quot;&gt;&gt;
         
 &lt;&lt;elseif $selected.includesAll(&quot;Old Newspaper&quot;, &quot;Petition&quot;)&gt;&gt;
         &lt;&lt;combine &quot;Terry&#39;s phone conversation&quot;&gt;&gt;
@@ -923,6 +934,8 @@ Click on two clues to try to link them.
 &lt;!--Extra flavor text for failures--&gt;
 
 &lt;&lt;elseif $selected.includesAll(&quot;Leaves&quot;, &quot;Petals&quot;)&gt;&gt;They&#39;re both probably from the same plant, but you can&#39;t see any other way they&#39;re connected meaningfully.&lt;&lt;set $fail += 1&gt;&gt;
+
+&lt;&lt;elseif $selected.includesAll(&quot;Wine&quot;, &quot;Corkscrew&quot;)&gt;&gt;
 
 &lt;&lt;elseif $selected.includesAll(&quot;Cane&quot;, &quot;Straight Tie&quot;)&gt;&gt;Well, you&#39;ve definitely figured out that these belong to the same guy - Terry&#39;s boyfriend. You don&#39;t want to think about him further.&lt;&lt;set $fail += 1&gt;&gt;
 
@@ -1101,7 +1114,7 @@ Oh, hold on, was that supposed to be something you were figuring &lt;&lt;linkapp
 
 Of course you know about Bram growing marijuana. You&#39;ve been blackmailing him about it for &lt;&lt;linkappend &quot;ages.&quot;&gt;&gt;
 
-You don&#39;t have to spell out everything you know all the time, do you? Jeez.&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;linkreplace&gt;&gt; for...what was it? &quot;Medicinal purposes&quot;? That&#39;s a little problem. Thanks to me, of course.&quot;
+You don&#39;t have to spell out everything you know all the time, do you? Jeez.&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; for...what was it? &quot;Medicinal purposes&quot;? That&#39;s a little problem. Thanks to me, of course.&quot;
 &lt;&lt;add &quot;Marijuana&quot;&gt;&gt;&lt;span id=&quot;m&quot;&gt;&lt;/span&gt;
 
 Living Mort chuckles again and takes another sip of wine. &quot;Just keep doing this and it won&#39;t ever be a big problem. Right?&quot; 
@@ -1747,24 +1760,24 @@ You float under the raised box to examine the item. It&#39;s a piece of paper wi
 
 &lt;!--If passage is a confession, add Play again and restore from save buttons--&gt;
 &lt;&lt;if tags().includes(&quot;confession&quot;)&gt;&gt;
-&lt;&lt;if Save.slots.has(0)&gt;&gt;
-    &lt;br&gt;&lt;br&gt;&lt;&lt;link &quot;Wait, no! Go back to your save.&quot;&gt;&gt;
-        &lt;&lt;script&gt;&gt;
-            if (Save.slots.has(0)) { 
-                Save.slots.load(0);
-            } 
-        &lt;&lt;/script&gt;&gt;
-    &lt;&lt;/link&gt;&gt;
-&lt;br&gt;&lt;&lt;link &quot;Play again.&quot;&gt;&gt;
+    &lt;&lt;if Save.slots.has(0)&gt;&gt;
+        &lt;br&gt;&lt;br&gt;&lt;&lt;link &quot;Wait, no! Go back to your save.&quot;&gt;&gt;
+            &lt;&lt;script&gt;&gt;
+                if (Save.slots.has(0)) { 
+                    Save.slots.load(0);
+                } 
+            &lt;&lt;/script&gt;&gt;
+        &lt;&lt;/link&gt;&gt;
+    &lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;br&gt;&lt;&lt;link &quot;Play again.&quot;&gt;&gt;
     &lt;&lt;script&gt;&gt;
         Engine.restart();
     &lt;&lt;/script&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="PassageHeader" tags="" position="350,1225">&lt;&lt;if tags().includes(&quot;memory&quot;) and $thoughts.length == 0&gt;&gt;As you connect the two clues in your mind, you feel a strong tide of emotions and sensations flood your senses, and you know they&#39;re not your own.
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Possession" tags="noinv" position="475,1225">You decide to spend the rest of your ghostly energy, or whatever the hell it is, to possess $who&#39;s body itself and get it to do your bidding, though you feel you&#39;ll only have enough power to say one thing. Steeling yourself for impact, you collide with $who and extend your influence over &lt;&lt;if $who is &quot;Justin&quot;  or &quot;Bram&quot;&gt;&gt;his&lt;&lt;else&gt;&gt;her&lt;&lt;/if&gt;&gt; person.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Possession" tags="noinv confession" position="475,1225">You decide to spend the rest of your ghostly energy, or whatever the hell it is, to possess $who&#39;s body itself and get it to do your bidding, though you feel you&#39;ll only have enough power to say one thing. Steeling yourself for impact, you collide with $who and extend your influence over &lt;&lt;if $who is &quot;Justin&quot;  or &quot;Bram&quot;&gt;&gt;his&lt;&lt;else&gt;&gt;her&lt;&lt;/if&gt;&gt; person.
 
 Warmth and bone and flesh wrap around you again, and you open your, or rather, $who&#39;s eyes to see the rest of the suspects and the detective looking over all of you. You must have taken longer than you realized to gain control, because everyone by now has already gathered in the waiting area to hear what the detective wants to do with them next.
 
@@ -2052,7 +2065,7 @@ She&#39;s not doing a very good job of keeping composed. You never realized you 
 
 Still upset, but more angry, Terry continues, &quot;That girl, I just - she has no idea what she&#39;s doing with her so-called magic, I wouldn&#39;t be surprised if drinking that finally...oh I don&#39;t want to think about it! But she&#39;s done terrible things before...regardless, whoever did it should be ashamed...&quot;
 
-The officer keeps interviewing Terry, asking her to recount her testimony. You wonder if the officer feels bad for pushing Terry to speak, or if these types are used to that sort of  thing. You think you&#39;ve heard everything important, though.\
+The officer keeps interviewing Terry, asking her to recount her testimony. You wonder if the officer feels bad for pushing Terry to speak, or if these types are used to that sort of  thing. You think you&#39;ve heard everything important, though.
 &lt;&lt;add &quot;Terry&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Terry&#39;s mind&quot;)&gt;&gt;Terry has her arms wrapped around her, her teeth chattering. She looks down at the table.&lt;&lt;else&gt;&gt;Terry has gone back to crying. It&#39;s beginning to get concerning, if you&#39;re being honest.&lt;&lt;/if&gt;&gt;
 
@@ -2096,7 +2109,7 @@ Never did want - is she talking about those creepy sigils you took down? She doe
 
 Whatever. You don&#39;t really understand Erin.
 
-The officer keeps interviewing Erin, asking her to recount the information in different ways, though you&#39;re not sure she&#39;s going to get any clearer. You think you&#39;ve heard everything important, though.\
+The officer keeps interviewing Erin, asking her to recount the information in different ways, though you&#39;re not sure she&#39;s going to get any clearer. You think you&#39;ve heard everything important, though.
 &lt;&lt;add &quot;Erin&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Erin&#39;s mind&quot;)&gt;&gt;Erin is turning her head sharply to look about the room, looking like a startled bird. &quot;Mort!&quot; she cries, and you freeze in place, surprised. &quot;Is that you? Are you a spirit now?&quot;
 
@@ -2134,7 +2147,7 @@ When Annie falls silent, the officer prompts, &quot;What did you do with the san
 
 &quot;I gave it to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?&quot; She paused. &quot;I wish we&#39;d made up. Feels wrong to have ill thoughts of the dead.&quot; 
 
-The officer keeps interviewing Annie, asking her to recount her testimony. &quot;Weren&#39;t you listening?&quot; she says grouchily before repeating. You think you&#39;ve heard everything important, though.\
+The officer keeps interviewing Annie, asking her to recount her testimony. &quot;Weren&#39;t you listening?&quot; she says grouchily before repeating. You think you&#39;ve heard everything important, though.
 &lt;&lt;add &quot;Annie&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Annie&#39;s Mind&quot;)&gt;&gt; and how her bones ache, her eyebrows knitted together.&lt;&lt;else&gt;&gt;Now that her testimony&#39;s over, Annie sits quietly at the table, gazing at her clasped hands.&lt;&lt;/if&gt;&gt;
 
@@ -2163,7 +2176,7 @@ The officer hums and writes something down. &quot;Thank you, Mr. Locklear.&quot;
 
 &quot;Could you please go over your testimony one more time?&quot;
 
-Bram gulps and nods weakly. You think you&#39;ve heard everything important now, though.\
+Bram gulps and nods weakly. You think you&#39;ve heard everything important now, though.
 &lt;&lt;add &quot;Bram&#39;s Testimony&quot;&gt;&gt;
 &lt;&lt;elseif hasVisited(&quot;Bram&#39;s mind&quot;)&gt;&gt;He looks even sweatier than he normally is, eyes darting back and forth, giving the distinct impression of a trapped rabbit.&lt;&lt;else&gt;&gt;Bram sits at the table quietly, sweat dripping from his brow.&lt;&lt;/if&gt;&gt;
 
@@ -2203,6 +2216,8 @@ This will erase your progress and saves. Are you sure?
 On this wacky journey of trying to figure out your own murderer, you&#39;ve discovered a bunch of other things too.
 
 &lt;&lt;print Object.values($thoughts).join(&quot;&lt;br&gt;&quot;)&gt;&gt;
+
+&lt;&lt;if !Object.keys($thoughts).length == 19&gt;&gt;It looks like you&#39;ve found out everything there is to discover about your murder. Anything else, well. You don&#39;t care about that.&lt;&lt;/if&gt;&gt;
 
 [[Open your eyes.|$returnTo]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
