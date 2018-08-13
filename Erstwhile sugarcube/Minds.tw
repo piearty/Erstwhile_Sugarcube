@@ -191,7 +191,7 @@ and a <<openlink "reminder." "reminderText">>reminder.<<replace "#reminder">>
 Huh. You never would have guessed.
 <<add "Medicine Reminder">><</replace>><</openlink>> <span id="reminder"></span>
 
-On the counter sit a <<linkreplace "flower">>hyacinth, maybe,<</linkreplace>> and grains of... sand?
+On the counter sits a <<linkreplace "flower">>hyacinth, maybe,<</linkreplace>> and grains of... sand?
 
 You look down. The floor is covered in sand. Or maybe it's just entirely sand; you've no way of knowing. You're not really sure why that is, but you've decided to accept it. Hmm, is there something buried in there? Looks like some sort of <<openlink "form." "formText">>form.<<replace "#form">> -
 
