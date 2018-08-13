@@ -101,6 +101,7 @@ Click on two clues to try to link them.
 <<widget "combine">>
 <<set $combo = $args[0]>>
 <<set $selected = []>>
+<<set $fail to 0>>
 <<if hasVisited($combo)>>
     You found that memory about $combo already...but maybe you could take a quick peek at it [[again|$combo]].
 <<else>>
