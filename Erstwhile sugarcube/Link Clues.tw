@@ -43,6 +43,8 @@ Click on two clues to try to link them.
  
 <span id="Selected"><<include "List Selected">></span>
 <span id="Link Clues"><<include "List Link Clues">></span>
+
+[[Open your eyes.|$returnTo]]
  
 :: List Selected [nobr]
 <<if $selected.length > 0>>
@@ -73,23 +75,26 @@ Click on two clues to try to link them.
         <</replace>>
 <</if>>
 
-[[Open your eyes.|$returnTo]]
-
 :: List Link Clues [nobr]
 /* Sets the clickedItem variable and opens the check. */
 <<if $inv.length > 0>>
-    <<for _n, _item range $inv.sort()>>
-        <<if passage() == "Link Clues">>
-            <<capture _item>>
-                <<link _item>>
-                    <<set $selected.push(_item)>>
+<<nobr>><<set _tmp = "">><table><col width="40%"><col width="40%"><col width="40%">
+    <<for _i, _item range $inv.sort()>>
+        <<set _tmp += '<td><<link "' + _item +'">>
+                    <<set $selected.push("' + _item +'")>>
                     <<replace "#Selected">>
                         <<include "List Selected">>
                     <</replace>>
-                <</link>><<if _n < $inv.length - 1>>, <</if>>
-            <</capture>>
+                <</link>></td>'>>
+        <<if _i % 3 == 2>>
+            <<print "<tr>" + _tmp + "</tr>">>
+            <<set _tmp = "">>
         <</if>>
-    <</for>>
+<</for>>
+<<if _tmp != "">>
+    <<print "<tr>" + _tmp + "</tr>">>
+<</if>>
+</table><</nobr>>
 <</if>>
 
 ::Combovaluation [widget nobr]

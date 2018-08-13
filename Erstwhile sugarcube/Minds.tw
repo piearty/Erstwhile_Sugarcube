@@ -7,7 +7,7 @@ Hmm, no. Something tells you this isn't an actual office; it's more a representa
 
 Yeah. Mind feels right to you, going by your //ghost sense//...or whatever it is.
 
-Looks like you were wrong about your lack of <<link "ghost powers">><<replace "#powers">>Though you don't recall mind-jumping to be a 'ghost' thing...still, rolling with it. What else would you do?<</replace>><</link>> after all. <span id="powers"></span><</linkappend>><</linkreplace>><</linkreplace>><</if>>
+Looks like you were wrong about your lack of <<linkreplace "ghost powers">>ghost powers<<replace "#powers">>Though you don't recall mind-jumping to be a 'ghost' thing...still, rolling with it. What else would you do?<</replace>><</linkreplace>> after all. <span id="powers"></span><</linkappend>><</linkreplace>><</linkreplace>><</if>>
 The walls, an inoffensive light grey, are covered in <<linkreplace "photographs">>photographs<<replace "#photos">>
 
 Hey, there's you! You don't look that good. You wish they'd used a picture from when you were alive, at the very least.<</replace>><</linkreplace>> of missing persons and dead people. <span id="photos"></span>

@@ -40,7 +40,7 @@ Bram was telling Annie about it while he sold her some <<linkappend "weed.">> - 
 <h3>Justin's Testimony</h3>
 "Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before the day itself. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn't because I was busy, but..."
 
-"Yeah, `[I was busy with]` patrols, talks with schools, //more// patrols...I mean. You know how it is."
+"Yeah, [I was busy with] patrols, talks with schools, //more// patrols...I mean. You know how it is."
 
 "Mort wasn't helping out because he was also busy with RNA matters. Apparently." He mutters the last word.
 
@@ -78,7 +78,7 @@ Bram was telling Annie about it while he sold her some <<linkappend "weed.">> - 
 
 "See, the association came up with the idea for the dinner, and everyone was really excited, but there was a negative aura in the air, I could feel it.
 
-"`[Why?]` Well I think that's obvious.
+"[Why?] Well I think that's obvious.
 
 "Well, earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We'd baked everything the day before- Annie, Bram, and I, and for some reason Mort didn't like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie's aura flared up, and of course everyone loves Annie so everyone else got frustrated-
 
@@ -88,7 +88,7 @@ Bram was telling Annie about it while he sold her some <<linkappend "weed.">> - 
 
 "I had prepared the potion for Mort because I thought he was in danger, and I was right.
                       
-"Ingredients that protect `[were in the potion]`, of course.
+"Ingredients that protect [were in the potion], of course.
 
 "I thought the potion would work. It was supposed to protect him, though I guess he never did want my protection."\
 <<if hasVisited("you drinking Erin's potion")>>
@@ -97,19 +97,19 @@ Bram was telling Annie about it while he sold her some <<linkappend "weed.">> - 
 
 :: Annie's Testimony [item]
 <h3>Annie's Testimony</h3>
-"I guess it coulda been `[a good day]`, but there's a dead man. Did you forget that or somethin'?
+"I guess it coulda been [a good day], but there's a dead man. Did you forget that or somethin'?
 
 "Where are we startin'? We fought this morning...
 
 "Well, all of yesterday Erin, Bram, and I were baking. Justin couldn't make it, busy as always, and Terry is a terrible cook. Mort was no help. If he'd been there we wouldn't have had -
 
-"I was getting `[to the fight]`, officer. If he'd been there we wouldn't have had the fight. He was sayin' he wouldn't eat the food, and naturally I took offense to that, I mean, spendin' hours in the kitchen cookin' just to have your friend refuse because he don't like nuts!
+"I was getting [to the fight], officer. If he'd been there we wouldn't have had the fight. He was sayin' he wouldn't eat the food, and naturally I took offense to that, I mean, spendin' hours in the kitchen cookin' just to have your friend refuse because he don't like nuts!
 
 "Now, if only he'd helped he coulda said that while we were baking. //Before// I put the nuts in everything. And after Justin said it'd be fine, encouraged me even...hmph.
 
 "I couldn't just let the man starve. After we exchanged some fighting words, I made him a sandwich. Everyone else went off to the party- except Justin and Terry. They went to the store.
 
-"I gave `[the sandwich]` to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?" She paused. "I wish we'd made up. Feels wrong to have ill thoughts of the dead."\
+"I gave [the sandwich] to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?" She paused. "I wish we'd made up. Feels wrong to have ill thoughts of the dead."\
 <<if hasVisited("your fight with Annie", "Terry giving Justin the nut article")>>
 
 <<set $isItemUsed = true>><</if>>

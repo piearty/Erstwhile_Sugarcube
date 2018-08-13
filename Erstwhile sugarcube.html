@@ -348,7 +348,7 @@ Lordlyhour
 Morgan
 Rebekka
 
-Extra special thanks to Chapel and TheMadExile from the Twine discord server! Thank you for helping me with code and generally being awesome. - Maddie
+Extra special thanks to Chapel, HiEv, and TheMadExile from the Twine discord server! Thank you for helping me with code and generally being awesome. - Maddie
 
 [[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="4" name="Hints" tags="noinv nobr" position="475,100">&lt;h1&gt;Hints&lt;/h1&gt;
 &lt;&lt;set $bigHints = [&quot;Several of the clues cannot be combined at all.&quot;, &quot;Sure there&#39;s a reason why you don&#39;t want to think about some of the clues. Are you going to say what it is? Hell no.&quot;]&gt;&gt;
@@ -558,7 +558,7 @@ Bram was telling Annie about it while he sold her some &lt;&lt;linkappend &quot;
 &lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Justin&#39;s Testimony" tags="item" position="725,350">&lt;h3&gt;Justin&#39;s Testimony&lt;/h3&gt;
 &quot;Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before the day itself. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn&#39;t because I was busy, but...&quot;
 
-&quot;Yeah, `[I was busy with]` patrols, talks with schools, //more// patrols...I mean. You know how it is.&quot;
+&quot;Yeah, [I was busy with] patrols, talks with schools, //more// patrols...I mean. You know how it is.&quot;
 
 &quot;Mort wasn&#39;t helping out because he was also busy with RNA matters. Apparently.&quot; He mutters the last word.
 
@@ -590,7 +590,7 @@ Bram was telling Annie about it while he sold her some &lt;&lt;linkappend &quot;
 
 &quot;See, the association came up with the idea for the dinner, and everyone was really excited, but there was a negative aura in the air, I could feel it.
 
-&quot;`[Why?]` Well I think that&#39;s obvious.
+&quot;[Why?] Well I think that&#39;s obvious.
 
 &quot;Well, earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We&#39;d baked everything the day before- Annie, Bram, and I, and for some reason Mort didn&#39;t like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie&#39;s aura flared up, and of course everyone loves Annie so everyone else got frustrated-
 
@@ -600,25 +600,25 @@ Bram was telling Annie about it while he sold her some &lt;&lt;linkappend &quot;
 
 &quot;I had prepared the potion for Mort because I thought he was in danger, and I was right.
                       
-&quot;Ingredients that protect `[were in the potion]`, of course.
+&quot;Ingredients that protect [were in the potion], of course.
 
 &quot;I thought the potion would work. It was supposed to protect him, though I guess he never did want my protection.&quot;\
 &lt;&lt;if hasVisited(&quot;you drinking Erin&#39;s potion&quot;)&gt;&gt;
 
 &lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Annie&#39;s Testimony" tags="item" position="1100,350">&lt;h3&gt;Annie&#39;s Testimony&lt;/h3&gt;
-&quot;I guess it coulda been `[a good day]`, but there&#39;s a dead man. Did you forget that or somethin&#39;?
+&quot;I guess it coulda been [a good day], but there&#39;s a dead man. Did you forget that or somethin&#39;?
 
 &quot;Where are we startin&#39;? We fought this morning...
 
 &quot;Well, all of yesterday Erin, Bram, and I were baking. Justin couldn&#39;t make it, busy as always, and Terry is a terrible cook. Mort was no help. If he&#39;d been there we wouldn&#39;t have had -
 
-&quot;I was getting `[to the fight]`, officer. If he&#39;d been there we wouldn&#39;t have had the fight. He was sayin&#39; he wouldn&#39;t eat the food, and naturally I took offense to that, I mean, spendin&#39; hours in the kitchen cookin&#39; just to have your friend refuse because he don&#39;t like nuts!
+&quot;I was getting [to the fight], officer. If he&#39;d been there we wouldn&#39;t have had the fight. He was sayin&#39; he wouldn&#39;t eat the food, and naturally I took offense to that, I mean, spendin&#39; hours in the kitchen cookin&#39; just to have your friend refuse because he don&#39;t like nuts!
 
 &quot;Now, if only he&#39;d helped he coulda said that while we were baking. //Before// I put the nuts in everything. And after Justin said it&#39;d be fine, encouraged me even...hmph.
 
 &quot;I couldn&#39;t just let the man starve. After we exchanged some fighting words, I made him a sandwich. Everyone else went off to the party- except Justin and Terry. They went to the store.
 
-&quot;I gave `[the sandwich]` to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?&quot; She paused. &quot;I wish we&#39;d made up. Feels wrong to have ill thoughts of the dead.&quot;\
+&quot;I gave [the sandwich] to Mort, of course. Why would I make a sandwich to feed a man and not give it to him?&quot; She paused. &quot;I wish we&#39;d made up. Feels wrong to have ill thoughts of the dead.&quot;\
 &lt;&lt;if hasVisited(&quot;your fight with Annie&quot;, &quot;Terry giving Justin the nut article&quot;)&gt;&gt;
 
 &lt;&lt;set $isItemUsed = true&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Bram&#39;s Testimony" tags="item" position="1225,350">&lt;h3&gt;Bram&#39;s Testimony&lt;/h3&gt;
@@ -798,7 +798,9 @@ This will erase your progress and saves. Are you sure?
 Click on two clues to try to link them.
  
 &lt;span id=&quot;Selected&quot;&gt;&lt;&lt;include &quot;List Selected&quot;&gt;&gt;&lt;/span&gt;
-&lt;span id=&quot;Link Clues&quot;&gt;&lt;&lt;include &quot;List Link Clues&quot;&gt;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="63" name="List Selected" tags="nobr" position="350,850">&lt;&lt;if $selected.length &gt; 0&gt;&gt;
+&lt;span id=&quot;Link Clues&quot;&gt;&lt;&lt;include &quot;List Link Clues&quot;&gt;&gt;&lt;/span&gt;
+
+[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="63" name="List Selected" tags="nobr" position="350,850">&lt;&lt;if $selected.length &gt; 0&gt;&gt;
     &lt;&lt;for _item range $selected&gt;&gt;
         _item selected.&lt;br&gt;
     &lt;&lt;/for&gt;&gt;
@@ -824,22 +826,25 @@ Click on two clues to try to link them.
         &lt;&lt;replace &quot;#Selected&quot;&gt;&gt;
             &lt;&lt;include &quot;List Selected&quot;&gt;&gt;
         &lt;&lt;/replace&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-
-[[Open your eyes.|$returnTo]]</tw-passagedata><tw-passagedata pid="64" name="List Link Clues" tags="nobr" position="475,850">/* Sets the clickedItem variable and opens the check. */
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="List Link Clues" tags="nobr" position="475,850">/* Sets the clickedItem variable and opens the check. */
 &lt;&lt;if $inv.length &gt; 0&gt;&gt;
-    &lt;&lt;for _n, _item range $inv.sort()&gt;&gt;
-        &lt;&lt;if passage() == &quot;Link Clues&quot;&gt;&gt;
-            &lt;&lt;capture _item&gt;&gt;
-                &lt;&lt;link _item&gt;&gt;
-                    &lt;&lt;set $selected.push(_item)&gt;&gt;
+&lt;&lt;nobr&gt;&gt;&lt;&lt;set _tmp = &quot;&quot;&gt;&gt;&lt;table&gt;&lt;col width=&quot;40%&quot;&gt;&lt;col width=&quot;40%&quot;&gt;&lt;col width=&quot;40%&quot;&gt;
+    &lt;&lt;for _i, _item range $inv.sort()&gt;&gt;
+        &lt;&lt;set _tmp += &#39;&lt;td&gt;&lt;&lt;link &quot;&#39; + _item +&#39;&quot;&gt;&gt;
+                    &lt;&lt;set $selected.push(&quot;&#39; + _item +&#39;&quot;)&gt;&gt;
                     &lt;&lt;replace &quot;#Selected&quot;&gt;&gt;
                         &lt;&lt;include &quot;List Selected&quot;&gt;&gt;
                     &lt;&lt;/replace&gt;&gt;
-                &lt;&lt;/link&gt;&gt;&lt;&lt;if _n &lt; $inv.length - 1&gt;&gt;, &lt;&lt;/if&gt;&gt;
-            &lt;&lt;/capture&gt;&gt;
+                &lt;&lt;/link&gt;&gt;&lt;/td&gt;&#39;&gt;&gt;
+        &lt;&lt;if _i % 3 == 2&gt;&gt;
+            &lt;&lt;print &quot;&lt;tr&gt;&quot; + _tmp + &quot;&lt;/tr&gt;&quot;&gt;&gt;
+            &lt;&lt;set _tmp = &quot;&quot;&gt;&gt;
         &lt;&lt;/if&gt;&gt;
-    &lt;&lt;/for&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+&lt;&lt;if _tmp != &quot;&quot;&gt;&gt;
+    &lt;&lt;print &quot;&lt;tr&gt;&quot; + _tmp + &quot;&lt;/tr&gt;&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;/table&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Combovaluation" tags="widget nobr" position="600,850">&lt;&lt;widget &quot;combine&quot;&gt;&gt;
 &lt;&lt;set $combo = $args[0]&gt;&gt;
 &lt;&lt;set $selected = []&gt;&gt;
@@ -1526,7 +1531,7 @@ Hmm, no. Something tells you this isn&#39;t an actual office; it&#39;s more a re
 
 Yeah. Mind feels right to you, going by your //ghost sense//...or whatever it is.
 
-Looks like you were wrong about your lack of &lt;&lt;link &quot;ghost powers&quot;&gt;&gt;&lt;&lt;replace &quot;#powers&quot;&gt;&gt;Though you don&#39;t recall mind-jumping to be a &#39;ghost&#39; thing...still, rolling with it. What else would you do?&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; after all. &lt;span id=&quot;powers&quot;&gt;&lt;/span&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
+Looks like you were wrong about your lack of &lt;&lt;linkreplace &quot;ghost powers&quot;&gt;&gt;ghost powers&lt;&lt;replace &quot;#powers&quot;&gt;&gt;Though you don&#39;t recall mind-jumping to be a &#39;ghost&#39; thing...still, rolling with it. What else would you do?&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; after all. &lt;span id=&quot;powers&quot;&gt;&lt;/span&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
 The walls, an inoffensive light grey, are covered in &lt;&lt;linkreplace &quot;photographs&quot;&gt;&gt;photographs&lt;&lt;replace &quot;#photos&quot;&gt;&gt;
 
 Hey, there&#39;s you! You don&#39;t look that good. You wish they&#39;d used a picture from when you were alive, at the very least.&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; of missing persons and dead people. &lt;span id=&quot;photos&quot;&gt;&lt;/span&gt;
