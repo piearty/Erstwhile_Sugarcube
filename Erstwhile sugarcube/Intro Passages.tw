@@ -27,7 +27,7 @@ You can still <<link "restart">><<script>>
                 <</link>> everything if you want (This will erase your saves).
 <<else>><<goto "Intro">><</if>>
 
-:: Intro [noinv]
+:: Intro [noinv intro]
 It was a pretty good Thanksgiving until you keeled over and died.
 
 The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less <<linkappend "//eavesdropping//">>, regardless of what Bram said,<</linkappend>> and more //surveying//, - it was having the bonding effect you wanted all along.

@@ -160,7 +160,7 @@ a:active {
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "Config" */
 Config.saves.autosave = true;
 Config.saves.isAllowed = function () {
-    if (passage() === 'Start' || tags().includes('confession')) {
+    if (passage() === 'Start' || tags().includesAny('confession', 'intro')) {
         return false;
     }
     return true; 
@@ -447,7 +447,7 @@ You can still &lt;&lt;link &quot;restart&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
                         Engine.restart();
                         &lt;&lt;/script&gt;&gt;
                 &lt;&lt;/link&gt;&gt; everything if you want (This will erase your saves).
-&lt;&lt;else&gt;&gt;&lt;&lt;goto &quot;Intro&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro" tags="noinv" position="725,100">It was a pretty good Thanksgiving until you keeled over and died.
+&lt;&lt;else&gt;&gt;&lt;&lt;goto &quot;Intro&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro" tags="noinv intro" position="725,100">It was a pretty good Thanksgiving until you keeled over and died.
 
 The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less &lt;&lt;linkappend &quot;//eavesdropping//&quot;&gt;&gt;, regardless of what Bram said,&lt;&lt;/linkappend&gt;&gt; and more //surveying//, - it was having the bonding effect you wanted all along.
 

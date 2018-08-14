@@ -1,7 +1,7 @@
 :: Config [script]
 Config.saves.autosave = true;
 Config.saves.isAllowed = function () {
-    if (passage() === 'Start' || tags().includes('confession')) {
+    if (passage() === 'Start' || tags().includesAny('confession', 'intro')) {
         return false;
     }
     return true; 
