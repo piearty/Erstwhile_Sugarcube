@@ -61,6 +61,22 @@ You have these clues:
 </table><</nobr>>
 <<else>>
 You remember a lot of things, but nothing that seems important right now.
+<</if>>
+<<if $setAside.length > 0>>
+
+You have set these clues aside:
+<<nobr>><<set _tmp = "">><table><col width="40%"><col width="40%"><col width="40%">
+    <<for _i, _item range $setAside.sort()>>
+        <<set _tmp += "<td>[[" + _item + "]]</td>">>
+        <<if _i % 3 == 2>>
+            <<print "<tr>" + _tmp + "</tr>">>
+            <<set _tmp = "">>
+        <</if>>
+<</for>>
+<<if _tmp != "">>
+    <<print "<tr>" + _tmp + "</tr>">>
+<</if>>
+</table><</nobr>>
 
 <</if>>\
 <<if $inv.length > 1 and !hasVisited("Link Clues")>>

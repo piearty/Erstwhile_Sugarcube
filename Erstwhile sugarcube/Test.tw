@@ -5,7 +5,7 @@ aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's tes
     <<set $thoughts["Bram realizing the wolfsbane was tampered with"] = "- blop">>
     <<set $thoughts["the detective ruminating about the murder weapon"] = "- blarp">>
     <<add "Aconite Poison">>
-    <<add "Medicine Reminder">>
+<!--    <<add "Medicine Reminder">>
     <<add "Sigils">>
     <<add "Potion">>
     <<add "Straight Tie">>
@@ -14,9 +14,14 @@ aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's tes
     <<add "Sandwich">>
     <<add "Salad">>
     <<add "Marijuana">>
-    <<add "Wolfsbane">>
+    <<add "Wolfsbane">>-->
     <<add "Werewolf">>
     <<add "Money">>
     <<add "Hospital Stickers">>
+
+original: <<= $inv>>
+return: <<= $inv.delete('Sandwich')>>
+after: <<= $inv>>
+
 :: Testing [lexa]
 <<print $inv.length>>

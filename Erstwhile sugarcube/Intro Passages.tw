@@ -32,7 +32,7 @@ It was a pretty good Thanksgiving until you keeled over and died.
 
 The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less <<linkappend "//eavesdropping//">>, regardless of what Bram said,<</linkappend>> and more //surveying//, - it was having the bonding effect you wanted all along.
 
-Yes, everything was going perfectly - that is, until you started feeling, quoth yourself as beads of sweat dripped down your chin, "a bit crappy". "Crappy" turned out to be a terribly understated description of your heart attack, especially with the <<linkappend "vomiting and suffocation">> - which you personally found excessive -<</linkappend>> piled on top of it. Though 911 was called as soon as you started convulsing, and the EMTs tried their damndest to save you, things ended in a non-miraculous way.
+Yes, everything was going perfectly - until, as you said yourself while beads of sweat dripped down your chin, you started to feel "a bit crappy". "Crappy" turned out to be a terribly understated description of your heart attack, especially with the <<linkappend "vomiting and suffocation">> - which you personally found excessive -<</linkappend>> piled on top of it. Though 911 was called as soon as you started convulsing, and the EMTs tried their damndest to save you, things ended in a non-miraculous way.
 
 In other words, you're a ghost now.
 
@@ -44,7 +44,7 @@ In other words, you're a ghost now.
 <<link "//One need not be a chamber to be haunted,<br>One need not be a house;<br>The brain has corridors surpassing<br>Material place.<br><br>-Emily Dickinson//" "Welp">><</link>>
 
 :: Welp [noinv]
-Even though you're dead, a nagging feeling at the back of your no-longer-corporeal head is telling you you've got some <<linkreplace "business">>business<<replace "#business">> - or should you say...//unfinished business//<</replace>><</linkreplace>> to attend to still<span id="business"></span>. Otherwise why would you still be here?
+Even though you're dead, a nagging feeling at the back of your no-longer-corporeal head is telling you you've got some <<linkreplace "business">>business<<replace "#business">> - or should you say...//unfinished business//<</replace>><</linkreplace>> to attend to still<span id="business"></span>. Otherwise, why would you still be here?
 
 You glance around the party, or what's left of it anyway, hoping to find some hint as to the answer to that question.
 
@@ -61,7 +61,7 @@ You can't figure out anything else you can do right now, being a ghost, other th
 <<if hasVisited("Guests", "Food", "Mort")>>[[Wait.]]<</if>>
 
 ::Mort [noinv]
-Well, you - your corpse, rather, was taken away by the EMTs a while ago and you have no desire to look at it - yourself? Again. You liked how you looked better when you were alive, rather than the cold, pale look of the dead.
+Well, you - your corpse, rather - was taken away by the EMTs a while ago and you have no desire to look at it - yourself? Again. You liked how you looked better when you were alive, rather than the cold, pale look of the dead.
 
 You're - you //were// a handsome man, even with your slightly thinning hair; getting on in years but still maintaining a youthful <<linkappend "charm">> (the charm was probably diminished when you vomited on yourself)<</linkappend>> and vigor, if you do say so yourself.
 
@@ -150,7 +150,7 @@ Your murder<</linkappend>>.
 
 :: Questioning [noinv]
 <<set _pronouns to "he">>\
-You're disturbed by the thought; it's all you could think about as the investigation went on. You were //murdered//? And not only murdered, but by one of your friends? Who would want to murder you? Why? How?
+You're disturbed by the thought; it's all you can think about as the investigation goes on. You were //murdered//? And not only murdered, but by one of your friends? Who would want to murder you? Why? How?
 
 You cycle through the rest of the <<linkappend "5 Ws">> (and 1 H)<</linkappend>> and other questions over and over as you float behind the police cars driving to the station, able to follow with apparent ease despite the cars' speed. Able to pass through the walls of the station just as easily, you find the area with all of the interview rooms and wait for someone to show up.
 

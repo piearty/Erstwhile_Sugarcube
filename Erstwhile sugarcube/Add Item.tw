@@ -7,7 +7,7 @@
         <br>You're not sure if you should care about this. But, just by looking at it, you can almost feel it added to your mind, as if that's an actual space you can visit.<br>
     <</if>>
 <!--Links to item's page and adds it to the inventory if it's not in it already-->
-<<if $inv.includes($args[0])>>
+<<if $inv.includes($args[0]) or $setAside.includes($args[0])>>
     //You've found the clue, <nowiki>"</nowiki>[[$args[0]]]<nowiki>"</nowiki> already.//
 <<else>>
     <br>//(The clue, <nowiki>"</nowiki>[[$args[0]]]<nowiki>"</nowiki> has been added to your memories.)//<<set $inv.pushUnique($args[0])>>

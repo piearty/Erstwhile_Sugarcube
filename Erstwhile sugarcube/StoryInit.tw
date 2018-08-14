@@ -4,6 +4,7 @@
 <<set $inv to []>>
 <<set $thoughts to {}>>
 <<set $selected to []>>
+<<set $setAside to []>>
 
 <!--Noncombinables-->
 <<set $noncombinables to ["Congratulatory Card", "Money", "Postcard", "Sticky Note", "Consent Form", "Photograph", "Burning Letter", "Hospital Stickers", "Rap Sheet"]>>
