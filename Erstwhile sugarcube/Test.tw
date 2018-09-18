@@ -5,16 +5,17 @@ aconite, reminder, sigils, potion, straight tie, bowtie, empty plot, annie's tes
     <<set $thoughts["Bram realizing the wolfsbane was tampered with"] = "- blop">>
     <<set $thoughts["the detective ruminating about the murder weapon"] = "- blarp">>
     <<add "Aconite Poison">>
-<!--    <<add "Medicine Reminder">>
+    <<add "Medicine Reminder">>
     <<add "Sigils">>
     <<add "Potion">>
-    <<add "Straight Tie">>
     <<add "Bowtie">>
     <<add "Justin's Testimony">>
     <<add "Sandwich">>
     <<add "Salad">>
     <<add "Marijuana">>
-    <<add "Wolfsbane">>-->
+    <<add "Old Newspaper">>
+    <<add "Petition"
+    <<add "Wolfsbane">>
     <<add "Werewolf">>
     <<add "Money">>
     <<add "Hospital Stickers">>

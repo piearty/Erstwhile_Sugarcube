@@ -30,9 +30,11 @@ You can still <<link "restart">><<script>>
 :: Intro [noinv intro]
 It was a pretty good Thanksgiving until you keeled over and died.
 
-The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less <<linkappend "//eavesdropping//">>, regardless of what Bram said,<</linkappend>> and more //surveying//, - it was having the bonding effect you wanted all along.
+The whole neighborhood was invited to the dinner, and just about the whole neighborhood showed up. Most of them were probably there for the free food over the Thanksgiving spirit advertised on the flyers, but it was such an impressive turnout that you didn't really give a damn about that. You simply beamed as you watched them pour into the park, chatting with each other and eyeing the feast laid out on the long plastic tablecloths.
 
-Yes, everything was going perfectly - until, as you said yourself while beads of sweat dripped down your chin, you started to feel "a bit crappy". "Crappy" turned out to be a terribly understated description of your heart attack, especially with the <<linkappend "vomiting and suffocation">> - which you personally found excessive -<</linkappend>> piled on top of it. Though 911 was called as soon as you started convulsing, and the EMTs tried their damndest to save you, things ended in a non-miraculous way.
+Before people could sit down in the folding chairs set on the browning grass, you made a point of greeting every single one of them, with a wide smile and a handshake so firm that many of them walked away rubbing their wrists. It was what any gracious host would do, and as the Ronton Neighborhood Association chairman, you wanted to make a good impression. Listening closely to their chatter, which, given your position in the community, you considered less <<linkappend "//eavesdropping//">>, regardless of what Bram said,<</linkappend>> and more //surveying//, you were making a very good one indeed.
+
+Yes, everything was going perfectly until, as you said with difficulty, you started to feel "a bit crappy". Beads of sweat dripped down your chin and your vision blurred, and people began to crowd about you in concern right up until you vomited on the table. It turned out that "crappy" was a terribly understated description of your heart attack, especially with the <<linkappend "suffocation">>, which you personally found excessive, <</linkappend>> on top of it. Though someone called 911 as soon as you started convulsing, and the EMTs tried their damndest to save you, things ended in a non-miraculous way.
 
 In other words, you're a ghost now.
 
@@ -61,9 +63,7 @@ You can't figure out anything else you can do right now, being a ghost, other th
 <<if hasVisited("Guests", "Food", "Mort")>>[[Wait.]]<</if>>
 
 ::Mort [noinv]
-Well, you - your corpse, rather - was taken away by the EMTs a while ago and you have no desire to look at it - yourself? Again. You liked how you looked better when you were alive, rather than the cold, pale look of the dead.
-
-You're - you //were// a handsome man, even with your slightly thinning hair; getting on in years but still maintaining a youthful <<linkappend "charm">> (the charm was probably diminished when you vomited on yourself)<</linkappend>> and vigor, if you do say so yourself.
+You're - you //were// a handsome man, even with your slightly thinning hair; getting on in years but still maintaining a youthful <<linkappend "charm">> (the charm was probably diminished when you vomited on yourself)<</linkappend>> and vigor, if you do say so yourself. You hate how pale and still your corpse looks in comparison, but can't manage to look away until the EMTs carry it off.
 
 Unfortunately you're not a mortician so you can't determine cause of death, though you wish you could. Yeah, the whole 'heart stopped beating' part seems to supply the cause just fine. But you weren't //that// <<linkappend "old">> (56 is barely middle aged!)<</linkappend>> and had no history of heart problems in your life or in your family. Plus, you've no idea where the other symptoms came from. You suspect there's something else going on.
 
@@ -72,7 +72,7 @@ Unfortunately you're not a mortician so you can't determine cause of death, thou
 ::Guests [noinv]
 You don't know who most of these people are, but you feel sorry for them nonetheless. You probably traumatized them all about the concept of Thanksgiving by having to go and die. You disappoint yourself sometimes.
 
-The other core members of the Neighborhood Association have stayed, maybe out of some sense of obligation. Justin is trying to calm the adults while his wife Terry is trying to calm the kids. Erin is running around gesticulating and doing...whatever, you don't really know or care. Annie and Bram are clearing the tables of food since, of course, the party is over.
+The other core members of the Neighborhood Association have stayed, maybe out of some sense of obligation. Justin is trying to calm the adults while his wife Terry is trying to calm the kids. Erin is running around gesticulating, maybe casting spells, though you don't know or care about the specifics. Annie and Bram are clearing the tables of food.
 
 [[Look at Justin.]]
 [[Look at Terry.]]
@@ -82,7 +82,7 @@ The other core members of the Neighborhood Association have stayed, maybe out of
 [[Look around some more.|Welp]]
 
 :: Look at Justin. [noinv]
-Justin Whittaker is a cop in his mid-30's and husband to Terry. He's got jet-black hair, a bowtie, a perpetually furrowed brow. He's sort of gruff and unpleasant, but you like him fine anyway. Right now he's calming some other guests down and reassuring them that things will be <<linkappend "alright.">> You'd beg to differ.<</linkappend>>
+Justin Whittaker is a cop in his mid-30s and husband to Terry. He's got jet-black hair, a bowtie, a perpetually furrowed brow. He's sort of gruff and unpleasant, but you like him fine anyway. Right now he's calming some other guests down and reassuring them that things will be <<linkappend "alright.">> You'd beg to differ.<</linkappend>>
 
 He's handling this remarkably well; makes sense since he's probably seen this kind of macabre stuff before.
 
@@ -91,7 +91,7 @@ Still, you wish he was a little more affected by a friend's death than he appear
 [[Look at more guests.|Guests]]
 
 :: Look at Terry. [noinv]
-Terry Whittaker is a pleasant, energetic wine store owner and wife to Justin, around the same age as him. Brown curls fall into her face and cling to the wet streaks left by tears. She looks distraught but is trying to put on a happy face for the kids who have flocked around her for comfort.
+Terry Whittaker is a pleasant, energetic wine store owner and wife to Justin, around her mid-30s like Justin is. Brown curls fall into her face and cling to the wet streaks left by tears. She looks distraught but is trying to put on a happy face for the kids who have flocked around her for comfort.
 
 Terry has always been the most helpful member of the association, after you of course. You can't imagine how much this is affecting her.
 
@@ -99,14 +99,12 @@ Terry has always been the most helpful member of the association, after you of c
 
 
 :: Look at Erin. [noinv]
-Erin Moonchild is...well, she's something alright. You don't pretend to understand why she thinks things like potions and spells and <<linkreplace "magic">> sorry, //magick//<</linkreplace>> are real, but she does, and everyone else has just had to deal with it. You find it a bit inappropriate in a woman of her age, already in her 30's. Her weird gestures right now are probably her trying to cast some incantation. You're not entirely sure she knows what just happened.
-
-You sigh.
+Erin Moonchild is...well, she's something alright. You don't pretend to understand why she thinks things like potions and spells and <<linkreplace "magic">> sorry, //magick//<</linkreplace>> are real, but she does, and everyone else has just had to deal with it. You find it a bit inappropriate in a woman of her age, already in her 30's. Her weird gestures right now are probably her trying to cast some incantation. You don't know if she's aware of what just happened.
 
 [[Look at other guests.|Guests]]
 
 :: Look at Annie. [noinv]
-Annie Smith is a stern but <<linkappend "kind">> (too kind, really)<</linkappend>> black woman in her 70's, retired. Right now she's shaking her head sadly as she packs up the mashed potatoes.
+Annie Smith is a stern but <<linkappend "kind">> (too kind, really)<</linkappend>> black woman in her 70's, retired. Right now she's shaking her head as she packs up the mashed potatoes.
 
 You know there's no way she's a grandma but everyone calls her Granny Smith anyway. She cooked everything for the dinner, which must've taken her days. You'd really appreciate it if not for all the nuts; for most of the dinner you were just frustratedly staring and drooling at all the stuff you couldn't eat because of your deadly allergy.
 
@@ -117,7 +115,7 @@ Not that it ended up mattering.
 :: Look at Bram. [noinv]
 Bram Locklear is the closest to you in age and you were fairly close friends. In fact, you're not entirely sure what he's going to do now that you're gone. He wears his hair in a long braid down his back, and tends to the <<linkappend "community greenhouse">>, though it's really more just Bram's greenhouse at this point<</linkappend>>. He also has a garden in his backyard, and sells the produce he grows there at the farmer's market for a living.
 
-Bram is currently wrapping the turkey in tin foil with a worried, upset look on his face. You wish you could pat him on the shoulder and say it'll be alright. But you can't, and it won't.
+Bram is currently attempting to wrap the turkey in tin foil. His hands are shaking as he wraps and unwraps sections that have bones sticking out, and the foil rips repeatedly. You wish you could pat him on the shoulder and say it'll be alright. But you can't, and it won't.
 
 [[Look at other guests.|Guests]]
 
@@ -129,20 +127,20 @@ Just about everything is covered in nuts, or is nut-based in some way. The turke
 :: Poltergeist [noinv]
 You try to make the stuffing float, just for <<linkappend kicks.>> And also to find some sort of solace in the fact that you're dead.<</linkappend>>
 
-Quickly you realize you have no idea how to do that. You try using your ~special ghost powers~, but after a whole minute of straining on your part and a complete lack of floating on the stuffing's part, you figure those probably don't exist.
+Quickly you realize you have no idea how to do that. You try using your //special ghost powers//, but after a whole minute of straining on your part and a complete lack of floating on the stuffing's part, you figure those probably don't exist.
 
 Trying to grab the stuffing proves futile as well, as your spectral hand can't touch it. Maybe this would be easier if you could //see// your spectral hand or the rest of your ghostly body. Maybe you're less of a ghost and more of a...presence? To be honest, you're not sure how this works.
 
 [[Look around some more.|Welp]]
 
 :: Wait. [noinv]
-It isn't long before, to your surprise, police cars show up. You float closer to try and figure out what's going on.
+It isn't long before police cars show up. You float closer to try and figure out what's going on.
 
 Justin and one of the policemen are talking. Justin looks <<linkappend "irritated">>, even more so than usual<</linkappend>>, fiddling with his bowtie. It seems that the medical examiner at the hospital suspected something was off about your death - turns out the inability to breathe and the barfing were excessive after all.
 
 Or perhaps a better word would be suspicious. 
 
- An autopsy is ordered post-haste and your friends are all detained as officers investigate the area and do basic interrogations, which takes a few hours. You float around the scene aimlessly, not really absorbing any information in your shock. Eventually the police inform the Neighborhood Association that they're to be taken in for questioning, having been deemed the group most likely to have had a hand in your <<linkappend "death">> - no -
+ An autopsy is ordered post-haste and your friends are all detained as officers investigate the area and do basic interrogations. You float around the scene aimlessly, not really absorbing any information in your shock. Eventually the police inform the Neighborhood Association that they're to be taken in for questioning, having been deemed the group most likely to have had a hand in your <<linkappend "death">> - no -
 
 Your murder<</linkappend>>.
 
@@ -158,7 +156,7 @@ A detective with cropped red hair, a worn brown coat, and an androgynous look wa
 
 You bring yourself closer to hear what they're saying, but just at that moment they start pacing in your direction. You instinctively try to back up, but before you do, your ghostly form and the detective collide and you feel a strong tug. The last thing you see before the world fades is the detective shuddering.
 
-[[Wait, what?->Detective's mind]]<</replace>><</linkreplace>><</linkreplace>> up and down the hall while muttering, presumably about the case. <span id="muttering"></span>
+[[Wait, what?->Detective's mind]]<</replace>><</linkreplace>><</linkreplace>> up and down the hall while muttering. <span id="muttering"></span>
 
 :: Police Station
 <<if $policeStationStart is true>>

@@ -5,7 +5,7 @@ You're not sure what just happened but you're trying to roll with it. Did you...
 
 Hmm, no. Something tells you this isn't an actual office; it's more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren't looking, there's nothing at all. Are you in the detective's <<linkreplace "dream?">><<linkreplace "memory?">><<linkappend "mind?">>
 
-Yeah. Mind feels right to you, going by your //ghost sense//...or whatever it is.
+Yeah. 'Mind' feels right to you as it surfaces from the depths of your thoughts. You're inside the detective's mind.
 
 Looks like you were wrong about your lack of <<linkreplace "ghost powers">>ghost powers<<replace "#powers">>Though you don't recall mind-jumping to be a 'ghost' thing...still, rolling with it. What else would you do?<</replace>><</linkreplace>> after all. <span id="powers"></span><</linkappend>><</linkreplace>><</linkreplace>><</if>>
 The walls, an inoffensive light grey, are covered in <<linkreplace "photographs">>photographs<<replace "#photos">>
@@ -14,7 +14,7 @@ Hey, there's you! You don't look that good. You wish they'd used a picture from 
 
 The <<openlink "desk" "deskText">>desk<<replace "#desk">>
 
-You feel a little daunted at the idea of going through the giant stack of papers, especially when you can't actually touch things. Fortunately it looks like none of them are that important, fuzzy and indistinct like the detective doesn't care to focus on them right now.
+You feel a little daunted at the idea of going through the giant stack of papers, especially when you can't actually touch things. Luckily, it turns out that none of them are readable at all; their words, even the outlines of the sheets, are fuzzy and indistinct.
 
 There's some stuff on the desk though that's almost //too// in focus though, like when you wear a glasses prescription that's a shade too strong. The first is a <<linkreplace "sandwich">>sandwich<<replace "#sandwich">>
 <<add "Sandwich">><</replace>><</linkreplace>>, the next is a <<linkreplace "potion">>potion<<replace "#potion">>
@@ -60,7 +60,7 @@ How unpleasant.
 <</nobr>>
 
 :: Justin's mind [justin mind]
-<<set $mindVisited to true>>It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a <<openlink "newspaper" "newspaperText">>newspaper<<replace "#newspaper">>
+<<set $mindVisited to true>>It's the Whittaker home, the den specifically. You've been here once or twice. It's quaint and domestic: a worn blue couch, a slightly out of date TV, and a coffee table with a few books, police forms, and a <<openlink "newspaper" "newspaperText">>newspaper<<replace "#newspaper">>
 
 The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, ''"Local Activists Protest Paving Over Park"'', is unrealistically sharp, ink unfaded by time inside Justin's memories. You don't want to think about it too much.
 <<add "Old Newspaper">><</replace>><</openlink>> on it. <span id="newspaper"></span>
@@ -78,7 +78,7 @@ One of the patches has spilled out of the box. It looks a bit like a band-aid.
 
 In here, for some bizarre reason, the walls are made of metal - steel, it looks like. Crushed steel, specifically; they're warped and corrugated as if the whole room is being squeezed by a giant vise. Something <<openlink "shiny">>shiny<<replace "#shiny">> - 
 
-You float closer and squint in the recesses of the crevice. There's a crescent moon charm glinting in there. Why, you don't rightly know, but you suspect its placement means something metaphorical, since the actual Whittaker house does not have metal walls and therefore does not have things stuck between said walls.
+You float closer and squint in the recesses of the crevice. There's a crescent moon charm glinting in there. You couldn't say why, but you suspect its placement means something metaphorical, since the actual Whittaker house does not have metal walls and therefore does not have things stuck between said walls.
 <<add "Crescent Charm">>
 
 <</replace>><</openlink>><span id="shiny"></span> and something <<openlink "glittery">>glittery<<replace "#glittery">> 
@@ -99,7 +99,7 @@ On account of the bent walls, the ceiling is much, //much// closer to the floor 
 [[Leave.|Justin]]
 
 :: Terry's mind [terry mind]
-<<set $mindVisited to true>>You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents and works at. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
+<<set $mindVisited to true>>You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
 
 Looking closer though, you see that the wine bottles are not jutting out of wooden racks, but out of honeycombs. Presumably made of beeswax, the combs ooze with honey that drips down and off the necks of the bottles onto the hardwood floor. In combs without bottles, there are assorted objects that you can only assume have some relevance to Terry. They're hard to see through the viscous layers of honey, though.
 
@@ -129,9 +129,9 @@ You really hope they're not for what you suspect they're for.
 [[Leave.|Terry]]
 
 :: Erin's mind [erin mind]
-<<set $mindVisited to true>>It looks like a study but. Weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking <<openlink "moon" "moonText">>moon<<replace "#moon">>
+<<set $mindVisited to true>>It looks like a study but...weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking <<openlink "moon" "moonText">>moon<<replace "#moon">>
 
-That's no moon. Or rather, that's no //real// moon. Well, it wasn't anyway since it's simply a metaphysical representation of a - your point is, it's actually a charm. Just hanging in the sky, pretending to be a celestial body. You can see the metallic luster of it and the tiny loop on top for attaching to keychains or necklaces or the like. Weird.
+That's no moon. Or rather, that's no //real// moon. Well, it wasn't anyway since it's simply a metaphysical representation of a - your point is, it's actually a charm. Just hanging in the sky, pretending to be a celestial body. You can see the metallic luster of it and the tiny loop on top for attaching to keychains or necklaces or the like.
 <<add "Gibbous Charm">><</replace>><</openlink>> hang in the purple-velvet night. <span id="moon"></span>
 
 There's clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed <<openlink "picture" "pictureText">>picture<<replace "#picture">>
@@ -165,7 +165,7 @@ You look out the window to check. Huh. It appears so.
 
 There are far fewer decorations than in an average kitchen, but sticky notes and bits of random papers are stuck with big clip bag magnets onto the fridge.
 
-Its corners are beveled, very 1960's <<linkappend "retro.">> Actually, you wouldn't be surprised if it was from back then and Annie never bothered to get a new one.<</linkappend>> You remember that the actual fridge is a pastel pink, but here of course, it just looks brownish. The papers and notes on its sides are blurry and unreadable to you right now, but you know that they're for birthdays and phone numbers and recipes, anything likely to slip an ailing 70-something's mind. Some of them look remarkably old, with faded ink and sun-bleached colored paper, perhaps put there years ago.
+Its corners are beveled, very 1960's <<linkappend "retro.">> Actually, you wouldn't be surprised if it was from back then and Annie never bothered to get a new one.<</linkappend>> You remember that the actual fridge is a pastel pink, but here of course, it just looks brownish. The papers and notes on its sides are blurry and unreadable to you right now, but you know that they're for birthdays and phone numbers and recipes, anything likely to slip a 70-something's mind. Some of them look remarkably old, with faded ink and sun-bleached colored paper, perhaps put there years ago.
 
 A few things catch your eye - the only readable writing in the blur of notes:
 

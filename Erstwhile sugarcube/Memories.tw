@@ -10,7 +10,7 @@ In one hand they're holding the autopsy report, your autopsy report; the other h
 
 Seriously? Wolfsbane? You can't believe it. You were offed by a garden flower.
 
-A heavy sigh comes from the detective. "But on the other hand, that's just so neat and easy. I should know better than anyone that these cases are never so simple." They chuckle softly to themself.
+A heavy sigh comes from the detective. "But on the other hand, that's just so neat and easy. I should know better than anyone that these cases are never so simple." They chuckle to themself.
 
 As the detective continues to think aloud, the [[memory->Link Clues]] drips away.
 
@@ -20,17 +20,17 @@ As the detective continues to think aloud, the [[memory->Link Clues]] drips away
 <</if>>\
 A murmuring of voices greets you first, then bright colors. It's daylight streaking across the community garden - the real one - and Bram is there talking to Annie, who is seated on a white stone bench. 
 
-Bram hands a small brown bag over to Annie, and she takes out a small notepad. "I can't pay you right now," she says regretfully, "but - " 
+Bram hands a small brown bag over to Annie, and she takes out a small notepad. "I can't pay you right now," she says, "but - " 
 
-"I know," Bram interrupts. "You can pay me later." 
+"I know," Bram says. "You can pay me later." 
 
-Annie hums in acknowledgement and makes a note to herself. "Y'know," she says, "it never seemed quite right to me that there're illegal plants."
+Annie hums in acknowledgement and writes a note to herself. "Y'know, it never seemed quite right to me that there're illegal plants."
 
 Bram shrugs. "Well, you know how it is. Not all laws make sense, and some people are just too harsh about what's wrong or right."
 
 "If you're gonna bad mouth Justin, I'm not here for it," Annie says matter-of-factly as she put the bag into her purse.
 
-Bram opens and closes his mouth a couple times. "Of course not." He continues. "It //is// pretty weird that it's illegal, isn't it? I mean, I feel like the law - not all of it," he adds quickly in response to another warning look from Annie, "but a lot of it, associates the stuff with, you know, teenage stoners. Historical precedent, I guess? But there are people who are using it medicinally," he gestures to her and she nods, "and I don't see why that's not alright. At least it's helping people. Unlike some plants out there..."
+Bram opens and closes his mouth a couple times, like a fish. "Of course not." He continues, "It //is// pretty weird that it's illegal, isn't it? I mean, I feel like the law - not all of it," he adds quickly in response to another warning look from Annie, "but a lot of it, associates the stuff with, you know, teenage stoners. Historical precedent, I guess? But there are people who are using it medicinally," he gestures to her and she nods, "and I don't see why that's not alright. At least it's helping people. Unlike some plants out there..."
 
 "What do ya mean by that?" Annie closes her eyes and tilts her head up to bask in the sunlight.
 
@@ -136,7 +136,7 @@ You [[refuse->Link Clues]].
 <</if>>\
 A flash of color, and you find yourself back at the party. You spot yourself sitting at a picnic table. It's - it's weird to see yourself though, you must say. You look pretty good for a man about to die. Your suit is impeccably ironed, and the comb-over is hardly noticeable.
 
-You see Erin approach you - that is, your living counterpart. She's holding out a potion, the same one that she tried to get you to drink all that fateful day. As she corners still living Mort, you think back to how you felt at that moment. You were kind of pissed off because you really did //not// want to drink her concoction - who knows what she put in it? You didn't want to create a fuss though , so you kept either ignoring her or brushing her off instead of telling her to scram like you wanted to.
+You see Erin approach you - that is, your living counterpart. She's holding out a potion, the same one that she tried to get you to drink all that fateful day. As she corners still living Mort, you think back to how you felt at that moment. You were kind of pissed off because you really did //not// want to drink her concoction - who knows what she put in it? You didn't want to create a fuss though, so you kept either ignoring her or brushing her off instead of telling her to scram like you wanted to.
 
 She'd approached you multiple times before, each time more insistent that you drink the damn thing. As time passed and you kept refusing, she became more agitated. In fact, by the time you agreed to drink whatever it was she made - if only to prevent a scene from happening between RNA members - you were kind of scared of her.
 
@@ -162,7 +162,7 @@ Bram furrows his eyebrows and says, "I'm a little concerned that you're drinking
 
 "Oh, it's fine," Mort replies, waving his hand. "Wine doesn't have a high proof, and what's a few glasses with an old friend?" He laughs. "Besides, a little buzz isn't such a bad thing. It helps you forget about the little problems." 
 
-As Bram holds his glass in both hands like a <<linkappend "bowl">>(which is frankly, all wrong. You're surprised you didn't comment on that while you were alive)<</linkappend>>, he stares down into the wine. "Like what," he says dully. 
+As Bram holds his glass in both hands like a <<linkappend "bowl">>(which is frankly, all wrong. You're surprised you didn't comment on that while you were alive)<</linkappend>>, he stares down into the wine. "Like what?"
 
 "Like you growing <<linkreplace "marijuana.">>marijuana.<<replace "#m">>
 
@@ -175,7 +175,7 @@ You don't have to spell out everything you know all the time, do you? Jeez.<</li
 
 Living Mort chuckles again and takes another sip of wine. "Just keep doing this and it won't ever be a big problem. Right?" 
 
-Bram laughs nervously. You didn't realize it while you were living but you're pretty sure he's sweating. "Yep. Right." The memory [[swirls->Link Clues]] from view.
+Bram laughs, but you're pretty sure he's sweating. "Yep. Right." The memory [[swirls->Link Clues]] from view.
 
 :: Justin and Terry at the grocery store [justin memory]
 <<if !$thoughts["Justin and Terry at the grocery store"]>>\
@@ -183,7 +183,7 @@ Bram laughs nervously. You didn't realize it while you were living but you're pr
 <</if>>\
 The Ronton grocery store forms around you. The Whittakers are here, with their shopping cart containing last minute items for the party - extra paper plates and napkins, sauce, some beer, and the like. 
 
-"Alright? What else do we need?" Terry says peppily.
+"Alright? What else do we need?" Terry says cheerfully.
 
 "Hmm? Oh." Justin blinks slowly and glances at the shopping list. "Looks like all that's left is getting the salad for Mort."
 
@@ -209,7 +209,7 @@ Justin jerks awake and looks at her. "Good. Uh. Let's get going then." The two r
 
 "...Ok," he grunts. "But only for you." 
 
-He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, "Oh sugarbites, we forgot dressing." She looks at Justin meaningfully. It takes a moment for him to respond. "I'll - I'll go get some." He walks off quickly, and the memory [[fades->Link Clues]].
+He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, "Oh sugarbites, we forgot dressing." She looks at Justin with wide eyes. It takes a moment for him to respond. "I'll - I'll go get some." He walks off quickly, and the memory [[fades->Link Clues]].
 
 :: your fight with Annie [memory annie]
 <<if !$thoughts["your fight with Annie"]>>\
@@ -248,7 +248,7 @@ And the memory [[slips->Link Clues]] from your sight.
 <</if>>\
 You're in the regular, not-metal-walled Whittaker house and Terry is talking to someone on her cell phone, sounding irate. The clock on the wall says it's 8am in the morning and she's got the clothes she wears to the wine store on, so you suppose she's getting ready for work.
 
-Terry adjusts one of the earbuds and continues to talk hotly. "I mean honestly, can you believe him? A plaque in her memory. Huh!"
+Terry adjusts one of the earbuds and continues to talk hotly. "I mean honestly, can you believe him? A plaque in her memory."
 
 Oh, here we go. You know what this is about.
 
@@ -297,28 +297,28 @@ He turns and eyes her. "Erin. It's midnight. Maybe don't go shouting and running
 
 "Oh, sorry. How are you?"
 
-"Fine, I guess," he says noncommittally.
+"Fine, I guess."
 
 "I feel like I haven't talked to you in forever, you keep missing my calls! Or ignoring them." She bites her lip. "I guess that's understandable."
 
 Justin blinks at her. "You know, I've been incredibly busy - "
 
-"No, I don't," she replies sadly, "because you don’t tell me anything anymore. But that's ok. Did you like your birthday presents from me, mom, and dad?"
+"No, I don't," she replies, "because you don’t tell me anything anymore. But that's ok. Did you like your birthday presents from me, mom, and dad?"
 
 Wait.
 
 "I, uh. Yes. Thank you. The bowtie was very nice."
 
-""Well, if you insist on wearing those rather than a regular tie, you have to make up for it with fun patterns and cool colors," she sighs.
+"Well, if you insist on wearing those rather than a regular tie, you have to make up for it with fun patterns and cool colors," she sighs.
 <<add "Bowtie">>
 
-"And what about the charm from our parents?" She holds hers up, the gibbous moon charm, attached to a silvery chain around her neck. "What did you think of that?"
+"And what about the charm from Mom and Dad?" She holds hers up, the gibbous moon charm, attached to a silvery chain around her neck. "What did you think of that?"
 
 They're //siblings?//
 
 "I...what are you doing out here so late anyway, Erin?"
 
-"You're changing the subject," she pouts.
+"You're changing the subject," she says, pouting.
 
 "And you're avoiding the question." He glances at her bag. "You're not doing what I think you're doing are you?"
 
@@ -332,11 +332,11 @@ In the silence, you examine the two more closely. Now that you think about it, t
 
 Tell you what? How many secrets were people hiding from you?
 
-She lets out a small squeak of happiness and goes to hug Justin, but he backs away and puts his hand up, looking irritated. Wow. Cold.
+She lets out a small squeak of happiness and goes to hug Justin, but he backs away and puts his hand up, looking irritated.
 
-Erin's face falls as her arms do, and she starts twirling her hair in her fingers, looking down again. "Well, I answered your question," she says meekly. "So, answer mine? What //did// you think of the crescent charm?"
+Erin's face falls as her arms do, and she starts twirling her hair in her fingers, looking down again. "Well, I answered your question. So, answer mine? What //did// you think of the crescent charm?"
 
-Justin bites his lip, then clears his throat. "I threw it out," he says gruffly. "I don't need reminders of that anymore. I'd rather just leave it all behind." Then, flatly, "Sorry."
+Justin bites his lip, then clears his throat. "I threw it out. I don't need reminders of that anymore. I'd rather just leave it all behind." Then, flatly, "Sorry."
 
 Erin looks like she's about to cry. "It's...I am too." She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears->Link Clues]].
 
@@ -353,9 +353,9 @@ He unceremoniously stuffs the paper back in his pocket, then peels off the backi
 
 When you look back up, Erin is standing by Justin, and you and he jolt back in surprise. "What is it, Erin?"
 
-"Um, I saw you put that patch on and - " Justin pulls his sleeve down quickly and gives her an irritated look. "-And I thought now would be a good time to give this to you..." Erin pulls a piece of paper out of her bag - the sigil marked for Justin.
+"Um, I saw you put that patch on and - " Justin pulls his sleeve down quickly and gives her an irritated look. "- And I thought now would be a good time to give this to you..." Erin pulls a piece of paper out of her bag - the sigil marked for Justin.
 
-"What's this supposed to do?" he says brusquely.
+"What's this supposed to do?" he says.
 
 "Well, it's a sigil for renewal of energy and relieving of stress!" Jeez, she's earnest about this stuff. "You should hang it up in your house to charge it with your stress energy and exhaustion, and then you burn it after it's fully charged so it can dispel them. You may not talk to me anymore, but anyone with eyes can see how tired you've been, and I thought it might help."
 
@@ -372,7 +372,7 @@ Erin looks vaguely disappointed and walks off, trying to smooth out the folds in
 <<if !$thoughts["Terry and Bram's conversation in her shop"]>>
     <<set $thoughts["Terry and Bram's conversation in her shop"] = "- Terry is having an affair with a customer at her wine shop, and Bram knows it. (bowtie + straight tie)">>
 <</if>>\
-You find yourself just outside Whittaker Wines. Bram is outside too, staring through the wall-to-floor front windows with a shocked expression on his face, sweat beading on his forehead. You look inside as well, but all you see is some man with a cane talking to Terry. Brown hair, dress shirt; you don't find him terribly relevant at all until Terry pulls on his tie and kisses him on the lean in.
+You find yourself just outside Whittaker Wines. Bram is outside too, staring through the wall-to-floor front windows with a shocked expression on his face, sweat beading on his forehead. You look inside as well, but all you see is some man with a cane talking to Terry. Brown hair, dress shirt; you don't find him terribly relevant at all until Terry pulls on his tie and kisses him.
 
 You'd probably pull the same expression Bram is making, were you to still have a face.
 
@@ -381,15 +381,15 @@ Bram goes to the door and makes to open it. Is he going to confront Terry or som
 The door opens and Bram starts back, then the man emerges. He leans heavily on the silver-tipped cane he's holding, but otherwise he looks like your average, generic 30-something brunette guy. Unremarkable, even. And yet...
 <<add "Cane">>
 
-He nods to Bram perfunctorily; Bram only eyes him warily in return. As the man walks off, Bram catches the door before it closes and heads hesitantly into the store.
+He nods to Bram politely; Bram only eyes him warily in return. As the man walks off, Bram catches the door before it closes and heads hesitantly into the store.
 
-"Hey Bram, how are you?" Terry chirrups. 
+"Hey Bram, how are you?" Terry says.
 
-"I've, uh, been better," he says haltingly. He glances back at the door and thumbs in that direction. "Hey uh. Who was - who was that? The guy with the cane, I mean."
+"I've, uh, been better," he says. He glances back at the door and thumbs in that direction. "Hey uh. Who was - who was that? The guy with the cane, I mean."
 
 By gum, he's actually doing it. You never thought he had it in him.
 
-Terry stares blankly at Bram briefly, then blinks and smiles. "He's a customer here." She leans against the counter. "Would you like some help finding a specific brand and year, or are you just browsing?" 
+Terry stares blankly at him, then blinks and smiles. "He's a customer here." She leans against the counter. "Would you like some help finding a specific brand and year, or are you just browsing?" 
 
 "Just brows- wait, no I'm looking for, uh," Bram pats his pockets for something, presumably a note with what wine he was looking for. After a moment of fruitless searching, he says, "...Are you two friends?"
 
@@ -403,9 +403,7 @@ Bram cringes before insisting, "Yeah, but usually store owners don't kiss their 
 
 At this, Terry freezes, and Bram just keeps going. "You flirted with him, put a necktie around his neck and, uh, kissed him. Does Justin know that - " 
 
-"No!" Terry shouts. She puts her hands up, almost like a surrender. With an embarrassed blush rapidly blooming on her face, she pleads, "Please don't tell Justin, he'd be heartbroken. He doesn't need to know." 
-
-You just - wow. You're not even sure of what to think at this point.
+"No!" Terry shouts. She puts her hands up, almost like a surrender. With an embarrassed blush blooming on her face, she says, "Please don't tell Justin, he'd be heartbroken. He doesn't need to know." 
 
 "Why - nevermind, I don't want to know." Bram stares at Terry, who has slowly drawn her arms back and wrapped them around herself. 
 
@@ -413,7 +411,7 @@ Coldly, she says, "What are you even doing here, Bram? I thought you didn't drin
 
 "I don- I mean, m-maybe I started?"
 
-You scowl at his slip up as Terry looks at him suspiciously. She opens her mouth to speak but Bram quickly says, "I guess you must've gotten tired of Justin and his bowties, huh? What with that necktie and all."
+You inwardly scowl at his slip up as Terry looks at him suspiciously. She opens her mouth to speak but Bram quickly says, "I guess you must've gotten tired of Justin and his bowties, huh? What with that necktie and all."
 
 The tenseness is palpable as the memory [[fades->Link Clues]].
 
@@ -444,7 +442,7 @@ Oh, crap.
 
 His eyes widen. "Oh god, Annie, you don't mean //that// something, do you?" What something? Nuts? Aconite? Arsenic?! When Annie nods, you feel panic rising in your nonexistent gut. Justin crosses his arms. "No. Don't."
 
-"Come on Justin!" she says indignantly, throwing her arms wide. "Lord knows he deserves it!"
+"Come on Justin!" she says, throwing her arms wide. "Lord knows he deserves it!"
 
 "No. It goes against my principles. As much as I dislike Mort, there's no reason to harm him."
 
@@ -486,7 +484,7 @@ Bram wipes the sweat off his forehead with his sleeve. "I don't know if now is t
 
 And then, from behind Justin, living Mort appears, smoothly saying, "Bram and I were actually about to catch up for a bit. Hello, Justin." Justin whips around to face you, clearly caught off guard. You know he hates that, but it's not exactly your fault he wasn't paying attention. "Speaking of busy," you continue, "don't you have somewhere to be, Justin?"
 
-Narrowing his eyes at living Mort, Justin asks, "I do?" 
+Narrowing his eyes at living Mort, Justin says, "I do?" 
 
 "Don't you have to put flyers for the policeman Q&A session at the middle school?" Mort replies.
 
@@ -597,7 +595,7 @@ Pointing to one of the entries, Erin says, "Here. Potion of Continued Life." You
 
 "That's an odd - wait, do you think Mort's going to, uh, you know?" Bram can't quite bring himself to say the word die. Oh, Bram. 
 
-"I think it's possible. You gonna help?" Erin looks over at Bram and smiles, though it's weak and born more of habit that cheer. When Bram nods, she drops it and looks melancholy. "Alright so, first we're going to need..."
+"I think it's possible. You gonna help?" Erin looks over at Bram and smiles, though it's weak and born more of habit than cheer. When Bram nods, she drops it and looks melancholy. "Alright so, first we're going to need..."
 
 She continues on, but the memory [[fades->Link Clues]]. You're not sure what to think.
 

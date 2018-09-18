@@ -34,7 +34,7 @@ You should only do it once you're absolutely sure who it is, though. Are you?
 
 "Mr. Whittaker," says the officer, "Could you please describe the events of the dinner and the surrounding circumstances?" 
 
-Clearing his throat, Justin nods. "Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before the day itself. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn't because I was," he pinches the bridge of his nose, "busy, but..."
+Clearing his throat, Justin nods. "Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before today. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn't because I was," he pinches the bridge of his nose, "busy, but..."
 
 "Busy?"
 
@@ -50,7 +50,7 @@ What is that supposed to mean?
 
 Sure he didn't.
 
-<</if>>"Annie and he had some sort of fight, since she had created the menu..." Justin shakes his head and sighs. "That happened before the dinner. Kinda turned everything sour from the start. Thinking about Mort sitting and eating nothing, well, even I felt sorry for him. So the wife suggested we get him a salad. Sure. We forgot dressing though, so she had me go back to get it." 
+<</if>>"They had some sort of fight, since she had created the menu..." Justin shakes his head and sighs. "That happened before the dinner. Kinda turned everything sour from the start. Thinking about Mort sitting and eating nothing, well, even I felt sorry for him. So the wife suggested we get him a salad. Sure. We forgot dressing though, so she had me go back to get it." 
 
 He pauses for a moment. "Then we prepared for the dinner for a couple hours, it started, and...well."
 
@@ -70,26 +70,26 @@ The officer keeps interviewing Justin, asking him to recount the information in 
 :: Terry
 <<set $who to "Terry">><<if visited() is 1>>Terry enters the room already speaking. She's sobbing heavily and keeps trying to wipe away her tears with her sleeve. 
 
-"I-I just can't believe - I'm - oh my word I can't do this. Sorry, I need a minute..." She takes a shaky breath and fans herself. "It's just, I never, I never thought that - Mort of all people!"
+"I just can't believe - I'm - oh my word I can't do this. Sorry, I need a minute..." She takes a shaky breath and fans herself. "It's just, I never, I never thought that - Mort of all people!"
 
 The officer sitting at the table interrupts, "Mrs. Whittaker. Could you tell me what happened at the dinner and its surrounding circumstances?"
 
-"Sorry yes, what happened...t-the dinner," she says, sniffling. "W-well, the RNA thought up the idea a while ago. A big feast. E-everyone was so excited! Mort, Justin, and I didn't cook but we were all pitching in in some way. B-but then - " she wipes her eyes with her sleeve - "we found out M-Mort couldn't eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he's been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I'd do if he wasn't there for me -"
+"Sorry yes, what happened...the dinner," she says, sniffling. "Well, the RNA thought up the idea a while ago. A big feast. E-everyone was so excited! Mort, Justin, and I didn't cook but we were all pitching in in some way. But then - " she wipes her eyes with her sleeve - "we found out Mort couldn't eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he's been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I'd do if he wasn't there for me -"
 
 "Mrs. Whittaker, please continue with your testimony."
 
-Terry blinks. "Sorry, right..."
+Terry blinks the tears out of her eyes. "Sorry, right..."
 
-There's a hint of empathy as the officer says, "It's alright. You were getting a salad?" 
+"It's alright. You were getting a salad?" 
 
 Terry tries to reign in her tears and continues, "Yes, we drove to the grocery to get a small salad for Mort. It was the least we could do so the poor man could have something to eat...poor Mort, oh!"
 
 She's not doing a very good job of keeping composed. You never realized you meant this much to Terry. You're touched, really.
 
-"We headed to the park after that... to help set up, you know? When the dinner started, before the poor man could die of hunger, we gave Mort our salad - oh, and Annie, she gave him a sandwich. Then Erin..." Terry's face shows a marked change, going from despair to disgust. "Erin gave him a silly little potion, going on and on about protection or something. He drank it, though I can't imagine why, and well...! Next thing you know he's d-dead on the floor!" She sobs again.
+"We headed to the park after that... to help set up, you know? When the dinner started, before the poor man could die of hunger, we gave Mort our salad - oh, and Annie, she gave him a sandwich. Then Erin..." Terry's face shows a marked change, going from despair to disgust. "Erin gave him a silly little potion, going on and on about protection or something. He drank it, though I can't imagine why, and well...! Next thing you know he's dead on the floor!" She sobs again.
 
 <<if !hasVisited("Erin's Testimony")>>Oh yeah, you remember that. You drank it, just to stop her from nagging you about it. It tasted like manure.
-<<else>>You'd swear you just felt a shiver go down your spine, were it not for your lack of a spine. Erin?<</if>> She could be a bit odd, but it hadn't occurred to you that she could be dangerous...
+<<else>>You'd swear you just felt a shiver go down your spine, were it not for your lack of a spine. Erin?<</if>>
 
 Still upset, but more angry, Terry continues, "That girl, I just - she has no idea what she's doing with her so-called magic, I wouldn't be surprised if drinking that finally...oh I don't want to think about it! But she's done terrible things before...regardless, whoever did it should be ashamed..."
 
@@ -105,19 +105,19 @@ When you float into the room, Erin is sitting in the cold metal chair, unspeakin
 
 Before that can happen, the officer speaks. "Hello, Ms. Moonchild. If you could, would you please explain the events leading up to Mr. Freedman's death?" 
 
-Erin frowns. "I knew this would happen..."
+Erin frowns. "I knew this would happen."
 
-The officer's eyes narrow slightly. "Could you explain that statement?
+"Could you explain that statement?"
 
 She wrings her hands. "See, the association came up with the idea for the dinner, and everyone was really excited, but there was a negative aura in the air, I could feel it."
 
 "Aura...? Why would there be a negative aura?"
 
-"Well I think that's obvious," she says dismissively.
+"Well I think that's obvious."
 
-"No, I don't think it is," the officer says with a hint of impatience. "Please. Elaborate."
+"No, I don't think it is," the officer says. "Please. Elaborate."
 
-"Well," Erin replies, blinking, "earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We'd baked everything the day before- Annie, Bram, and I, and for some reason Mort didn't like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie's aura flared up, and of course everyone loves Annie so everyone else got frustrated-"
+"Well," Erin replies, "earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We'd baked everything the day before- Annie, Bram, and I, and for some reason Mort didn't like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie's aura flared up, and of course everyone loves Annie so everyone else got frustrated-"
 
 The officer interrupts. "Excuse me, Miss. What, exactly, happened at that meeting?"
 
@@ -132,7 +132,7 @@ You frown. Before the officer can interrupt, she continues, "I had prepared the 
 
 Yeah, given Terry's statements, now you're wondering too.<</if>>
                       
-"Ingredients that protect, of course," Erin says, as if it's the most obvious thing in the world. By the distant look on her face, both you and, it seems, the officer, know that's all you're gonna get out of her about that. <<if hasVisited("Terry's Testimony")>>You want to scream.<</if>>
+"Ingredients that protect, of course," Erin says. By the distant look on her face, both you and, it seems, the officer, know that's all you're gonna get out of her about that. <<if hasVisited("Terry's Testimony")>>You want to scream.<</if>>
 
 Before the officer can ask anything else, Erin adds, "I thought the potion would work. It was supposed to protect him, though I guess he never did want my protection."
 
@@ -155,7 +155,7 @@ You don't know if it's possible to respond and you're not sure you want to.
 
 Annie interrupts, saying, "I guess it coulda been, but there's a dead man. Did you forget that or somethin'?"
 
-"Well, yes, there is." The officer seems caught off guard. "I'd like to ask you a few questions about that, actually. What happened leading up to Mr. Freedman's death?"
+"Well, yes, there is. I'd like to ask you a few questions about that, actually. What happened leading up to Mr. Freedman's death?"
 
 Annie's face twists into a displeased expression. About your untimely murder, you assume. "Where are we startin'? We fought this morning..."
 
@@ -194,11 +194,11 @@ Bram, poor guy, enters the room sweating, dabbing at his forehead with a handker
 
 He sits down slowly, and listens for the officer. The officer speaks, "Mr. Locklear, could you please describe the events leading up to and around Mr. Freedman's death?"
 
-"Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn't there though, so where should I start, officer? I don't want to slow you down with irrelevant info, ha." Bram laughs nervously. 
+"Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn't there though, so where should I start, officer? I don't want to slow you down with irrelevant info." Bram laughs nervously. 
 
-The officer doesn't respond for a moment, not realizing Bram's invitation to talk. Then, "Wherever you think is the most relevant. If I think you're leaving something out, I will ask." 
+"Wherever you think is the most relevant. If I think you're leaving something out, I will ask." 
 
-Bram furrows his eyebrows. "O-okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin's idea apparently- I don't know if Justin knew about the allergy, of course! Anyway, that's why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It's like she doesn't know what allergies are." 
+Bram furrows his eyebrows. "Okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin's idea apparently- I don't know if Justin knew about the allergy, of course! Anyway, that's why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It's like she doesn't know what allergies are." 
 
 He laughs again, his expression pained. If only you weren't dead, you could remind him that laughing while being asked about a murder is a bad idea.
 
@@ -206,11 +206,11 @@ He laughs again, his expression pained. If only you weren't dead, you could remi
 
 After a short silence, the officer says, "Mr. Locklear, we believe that Mr. Freedman was killed with a poison. Are you aware of how aconite is made?"
 
-Bram takes a moment to process the question, then puts his hands up and sputters out an objection, "B-before you start asking about the wolfsbane in the garden, Erin asked me to plant it. She uses it for spells. But I wasn't growing it to poison Mort!"
+Bram takes a moment to process the question, then puts his hands up and sputters out an objection, "Before you start asking about the wolfsbane in the garden, Erin asked me to plant it. She uses it for spells. But I wasn't growing it to poison Mort!"
 
 The officer hums and writes something down. "Thank you, Mr. Locklear." 
 
-"W-wait, what are you writing down?" Bram stammers. "I said I wasn't - "
+"Wait, what are you writing down?" Bram stammers. "I said I wasn't - "
 
 "Could you please go over your testimony one more time?"
 
