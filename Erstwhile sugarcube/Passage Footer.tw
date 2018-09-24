@@ -17,7 +17,7 @@
 <!--Unless a passage is an item, a memory, or is not supposed to display an inventory, add the inventory link to every passage-->
     <<if !tags().includesAny("noinv", "item", "memory")>>
 <!--Saves where you were and sends you to the inventory page if clicked-->
-        <<link ''"<br><br>Remember."''>>
+        <<link "''<br><br>Remember.''">>
             <<set $returnTo to passage()>>
             <<goto "Clues">>
         <</link>>

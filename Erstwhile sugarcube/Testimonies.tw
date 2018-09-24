@@ -54,7 +54,7 @@ Sure he didn't.
 
 He pauses for a moment. "Then we prepared for the dinner for a couple hours, it started, and...well."
 
-He exhales slowly, gathering his thoughts. "I hope you all find the killer soon and bring them to justice. I didn't exactly call Mort a friend - I - to be completely honest I didn't like him very much, but I-" He clears his throat. "I never wished him dead."
+He exhales slowly, gathering his thoughts. "I hope you all find the killer soon and bring them to justice. I didn't exactly call Mort a friend - to be completely honest I didn't like him very much, but I - " He clears his throat. "I never wished him dead."
 
 <<if !hasVisited("Annie's Testimony")>>What? You aren't friends? He doesn't like you? Well! This is certainly news to you. You drift closer, wishing you could ask Justin why he would say something like that.\
 <<else>>You'd be highly surprised that Justin didn't like you before, but with the knowledge that he told Annie to add nuts to everything, this just makes a terrible sort of sense. You drift closer, feeling cold.<</if>> His face is impassive - no signs of sorrow belying his calm demeanor.
@@ -74,7 +74,7 @@ The officer keeps interviewing Justin, asking him to recount the information in 
 
 The officer sitting at the table interrupts, "Mrs. Whittaker. Could you tell me what happened at the dinner and its surrounding circumstances?"
 
-"Sorry yes, what happened...the dinner," she says, sniffling. "Well, the RNA thought up the idea a while ago. A big feast. E-everyone was so excited! Mort, Justin, and I didn't cook but we were all pitching in in some way. But then - " she wipes her eyes with her sleeve - "we found out Mort couldn't eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he's been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I'd do if he wasn't there for me -"
+"Sorry yes, what happened...the dinner," she says, sniffling. "Well, the RNA thought up the idea a while ago. A big feast. Everyone was so excited! Mort, Justin, and I didn't cook but we were all pitching in in some way. But then - " she wipes her eyes with her sleeve - "we found out Mort couldn't eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he's been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I'd do if he wasn't there for me -"
 
 "Mrs. Whittaker, please continue with your testimony."
 
@@ -117,11 +117,11 @@ She wrings her hands. "See, the association came up with the idea for the dinner
 
 "No, I don't think it is," the officer says. "Please. Elaborate."
 
-"Well," Erin replies, "earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We'd baked everything the day before- Annie, Bram, and I, and for some reason Mort didn't like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie's aura flared up, and of course everyone loves Annie so everyone else got frustrated-"
+"Well," Erin replies, "earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We'd baked everything the day before - Annie, Bram, and I, and for some reason Mort didn't like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie's aura flared up, and of course everyone loves Annie so everyone else got frustrated - "
 
 The officer interrupts. "Excuse me, Miss. What, exactly, happened at that meeting?"
 
-"Well, Mort didn't want to eat any of the dishes- couldn't? He said something like that.  I kept trying to give him the potion, but he ignored me! Everyone ignores me," she says softly. She shakes her head. "He left all angrily, and then Justin and Terry went off to get Mort something, salad maybe? I didn't pay too much attention." She pauses. "Well, I did, but not because I was stalking them or anything." (What?) "I was just concerned about Justin. He hasn't been talking to me at all. I tried to tell him about the bad energies and signs I've felt lately, but he wouldn't listen, and then this had to go and happen!"
+"Well, Mort didn't want to eat any of the dishes - couldn't? He said something like that.  I kept trying to give him the potion, but he ignored me! Everyone ignores me," she says softly. She shakes her head. "He left all angrily, and then Justin and Terry went off to get Mort something, salad maybe? I didn't pay too much attention." She pauses. "Well, I did, but not because I was stalking them or anything." (What?) "I was just concerned about Justin. He hasn't been talking to me at all. I tried to tell him about the bad energies and signs I've felt lately, but he wouldn't listen, and then this had to go and happen!"
 
 She throws her hands up in the air. The officer makes a noise as if to question her, but she keeps going. "Anyway, we all set up the dinner for a couple hours. Then I gave Mort the potion at the party. I watched him drink it and then went back to the party, feeling better, until..." She looks down sadly. 
 
@@ -151,11 +151,11 @@ You don't know if it's possible to respond and you're not sure you want to.
 
 
 :: Annie
-<<set $who to "Annie">><<if visited() is 1>>The officer has just begun speaking when you enter the room. "Good day, Ms. Smith-"
+<<set $who to "Annie">><<if visited() is 1>>The officer has just begun speaking when you enter the room. "Good day, Ms. Smith - "
 
 Annie interrupts, saying, "I guess it coulda been, but there's a dead man. Did you forget that or somethin'?"
 
-"Well, yes, there is. I'd like to ask you a few questions about that, actually. What happened leading up to Mr. Freedman's death?"
+"I'd like to ask you a few questions about that, actually. What happened leading up to Mr. Freedman's death?"
 
 Annie's face twists into a displeased expression. About your untimely murder, you assume. "Where are we startin'? We fought this morning..."
 
@@ -198,7 +198,7 @@ He sits down slowly, and listens for the officer. The officer speaks, "Mr. Lockl
 
 "Wherever you think is the most relevant. If I think you're leaving something out, I will ask." 
 
-Bram furrows his eyebrows. "Okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin's idea apparently- I don't know if Justin knew about the allergy, of course! Anyway, that's why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It's like she doesn't know what allergies are." 
+Bram furrows his eyebrows. "Okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin's idea apparently - I don't know if Justin knew about the allergy, of course! Anyway, that's why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It's like she doesn't know what allergies are." 
 
 He laughs again, his expression pained. If only you weren't dead, you could remind him that laughing while being asked about a murder is a bad idea.
 

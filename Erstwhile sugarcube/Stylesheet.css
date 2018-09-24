@@ -6,34 +6,34 @@ body {
 }
 
 body[data-tags~="detective"] {
-	background-color: #d8d8d8;
-    color: #545454;
+	background-color: #f0eaea;
+    color: #464545;
 }
 
 
 body[data-tags~="justin"] {
-	background-color: LightBlue;
-	color: #1c3654;
+	background-color: rgb(186, 226, 240);
+	color: #122b47;
 }
 
 body[data-tags~="terry"] {
-	background-color: LightYellow;
-	color: #726918;
+	background-color: rgb(255, 255, 238);
+	color: #5a5310;
 }
 
 body[data-tags~="erin"]{
-	background-color: #f0d2f9;
-	color: purple
+	background-color: #f8e1ff;
+	color: rgb(92, 1, 92)
 }
 
 body[data-tags~="annie"] {
-	background-color: #f9deac;
-	color: #90671a
+	background-color: #fff3dd;
+	color: #523500
 }
 
 body[data-tags~="bram"] {
-	background-color: #b3dda6;
-	color: forestgreen;
+	background-color: #e2ffd9;
+	color: rgb(10, 65, 10);
 }
 
 a {

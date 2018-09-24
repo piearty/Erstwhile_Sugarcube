@@ -1,1 +1,1 @@
-tweego -s "Test" -o "Erstwhile sugarcube.html" "Erstwhile sugarcube"
+tweego -o "Erstwhile sugarcube.html" "Erstwhile sugarcube"

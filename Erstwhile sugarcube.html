@@ -102,7 +102,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="102" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
+	<div id="store-area" hidden><tw-storydata name="Erstwhile" startnode="5" creator="Tweego" creator-version="1.3.0" ifid="67CC551D-BC54-4761-A6BE-986451D23B61" zoom="1" format="SugarCube" format-version="2.24.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "Stylesheet.css" */
 body {
     background: white;
     color: black;
@@ -111,34 +111,34 @@ body {
 }
 
 body[data-tags~="detective"] {
-	background-color: #d8d8d8;
-    color: #545454;
+	background-color: #f0eaea;
+    color: #464545;
 }
 
 
 body[data-tags~="justin"] {
-	background-color: LightBlue;
-	color: #1c3654;
+	background-color: rgb(186, 226, 240);
+	color: #122b47;
 }
 
 body[data-tags~="terry"] {
-	background-color: LightYellow;
-	color: #726918;
+	background-color: rgb(255, 255, 238);
+	color: #5a5310;
 }
 
 body[data-tags~="erin"]{
-	background-color: #f0d2f9;
-	color: purple
+	background-color: #f8e1ff;
+	color: rgb(92, 1, 92)
 }
 
 body[data-tags~="annie"] {
-	background-color: #f9deac;
-	color: #90671a
+	background-color: #fff3dd;
+	color: #523500
 }
 
 body[data-tags~="bram"] {
-	background-color: #b3dda6;
-	color: forestgreen;
+	background-color: #e2ffd9;
+	color: rgb(10, 65, 10);
 }
 
 a {
@@ -353,6 +353,7 @@ Alex
 Anna
 Ava
 Brigit
+Chapel
 Eleanor
 Element
 Emma
@@ -449,9 +450,11 @@ You can still &lt;&lt;link &quot;restart&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
                 &lt;&lt;/link&gt;&gt; everything if you want (This will erase your saves).
 &lt;&lt;else&gt;&gt;&lt;&lt;goto &quot;Intro&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Intro" tags="noinv intro" position="725,100">It was a pretty good Thanksgiving until you keeled over and died.
 
-The whole neighborhood was invited to the dinner and just about the whole neighborhood showed up, ostensibly to strengthen the bonds of the Ronton community, but most likely for the free food. You were fine with that though, beaming with pride at the amount of people who came to the party //you// arranged, regardless of why they were there. And listening closely to their chatter - which, as the Ronton Neighborhood Association chairman, you considered less &lt;&lt;linkappend &quot;//eavesdropping//&quot;&gt;&gt;, regardless of what Bram said,&lt;&lt;/linkappend&gt;&gt; and more //surveying//, - it was having the bonding effect you wanted all along.
+The whole neighborhood was invited to the dinner, and just about the whole neighborhood showed up. Most of them were probably there for the free food over the Thanksgiving spirit advertised on the flyers, but it was such an impressive turnout that you didn&#39;t really give a damn about that. You simply beamed as you watched them pour into the park, chatting with each other and eyeing the feast laid out on the long plastic tablecloths.
 
-Yes, everything was going perfectly - until, as you said yourself while beads of sweat dripped down your chin, you started to feel &quot;a bit crappy&quot;. &quot;Crappy&quot; turned out to be a terribly understated description of your heart attack, especially with the &lt;&lt;linkappend &quot;vomiting and suffocation&quot;&gt;&gt; - which you personally found excessive -&lt;&lt;/linkappend&gt;&gt; piled on top of it. Though 911 was called as soon as you started convulsing, and the EMTs tried their damndest to save you, things ended in a non-miraculous way.
+Before people could sit down in the folding chairs set on the browning grass, you made a point of greeting every single one of them, with a wide smile and a handshake so firm that many of them walked away rubbing their wrists. It was what any gracious host would do, and as the Ronton Neighborhood Association chairman, you wanted to make a good impression. Listening closely to their chatter, which, given your position in the community, you considered less &lt;&lt;linkappend &quot;//eavesdropping//&quot;&gt;&gt;, regardless of what Bram said,&lt;&lt;/linkappend&gt;&gt; and more //surveying//, you were making a very good one indeed.
+
+Yes, everything was going perfectly until, as you said with difficulty, you started to feel &quot;a bit crappy&quot;. Beads of sweat dripped down your chin and your vision blurred, and people began to crowd about you in concern right up until you vomited on the table. It turned out that &quot;crappy&quot; was a terribly understated description of your heart attack, especially with the &lt;&lt;linkappend &quot;suffocation&quot;&gt;&gt;, which you personally found excessive, &lt;&lt;/linkappend&gt;&gt; on top of it. Though someone called 911 as soon as you started convulsing, and the EMTs tried their damndest to save you, things ended in a non-miraculous way.
 
 In other words, you&#39;re a ghost now.
 
@@ -471,36 +474,32 @@ You can&#39;t figure out anything else you can do right now, being a ghost, othe
 [[Look at the guests.|Guests]]
 [[Look at the food.|Food]]
 [[Be a poltergeist.|Poltergeist]]
-&lt;&lt;if hasVisited(&quot;Guests&quot;, &quot;Food&quot;, &quot;Mort&quot;)&gt;&gt;[[Wait.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Mort" tags="noinv" position="1100,100">Well, you - your corpse, rather - was taken away by the EMTs a while ago and you have no desire to look at it - yourself? Again. You liked how you looked better when you were alive, rather than the cold, pale look of the dead.
-
-You&#39;re - you //were// a handsome man, even with your slightly thinning hair; getting on in years but still maintaining a youthful &lt;&lt;linkappend &quot;charm&quot;&gt;&gt; (the charm was probably diminished when you vomited on yourself)&lt;&lt;/linkappend&gt;&gt; and vigor, if you do say so yourself.
+&lt;&lt;if hasVisited(&quot;Guests&quot;, &quot;Food&quot;, &quot;Mort&quot;)&gt;&gt;[[Wait.]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Mort" tags="noinv" position="1100,100">You&#39;re - you //were// a handsome man, even with your slightly thinning hair; getting on in years but still maintaining a youthful &lt;&lt;linkappend &quot;charm&quot;&gt;&gt; (the charm was probably diminished when you vomited on yourself)&lt;&lt;/linkappend&gt;&gt; and vigor, if you do say so yourself. You hate how pale and still your corpse looks in comparison, but can&#39;t manage to look away until the EMTs carry it off.
 
 Unfortunately you&#39;re not a mortician so you can&#39;t determine cause of death, though you wish you could. Yeah, the whole &#39;heart stopped beating&#39; part seems to supply the cause just fine. But you weren&#39;t //that// &lt;&lt;linkappend &quot;old&quot;&gt;&gt; (56 is barely middle aged!)&lt;&lt;/linkappend&gt;&gt; and had no history of heart problems in your life or in your family. Plus, you&#39;ve no idea where the other symptoms came from. You suspect there&#39;s something else going on.
 
 [[Look around some more.|Welp]]</tw-passagedata><tw-passagedata pid="10" name="Guests" tags="noinv" position="1225,100">You don&#39;t know who most of these people are, but you feel sorry for them nonetheless. You probably traumatized them all about the concept of Thanksgiving by having to go and die. You disappoint yourself sometimes.
 
-The other core members of the Neighborhood Association have stayed, maybe out of some sense of obligation. Justin is trying to calm the adults while his wife Terry is trying to calm the kids. Erin is running around gesticulating and doing...whatever, you don&#39;t really know or care. Annie and Bram are clearing the tables of food since, of course, the party is over.
+The other core members of the Neighborhood Association have stayed, maybe out of some sense of obligation. Justin is trying to calm the adults while his wife Terry is trying to calm the kids. Erin is running around gesticulating, maybe casting spells, though you don&#39;t know or care about the specifics. Annie and Bram are clearing the tables of food.
 
 [[Look at Justin.]]
 [[Look at Terry.]]
 [[Look at Erin.]]
 [[Look at Annie.]]
 [[Look at Bram.]]
-[[Look around some more.|Welp]]</tw-passagedata><tw-passagedata pid="11" name="Look at Justin." tags="noinv" position="100,225">Justin Whittaker is a cop in his mid-30&#39;s and husband to Terry. He&#39;s got jet-black hair, a bowtie, a perpetually furrowed brow. He&#39;s sort of gruff and unpleasant, but you like him fine anyway. Right now he&#39;s calming some other guests down and reassuring them that things will be &lt;&lt;linkappend &quot;alright.&quot;&gt;&gt; You&#39;d beg to differ.&lt;&lt;/linkappend&gt;&gt;
+[[Look around some more.|Welp]]</tw-passagedata><tw-passagedata pid="11" name="Look at Justin." tags="noinv" position="100,225">Justin Whittaker is a cop in his mid-30s and husband to Terry. He&#39;s got jet-black hair, a bowtie, a perpetually furrowed brow. He&#39;s sort of gruff and unpleasant, but you like him fine anyway. Right now he&#39;s calming some other guests down and reassuring them that things will be &lt;&lt;linkappend &quot;alright.&quot;&gt;&gt; You&#39;d beg to differ.&lt;&lt;/linkappend&gt;&gt;
 
 He&#39;s handling this remarkably well; makes sense since he&#39;s probably seen this kind of macabre stuff before.
 
 Still, you wish he was a little more affected by a friend&#39;s death than he appears to be.
 
-[[Look at more guests.|Guests]]</tw-passagedata><tw-passagedata pid="12" name="Look at Terry." tags="noinv" position="225,225">Terry Whittaker is a pleasant, energetic wine store owner and wife to Justin, around the same age as him. Brown curls fall into her face and cling to the wet streaks left by tears. She looks distraught but is trying to put on a happy face for the kids who have flocked around her for comfort.
+[[Look at more guests.|Guests]]</tw-passagedata><tw-passagedata pid="12" name="Look at Terry." tags="noinv" position="225,225">Terry Whittaker is a pleasant, energetic wine store owner and wife to Justin, around her mid-30s like Justin is. Brown curls fall into her face and cling to the wet streaks left by tears. She looks distraught but is trying to put on a happy face for the kids who have flocked around her for comfort.
 
 Terry has always been the most helpful member of the association, after you of course. You can&#39;t imagine how much this is affecting her.
 
-[[Look at other guests.|Guests]]</tw-passagedata><tw-passagedata pid="13" name="Look at Erin." tags="noinv" position="350,225">Erin Moonchild is...well, she&#39;s something alright. You don&#39;t pretend to understand why she thinks things like potions and spells and &lt;&lt;linkreplace &quot;magic&quot;&gt;&gt; sorry, //magick//&lt;&lt;/linkreplace&gt;&gt; are real, but she does, and everyone else has just had to deal with it. You find it a bit inappropriate in a woman of her age, already in her 30&#39;s. Her weird gestures right now are probably her trying to cast some incantation. You&#39;re not entirely sure she knows what just happened.
+[[Look at other guests.|Guests]]</tw-passagedata><tw-passagedata pid="13" name="Look at Erin." tags="noinv" position="350,225">Erin Moonchild is...well, she&#39;s something alright. You don&#39;t pretend to understand why she thinks things like potions and spells and &lt;&lt;linkreplace &quot;magic&quot;&gt;&gt; sorry, //magick//&lt;&lt;/linkreplace&gt;&gt; are real, but she does, and everyone else has just had to deal with it. You find it a bit inappropriate in a woman of her age, already in her 30&#39;s. Her weird gestures right now are probably her trying to cast some incantation. You don&#39;t know if she&#39;s aware of what just happened.
 
-You sigh.
-
-[[Look at other guests.|Guests]]</tw-passagedata><tw-passagedata pid="14" name="Look at Annie." tags="noinv" position="475,225">Annie Smith is a stern but &lt;&lt;linkappend &quot;kind&quot;&gt;&gt; (too kind, really)&lt;&lt;/linkappend&gt;&gt; black woman in her 70&#39;s, retired. Right now she&#39;s shaking her head sadly as she packs up the mashed potatoes.
+[[Look at other guests.|Guests]]</tw-passagedata><tw-passagedata pid="14" name="Look at Annie." tags="noinv" position="475,225">Annie Smith is a stern but &lt;&lt;linkappend &quot;kind&quot;&gt;&gt; (too kind, really)&lt;&lt;/linkappend&gt;&gt; black woman in her 70&#39;s, retired. Right now she&#39;s shaking her head as she packs up the mashed potatoes.
 
 You know there&#39;s no way she&#39;s a grandma but everyone calls her Granny Smith anyway. She cooked everything for the dinner, which must&#39;ve taken her days. You&#39;d really appreciate it if not for all the nuts; for most of the dinner you were just frustratedly staring and drooling at all the stuff you couldn&#39;t eat because of your deadly allergy.
 
@@ -508,23 +507,23 @@ Not that it ended up mattering.
 
 [[Look at other guests.|Guests]]</tw-passagedata><tw-passagedata pid="15" name="Look at Bram." tags="noinv" position="600,225">Bram Locklear is the closest to you in age and you were fairly close friends. In fact, you&#39;re not entirely sure what he&#39;s going to do now that you&#39;re gone. He wears his hair in a long braid down his back, and tends to the &lt;&lt;linkappend &quot;community greenhouse&quot;&gt;&gt;, though it&#39;s really more just Bram&#39;s greenhouse at this point&lt;&lt;/linkappend&gt;&gt;. He also has a garden in his backyard, and sells the produce he grows there at the farmer&#39;s market for a living.
 
-Bram is currently wrapping the turkey in tin foil with a worried, upset look on his face. You wish you could pat him on the shoulder and say it&#39;ll be alright. But you can&#39;t, and it won&#39;t.
+Bram is currently attempting to wrap the turkey in tin foil. His hands are shaking as he wraps and unwraps sections that have bones sticking out, and the foil rips repeatedly. You wish you could pat him on the shoulder and say it&#39;ll be alright. But you can&#39;t, and it won&#39;t.
 
 [[Look at other guests.|Guests]]</tw-passagedata><tw-passagedata pid="16" name="Food" tags="noinv" position="725,225">Just about everything is covered in nuts, or is nut-based in some way. The turkey, the stuffing, the mashed potatoes. You have no idea why. You &lt;&lt;linkappend &quot;can&#39;t&quot;&gt;&gt;&lt;&lt;linkappend &quot; (or couldn&#39;t, anyway)&quot;&gt;&gt; (or still can&#39;t, being as you&#39;re a ghost)&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt; eat any of it, oh, what with your //nut allergy//. You&#39;d grind your teeth if you weren&#39;t intangible. How the hell was that overlooked?!
  
 [[Look around some more.|Welp]]</tw-passagedata><tw-passagedata pid="17" name="Poltergeist" tags="noinv" position="850,225">You try to make the stuffing float, just for &lt;&lt;linkappend kicks.&gt;&gt; And also to find some sort of solace in the fact that you&#39;re dead.&lt;&lt;/linkappend&gt;&gt;
 
-Quickly you realize you have no idea how to do that. You try using your ~special ghost powers~, but after a whole minute of straining on your part and a complete lack of floating on the stuffing&#39;s part, you figure those probably don&#39;t exist.
+Quickly you realize you have no idea how to do that. You try using your //special ghost powers//, but after a whole minute of straining on your part and a complete lack of floating on the stuffing&#39;s part, you figure those probably don&#39;t exist.
 
 Trying to grab the stuffing proves futile as well, as your spectral hand can&#39;t touch it. Maybe this would be easier if you could //see// your spectral hand or the rest of your ghostly body. Maybe you&#39;re less of a ghost and more of a...presence? To be honest, you&#39;re not sure how this works.
 
-[[Look around some more.|Welp]]</tw-passagedata><tw-passagedata pid="18" name="Wait." tags="noinv" position="975,225">It isn&#39;t long before, to your surprise, police cars show up. You float closer to try and figure out what&#39;s going on.
+[[Look around some more.|Welp]]</tw-passagedata><tw-passagedata pid="18" name="Wait." tags="noinv" position="975,225">It isn&#39;t long before police cars show up. You float closer to try and figure out what&#39;s going on.
 
 Justin and one of the policemen are talking. Justin looks &lt;&lt;linkappend &quot;irritated&quot;&gt;&gt;, even more so than usual&lt;&lt;/linkappend&gt;&gt;, fiddling with his bowtie. It seems that the medical examiner at the hospital suspected something was off about your death - turns out the inability to breathe and the barfing were excessive after all.
 
 Or perhaps a better word would be suspicious. 
 
- An autopsy is ordered post-haste and your friends are all detained as officers investigate the area and do basic interrogations, which takes a few hours. You float around the scene aimlessly, not really absorbing any information in your shock. Eventually the police inform the Neighborhood Association that they&#39;re to be taken in for questioning, having been deemed the group most likely to have had a hand in your &lt;&lt;linkappend &quot;death&quot;&gt;&gt; - no -
+ An autopsy is ordered post-haste and your friends are all detained as officers investigate the area and do basic interrogations. You float around the scene aimlessly, not really absorbing any information in your shock. Eventually the police inform the Neighborhood Association that they&#39;re to be taken in for questioning, having been deemed the group most likely to have had a hand in your &lt;&lt;linkappend &quot;death&quot;&gt;&gt; - no -
 
 Your murder&lt;&lt;/linkappend&gt;&gt;.
 
@@ -537,7 +536,7 @@ A detective with cropped red hair, a worn brown coat, and an androgynous look wa
 
 You bring yourself closer to hear what they&#39;re saying, but just at that moment they start pacing in your direction. You instinctively try to back up, but before you do, your ghostly form and the detective collide and you feel a strong tug. The last thing you see before the world fades is the detective shuddering.
 
-[[Wait, what?-&gt;Detective&#39;s mind]]&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; up and down the hall while muttering, presumably about the case. &lt;span id=&quot;muttering&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="20" name="Police Station" tags="" position="1225,225">&lt;&lt;if $policeStationStart is true&gt;&gt;
+[[Wait, what?-&gt;Detective&#39;s mind]]&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; up and down the hall while muttering. &lt;span id=&quot;muttering&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="20" name="Police Station" tags="" position="1225,225">&lt;&lt;if $policeStationStart is true&gt;&gt;
 You&#39;re in the police station, watching as the RNA shuffle into the interview rooms. The [[Aconite Poison]], the [[Potion]], the [[Rap Sheet]], [[Sandwich]], and the [[Salad]] are already in your inventory.&lt;&lt;set $inv.pushUnique(&quot;Aconite Poison&quot;, &quot;Potion&quot;, &quot;Rap Sheet&quot;, &quot;Sandwich&quot;, &quot;Salad&quot;)&gt;&gt;\
 &lt;&lt;elseif visited(&quot;Detective&#39;s mind&quot;) == 1&gt;&gt;You&#39;re shunted out of the detective&#39;s mind and back into the hallway. The detective is looking a bit disoriented, holding their hand to their head. While you and they try to reorient yourselves, the other members of the RNA start to head into the hallway, and then the separate interview rooms where they&#39;re to be questioned by the police.\
 &lt;&lt;else&gt;&gt;The RNA members - the suspects - are sitting in their separate interview rooms, being questioned by the police.&lt;&lt;/if&gt;&gt;
@@ -585,45 +584,45 @@ Bram was telling Annie about it while he sold her some &lt;&lt;linkappend &quot;
 &lt;&lt;if hasVisited(&quot;the detective ruminating about the murder weapon&quot;, &quot;Bram realizing the wolfsbane was tampered with&quot;, &quot;Annie and Erin talking about warding you away&quot;, &quot;Terry poisoning your salad&quot;)&gt;&gt;
 
 &lt;&lt;used &quot;Wolfsbane&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Justin&#39;s Testimony" tags="item" position="850,350">&lt;h3&gt;Justin&#39;s Testimony&lt;/h3&gt;
-&quot;Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before the day itself. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn&#39;t because I was busy, but...&quot;
+&quot;Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before today. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn&#39;t because I was busy, but...&quot;
 
 &quot;Yeah, [I was busy with] patrols, talks with schools, //more// patrols...I mean. You know how it is.&quot;
 
-&quot;Mort wasn&#39;t helping out because he was also busy with RNA matters. Apparently.&quot; He mutters the last word.
+&quot;Mort wasn&#39;t helping out because he was also busy with RNA matters. Apparently.
 
 &quot;So when we met on Thanksgiving day at Annie&#39;s place to touch base, he got all angry that there were nuts in every dish that&#39;d been cooked. Some nut allergy. I - I had no idea.
 
-&quot;Annie and he had some sort of fight, since she had created the menu...That happened before the dinner. Kinda turned everything sour from the start. Thinking about Mort sitting and eating nothing, well, even I felt sorry for him. So the wife suggested we get him a salad. Sure. We forgot dressing though, so she had me go back to get it.
+&quot;They had some sort of fight, since she had created the menu...That happened before the dinner. Kinda turned everything sour from the start. Thinking about Mort sitting and eating nothing, well, even I felt sorry for him. So the wife suggested we get him a salad. Sure. We forgot dressing though, so she had me go back to get it.
 
 &quot;Then we prepared for the dinner for a couple hours, it started, and...well.
 
-&quot;I hope you all find the killer soon and bring them to justice. I didn&#39;t exactly call Mort a friend - I - to be completely honest I didn&#39;t like him very much, but I-&quot; He clears his throat. &quot;I never wished him dead.&quot;\
+&quot;I hope you all find the killer soon and bring them to justice. I didn&#39;t exactly call Mort a friend - to be completely honest I didn&#39;t like him very much, but I - I never wished him dead.&quot;\
 &lt;&lt;if hasVisited(&quot;Justin and Terry at the grocery store&quot;)&gt;&gt;
 
 &lt;&lt;used &quot;Justin&#39;s Testimony&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Terry&#39;s Testimony" tags="item" position="975,350">&lt;h3&gt;Terry&#39;s Testimony&lt;/h3&gt;
-&quot;I-I just can&#39;t believe - I&#39;m - oh my word I can&#39;t do this. Sorry, I need a minute...&quot; She takes a shaky breath and fans herself. &quot;It&#39;s just, I never, I never thought that - Mort of all people!
+&quot;I just can&#39;t believe - I&#39;m - oh my word I can&#39;t do this. Sorry, I need a minute...&quot; She takes a shaky breath and fans herself. &quot;It&#39;s just, I never, I never thought that - Mort of all people!
 
-&quot;Sorry yes, what happened...t-the dinner. W-well, the RNA thought up the idea a while ago. A big feast. E-everyone was so excited! Mort, Justin, and I didn&#39;t cook but we were all pitching in in some way. B-but then - we found out M-Mort couldn&#39;t eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he&#39;s been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I&#39;d do if he wasn&#39;t there for me -
+&quot;Sorry yes, what happened...the dinner. Well, the RNA thought up the idea a while ago. A big feast. Everyone was so excited! Mort, Justin, and I didn&#39;t cook but we were all pitching in in some way. But then - we found out Mort couldn&#39;t eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he&#39;s been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I&#39;d do if he wasn&#39;t there for me -
 
 &quot;Sorry, right...
 
 &quot;Yes, we drove to the grocery to get a small salad for Mort. It was the least we could do so the poor man could have something to eat...poor Mort, oh!
 
-&quot;We headed to the park after that... to help set up, you know? When the dinner started, before the poor man could die of hunger, we gave Mort our salad - oh, and Annie, she gave him a sandwich. Then Erin...Erin gave him a silly little potion, going on and on about protection or something. He drank it, though I can&#39;t imagine why, and well...! Next thing you know he&#39;s d-dead on the floor!
+&quot;We headed to the park after that... to help set up, you know? When the dinner started, before the poor man could die of hunger, we gave Mort our salad - oh, and Annie, she gave him a sandwich. Then Erin...Erin gave him a silly little potion, going on and on about protection or something. He drank it, though I can&#39;t imagine why, and well...! Next thing you know he&#39;s dead on the floor!
 
 &quot;That girl, I just - she has no idea what she&#39;s doing with her so-called magic, I wouldn&#39;t be surprised if drinking that finally...oh I don&#39;t want to think about it! But she&#39;s done terrible things before...regardless, whoever did it should be ashamed...&quot;\
 &lt;&lt;if hasVisited(&quot;Justin and Terry at the grocery store&quot;)&gt;&gt;
 
 &lt;&lt;used &quot;Terry&#39;s Testimony&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Erin&#39;s Testimony" tags="item" position="1100,350">&lt;h3&gt;Erin&#39;s Testimony&lt;/h3&gt;
-&quot;I knew this would happen...
+&quot;I knew this would happen.
 
 &quot;See, the association came up with the idea for the dinner, and everyone was really excited, but there was a negative aura in the air, I could feel it.
 
 &quot;[Why?] Well I think that&#39;s obvious.
 
-&quot;Well, earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We&#39;d baked everything the day before- Annie, Bram, and I, and for some reason Mort didn&#39;t like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie&#39;s aura flared up, and of course everyone loves Annie so everyone else got frustrated-
+&quot;Well, earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We&#39;d baked everything the day before- Annie, Bram, and I, and for some reason Mort didn&#39;t like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie&#39;s aura flared up, and of course everyone loves Annie so everyone else got frustrated -
 
-&quot;Well, Mort didn&#39;t want to eat any of the dishes- couldn&#39;t? He said something like that.  I kept trying to give him the potion, but he ignored me! Everyone ignores me. He left all angrily, and then Justin and Terry went off to get Mort something, salad maybe? I didn&#39;t pay too much attention. Well, I did, but not because I was stalking them or anything. I was just concerned about Justin. He hasn&#39;t been talking to me at all. I tried to tell him about the bad energies and signs I&#39;ve felt lately, but he wouldn&#39;t listen, and then this had to go and happen!
+&quot;Well, Mort didn&#39;t want to eat any of the dishes - couldn&#39;t? He said something like that.  I kept trying to give him the potion, but he ignored me! Everyone ignores me. He left all angrily, and then Justin and Terry went off to get Mort something, salad maybe? I didn&#39;t pay too much attention. Well, I did, but not because I was stalking them or anything. I was just concerned about Justin. He hasn&#39;t been talking to me at all. I tried to tell him about the bad energies and signs I&#39;ve felt lately, but he wouldn&#39;t listen, and then this had to go and happen!
 
 &quot;Anyway, we all set up the dinner for a couple hours. Then I gave Mort the potion at the party. I watched him drink it and then went back to the party, feeling better, until...
 
@@ -651,15 +650,15 @@ Bram was telling Annie about it while he sold her some &lt;&lt;linkappend &quot;
 &lt;&lt;if hasVisited(&quot;your fight with Annie&quot;, &quot;Terry giving Justin the nut article&quot;)&gt;&gt;
 
 &lt;&lt;used &quot;Annie&#39;s Testimony&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Bram&#39;s Testimony" tags="item" position="100,475">&lt;h3&gt;Bram&#39;s Testimony&lt;/h3&gt;
-&quot;Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn&#39;t there though, so where should I start, officer? I don&#39;t want to slow you down with irrelevant info, ha.
+&quot;Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn&#39;t there though, so where should I start, officer? I don&#39;t want to slow you down with irrelevant info.
 
-&quot;O-okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin&#39;s idea apparently- I don&#39;t know if Justin knew about the allergy, of course! Anyway, that&#39;s why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It&#39;s like she doesn&#39;t know what allergies are.
+&quot;Okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin&#39;s idea apparently - I don&#39;t know if Justin knew about the allergy, of course! Anyway, that&#39;s why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It&#39;s like she doesn&#39;t know what allergies are.
 
 &quot;Mort left, which was really uncomfortable, but we tried to finish the meeting anyway. Then we all went to the party. Or the store. Or the kitchen. I went to the party to set up.
 
-&quot;B-before you start asking about the wolfsbane in the greenhouse, Erin asked me to plant it. She uses it for spells. But I wasn&#39;t growing it to poison Mort!
+&quot;Before you start asking about the wolfsbane in the greenhouse, Erin asked me to plant it. She uses it for spells. But I wasn&#39;t growing it to poison Mort!
 
-&quot;W-wait, what are you writing down? I said I wasn&#39;t - &quot;
+&quot;Wait, what are you writing down? I said I wasn&#39;t - &quot;
 
 &lt;&lt;used &quot;Bram&#39;s Testimony&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Petition" tags="item lexa" position="225,475">&lt;h3&gt;Petition&lt;/h3&gt;
 Your petition for the park plaque, ripped into itty bitty pieces in Terry&#39;s mind. You can make out -ETITION, memori-, -xa, and what look like parts of signatures.\
@@ -1008,24 +1007,24 @@ In one hand they&#39;re holding the autopsy report, your autopsy report; the oth
 
 Seriously? Wolfsbane? You can&#39;t believe it. You were offed by a garden flower.
 
-A heavy sigh comes from the detective. &quot;But on the other hand, that&#39;s just so neat and easy. I should know better than anyone that these cases are never so simple.&quot; They chuckle softly to themself.
+A heavy sigh comes from the detective. &quot;But on the other hand, that&#39;s just so neat and easy. I should know better than anyone that these cases are never so simple.&quot; They chuckle to themself.
 
 As the detective continues to think aloud, the [[memory-&gt;Link Clues]] drips away.</tw-passagedata><tw-passagedata pid="69" name="Bram and Annie&#39;s conversation in the garden" tags="memory annie" position="1100,850">&lt;&lt;if !$thoughts[&quot;Bram and Annie&#39;s conversation in the garden&quot;]&gt;&gt;
     &lt;&lt;set $thoughts[&quot;Bram and Annie&#39;s conversation in the garden&quot;] = &quot;- Annie uses Bram&#39;s marijuana medicinally, though she couldn&#39;t pay last time. (marijuana + reminder)&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
 A murmuring of voices greets you first, then bright colors. It&#39;s daylight streaking across the community garden - the real one - and Bram is there talking to Annie, who is seated on a white stone bench. 
 
-Bram hands a small brown bag over to Annie, and she takes out a small notepad. &quot;I can&#39;t pay you right now,&quot; she says regretfully, &quot;but - &quot; 
+Bram hands a small brown bag over to Annie, and she takes out a small notepad. &quot;I can&#39;t pay you right now,&quot; she says, &quot;but - &quot; 
 
-&quot;I know,&quot; Bram interrupts. &quot;You can pay me later.&quot; 
+&quot;I know,&quot; Bram says. &quot;You can pay me later.&quot; 
 
-Annie hums in acknowledgement and makes a note to herself. &quot;Y&#39;know,&quot; she says, &quot;it never seemed quite right to me that there&#39;re illegal plants.&quot;
+Annie hums in acknowledgement and writes a note to herself. &quot;Y&#39;know, it never seemed quite right to me that there&#39;re illegal plants.&quot;
 
 Bram shrugs. &quot;Well, you know how it is. Not all laws make sense, and some people are just too harsh about what&#39;s wrong or right.&quot;
 
 &quot;If you&#39;re gonna bad mouth Justin, I&#39;m not here for it,&quot; Annie says matter-of-factly as she put the bag into her purse.
 
-Bram opens and closes his mouth a couple times. &quot;Of course not.&quot; He continues. &quot;It //is// pretty weird that it&#39;s illegal, isn&#39;t it? I mean, I feel like the law - not all of it,&quot; he adds quickly in response to another warning look from Annie, &quot;but a lot of it, associates the stuff with, you know, teenage stoners. Historical precedent, I guess? But there are people who are using it medicinally,&quot; he gestures to her and she nods, &quot;and I don&#39;t see why that&#39;s not alright. At least it&#39;s helping people. Unlike some plants out there...&quot;
+Bram opens and closes his mouth a couple times, like a fish. &quot;Of course not.&quot; He continues, &quot;It //is// pretty weird that it&#39;s illegal, isn&#39;t it? I mean, I feel like the law - not all of it,&quot; he adds quickly in response to another warning look from Annie, &quot;but a lot of it, associates the stuff with, you know, teenage stoners. Historical precedent, I guess? But there are people who are using it medicinally,&quot; he gestures to her and she nods, &quot;and I don&#39;t see why that&#39;s not alright. At least it&#39;s helping people. Unlike some plants out there...&quot;
 
 &quot;What do ya mean by that?&quot; Annie closes her eyes and tilts her head up to bask in the sunlight.
 
@@ -1119,7 +1118,7 @@ You [[refuse-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="73" name="yo
 &lt;&lt;/if&gt;&gt;\
 A flash of color, and you find yourself back at the party. You spot yourself sitting at a picnic table. It&#39;s - it&#39;s weird to see yourself though, you must say. You look pretty good for a man about to die. Your suit is impeccably ironed, and the comb-over is hardly noticeable.
 
-You see Erin approach you - that is, your living counterpart. She&#39;s holding out a potion, the same one that she tried to get you to drink all that fateful day. As she corners still living Mort, you think back to how you felt at that moment. You were kind of pissed off because you really did //not// want to drink her concoction - who knows what she put in it? You didn&#39;t want to create a fuss though , so you kept either ignoring her or brushing her off instead of telling her to scram like you wanted to.
+You see Erin approach you - that is, your living counterpart. She&#39;s holding out a potion, the same one that she tried to get you to drink all that fateful day. As she corners still living Mort, you think back to how you felt at that moment. You were kind of pissed off because you really did //not// want to drink her concoction - who knows what she put in it? You didn&#39;t want to create a fuss though, so you kept either ignoring her or brushing her off instead of telling her to scram like you wanted to.
 
 She&#39;d approached you multiple times before, each time more insistent that you drink the damn thing. As time passed and you kept refusing, she became more agitated. In fact, by the time you agreed to drink whatever it was she made - if only to prevent a scene from happening between RNA members - you were kind of scared of her.
 
@@ -1141,25 +1140,25 @@ Bram furrows his eyebrows and says, &quot;I&#39;m a little concerned that you&#3
 
 &quot;Oh, it&#39;s fine,&quot; Mort replies, waving his hand. &quot;Wine doesn&#39;t have a high proof, and what&#39;s a few glasses with an old friend?&quot; He laughs. &quot;Besides, a little buzz isn&#39;t such a bad thing. It helps you forget about the little problems.&quot; 
 
-As Bram holds his glass in both hands like a &lt;&lt;linkappend &quot;bowl&quot;&gt;&gt;(which is frankly, all wrong. You&#39;re surprised you didn&#39;t comment on that while you were alive)&lt;&lt;/linkappend&gt;&gt;, he stares down into the wine. &quot;Like what,&quot; he says dully. 
+As Bram holds his glass in both hands like a &lt;&lt;linkappend &quot;bowl&quot;&gt;&gt;(which is frankly, all wrong. You&#39;re surprised you didn&#39;t comment on that while you were alive)&lt;&lt;/linkappend&gt;&gt;, he stares down into the wine. &quot;Like what?&quot;
 
 &quot;Like you growing &lt;&lt;linkreplace &quot;marijuana.&quot;&gt;&gt;marijuana.&lt;&lt;replace &quot;#m&quot;&gt;&gt;
 
-Oh, hold on, was that supposed to be something you were figuring &lt;&lt;linkappend &quot;out?&quot;&gt;&gt;
+Oh, by the &lt;&lt;linkappend &quot;way?&quot;&gt;&gt;
 
-Of course you know about Bram growing marijuana. You&#39;ve been blackmailing him about it for &lt;&lt;linkappend &quot;ages.&quot;&gt;&gt;
+You already knew about Bram growing marijuana. You&#39;ve been blackmailing him about it for ages.
 
-You don&#39;t have to spell out everything you know all the time, do you? Jeez.&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; for...what was it? &quot;Medicinal purposes&quot;? That&#39;s a little problem. Thanks to me, of course.&quot;
+&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; for...what was it? &#39;Medicinal purposes&#39;? That&#39;s a little problem. Thanks to me, of course.&quot;
 &lt;&lt;add &quot;Marijuana&quot;&gt;&gt;&lt;span id=&quot;m&quot;&gt;&lt;/span&gt;
 
 Living Mort chuckles again and takes another sip of wine. &quot;Just keep doing this and it won&#39;t ever be a big problem. Right?&quot; 
 
-Bram laughs nervously. You didn&#39;t realize it while you were living but you&#39;re pretty sure he&#39;s sweating. &quot;Yep. Right.&quot; The memory [[swirls-&gt;Link Clues]] from view.</tw-passagedata><tw-passagedata pid="75" name="Justin and Terry at the grocery store" tags="justin memory" position="600,975">&lt;&lt;if !$thoughts[&quot;Justin and Terry at the grocery store&quot;]&gt;&gt;\
+Bram laughs, but you&#39;re pretty sure he&#39;s sweating. &quot;Yep. Right.&quot; The memory [[swirls-&gt;Link Clues]] from view.</tw-passagedata><tw-passagedata pid="75" name="Justin and Terry at the grocery store" tags="justin memory" position="600,975">&lt;&lt;if !$thoughts[&quot;Justin and Terry at the grocery store&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin and Terry at the grocery store&quot;] = &quot;- Terry and Justin got you a salad at the store. (salad + Justin&#39;s testimony or Terry&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 The Ronton grocery store forms around you. The Whittakers are here, with their shopping cart containing last minute items for the party - extra paper plates and napkins, sauce, some beer, and the like. 
 
-&quot;Alright? What else do we need?&quot; Terry says peppily.
+&quot;Alright? What else do we need?&quot; Terry says cheerfully.
 
 &quot;Hmm? Oh.&quot; Justin blinks slowly and glances at the shopping list. &quot;Looks like all that&#39;s left is getting the salad for Mort.&quot;
 
@@ -1185,7 +1184,7 @@ Justin jerks awake and looks at her. &quot;Good. Uh. Let&#39;s get going then.&q
 
 &quot;...Ok,&quot; he grunts. &quot;But only for you.&quot; 
 
-He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, &quot;Oh sugarbites, we forgot dressing.&quot; She looks at Justin meaningfully. It takes a moment for him to respond. &quot;I&#39;ll - I&#39;ll go get some.&quot; He walks off quickly, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="76" name="your fight with Annie" tags="memory annie" position="725,975">&lt;&lt;if !$thoughts[&quot;your fight with Annie&quot;]&gt;&gt;\
+He reaches out to take the salad from Terry, but she suddenly pulls away, frowns at the bowl, and says, &quot;Oh sugarbites, we forgot dressing.&quot; She looks at Justin with wide eyes. It takes a moment for him to respond. &quot;I&#39;ll - I&#39;ll go get some.&quot; He walks off quickly, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="76" name="your fight with Annie" tags="memory annie" position="725,975">&lt;&lt;if !$thoughts[&quot;your fight with Annie&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;your fight with Annie&quot;] = &quot;- Man, Annie just does not get the concept of allergies. (sandwich + Annie&#39;s testimony)&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 A memory forms around you, and it&#39;s a familiar scene. You&#39;re in Annie&#39;s kitchen, and everything is calm. This must&#39;ve been before -
@@ -1218,7 +1217,7 @@ And the memory [[slips-&gt;Link Clues]] from your sight.</tw-passagedata><tw-pas
 &lt;&lt;/if&gt;&gt;\
 You&#39;re in the regular, not-metal-walled Whittaker house and Terry is talking to someone on her cell phone, sounding irate. The clock on the wall says it&#39;s 8am in the morning and she&#39;s got the clothes she wears to the wine store on, so you suppose she&#39;s getting ready for work.
 
-Terry adjusts one of the earbuds and continues to talk hotly. &quot;I mean honestly, can you believe him? A plaque in her memory. Huh!&quot;
+Terry adjusts one of the earbuds and continues to talk hotly. &quot;I mean honestly, can you believe him? A plaque in her memory.&quot;
 
 Oh, here we go. You know what this is about.
 
@@ -1263,28 +1262,28 @@ He turns and eyes her. &quot;Erin. It&#39;s midnight. Maybe don&#39;t go shoutin
 
 &quot;Oh, sorry. How are you?&quot;
 
-&quot;Fine, I guess,&quot; he says noncommittally.
+&quot;Fine, I guess.&quot;
 
 &quot;I feel like I haven&#39;t talked to you in forever, you keep missing my calls! Or ignoring them.&quot; She bites her lip. &quot;I guess that&#39;s understandable.&quot;
 
 Justin blinks at her. &quot;You know, I&#39;ve been incredibly busy - &quot;
 
-&quot;No, I don&#39;t,&quot; she replies sadly, &quot;because you don’t tell me anything anymore. But that&#39;s ok. Did you like your birthday presents from me, mom, and dad?&quot;
+&quot;No, I don&#39;t,&quot; she replies, &quot;because you don’t tell me anything anymore. But that&#39;s ok. Did you like your birthday presents from me, mom, and dad?&quot;
 
 Wait.
 
 &quot;I, uh. Yes. Thank you. The bowtie was very nice.&quot;
 
-&quot;&quot;Well, if you insist on wearing those rather than a regular tie, you have to make up for it with fun patterns and cool colors,&quot; she sighs.
+&quot;Well, if you insist on wearing those rather than a regular tie, you have to make up for it with fun patterns and cool colors,&quot; she sighs.
 &lt;&lt;add &quot;Bowtie&quot;&gt;&gt;
 
-&quot;And what about the charm from our parents?&quot; She holds hers up, the gibbous moon charm, attached to a silvery chain around her neck. &quot;What did you think of that?&quot;
+&quot;And what about the charm from Mom and Dad?&quot; She holds hers up, the gibbous moon charm, attached to a silvery chain around her neck. &quot;What did you think of that?&quot;
 
 They&#39;re //siblings?//
 
 &quot;I...what are you doing out here so late anyway, Erin?&quot;
 
-&quot;You&#39;re changing the subject,&quot; she pouts.
+&quot;You&#39;re changing the subject,&quot; she says, pouting.
 
 &quot;And you&#39;re avoiding the question.&quot; He glances at her bag. &quot;You&#39;re not doing what I think you&#39;re doing are you?&quot;
 
@@ -1298,11 +1297,11 @@ In the silence, you examine the two more closely. Now that you think about it, t
 
 Tell you what? How many secrets were people hiding from you?
 
-She lets out a small squeak of happiness and goes to hug Justin, but he backs away and puts his hand up, looking irritated. Wow. Cold.
+She lets out a small squeak of happiness and goes to hug Justin, but he backs away and puts his hand up, looking irritated.
 
-Erin&#39;s face falls as her arms do, and she starts twirling her hair in her fingers, looking down again. &quot;Well, I answered your question,&quot; she says meekly. &quot;So, answer mine? What //did// you think of the crescent charm?&quot;
+Erin&#39;s face falls as her arms do, and she starts twirling her hair in her fingers, looking down again. &quot;Well, I answered your question. So, answer mine? What //did// you think of the crescent charm?&quot;
 
-Justin bites his lip, then clears his throat. &quot;I threw it out,&quot; he says gruffly. &quot;I don&#39;t need reminders of that anymore. I&#39;d rather just leave it all behind.&quot; Then, flatly, &quot;Sorry.&quot;
+Justin bites his lip, then clears his throat. &quot;I threw it out. I don&#39;t need reminders of that anymore. I&#39;d rather just leave it all behind.&quot; Then, flatly, &quot;Sorry.&quot;
 
 Erin looks like she&#39;s about to cry. &quot;It&#39;s...I am too.&quot; She walks past Justin, who stands there, unmoving, with a hard look on his face. The scene [[disappears-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="79" name="Justin and Erin setting up for the dinner" tags="justin memory" position="1100,975">&lt;&lt;if !$thoughts[&quot;Justin and Erin setting up for the dinner&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin and Erin setting up for the dinner&quot;] = &quot;- Justin&#39;s been so exhausted he&#39;s had to rely on caffeine patches to get through the day. (caf patch + sigils)&quot;&gt;&gt;\
@@ -1316,9 +1315,9 @@ He unceremoniously stuffs the paper back in his pocket, then peels off the backi
 
 When you look back up, Erin is standing by Justin, and you and he jolt back in surprise. &quot;What is it, Erin?&quot;
 
-&quot;Um, I saw you put that patch on and - &quot; Justin pulls his sleeve down quickly and gives her an irritated look. &quot;-And I thought now would be a good time to give this to you...&quot; Erin pulls a piece of paper out of her bag - the sigil marked for Justin.
+&quot;Um, I saw you put that patch on and - &quot; Justin pulls his sleeve down quickly and gives her an irritated look. &quot;- And I thought now would be a good time to give this to you...&quot; Erin pulls a piece of paper out of her bag - the sigil marked for Justin.
 
-&quot;What&#39;s this supposed to do?&quot; he says brusquely.
+&quot;What&#39;s this supposed to do?&quot; he says.
 
 &quot;Well, it&#39;s a sigil for renewal of energy and relieving of stress!&quot; Jeez, she&#39;s earnest about this stuff. &quot;You should hang it up in your house to charge it with your stress energy and exhaustion, and then you burn it after it&#39;s fully charged so it can dispel them. You may not talk to me anymore, but anyone with eyes can see how tired you&#39;ve been, and I thought it might help.&quot;
 
@@ -1332,7 +1331,7 @@ Her brows scrunch together. &quot;But your fatigue! You can&#39;t just keep livi
 Erin looks vaguely disappointed and walks off, trying to smooth out the folds in the sigil. Justin pushes himself off the tree and looks around. He gets back to work, and the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="80" name="Terry and Bram&#39;s conversation in her shop" tags="bram memory" position="1225,975">&lt;&lt;if !$thoughts[&quot;Terry and Bram&#39;s conversation in her shop&quot;]&gt;&gt;
     &lt;&lt;set $thoughts[&quot;Terry and Bram&#39;s conversation in her shop&quot;] = &quot;- Terry is having an affair with a customer at her wine shop, and Bram knows it. (bowtie + straight tie)&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;\
-You find yourself just outside Whittaker Wines. Bram is outside too, staring through the wall-to-floor front windows with a shocked expression on his face, sweat beading on his forehead. You look inside as well, but all you see is some man with a cane talking to Terry. Brown hair, dress shirt; you don&#39;t find him terribly relevant at all until Terry pulls on his tie and kisses him on the lean in.
+You find yourself just outside Whittaker Wines. Bram is outside too, staring through the wall-to-floor front windows with a shocked expression on his face, sweat beading on his forehead. You look inside as well, but all you see is some man with a cane talking to Terry. Brown hair, dress shirt; you don&#39;t find him terribly relevant at all until Terry pulls on his tie and kisses him.
 
 You&#39;d probably pull the same expression Bram is making, were you to still have a face.
 
@@ -1341,15 +1340,15 @@ Bram goes to the door and makes to open it. Is he going to confront Terry or som
 The door opens and Bram starts back, then the man emerges. He leans heavily on the silver-tipped cane he&#39;s holding, but otherwise he looks like your average, generic 30-something brunette guy. Unremarkable, even. And yet...
 &lt;&lt;add &quot;Cane&quot;&gt;&gt;
 
-He nods to Bram perfunctorily; Bram only eyes him warily in return. As the man walks off, Bram catches the door before it closes and heads hesitantly into the store.
+He nods to Bram politely; Bram only eyes him warily in return. As the man walks off, Bram catches the door before it closes and heads hesitantly into the store.
 
-&quot;Hey Bram, how are you?&quot; Terry chirrups. 
+&quot;Hey Bram, how are you?&quot; Terry says.
 
-&quot;I&#39;ve, uh, been better,&quot; he says haltingly. He glances back at the door and thumbs in that direction. &quot;Hey uh. Who was - who was that? The guy with the cane, I mean.&quot;
+&quot;I&#39;ve, uh, been better,&quot; he says. He glances back at the door and thumbs in that direction. &quot;Hey uh. Who was - who was that? The guy with the cane, I mean.&quot;
 
 By gum, he&#39;s actually doing it. You never thought he had it in him.
 
-Terry stares blankly at Bram briefly, then blinks and smiles. &quot;He&#39;s a customer here.&quot; She leans against the counter. &quot;Would you like some help finding a specific brand and year, or are you just browsing?&quot; 
+Terry stares blankly at him, then blinks and smiles. &quot;He&#39;s a customer here.&quot; She leans against the counter. &quot;Would you like some help finding a specific brand and year, or are you just browsing?&quot; 
 
 &quot;Just brows- wait, no I&#39;m looking for, uh,&quot; Bram pats his pockets for something, presumably a note with what wine he was looking for. After a moment of fruitless searching, he says, &quot;...Are you two friends?&quot;
 
@@ -1363,9 +1362,7 @@ Bram cringes before insisting, &quot;Yeah, but usually store owners don&#39;t ki
 
 At this, Terry freezes, and Bram just keeps going. &quot;You flirted with him, put a necktie around his neck and, uh, kissed him. Does Justin know that - &quot; 
 
-&quot;No!&quot; Terry shouts. She puts her hands up, almost like a surrender. With an embarrassed blush rapidly blooming on her face, she pleads, &quot;Please don&#39;t tell Justin, he&#39;d be heartbroken. He doesn&#39;t need to know.&quot; 
-
-You just - wow. You&#39;re not even sure of what to think at this point.
+&quot;No!&quot; Terry shouts. She puts her hands up, almost like a surrender. With an embarrassed blush blooming on her face, she says, &quot;Please don&#39;t tell Justin, he&#39;d be heartbroken. He doesn&#39;t need to know.&quot; 
 
 &quot;Why - nevermind, I don&#39;t want to know.&quot; Bram stares at Terry, who has slowly drawn her arms back and wrapped them around herself. 
 
@@ -1373,7 +1370,7 @@ Coldly, she says, &quot;What are you even doing here, Bram? I thought you didn&#
 
 &quot;I don- I mean, m-maybe I started?&quot;
 
-You scowl at his slip up as Terry looks at him suspiciously. She opens her mouth to speak but Bram quickly says, &quot;I guess you must&#39;ve gotten tired of Justin and his bowties, huh? What with that necktie and all.&quot;
+You inwardly scowl at his slip up as Terry looks at him suspiciously. She opens her mouth to speak but Bram quickly says, &quot;I guess you must&#39;ve gotten tired of Justin and his bowties, huh? What with that necktie and all.&quot;
 
 The tenseness is palpable as the memory [[fades-&gt;Link Clues]].</tw-passagedata><tw-passagedata pid="81" name="Justin, Annie, and sriracha" tags="annie memory" position="100,1100">&lt;&lt;if !$thoughts[&quot;Justin, Annie, and sriracha&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Justin, Annie, and sriracha&quot;] = &quot;- Annie couldn&#39;t think to do anything worse to me than put hot sauce in my sandwich and Justin couldn&#39;t even bear that. Looks like they&#39;re both innocent. (crumpled paper + sharpie)&quot;&gt;&gt;\
@@ -1400,7 +1397,7 @@ Oh, crap.
 
 His eyes widen. &quot;Oh god, Annie, you don&#39;t mean //that// something, do you?&quot; What something? Nuts? Aconite? Arsenic?! When Annie nods, you feel panic rising in your nonexistent gut. Justin crosses his arms. &quot;No. Don&#39;t.&quot;
 
-&quot;Come on Justin!&quot; she says indignantly, throwing her arms wide. &quot;Lord knows he deserves it!&quot;
+&quot;Come on Justin!&quot; she says, throwing her arms wide. &quot;Lord knows he deserves it!&quot;
 
 &quot;No. It goes against my principles. As much as I dislike Mort, there&#39;s no reason to harm him.&quot;
 
@@ -1439,7 +1436,7 @@ Bram wipes the sweat off his forehead with his sleeve. &quot;I don&#39;t know if
 
 And then, from behind Justin, living Mort appears, smoothly saying, &quot;Bram and I were actually about to catch up for a bit. Hello, Justin.&quot; Justin whips around to face you, clearly caught off guard. You know he hates that, but it&#39;s not exactly your fault he wasn&#39;t paying attention. &quot;Speaking of busy,&quot; you continue, &quot;don&#39;t you have somewhere to be, Justin?&quot;
 
-Narrowing his eyes at living Mort, Justin asks, &quot;I do?&quot; 
+Narrowing his eyes at living Mort, Justin says, &quot;I do?&quot; 
 
 &quot;Don&#39;t you have to put flyers for the policeman Q&amp;A session at the middle school?&quot; Mort replies.
 
@@ -1540,7 +1537,7 @@ Pointing to one of the entries, Erin says, &quot;Here. Potion of Continued Life.
 
 &quot;That&#39;s an odd - wait, do you think Mort&#39;s going to, uh, you know?&quot; Bram can&#39;t quite bring himself to say the word die. Oh, Bram. 
 
-&quot;I think it&#39;s possible. You gonna help?&quot; Erin looks over at Bram and smiles, though it&#39;s weak and born more of habit that cheer. When Bram nods, she drops it and looks melancholy. &quot;Alright so, first we&#39;re going to need...&quot;
+&quot;I think it&#39;s possible. You gonna help?&quot; Erin looks over at Bram and smiles, though it&#39;s weak and born more of habit than cheer. When Bram nods, she drops it and looks melancholy. &quot;Alright so, first we&#39;re going to need...&quot;
 
 She continues on, but the memory [[fades-&gt;Link Clues]]. You&#39;re not sure what to think.</tw-passagedata><tw-passagedata pid="86" name="Terry poisoning your salad" tags="terry memory" position="725,1100">&lt;&lt;if !$thoughts[&quot;Terry poisoning your salad&quot;]&gt;&gt;\
     &lt;&lt;set $thoughts[&quot;Terry poisoning your salad&quot;] = &quot;- Terry poisoned you. Terry poisoned you and you feel like a chump. (aconite, wolfsbane, or leaves + salad)&quot;&gt;&gt;\
@@ -1559,7 +1556,7 @@ You&#39;re not sure what just happened but you&#39;re trying to roll with it. Di
 
 Hmm, no. Something tells you this isn&#39;t an actual office; it&#39;s more a representation of one. Everything looks less detailed than it should, hazy and strange, except a few things that stand out in sharp, detailed relief. As you look around, everything at the edge of your vision shimmers and fades, and you suspect that wherever you aren&#39;t looking, there&#39;s nothing at all. Are you in the detective&#39;s &lt;&lt;linkreplace &quot;dream?&quot;&gt;&gt;&lt;&lt;linkreplace &quot;memory?&quot;&gt;&gt;&lt;&lt;linkappend &quot;mind?&quot;&gt;&gt;
 
-Yeah. Mind feels right to you, going by your //ghost sense//...or whatever it is.
+Yeah. &#39;Mind&#39; feels right to you as it surfaces from the depths of your thoughts. You&#39;re inside the detective&#39;s mind.
 
 Looks like you were wrong about your lack of &lt;&lt;linkreplace &quot;ghost powers&quot;&gt;&gt;ghost powers&lt;&lt;replace &quot;#powers&quot;&gt;&gt;Though you don&#39;t recall mind-jumping to be a &#39;ghost&#39; thing...still, rolling with it. What else would you do?&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt; after all. &lt;span id=&quot;powers&quot;&gt;&lt;/span&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
 The walls, an inoffensive light grey, are covered in &lt;&lt;linkreplace &quot;photographs&quot;&gt;&gt;photographs&lt;&lt;replace &quot;#photos&quot;&gt;&gt;
@@ -1568,7 +1565,7 @@ Hey, there&#39;s you! You don&#39;t look that good. You wish they&#39;d used a p
 
 The &lt;&lt;openlink &quot;desk&quot; &quot;deskText&quot;&gt;&gt;desk&lt;&lt;replace &quot;#desk&quot;&gt;&gt;
 
-You feel a little daunted at the idea of going through the giant stack of papers, especially when you can&#39;t actually touch things. Fortunately it looks like none of them are that important, fuzzy and indistinct like the detective doesn&#39;t care to focus on them right now.
+You feel a little daunted at the idea of going through the giant stack of papers, especially when you can&#39;t actually touch things. Luckily, it turns out that none of them are readable at all; their words, even the outlines of the sheets, are fuzzy and indistinct.
 
 There&#39;s some stuff on the desk though that&#39;s almost //too// in focus though, like when you wear a glasses prescription that&#39;s a shade too strong. The first is a &lt;&lt;linkreplace &quot;sandwich&quot;&gt;&gt;sandwich&lt;&lt;replace &quot;#sandwich&quot;&gt;&gt;
 &lt;&lt;add &quot;Sandwich&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;, the next is a &lt;&lt;linkreplace &quot;potion&quot;&gt;&gt;potion&lt;&lt;replace &quot;#potion&quot;&gt;&gt;
@@ -1611,7 +1608,7 @@ How unpleasant.
     &lt;&lt;link &quot;Leave room.&quot; $who&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;link &quot;Leave room.&quot; &quot;Police Station&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="Justin&#39;s mind" tags="justin mind" position="975,1100">&lt;&lt;set $mindVisited to true&gt;&gt;It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic: a worn blue couch, a slightly out of date tv, and a coffee table with a few books, police forms, and a &lt;&lt;openlink &quot;newspaper&quot; &quot;newspaperText&quot;&gt;&gt;newspaper&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="Justin&#39;s mind" tags="justin mind" position="975,1100">&lt;&lt;set $mindVisited to true&gt;&gt;It&#39;s the Whittaker home, the den specifically. You&#39;ve been here once or twice. It&#39;s quaint and domestic: a worn blue couch, a slightly out of date TV, and a coffee table with a few books, police forms, and a &lt;&lt;openlink &quot;newspaper&quot; &quot;newspaperText&quot;&gt;&gt;newspaper&lt;&lt;replace &quot;#newspaper&quot;&gt;&gt;
 
 The newspaper, dated from 2 decades ago, is yellowed and fragile, but the two girls chained to a plane tree on the front page are still recognizable. One of them is Terry. The other girl is - well, who cares. The headline, &#39;&#39;&quot;Local Activists Protest Paving Over Park&quot;&#39;&#39;, is unrealistically sharp, ink unfaded by time inside Justin&#39;s memories. You don&#39;t want to think about it too much.
 &lt;&lt;add &quot;Old Newspaper&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; on it. &lt;span id=&quot;newspaper&quot;&gt;&lt;/span&gt;
@@ -1629,7 +1626,7 @@ One of the patches has spilled out of the box. It looks a bit like a band-aid.
 
 In here, for some bizarre reason, the walls are made of metal - steel, it looks like. Crushed steel, specifically; they&#39;re warped and corrugated as if the whole room is being squeezed by a giant vise. Something &lt;&lt;openlink &quot;shiny&quot;&gt;&gt;shiny&lt;&lt;replace &quot;#shiny&quot;&gt;&gt; - 
 
-You float closer and squint in the recesses of the crevice. There&#39;s a crescent moon charm glinting in there. Why, you don&#39;t rightly know, but you suspect its placement means something metaphorical, since the actual Whittaker house does not have metal walls and therefore does not have things stuck between said walls.
+You float closer and squint in the recesses of the crevice. There&#39;s a crescent moon charm glinting in there. You couldn&#39;t say why, but you suspect its placement means something metaphorical, since the actual Whittaker house does not have metal walls and therefore does not have things stuck between said walls.
 &lt;&lt;add &quot;Crescent Charm&quot;&gt;&gt;
 
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt;&lt;span id=&quot;shiny&quot;&gt;&lt;/span&gt; and something &lt;&lt;openlink &quot;glittery&quot;&gt;&gt;glittery&lt;&lt;replace &quot;#glittery&quot;&gt;&gt; 
@@ -1647,7 +1644,7 @@ Erin&#39;s a peculiar one, alright.
 
 On account of the bent walls, the ceiling is much, //much// closer to the floor than you&#39;re used to, and you&#39;re glad you&#39;re not enough of a presence to need to duck.
 
-[[Leave.|Justin]]</tw-passagedata><tw-passagedata pid="89" name="Terry&#39;s mind" tags="terry mind" position="1100,1100">&lt;&lt;set $mindVisited to true&gt;&gt;You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents and works at. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
+[[Leave.|Justin]]</tw-passagedata><tw-passagedata pid="89" name="Terry&#39;s mind" tags="terry mind" position="1100,1100">&lt;&lt;set $mindVisited to true&gt;&gt;You recognize the place as Whittaker Wines, the wine store that Terry inherited from her parents. With its cheerful yellow walls and large storefront windows, the store appears normal at first blush. 
 
 Looking closer though, you see that the wine bottles are not jutting out of wooden racks, but out of honeycombs. Presumably made of beeswax, the combs ooze with honey that drips down and off the necks of the bottles onto the hardwood floor. In combs without bottles, there are assorted objects that you can only assume have some relevance to Terry. They&#39;re hard to see through the viscous layers of honey, though.
 
@@ -1674,9 +1671,9 @@ It&#39;s hard to get a good look at all of them, but they seem to be hospital st
 You really hope they&#39;re not for what you suspect they&#39;re for.
 &lt;&lt;add &quot;Hospital Stickers&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; suspended in the fluid at various angles. &lt;span id=&quot;stickers&quot;&gt;&lt;/span&gt;
 
-[[Leave.|Terry]]</tw-passagedata><tw-passagedata pid="90" name="Erin&#39;s mind" tags="erin mind" position="1225,1100">&lt;&lt;set $mindVisited to true&gt;&gt;It looks like a study but. Weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking &lt;&lt;openlink &quot;moon&quot; &quot;moonText&quot;&gt;&gt;moon&lt;&lt;replace &quot;#moon&quot;&gt;&gt;
+[[Leave.|Terry]]</tw-passagedata><tw-passagedata pid="90" name="Erin&#39;s mind" tags="erin mind" position="1225,1100">&lt;&lt;set $mindVisited to true&gt;&gt;It looks like a study but...weird. Gauzy lavender curtains float in a gentle breeze from the open window. Outside, stars and a nearly-full, albeit odd-looking &lt;&lt;openlink &quot;moon&quot; &quot;moonText&quot;&gt;&gt;moon&lt;&lt;replace &quot;#moon&quot;&gt;&gt;
 
-That&#39;s no moon. Or rather, that&#39;s no //real// moon. Well, it wasn&#39;t anyway since it&#39;s simply a metaphysical representation of a - your point is, it&#39;s actually a charm. Just hanging in the sky, pretending to be a celestial body. You can see the metallic luster of it and the tiny loop on top for attaching to keychains or necklaces or the like. Weird.
+That&#39;s no moon. Or rather, that&#39;s no //real// moon. Well, it wasn&#39;t anyway since it&#39;s simply a metaphysical representation of a - your point is, it&#39;s actually a charm. Just hanging in the sky, pretending to be a celestial body. You can see the metallic luster of it and the tiny loop on top for attaching to keychains or necklaces or the like.
 &lt;&lt;add &quot;Gibbous Charm&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/openlink&gt;&gt; hang in the purple-velvet night. &lt;span id=&quot;moon&quot;&gt;&lt;/span&gt;
 
 There&#39;s clutter everywhere - herbs hanging from hooks on the walls; books purporting to be full of spells scattered on the table, chair, and floor; odd occult knick-knacks; a framed &lt;&lt;openlink &quot;picture&quot; &quot;pictureText&quot;&gt;&gt;picture&lt;&lt;replace &quot;#picture&quot;&gt;&gt;
@@ -1707,7 +1704,7 @@ You look out the window to check. Huh. It appears so.
 
 There are far fewer decorations than in an average kitchen, but sticky notes and bits of random papers are stuck with big clip bag magnets onto the fridge.
 
-Its corners are beveled, very 1960&#39;s &lt;&lt;linkappend &quot;retro.&quot;&gt;&gt; Actually, you wouldn&#39;t be surprised if it was from back then and Annie never bothered to get a new one.&lt;&lt;/linkappend&gt;&gt; You remember that the actual fridge is a pastel pink, but here of course, it just looks brownish. The papers and notes on its sides are blurry and unreadable to you right now, but you know that they&#39;re for birthdays and phone numbers and recipes, anything likely to slip an ailing 70-something&#39;s mind. Some of them look remarkably old, with faded ink and sun-bleached colored paper, perhaps put there years ago.
+Its corners are beveled, very 1960&#39;s &lt;&lt;linkappend &quot;retro.&quot;&gt;&gt; Actually, you wouldn&#39;t be surprised if it was from back then and Annie never bothered to get a new one.&lt;&lt;/linkappend&gt;&gt; You remember that the actual fridge is a pastel pink, but here of course, it just looks brownish. The papers and notes on its sides are blurry and unreadable to you right now, but you know that they&#39;re for birthdays and phone numbers and recipes, anything likely to slip a 70-something&#39;s mind. Some of them look remarkably old, with faded ink and sun-bleached colored paper, perhaps put there years ago.
 
 A few things catch your eye - the only readable writing in the blur of notes:
 
@@ -1774,7 +1771,7 @@ You float under the raised box to examine the item. It&#39;s a piece of paper wi
 &lt;!--Unless a passage is an item, a memory, or is not supposed to display an inventory, add the inventory link to every passage--&gt;
     &lt;&lt;if !tags().includesAny(&quot;noinv&quot;, &quot;item&quot;, &quot;memory&quot;)&gt;&gt;
 &lt;!--Saves where you were and sends you to the inventory page if clicked--&gt;
-        &lt;&lt;link &quot;&lt;br&gt;&lt;br&gt;Remember.&quot;&gt;&gt;
+        &lt;&lt;link &quot;&#39;&#39;&lt;br&gt;&lt;br&gt;Remember.&#39;&#39;&quot;&gt;&gt;
             &lt;&lt;set $returnTo to passage()&gt;&gt;
             &lt;&lt;goto &quot;Clues&quot;&gt;&gt;
         &lt;&lt;/link&gt;&gt;
@@ -1833,33 +1830,49 @@ You guess you&#39;ll never find out.</tw-passagedata><tw-passagedata pid="97" na
 
 The detective&#39;s glare is piercing, almost triumphant. &quot;Did you just confess?&quot;
 
-&quot;What? No, I!&quot; Terry looks distressed. Her hands flutter as she speaks. &quot;I-I don&#39;t know what made me say that but no, I&#39;m not, I swear, I&#39;m not! I&#39;ve - I&#39;ve just been under so much stress lately that I don&#39;t know what I&#39;m saying, I&#39;m so sorry detective! So sorry!&quot; She starts crying again.
+&quot;What?&quot; No, I!&quot; Terry looks distressed. Her hands flutter as she speaks. &quot;I don&#39;t know what made me say that but no, I&#39;m not, I swear, I&#39;m not! I&#39;ve - I&#39;ve just been under so much stress lately that I don&#39;t know what I&#39;m saying, I&#39;m so sorry detective! So sorry!&quot; She starts crying again, burying her face in her hands.
 
 &quot;Save your tears, Mrs. Whittaker. I don&#39;t know why you said that either, but a confession&#39;s a confession. I suspected your involvement anyway. All the evidence points to you.&quot;
 
-You would smile from ear to ear if you could smile, or had ears.
+Even though you saw her do it, hearing the detective confirm everything is disturbing. You wish this wasn&#39;t happening.
 
 &quot;Now hold on, my wife would never - &quot;
 
-&quot;Mr. Whittaker,&quot; the detective holds up a hand as Justin begins to rise angrily from his seat. &quot;You should know enough, as a police officer, not to obstruct justice.&quot;
+&quot;Honeybear,&quot; Terry says through her hands as Justin begins to rise angrily from his seat. Her voice sounds different now, colder. &quot;Please. Sit.&quot;
 
-Terry chokes out a sob. &quot;I…! No! Please, I can&#39;t go to jail! I didn&#39;t do it, I swear, I&#39;m innocent!&quot; She goes on like this for a bit further and you bask in both her histrionics and the detective&#39;s cool indifference. When she realizes that this is having no effect, she calms down for the first time since she entered the police station.
+Justin slowly lowers himself back down, confused. He puts a hand on Terry&#39;s knee but she jerks away from him. She wipes her tears away, and as she looks up at the detective with red-rimmed eyes, she says, &quot;Alright, fine. I did it.&quot;
 
-She sniffles, and when she speaks this time, her voice is hard and cold. &quot;Fine. If you&#39;re so convinced, then fine. I won&#39;t say he completely deserved it, but that bastard had it coming anyway. He stomped over all of us and acted like he could do whatever he wanted because the community adored him, or whoever they thought he was. In my opinion that&#39;s enough of a reason. But I&#39;ll never forget what he did all those years ago. And what he was going to do to her memory.&quot;
+Horror twists Justin&#39;s face while the detective affords themself a smile. &quot;Terry, what are you saying?&quot; says Justin, searching her expression. &quot;Lying to the detective won&#39;t - &quot;
 
-Terry looks to Annie and Justin, expecting sympathy. Instead, she sees that Annie is scowling and Justin is... devastated. It hadn&#39;t occurred to you that he wouldn&#39;t know she was the killer. Erin reaches out to him and grabs his hand, which, for once, he doesn&#39;t reject.
+&quot;I&#39;m not lying, Justin. And you shouldn&#39;t be surprised, with everything that&#39;s happened. He stomped over every one of us and acted like he could do whatever he wanted because the community adored him, or whatever they thought he was. But we know the truth, don&#39;t we?&quot; She looks around at the members of the RNA, her eyes bright. &quot;We know how much that bastard had it coming for what he did.&quot;
 
-And Bram, well, he just doesn&#39;t seem to know what&#39;s going on. This pleases you somewhat; at least the man you thought was your best friend didn&#39;t have anything to do with your death. 
+Justin glares at the floor, his hands gripping the armrests of his chair. &quot;Terry, //why//?&quot;
 
-&quot;That&#39;s enough,&quot; the detective says. &quot;No one cares about your reasons. You killed a man. There&#39;s no reason or justification for that.&quot;
+&quot;Because of the way he treated you. The way he treated all of us! You really wouldn&#39;t like to see an end to those countless patrols?&quot;
+
+Justin only grits his teeth and squeezes his eyes shut. Are those tears?
+
+&quot;He tore down your sigils!&quot; she says to Erin. She turns to Bram and adds, &quot;And I don&#39;t know why exactly you bought that wine, but you don&#39;t drink and we all know what Mort was.&quot;
+
+&quot;Murder is murder,&quot; says Bram, looking at the floor tiles.
+
+And in a sharp, high pitched voice, Erin says, &quot;My sigils were to protect from hunters like you.&quot;
+
+Terry exhales, nostrils flaring, and presses her lips together. She opens her mouth to speak, but Annie interrupts, scowling. &quot;You think any of that warrants killing a man?&quot;
+
+&quot;Don&#39;t pretend you don&#39;t understand me, Granny Smith! He&#39;s the only reason that L - &quot;
+
+&quot;Don&#39;t call me that,&quot; Annie snaps. &quot;And you&#39;re not so free of wrongdoing yourself, missy. No human on this earth gets to play angel of death, especially not someone livin&#39; in a glass house like you are.&quot;
+
+Terry&#39;s eyes flit back and forth between the RNA members, searching for something she can&#39;t find. &quot;I was right,&quot; she says, louder as if that will convince people. She thrusts her hand forward, finger pointed, at the people gathered in the room. &quot;Even if none of you believe me, I know I was right to kill Mort! He deserved it!&quot;
+
+&quot;That&#39;s enough,&quot; the detective says. &quot;No one cares about your reasons. Nothing justifies cold-blooded murder. Nothing.&quot;
 
 She glares at them.
 
 The detective waves two officers over, one of whom pulls out handcuffs. &quot;Take her away.&quot;
 
-Whatever binds you to the land of the living breaks and you begin to fade, feeling conscious thoughts die like blown out candles. Your influence has finally ended, and the last things you feel before you disappear is the joy of sweet comeuppance.
-
-And the slightest hint of guilt.</tw-passagedata><tw-passagedata pid="98" name="Erin&#39;s Confession" tags="noinv nosave confession" position="975,1225">You have just enough time to see everyone turn to look at you in shock before you&#39;re pushed out of Erin&#39;s body, perhaps from some spiritual power of h- pff nah who are you kidding. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
+Whatever binds you to the land of the living breaks and you begin to fade, feeling conscious thoughts die like blown out candles. Your influence has finally ended. The last thing you wonder before you disappear is whether the detective was right, or Terry was.</tw-passagedata><tw-passagedata pid="98" name="Erin&#39;s Confession" tags="noinv nosave confession" position="975,1225">You have just enough time to see everyone turn to look at you in shock before you&#39;re pushed out of Erin&#39;s body, perhaps from some spiritual power of h- pff nah who are you kidding. Something tells you that you only have a minute or so more before you go to the real place that people are supposed to go when they die, instead of this limbo. You hold on as tight as you can to the world for now.
 
 There&#39;s a confusing mix of emotions on the detective&#39;s face. &quot;What did you say?&quot;
 
@@ -1867,7 +1880,7 @@ Erin blinks and looks around. &quot;Well,&quot; she says in an airy voice, &quot
 
 &quot;And why would you say that?&quot; the detective says slowly.
 
-&quot;I don&#39;t really know, honestly. I didn&#39;t do it, you know, and I see no reason why I would say that naturally, so I suppose the natural conclusion is I was possessed by Mort&#39;s ghost and made to as some form of retribution.&quot; She states this as lightly as you would mention the weather outside, but it&#39;s so spot on that you wonder with a jolt if maybe you&#39;d been wrong about her all this time.
+&quot;I don&#39;t really know, honestly. I didn&#39;t do it, you know, and I see no reason why I would say that naturally, so I suppose the obvious conclusion is I was possessed by Mort&#39;s ghost and made to as some form of retribution.&quot; She states this as lightly as you would mention the weather outside, but it&#39;s so spot on that you wonder with a jolt if maybe you&#39;d been wrong about her all this time.
 
 &quot;Possessed.&quot; The detective stares at her in disbelief, then shakes their head. &quot;Nevertheless, I&#39;ve had several reason to suspect you as the culprit; I only hesitated because not everything added up.&quot;
 
@@ -1901,9 +1914,9 @@ Annie shakes her head. &quot;I don&#39;t know why I said that. I don&#39;t know.
 
 There&#39;s some murmuring coming from the others in the room. You feel a twinge of panic creeping over you. Annie seemed so convinced that she didn&#39;t kill you, and you&#39;ve never known her to be a liar. Then again, you never knew anyone here to be a murderer.
 
-After a moment, the detective bites their lip and then says, &quot;Well, the evidence doesn&#39;t point to you, but that confession was pretty blatant, even if you&#39;re saying you&#39;re innocent.&quot; They look at Annie. &quot;You understand, right?&quot;
+After a moment, the detective purses their lips and then says, &quot;Well, the evidence doesn&#39;t point to you, but that confession was pretty blatant, even if you&#39;re saying you&#39;re innocent.&quot; They look at Annie. &quot;You understand, right?&quot;
 
-Annie looks upset, and you feel... guilty. You were so sure she did it. Next to Annie, Justin&#39;s breath has stilled, and he runs his hand over his pocket with the note sticking out. His other hand is holding Terry&#39;s, and she looks incredibly distraught.
+Annie looks upset, and you feel... guilty. You were so sure she did it. Next to Annie, Justin&#39;s breath has stilled, and he runs his hand over his pocket that has a note sticking out. His other hand is holding Terry&#39;s, and she looks incredibly distraught.
 
 &quot;I understand,&quot; Annie says finally. 
 
@@ -2043,7 +2056,7 @@ You should only do it once you&#39;re absolutely sure who it is, though. Are you
 
 &quot;Mr. Whittaker,&quot; says the officer, &quot;Could you please describe the events of the dinner and the surrounding circumstances?&quot; 
 
-Clearing his throat, Justin nods. &quot;Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before the day itself. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn&#39;t because I was,&quot; he pinches the bridge of his nose, &quot;busy, but...&quot;
+Clearing his throat, Justin nods. &quot;Well, we - the RNA - planned out this big, neighborhood Thanksgiving feast a couple weeks before today. Things were going well, related to the dinner anyway, and everyone who could was helping cook and such. I didn&#39;t because I was,&quot; he pinches the bridge of his nose, &quot;busy, but...&quot;
 
 &quot;Busy?&quot;
 
@@ -2059,11 +2072,11 @@ What is that supposed to mean?
 
 Sure he didn&#39;t.
 
-&lt;&lt;/if&gt;&gt;&quot;Annie and he had some sort of fight, since she had created the menu...&quot; Justin shakes his head and sighs. &quot;That happened before the dinner. Kinda turned everything sour from the start. Thinking about Mort sitting and eating nothing, well, even I felt sorry for him. So the wife suggested we get him a salad. Sure. We forgot dressing though, so she had me go back to get it.&quot; 
+&lt;&lt;/if&gt;&gt;&quot;They had some sort of fight, since she had created the menu...&quot; Justin shakes his head and sighs. &quot;That happened before the dinner. Kinda turned everything sour from the start. Thinking about Mort sitting and eating nothing, well, even I felt sorry for him. So the wife suggested we get him a salad. Sure. We forgot dressing though, so she had me go back to get it.&quot; 
 
 He pauses for a moment. &quot;Then we prepared for the dinner for a couple hours, it started, and...well.&quot;
 
-He exhales slowly, gathering his thoughts. &quot;I hope you all find the killer soon and bring them to justice. I didn&#39;t exactly call Mort a friend - I - to be completely honest I didn&#39;t like him very much, but I-&quot; He clears his throat. &quot;I never wished him dead.&quot;
+He exhales slowly, gathering his thoughts. &quot;I hope you all find the killer soon and bring them to justice. I didn&#39;t exactly call Mort a friend - to be completely honest I didn&#39;t like him very much, but I - &quot; He clears his throat. &quot;I never wished him dead.&quot;
 
 &lt;&lt;if !hasVisited(&quot;Annie&#39;s Testimony&quot;)&gt;&gt;What? You aren&#39;t friends? He doesn&#39;t like you? Well! This is certainly news to you. You drift closer, wishing you could ask Justin why he would say something like that.\
 &lt;&lt;else&gt;&gt;You&#39;d be highly surprised that Justin didn&#39;t like you before, but with the knowledge that he told Annie to add nuts to everything, this just makes a terrible sort of sense. You drift closer, feeling cold.&lt;&lt;/if&gt;&gt; His face is impassive - no signs of sorrow belying his calm demeanor.
@@ -2076,26 +2089,26 @@ The officer keeps interviewing Justin, asking him to recount the information in 
 
 &lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Terry" tags="" position="850,1350">&lt;&lt;set $who to &quot;Terry&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;Terry enters the room already speaking. She&#39;s sobbing heavily and keeps trying to wipe away her tears with her sleeve. 
 
-&quot;I-I just can&#39;t believe - I&#39;m - oh my word I can&#39;t do this. Sorry, I need a minute...&quot; She takes a shaky breath and fans herself. &quot;It&#39;s just, I never, I never thought that - Mort of all people!&quot;
+&quot;I just can&#39;t believe - I&#39;m - oh my word I can&#39;t do this. Sorry, I need a minute...&quot; She takes a shaky breath and fans herself. &quot;It&#39;s just, I never, I never thought that - Mort of all people!&quot;
 
 The officer sitting at the table interrupts, &quot;Mrs. Whittaker. Could you tell me what happened at the dinner and its surrounding circumstances?&quot;
 
-&quot;Sorry yes, what happened...t-the dinner,&quot; she says, sniffling. &quot;W-well, the RNA thought up the idea a while ago. A big feast. E-everyone was so excited! Mort, Justin, and I didn&#39;t cook but we were all pitching in in some way. B-but then - &quot; she wipes her eyes with her sleeve - &quot;we found out M-Mort couldn&#39;t eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he&#39;s been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I&#39;d do if he wasn&#39;t there for me -&quot;
+&quot;Sorry yes, what happened...the dinner,&quot; she says, sniffling. &quot;Well, the RNA thought up the idea a while ago. A big feast. Everyone was so excited! Mort, Justin, and I didn&#39;t cook but we were all pitching in in some way. But then - &quot; she wipes her eyes with her sleeve - &quot;we found out Mort couldn&#39;t eat the food - any of it! And to find out day of too, oh, can you imagine? So Justin -  he&#39;s been my rock through all of this bless him - he thought to get Mort a salad. Bless Justin honestly, bless him, I don’t know what I&#39;d do if he wasn&#39;t there for me -&quot;
 
 &quot;Mrs. Whittaker, please continue with your testimony.&quot;
 
-Terry blinks. &quot;Sorry, right...&quot;
+Terry blinks the tears out of her eyes. &quot;Sorry, right...&quot;
 
-There&#39;s a hint of empathy as the officer says, &quot;It&#39;s alright. You were getting a salad?&quot; 
+&quot;It&#39;s alright. You were getting a salad?&quot; 
 
 Terry tries to reign in her tears and continues, &quot;Yes, we drove to the grocery to get a small salad for Mort. It was the least we could do so the poor man could have something to eat...poor Mort, oh!&quot;
 
 She&#39;s not doing a very good job of keeping composed. You never realized you meant this much to Terry. You&#39;re touched, really.
 
-&quot;We headed to the park after that... to help set up, you know? When the dinner started, before the poor man could die of hunger, we gave Mort our salad - oh, and Annie, she gave him a sandwich. Then Erin...&quot; Terry&#39;s face shows a marked change, going from despair to disgust. &quot;Erin gave him a silly little potion, going on and on about protection or something. He drank it, though I can&#39;t imagine why, and well...! Next thing you know he&#39;s d-dead on the floor!&quot; She sobs again.
+&quot;We headed to the park after that... to help set up, you know? When the dinner started, before the poor man could die of hunger, we gave Mort our salad - oh, and Annie, she gave him a sandwich. Then Erin...&quot; Terry&#39;s face shows a marked change, going from despair to disgust. &quot;Erin gave him a silly little potion, going on and on about protection or something. He drank it, though I can&#39;t imagine why, and well...! Next thing you know he&#39;s dead on the floor!&quot; She sobs again.
 
 &lt;&lt;if !hasVisited(&quot;Erin&#39;s Testimony&quot;)&gt;&gt;Oh yeah, you remember that. You drank it, just to stop her from nagging you about it. It tasted like manure.
-&lt;&lt;else&gt;&gt;You&#39;d swear you just felt a shiver go down your spine, were it not for your lack of a spine. Erin?&lt;&lt;/if&gt;&gt; She could be a bit odd, but it hadn&#39;t occurred to you that she could be dangerous...
+&lt;&lt;else&gt;&gt;You&#39;d swear you just felt a shiver go down your spine, were it not for your lack of a spine. Erin?&lt;&lt;/if&gt;&gt;
 
 Still upset, but more angry, Terry continues, &quot;That girl, I just - she has no idea what she&#39;s doing with her so-called magic, I wouldn&#39;t be surprised if drinking that finally...oh I don&#39;t want to think about it! But she&#39;s done terrible things before...regardless, whoever did it should be ashamed...&quot;
 
@@ -2108,23 +2121,23 @@ When you float into the room, Erin is sitting in the cold metal chair, unspeakin
 
 Before that can happen, the officer speaks. &quot;Hello, Ms. Moonchild. If you could, would you please explain the events leading up to Mr. Freedman&#39;s death?&quot; 
 
-Erin frowns. &quot;I knew this would happen...&quot;
+Erin frowns. &quot;I knew this would happen.&quot;
 
-The officer&#39;s eyes narrow slightly. &quot;Could you explain that statement?
+&quot;Could you explain that statement?&quot;
 
 She wrings her hands. &quot;See, the association came up with the idea for the dinner, and everyone was really excited, but there was a negative aura in the air, I could feel it.&quot;
 
 &quot;Aura...? Why would there be a negative aura?&quot;
 
-&quot;Well I think that&#39;s obvious,&quot; she says dismissively.
+&quot;Well I think that&#39;s obvious.&quot;
 
-&quot;No, I don&#39;t think it is,&quot; the officer says with a hint of impatience. &quot;Please. Elaborate.&quot;
+&quot;No, I don&#39;t think it is,&quot; the officer says. &quot;Please. Elaborate.&quot;
 
-&quot;Well,&quot; Erin replies, blinking, &quot;earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We&#39;d baked everything the day before- Annie, Bram, and I, and for some reason Mort didn&#39;t like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie&#39;s aura flared up, and of course everyone loves Annie so everyone else got frustrated-&quot;
+&quot;Well,&quot; Erin replies, &quot;earlier today while the RNA was meeting, Annie and Mort got into a quarrel. We&#39;d baked everything the day before - Annie, Bram, and I, and for some reason Mort didn&#39;t like it. There was a bad aura around everyone beforehand, but then it got really bad at the meeting. Annie&#39;s aura flared up, and of course everyone loves Annie so everyone else got frustrated - &quot;
 
 The officer interrupts. &quot;Excuse me, Miss. What, exactly, happened at that meeting?&quot;
 
-&quot;Well, Mort didn&#39;t want to eat any of the dishes- couldn&#39;t? He said something like that.  I kept trying to give him the potion, but he ignored me! Everyone ignores me,&quot; she says softly. She shakes her head. &quot;He left all angrily, and then Justin and Terry went off to get Mort something, salad maybe? I didn&#39;t pay too much attention.&quot; She pauses. &quot;Well, I did, but not because I was stalking them or anything.&quot; (What?) &quot;I was just concerned about Justin. He hasn&#39;t been talking to me at all. I tried to tell him about the bad energies and signs I&#39;ve felt lately, but he wouldn&#39;t listen, and then this had to go and happen!&quot;
+&quot;Well, Mort didn&#39;t want to eat any of the dishes - couldn&#39;t? He said something like that.  I kept trying to give him the potion, but he ignored me! Everyone ignores me,&quot; she says softly. She shakes her head. &quot;He left all angrily, and then Justin and Terry went off to get Mort something, salad maybe? I didn&#39;t pay too much attention.&quot; She pauses. &quot;Well, I did, but not because I was stalking them or anything.&quot; (What?) &quot;I was just concerned about Justin. He hasn&#39;t been talking to me at all. I tried to tell him about the bad energies and signs I&#39;ve felt lately, but he wouldn&#39;t listen, and then this had to go and happen!&quot;
 
 She throws her hands up in the air. The officer makes a noise as if to question her, but she keeps going. &quot;Anyway, we all set up the dinner for a couple hours. Then I gave Mort the potion at the party. I watched him drink it and then went back to the party, feeling better, until...&quot; She looks down sadly. 
 
@@ -2135,7 +2148,7 @@ You frown. Before the officer can interrupt, she continues, &quot;I had prepared
 
 Yeah, given Terry&#39;s statements, now you&#39;re wondering too.&lt;&lt;/if&gt;&gt;
                       
-&quot;Ingredients that protect, of course,&quot; Erin says, as if it&#39;s the most obvious thing in the world. By the distant look on her face, both you and, it seems, the officer, know that&#39;s all you&#39;re gonna get out of her about that. &lt;&lt;if hasVisited(&quot;Terry&#39;s Testimony&quot;)&gt;&gt;You want to scream.&lt;&lt;/if&gt;&gt;
+&quot;Ingredients that protect, of course,&quot; Erin says. By the distant look on her face, both you and, it seems, the officer, know that&#39;s all you&#39;re gonna get out of her about that. &lt;&lt;if hasVisited(&quot;Terry&#39;s Testimony&quot;)&gt;&gt;You want to scream.&lt;&lt;/if&gt;&gt;
 
 Before the officer can ask anything else, Erin adds, &quot;I thought the potion would work. It was supposed to protect him, though I guess he never did want my protection.&quot;
 
@@ -2150,11 +2163,11 @@ The officer keeps interviewing Erin, asking her to recount the information in di
 You don&#39;t know if it&#39;s possible to respond and you&#39;re not sure you want to.
 &lt;&lt;else&gt;&gt;Erin is wringing her hands and repeating, &quot;oh, oh, oh&quot; to herself.&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="Annie" tags="" position="1100,1350">&lt;&lt;set $who to &quot;Annie&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;The officer has just begun speaking when you enter the room. &quot;Good day, Ms. Smith-&quot;
+&lt;&lt;include &quot;Listen to Testimonies&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="Annie" tags="" position="1100,1350">&lt;&lt;set $who to &quot;Annie&quot;&gt;&gt;&lt;&lt;if visited() is 1&gt;&gt;The officer has just begun speaking when you enter the room. &quot;Good day, Ms. Smith - &quot;
 
 Annie interrupts, saying, &quot;I guess it coulda been, but there&#39;s a dead man. Did you forget that or somethin&#39;?&quot;
 
-&quot;Well, yes, there is.&quot; The officer seems caught off guard. &quot;I&#39;d like to ask you a few questions about that, actually. What happened leading up to Mr. Freedman&#39;s death?&quot;
+&quot;I&#39;d like to ask you a few questions about that, actually. What happened leading up to Mr. Freedman&#39;s death?&quot;
 
 Annie&#39;s face twists into a displeased expression. About your untimely murder, you assume. &quot;Where are we startin&#39;? We fought this morning...&quot;
 
@@ -2190,11 +2203,11 @@ Bram, poor guy, enters the room sweating, dabbing at his forehead with a handker
 
 He sits down slowly, and listens for the officer. The officer speaks, &quot;Mr. Locklear, could you please describe the events leading up to and around Mr. Freedman&#39;s death?&quot;
 
-&quot;Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn&#39;t there though, so where should I start, officer? I don&#39;t want to slow you down with irrelevant info, ha.&quot; Bram laughs nervously. 
+&quot;Well, there was the party. And, oh! Before that was the meeting, and I guess the baking the day before. Mort wasn&#39;t there though, so where should I start, officer? I don&#39;t want to slow you down with irrelevant info.&quot; Bram laughs nervously. 
 
-The officer doesn&#39;t respond for a moment, not realizing Bram&#39;s invitation to talk. Then, &quot;Wherever you think is the most relevant. If I think you&#39;re leaving something out, I will ask.&quot; 
+&quot;Wherever you think is the most relevant. If I think you&#39;re leaving something out, I will ask.&quot; 
 
-Bram furrows his eyebrows. &quot;O-okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin&#39;s idea apparently- I don&#39;t know if Justin knew about the allergy, of course! Anyway, that&#39;s why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It&#39;s like she doesn&#39;t know what allergies are.&quot; 
+Bram furrows his eyebrows. &quot;Okay. Well, yesterday, we were all baking. Erin, Annie, and I, that is. There were a lot of nuts in everything, which was Justin&#39;s idea apparently - I don&#39;t know if Justin knew about the allergy, of course! Anyway, that&#39;s why Mort started the fight with Annie. Today, at the meeting, I mean. Not yesterday. It&#39;s like she doesn&#39;t know what allergies are.&quot; 
 
 He laughs again, his expression pained. If only you weren&#39;t dead, you could remind him that laughing while being asked about a murder is a bad idea.
 
@@ -2202,11 +2215,11 @@ He laughs again, his expression pained. If only you weren&#39;t dead, you could 
 
 After a short silence, the officer says, &quot;Mr. Locklear, we believe that Mr. Freedman was killed with a poison. Are you aware of how aconite is made?&quot;
 
-Bram takes a moment to process the question, then puts his hands up and sputters out an objection, &quot;B-before you start asking about the wolfsbane in the garden, Erin asked me to plant it. She uses it for spells. But I wasn&#39;t growing it to poison Mort!&quot;
+Bram takes a moment to process the question, then puts his hands up and sputters out an objection, &quot;Before you start asking about the wolfsbane in the garden, Erin asked me to plant it. She uses it for spells. But I wasn&#39;t growing it to poison Mort!&quot;
 
 The officer hums and writes something down. &quot;Thank you, Mr. Locklear.&quot; 
 
-&quot;W-wait, what are you writing down?&quot; Bram stammers. &quot;I said I wasn&#39;t - &quot;
+&quot;Wait, what are you writing down?&quot; Bram stammers. &quot;I said I wasn&#39;t - &quot;
 
 &quot;Could you please go over your testimony one more time?&quot;
 
