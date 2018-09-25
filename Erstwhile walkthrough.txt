@@ -1,0 +1,71 @@
+Each level requires memories from a lower level to be unlocked first.
+
+**0th Level**
+
+Potion + Testimony => you drinking Erin's potion
+
+Salad + Justin's Testimony or Salad + Terry's Testimony => Justin and Terry at the grocery store
+
+Sandwich + Annie's Testimony => your fight with Annie [Sharpie]
+
+Wine + Gift Request => you and Bram drinking wine [Corkscrew, Marijuana]
+
+Old Newspaper + Petition => Terry's phone conversation [Straight Tie]
+
+Crescent Charm + Gibbous Charm => Justin and Erin being siblings [Justin's Keys, Bowtie]
+
+Sigils + Potion = Erin's night [Shifty Person, Petals]
+
+Caf Patch + Sigils = Justin and Erin setting up for the dinner [Crumpled Paper, Nut Article]
+
+**1st Level**
+
+Marijuana + Medicine Reminder => Bram and Annie's conversation in the garden [Wolfsbane]
+
+Nut Article + Annie's Testimony => Terry giving Justin the nut article
+
+**2nd Level**
+
+Straight Tie + Bowtie => Terry and Bram's conversation in her shop [Cane]
+
+Aconite Poison + Wolfsbane => the detective ruminating about the murder weapon
+
+Crumpled Paper + Sharpie => Justin, Annie, and sriracha
+
+Justin's Keys + Corkscrew => you distracting Justin in front of Bram
+
+**3rd Level**
+
+Petals + Wolfsbane => Annie and Erin talking about warding you away [Werewolf]
+
+**4th Level**
+
+Shifty Person + Cane => Terry's boyfriend giving her some leaves [Leaves]
+
+Werewolf + Potion => Erin and Bram brewing you a potion
+
+**5th Level**
+
+Leaves + Wolfsbane => Bram realising the wolfsbane was tampered with
+
+**6th Level**
+
+This level reveals the killer!
+
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+
+If you have the memories, "Bram realizing the wolfsbane was tampered with" and "the detective ruminating about the murder weapon", you can combine Salad with Wolfbane, Leaves, or Aconite Poison to get the final memory and true murder:
+
+Terry poisoning your salad
+
+***The other items***
+Some of the items, such as the Rap Sheet, cannot be combined with any other items to unlock memories. They all have the same statement on them indicating as such, and you can set them aside using the feature. Don't ignore them though; there's mysteries in this game aside from who the killer is.
